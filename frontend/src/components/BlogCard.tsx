@@ -13,6 +13,9 @@ interface BlogCardProps {
 }
 
 export function BlogCard({ post, index = 0 }: BlogCardProps) {
+  // Ensure we have a valid slug, fallback to id if needed
+  const blogSlug = post.slug || post.id;
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -20,7 +23,7 @@ export function BlogCard({ post, index = 0 }: BlogCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Link href={`/blog/${post.slug}`}>
+      <Link href={`/blog/${blogSlug}`}>
         <Card className="h-full group hover:shadow-lg transition-all duration-300 cursor-pointer">
           <CardHeader>
             <div className="aspect-video relative overflow-hidden rounded-md bg-accent mb-4">

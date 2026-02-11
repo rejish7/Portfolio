@@ -32,6 +32,38 @@ api.interceptors.response.use(
   }
 );
 
+// Helper function to transform MongoDB documents
+const transformBlogPost = (post: any): BlogPost => {
+  return {
+    id: post._id || post.id,
+    slug: post.slug || post._id, // Fallback to _id if slug is missing
+    title: post.title,
+    excerpt: post.excerpt,
+    content: post.content,
+    image: post.image,
+    publishedAt: post.publishedAt,
+    readTime: post.readTime,
+    tags: post.tags,
+    author: post.author,
+  };
+};
+
+const transformProject = (project: any): Project => {
+  return {
+    id: project._id || project.id,
+    slug: project.slug || project._id, // Fallback to _id if slug is missing
+    title: project.title,
+    description: project.description,
+    fullDescription: project.fullDescription,
+    image: project.image,
+    technologies: project.technologies || [],
+    liveUrl: project.liveUrl,
+    githubUrl: project.githubUrl,
+    featured: project.featured,
+    category: project.category,
+  };
+};
+
 // API Methods
 export const contactAPI = {
   submit: async (data: ContactFormData): Promise<ApiResponse<any>> => {
@@ -55,9 +87,10 @@ export const projectsAPI = {
   getAll: async (): Promise<ApiResponse<Project[]>> => {
     try {
       const response = await api.get("/api/projects");
+      const transformedData = response.data.map(transformProject);
       return {
         success: true,
-        data: response.data,
+        data: transformedData,
       };
     } catch (error: any) {
       return {
@@ -70,9 +103,10 @@ export const projectsAPI = {
   getById: async (id: string): Promise<ApiResponse<Project>> => {
     try {
       const response = await api.get(`/api/projects/${id}`);
+      const transformedData = transformProject(response.data);
       return {
         success: true,
-        data: response.data,
+        data: transformedData,
       };
     } catch (error: any) {
       return {
@@ -87,9 +121,10 @@ export const blogsAPI = {
   getAll: async (): Promise<ApiResponse<BlogPost[]>> => {
     try {
       const response = await api.get("/api/blogs");
+      const transformedData = response.data.map(transformBlogPost);
       return {
         success: true,
-        data: response.data,
+        data: transformedData,
       };
     } catch (error: any) {
       return {
@@ -102,9 +137,10 @@ export const blogsAPI = {
   getBySlug: async (slug: string): Promise<ApiResponse<BlogPost>> => {
     try {
       const response = await api.get(`/api/blogs/${slug}`);
+      const transformedData = transformBlogPost(response.data);
       return {
         success: true,
-        data: response.data,
+        data: transformedData,
       };
     } catch (error: any) {
       return {
