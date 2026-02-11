@@ -7,38 +7,11 @@ import { Button } from "@/components/ui/button";
 import { BlogCard } from "@/components/BlogCard";
 import type { BlogPost } from "@/lib/types";
 
-// Sample blog posts
-const recentPosts: BlogPost[] = [
-  {
-    id: "1",
-    slug: "next-js-performance-optimization",
-    title: "Next.js Performance Optimization: Best Practices for 2024",
-    excerpt: "Learn how to optimize your Next.js applications for maximum performance with these proven techniques and strategies.",
-    publishedAt: "2024-01-15",
-    readTime: "5 min read",
-    tags: ["Next.js", "Performance", "Web Development"],
-  },
-  {
-    id: "2",
-    slug: "modern-seo-strategies",
-    title: "Modern SEO Strategies for Developers",
-    excerpt: "A comprehensive guide to implementing SEO best practices in modern web applications built with React and Next.js.",
-    publishedAt: "2024-01-10",
-    readTime: "7 min read",
-    tags: ["SEO", "Marketing", "Web Development"],
-  },
-  {
-    id: "3",
-    slug: "typescript-advanced-patterns",
-    title: "Advanced TypeScript Patterns for Scalable Applications",
-    excerpt: "Explore advanced TypeScript patterns and techniques to build type-safe, maintainable, and scalable applications.",
-    publishedAt: "2024-01-05",
-    readTime: "6 min read",
-    tags: ["TypeScript", "JavaScript", "Programming"],
-  },
-];
+interface BlogPreviewProps {
+  posts?: BlogPost[];
+}
 
-export function BlogPreview() {
+export function BlogPreview({ posts = [] }: BlogPreviewProps) {
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,11 +30,17 @@ export function BlogPreview() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {recentPosts.map((post, index) => (
-            <BlogCard key={post.id} post={post} index={index} />
-          ))}
-        </div>
+        {posts.length === 0 ? (
+          <div className="text-center text-muted-foreground py-12">
+            <p>Blog posts coming soon!</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {posts.map((post, index) => (
+              <BlogCard key={post.id} post={post} index={index} />
+            ))}
+          </div>
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,7 +1,11 @@
 import Blog from "../models/Blog.js";
 
 const getAllBlogs = async () => {
-  return await Blog.find();
+  return await Blog.find().sort({ publishedAt: -1 });
+};
+
+const getBlogBySlug = async (slug) => {
+  return await Blog.findOne({ slug });
 };
 
 const createNewBlog = async (data) => {
@@ -16,4 +20,10 @@ const deleteBlogById = async (id) => {
   return await Blog.findByIdAndDelete(id);
 };
 
-export { getAllBlogs, createNewBlog, updateBlogById, deleteBlogById };
+export {
+  getAllBlogs,
+  getBlogBySlug,
+  createNewBlog,
+  updateBlogById,
+  deleteBlogById,
+};

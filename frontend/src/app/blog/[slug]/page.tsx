@@ -3,61 +3,23 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { formatDate } from "@/lib/utils";
+import { blogsAPI } from "@/lib/api";
+import { notFound } from "next/navigation";
 
-// This would typically come from an API or database
+// Revalidate every hour
+export const revalidate = 3600;
+
 const getBlogPost = async (slug: string) => {
-  // Mock data - replace with actual API call
-  return {
-    id: "1",
-    slug,
-    title: "Next.js Performance Optimization: Best Practices for 2024",
-    excerpt: "Learn how to optimize your Next.js applications for maximum performance.",
-    content: `
-# Introduction
-
-Next.js has become the go-to framework for building modern React applications. However, as your application grows, performance can become a challenge. In this article, we'll explore proven techniques to keep your Next.js app fast and responsive.
-
-## Image Optimization
-
-One of the most impactful optimizations you can make is properly handling images. Next.js provides the Image component which automatically optimizes images.
-
-\`\`\`tsx
-import Image from 'next/image';
-
-export default function Hero() {
-  return (
-    <Image
-      src="/hero.jpg"
-      alt="Hero"
-      width={1200}
-      height={600}
-      priority
-    />
-  );
-}
-\`\`\`
-
-## Code Splitting
-
-Next.js automatically code-splits your application at the page level. You can take this further with dynamic imports:
-
-\`\`\`tsx
-import dynamic from 'next/dynamic';
-
-const DynamicComponent = dynamic(() => import('./HeavyComponent'), {
-  loading: () => <p>Loading...</p>
-});
-\`\`\`
-
-## Conclusion
-
-By following these best practices, you can significantly improve your Next.js application's performance. Remember to measure, optimize, and test continuously.
-    `,
-    publishedAt: "2024-01-15",
-    readTime: "5 min read",
-    tags: ["Next.js", "Performance", "Web Development"],
-    author: "Rejish Khanal",
-  };
+  try {
+    const response = await blogsAPI.getBySlug(slug);
+    if (response.success && response.data) {
+      return response.data;
+    }
+    return null;
+  } catch (error) {
+    console.error("Failed to fetch blog post:", error);
+    return null;
+  }
 };
 
 export async function generateMetadata({
@@ -66,6 +28,13 @@ export async function generateMetadata({
   params: { slug: string };
 }): Promise<Metadata> {
   const post = await getBlogPost(params.slug);
+  
+  if (!post) {
+    return {
+      title: "Blog Post Not Found",
+      description: "The requested blog post could not be found.",
+    };
+  }
   
   return {
     title: post.title,
@@ -79,6 +48,10 @@ export default async function BlogPostPage({
   params: { slug: string };
 }) {
   const post = await getBlogPost(params.slug);
+
+  if (!post) {
+    notFound();
+  }
 
   return (
     <article className="pt-24 pb-24">

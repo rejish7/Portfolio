@@ -1,5 +1,6 @@
 import {
   getAllBlogs,
+  getBlogBySlug as getBySlug,
   createNewBlog,
   updateBlogById,
   deleteBlogById,
@@ -9,6 +10,16 @@ const getBlogs = async (req, res, next) => {
   try {
     const blogs = await getAllBlogs();
     res.json(blogs);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const getBlogBySlug = async (req, res, next) => {
+  try {
+    const blog = await getBySlug(req.params.slug);
+    if (!blog) return res.status(404).json({ message: "Blog not found" });
+    res.json(blog);
   } catch (err) {
     next(err);
   }
@@ -43,4 +54,4 @@ const deleteBlog = async (req, res, next) => {
   }
 };
 
-export { getBlogs, createBlog, updateBlog, deleteBlog };
+export { getBlogs, getBlogBySlug, createBlog, updateBlog, deleteBlog };

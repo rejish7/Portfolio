@@ -1,5 +1,6 @@
 import {
   getAllProjects,
+  getProjectById as getById,
   createNewProject,
   updateProjectById,
   deleteProjectById,
@@ -9,6 +10,16 @@ const getProjects = async (req, res, next) => {
   try {
     const projects = await getAllProjects();
     res.json(projects);
+  } catch (err) {
+    next(err);
+  }
+};
+
+const getProjectById = async (req, res, next) => {
+  try {
+    const project = await getById(req.params.id);
+    if (!project) return res.status(404).json({ message: "Project not found" });
+    res.json(project);
   } catch (err) {
     next(err);
   }
@@ -43,4 +54,10 @@ const deleteProject = async (req, res, next) => {
   }
 };
 
-export { getProjects, createProject, updateProject, deleteProject };
+export {
+  getProjects,
+  getProjectById,
+  createProject,
+  updateProject,
+  deleteProject,
+};

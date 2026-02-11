@@ -7,41 +7,11 @@ import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/ProjectCard";
 import type { Project } from "@/lib/types";
 
-// Sample featured projects
-const featuredProjects: Project[] = [
-  {
-    id: "1",
-    slug: "ecommerce-platform",
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-    technologies: ["Next.js", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-    liveUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/rejishkhanal/ecommerce",
-    featured: true,
-  },
-  {
-    id: "2",
-    slug: "task-management-app",
-    title: "Task Management App",
-    description: "Collaborative task management tool with real-time updates, team collaboration, and progress tracking.",
-    technologies: ["React", "Express", "MongoDB", "Socket.io", "Redux"],
-    liveUrl: "https://tasks.example.com",
-    githubUrl: "https://github.com/rejishkhanal/taskapp",
-    featured: true,
-  },
-  {
-    id: "3",
-    slug: "analytics-dashboard",
-    title: "Analytics Dashboard",
-    description: "Real-time analytics dashboard with data visualization, custom reports, and export functionality.",
-    technologies: ["Vue.js", "Django", "Redis", "Chart.js", "Docker"],
-    liveUrl: "https://analytics.example.com",
-    githubUrl: "https://github.com/rejishkhanal/analytics",
-    featured: true,
-  },
-];
+interface ProjectsProps {
+  projects?: Project[];
+}
 
-export function Projects() {
+export function Projects({ projects = [] }: ProjectsProps) {
   return (
     <section className="py-24 bg-accent/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,11 +30,17 @@ export function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {featuredProjects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
-        </div>
+        {projects.length === 0 ? (
+          <div className="text-center text-muted-foreground py-12">
+            <p>Featured projects coming soon!</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {projects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
+        )}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

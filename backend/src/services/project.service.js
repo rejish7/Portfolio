@@ -1,7 +1,11 @@
 import Project from "../models/Project.js";
 
 const getAllProjects = async () => {
-  return await Project.find();
+  return await Project.find().sort({ createdAt: -1 });
+};
+
+const getProjectById = async (id) => {
+  return await Project.findById(id);
 };
 
 const createNewProject = async (data) => {
@@ -18,6 +22,7 @@ const deleteProjectById = async (id) => {
 
 export {
   getAllProjects,
+  getProjectById,
   createNewProject,
   updateProjectById,
   deleteProjectById,
