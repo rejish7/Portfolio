@@ -99,10 +99,9 @@ export default async function BlogPostPage({
         {/* Content */}
         <div className="prose prose-lg dark:prose-invert max-w-none">
           {post.content ? (
-            <div
-              dangerouslySetInnerHTML={{ __html: post.content as string }}
-              className="space-y-6"
-            />
+            <div className="whitespace-pre-wrap space-y-6">
+              {post.content}
+            </div>
           ) : (
             <p className="text-muted-foreground">No content available.</p>
           )}
