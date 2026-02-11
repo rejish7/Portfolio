@@ -9,8 +9,9 @@ export const metadata: Metadata = {
     "Explore my portfolio of web development projects, including full-stack applications, e-commerce platforms, and more.",
 };
 
-// Revalidate every hour
-export const revalidate = 3600;
+// Force dynamic rendering - prevents caching stale data
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 async function getProjects(): Promise<Project[]> {
   try {

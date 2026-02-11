@@ -9,8 +9,9 @@ export const metadata: Metadata = {
     "Technical articles, tutorials, and insights on web development, SEO, and modern technologies.",
 };
 
-// Revalidate every hour
-export const revalidate = 3600;
+// Force dynamic rendering - prevents caching stale data
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 async function getBlogs(): Promise<BlogPost[]> {
   try {

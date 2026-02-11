@@ -8,8 +8,9 @@ import { BlogPreview } from "@/components/sections/BlogPreview";
 import { projectsAPI, blogsAPI } from "@/lib/api";
 import type { Project, BlogPost } from "@/lib/types";
 
-// Revalidate every hour
-export const revalidate = 3600;
+// Force dynamic rendering - prevents caching stale data
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 async function getFeaturedProjects(): Promise<Project[]> {
   try {

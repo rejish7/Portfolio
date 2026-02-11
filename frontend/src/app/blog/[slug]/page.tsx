@@ -6,8 +6,9 @@ import { formatDate } from "@/lib/utils";
 import { blogsAPI } from "@/lib/api";
 import { notFound } from "next/navigation";
 
-// Revalidate every hour
-export const revalidate = 3600;
+// Force dynamic rendering - prevents caching stale data
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 const getBlogPost = async (slug: string) => {
   try {
