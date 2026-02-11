@@ -121,9 +121,9 @@ export function ContactForm() {
             }`}
           >
             {status === "success" ? (
-              <CheckCircle2 className="h-5 w-5 flex-shrink-0" />
+              <CheckCircle2 className="h-5 w-5 shrink-0" />
             ) : (
-              <AlertCircle className="h-5 w-5 flex-shrink-0" />
+              <AlertCircle className="h-5 w-5 shrink-0" />
             )}
             <p className="text-sm">{message}</p>
           </motion.div>

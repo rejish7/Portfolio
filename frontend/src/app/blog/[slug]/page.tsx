@@ -73,31 +73,39 @@ export default async function BlogPostPage({
               <Calendar className="h-4 w-4" />
               {formatDate(post.publishedAt)}
             </div>
-            <div className="flex items-center gap-2">
-              <Clock className="h-4 w-4" />
-              {post.readTime}
-            </div>
-            <div>By {post.author}</div>
+            {post.readTime && (
+              <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                {post.readTime}
+              </div>
+            )}
+            {post.author && <div>By {post.author}</div>}
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-full"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+          {post.tags && post.tags.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-3 py-1 text-sm font-medium bg-primary/10 text-primary rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </header>
 
         {/* Content */}
         <div className="prose prose-lg dark:prose-invert max-w-none">
-          <div
-            dangerouslySetInnerHTML={{ __html: post.content }}
-            className="space-y-6"
-          />
+          {post.content ? (
+            <div
+              dangerouslySetInnerHTML={{ __html: post.content as string }}
+              className="space-y-6"
+            />
+          ) : (
+            <p className="text-muted-foreground">No content available.</p>
+          )}
         </div>
 
         {/* Footer */}
