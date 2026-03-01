@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { formatDate } from "@/lib/utils";
+import { formatDate, generateBlogSEOMetadata, convertSEOMetadataToNextJS } from "@/lib/utils";
 import { blogsAPI } from "@/lib/api";
 import { notFound } from "next/navigation";
 
@@ -37,13 +37,9 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: post.title,
-    description: post.excerpt,
-    alternates: {
-      canonical: `/blog/${params.slug}`,
-    },
-  };
+  const seoData = generateBlogSEOMetadata(post);
+
+  return convertSEOMetadataToNextJS(seoData);
 }
 
 export default async function BlogPostPage({

@@ -45,6 +45,7 @@ const transformBlogPost = (post: any): BlogPost => {
     readTime: post.readTime,
     tags: post.tags,
     author: post.author,
+    seo: post.seo, // Include SEO metadata
   };
 };
 

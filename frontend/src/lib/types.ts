@@ -12,6 +12,23 @@ export interface Project {
   category?: string;
 }
 
+export interface SEOMetadata {
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonical: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: 'article' | 'website';
+  twitterCard?: 'summary' | 'summary_large_image';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+}
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -23,6 +40,7 @@ export interface BlogPost {
   readTime?: string;
   tags?: string[];
   author?: string;
+  seo?: SEOMetadata;
 }
 
 export interface Experience {
@@ -60,12 +78,4 @@ export interface SocialLink {
   name: string;
   url: string;
   icon: string;
-}
-
-export interface SEOMetadata {
-  title: string;
-  description: string;
-  keywords?: string[];
-  ogImage?: string;
-  canonical?: string;
 }
