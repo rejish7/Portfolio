@@ -12,17 +12,17 @@ const skillsData = [
   {
     category: "Backend",
     icon: Server,
-    skills: ["Node.js", "Python", "Express", "Django", "REST APIs", "GraphQL"],
+    skills: ["Node.js", "Python", "Express", "Django", "REST APIs"],
   },
   {
     category: "Database",
     icon: Database,
-    skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Prisma", "TypeORM"],
+    skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
   },
   {
     category: "DevOps & Tools",
     icon: Wrench,
-    skills: ["Docker", "Git", "AWS", "Vercel", "CI/CD", "Linux"],
+    skills: ["Docker", "Git","Vercel", "CI/CD", "Linux"],
   },
 ];
 
