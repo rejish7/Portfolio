@@ -1,7 +1,7 @@
 import {
   getAllProjects,
   getProjectById as getById,
-  getProjectBySlug,
+  getProjectBySlug as getBySlug,
   createNewProject,
   updateProjectById,
   deleteProjectById,
@@ -28,7 +28,7 @@ const getProjectById = async (req, res, next) => {
 
 const getProjectBySlug = async (req, res, next) => {
   try {
-    const project = await getProjectBySlug(req.params.slug);
+    const project = await getBySlug(req.params.slug);
     if (!project) return res.status(404).json({ message: "Project not found" });
     res.json(project);
   } catch (err) {

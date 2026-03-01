@@ -10,7 +10,7 @@ import type { Project, BlogPost } from "@/lib/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Rejish Khanal Portfolio ",
   description: "Welcome to Rejish Khanal's portfolio - Full-Stack Developer and SEO Specialist. Explore my projects, blog posts, and get in touch for collaborations.",
   alternates: {
     canonical: "/",
