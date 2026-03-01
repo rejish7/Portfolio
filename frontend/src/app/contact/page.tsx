@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with Rejish Khanal for project inquiries, collaborations, or just to say hello.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 const contactInfo = [
@@ -36,7 +39,7 @@ export default function ContactPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Get in Touch</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? Feel free to reach out. 
+            Have a project in mind or just want to chat? Feel free to reach out.
             I am always open to discussing new opportunities and collaborations.
           </p>
         </div>

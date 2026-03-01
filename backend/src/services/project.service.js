@@ -8,6 +8,10 @@ const getProjectById = async (id) => {
   return await Project.findById(id);
 };
 
+const getProjectBySlug = async (slug) => {
+  return await Project.findOne({ slug });
+};
+
 const createNewProject = async (data) => {
   return await Project.create(data);
 };
@@ -23,6 +27,7 @@ const deleteProjectById = async (id) => {
 export {
   getAllProjects,
   getProjectById,
+  getProjectBySlug,
   createNewProject,
   updateProjectById,
   deleteProjectById,

@@ -115,6 +115,22 @@ export const projectsAPI = {
       };
     }
   },
+
+  getBySlug: async (slug: string): Promise<ApiResponse<Project>> => {
+    try {
+      const response = await api.get(`/api/projects/slug/${slug}`);
+      const transformedData = transformProject(response.data);
+      return {
+        success: true,
+        data: transformedData,
+      };
+    } catch (error: any) {
+      return {
+        success: false,
+        error: error.message || "Failed to fetch project",
+      };
+    }
+  },
 };
 
 export const blogsAPI = {

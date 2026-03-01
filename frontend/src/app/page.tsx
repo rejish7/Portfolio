@@ -7,6 +7,15 @@ import { CTASection } from "@/components/sections/CTASection";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 import { projectsAPI, blogsAPI } from "@/lib/api";
 import type { Project, BlogPost } from "@/lib/types";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Welcome to Rejish Khanal's portfolio - Full-Stack Developer and SEO Specialist. Explore my projects, blog posts, and get in touch for collaborations.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 // Force dynamic rendering - prevents caching stale data
 export const dynamic = 'force-dynamic';

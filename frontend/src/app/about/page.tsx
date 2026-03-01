@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Learn more about Rejish Khanal - Full-Stack Developer and SEO Specialist with expertise in modern web technologies.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Projects",
   description:
     "Explore my portfolio of web development projects, including full-stack applications, e-commerce platforms, and more.",
+  alternates: {
+    canonical: "/projects",
+  },
 };
 
 // Force dynamic rendering - prevents caching stale data
@@ -29,13 +32,52 @@ async function getProjects(): Promise<Project[]> {
 export default async function ProjectsPage() {
   const allProjects = await getProjects();
 
+  const projectsSchema = allProjects.map(project => ({
+    "@type": "SoftwareApplication",
+    "name": project.title,
+    "description": project.description,
+    "url": project.liveUrl || `https://rejishkhanal.com.np/projects#${project.slug}`,
+    "applicationCategory": "WebApplication",
+    "operatingSystem": "Web Browser",
+    "author": {
+      "@type": "Person",
+      "name": "Rejish Khanal"
+    },
+    "offers": project.liveUrl ? {
+      "@type": "Offer",
+      "url": project.liveUrl
+    } : undefined,
+    "codeRepository": project.githubUrl,
+    "programmingLanguage": project.technologies.join(", "),
+    "image": project.image
+  }));
+
   return (
     <div className="pt-24 pb-24">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Rejish Khanal's Projects",
+            "description": "A collection of web development projects showcasing full-stack development skills.",
+            "url": "https://rejishkhanal.com.np/projects",
+            "author": {
+              "@type": "Person",
+              "name": "Rejish Khanal",
+              "url": "https://rejishkhanal.com.np"
+            },
+            "hasPart": projectsSchema
+          })
+        }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">My Projects</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A collection of projects showcasing my skills in full-stack development, 
+            A collection of projects showcasing my skills in full-stack development,
             from concept to deployment.
           </p>
         </div>

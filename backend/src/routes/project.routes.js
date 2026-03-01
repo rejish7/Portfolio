@@ -2,6 +2,7 @@ import express from "express";
 import {
   getProjects,
   getProjectById,
+  getProjectBySlug,
   createProject,
   updateProject,
   deleteProject,
@@ -10,6 +11,7 @@ import {
 const router = express.Router();
 
 router.get("/", getProjects);
+router.get("/slug/:slug", getProjectBySlug);
 router.get("/:id", getProjectById);
 router.post("/", createProject);
 router.put("/:id", updateProject);
