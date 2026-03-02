@@ -26,9 +26,10 @@ const getBlogPost = async (slug: string) => {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const post = await getBlogPost(params.slug);
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
 
   if (!post) {
     return {
@@ -45,9 +46,10 @@ export async function generateMetadata({
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const post = await getBlogPost(params.slug);
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
 
   if (!post) {
     notFound();
@@ -78,7 +80,7 @@ export default async function BlogPostPage({
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://rejishkhanal.com.np/blog/${params.slug}`
+              "@id": `https://rejishkhanal.com.np/blog/${slug}`
             },
             "keywords": post.tags?.join(", "),
             "articleSection": "Technology",

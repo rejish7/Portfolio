@@ -26,9 +26,10 @@ const getProject = async (slug: string) => {
 export async function generateMetadata({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-    const project = await getProject(params.slug);
+    const { slug } = await params;
+    const project = await getProject(slug);
 
     if (!project) {
         return {
@@ -42,7 +43,7 @@ export async function generateMetadata({
         description: project.description,
         keywords: project.technologies.join(", "),
         alternates: {
-            canonical: `/projects/${params.slug}`,
+            canonical: `/projects/${slug}`,
         },
         openGraph: {
             title: `${project.title} - Project by Rejish Khanal`,
@@ -55,9 +56,10 @@ export async function generateMetadata({
 export default async function ProjectPage({
     params,
 }: {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }) {
-    const project = await getProject(params.slug);
+    const { slug } = await params;
+    const project = await getProject(slug);
 
     if (!project) {
         notFound();
@@ -74,7 +76,7 @@ export default async function ProjectPage({
                         "@type": "SoftwareApplication",
                         "name": project.title,
                         "description": project.description,
-                        "url": project.liveUrl || `https://rejishkhanal.com.np/projects/${params.slug}`,
+                        "url": project.liveUrl || `https://rejishkhanal.com.np/projects/${slug}`,
                         "applicationCategory": "WebApplication",
                         "operatingSystem": "Web Browser",
                         "author": {
@@ -91,7 +93,7 @@ export default async function ProjectPage({
                         "image": project.image,
                         "mainEntityOfPage": {
                             "@type": "WebPage",
-                            "@id": `https://rejishkhanal.com.np/projects/${params.slug}`
+                            "@id": `https://rejishkhanal.com.np/projects/${slug}`
                         }
                     })
                 }}
