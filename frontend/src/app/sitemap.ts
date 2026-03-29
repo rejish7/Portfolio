@@ -12,7 +12,7 @@ async function fetchSlugs<T extends { slug: string }>(endpoint: string): Promise
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://rejishkhanal.com.np";
+  const baseUrl = "https://rejishkhanal.com.np";
 
   const [projects, blogs] = await Promise.all([
     fetchSlugs<{ slug: string; updatedAt?: string }>("/api/projects"),
@@ -22,8 +22,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectEntries: MetadataRoute.Sitemap = projects.map((project) => ({
     url: `${baseUrl}/projects/${project.slug}`,
     lastModified: project.updatedAt ? new Date(project.updatedAt) : new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
   }));
 
   const blogEntries: MetadataRoute.Sitemap = blogs.map((post) => ({
@@ -33,7 +33,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       : post.publishedAt
         ? new Date(post.publishedAt)
         : new Date(),
-    changeFrequency: "weekly",
+    changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
 
@@ -41,34 +41,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+      changeFrequency: "weekly" as const,
+      priority: 1.0,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/services`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/tech-stack`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/projects`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
     },
     ...projectEntries,
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.9,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
     },
     ...blogEntries,
     {
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     },
   ];
 }

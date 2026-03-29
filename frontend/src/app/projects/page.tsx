@@ -4,11 +4,11 @@ import type { Project } from "@/lib/types";
 import { projectsAPI } from "@/lib/api";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "SEO & Web Development Portfolio — Rejish Khanal",
   description:
-    "Explore my portfolio of web development projects, including full-stack applications, e-commerce platforms, and more.",
+    "Real case studies showing SEO results and web development work. Clients include restaurants, marketing agencies, and local businesses across Australia and Nepal.",
   alternates: {
-    canonical: "/projects",
+    canonical: "https://rejishkhanal.com.np/projects",
   },
 };
 
@@ -75,10 +75,10 @@ export default async function ProjectsPage() {
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">My Projects</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">SEO & Web Development Portfolio</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A collection of projects showcasing my skills in full-stack development,
-            from concept to deployment.
+            Real case studies showing SEO results and web development work. Clients include
+            restaurants, marketing agencies, and local businesses across Australia and Nepal.
           </p>
         </div>
 

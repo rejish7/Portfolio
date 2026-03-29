@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactForm } from "@/components/sections/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Hire a Technical SEO Specialist — Contact Rejish Khanal",
   description:
-    "Get in touch with Rejish Khanal for project inquiries, collaborations, or just to say hello.",
+    "Get in touch to discuss Technical SEO audits, Local SEO, or web development projects. Based in Kathmandu, available for international remote work.",
   alternates: {
-    canonical: "/contact",
+    canonical: "https://rejishkhanal.com.np/contact",
   },
 };
 
@@ -36,11 +37,17 @@ export default function ContactPage() {
   return (
     <div className="pt-24 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Contact" },
+          ]}
+        />
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Get in Touch</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Hire a Technical SEO Specialist</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? Feel free to reach out.
-            I am always open to discussing new opportunities and collaborations.
+            Get in touch to discuss Technical SEO audits, Local SEO, or web development projects.
+            Based in Kathmandu, available for international remote work.
           </p>
         </div>
 

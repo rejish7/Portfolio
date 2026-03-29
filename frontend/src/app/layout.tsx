@@ -1,64 +1,51 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Plus_Jakarta_Sans, JetBrains_Mono, Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
-const jakartaSans = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
+  display: "swap",
   variable: "--font-sans",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
-
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Rejish Khanal - Full-Stack Developer & SEO Specialist",
+    default: "Rejish Khanal — Technical SEO Specialist & Full Stack Developer",
     template: "%s | Rejish Khanal",
   },
   description:
-    "Full-Stack Developer and SEO Specialist specializing in modern web applications. Building scalable solutions with React, Next.js, Node.js, and more.",
+    "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal. I help businesses rank higher and build faster using SEO audits, Core Web Vitals fixes, and modern web development.",
   keywords: [
-    "Rejish Khanal",
-    "Full-Stack Developer",
-    "SEO Specialist",
-    "Web Developer",
-    "React Developer",
-    "Next.js Developer",
-    "Node.js Developer",
-    "Nepal Developer",
+    "technical SEO specialist",
+    "full stack developer Nepal",
+    "SEO expert Kathmandu",
+    "hire SEO specialist",
+    "SEO audits",
+    "Core Web Vitals",
+    "JavaScript SEO",
   ],
-  authors: [{ name: "Rejish Khanal" }],
+  authors: [{ name: "Rejish Khanal", url: "https://rejishkhanal.com.np" }],
   creator: "Rejish Khanal",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://rejishkhanal.com.np"),
+  metadataBase: new URL("https://rejishkhanal.com.np"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "/",
-    title: "Rejish Khanal - Full-Stack Developer & SEO Specialist",
+    url: "https://rejishkhanal.com.np",
+    title: "Rejish Khanal — Technical SEO Specialist & Full Stack Developer",
     description:
-      "Full-Stack Developer and SEO Specialist specializing in modern web applications.",
-    siteName: "Rejish Khanal Portfolio",
+      "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal. I help businesses rank higher and build faster using SEO audits, Core Web Vitals fixes, and modern web development.",
+    siteName: "Rejish Khanal",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rejish Khanal - Full-Stack Developer & SEO Specialist",
+    title: "Rejish Khanal — Technical SEO Specialist & Full Stack Developer",
     description:
-      "Full-Stack Developer and SEO Specialist specializing in modern web applications.",
-    creator: "@rejishkhanal",
+      "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal.",
+    creator: "@KhanalRejish",
   },
   robots: {
     index: true,
@@ -78,9 +65,46 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Rejish Khanal",
+    url: "https://rejishkhanal.com.np",
+    jobTitle: "Technical SEO Specialist & Full Stack Developer",
+    email: "contact@rejishkhanal.com.np",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Kathmandu",
+      addressCountry: "NP",
+    },
+    sameAs: ["https://twitter.com/KhanalRejish"],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Rejish Khanal",
+    url: "https://rejishkhanal.com.np",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://rejishkhanal.com.np/blog?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* JSON-LD Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+
         {/* Google Tag Manager */}
         <Script
           id="gtm-script"
@@ -100,9 +124,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body
-        className={`${jakartaSans.variable} ${jetbrainsMono.variable} ${sora.variable} antialiased`}
-      >
+      <body className={`${inter.variable} antialiased`}>
         {/* Google Tag Manager (noscript fallback) */}
         <noscript>
           <iframe

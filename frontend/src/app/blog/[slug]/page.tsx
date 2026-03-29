@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { formatDate, generateBlogSEOMetadata, convertSEOMetadataToNextJS } from "@/lib/utils";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { SchemaScript } from "@/components/SchemaScript";
+import { formatDate } from "@/lib/utils";
 import { blogsAPI } from "@/lib/api";
 import { notFound } from "next/navigation";
 
@@ -38,9 +41,22 @@ export async function generateMetadata({
     };
   }
 
-  const seoData = generateBlogSEOMetadata(post);
-
-  return convertSEOMetadataToNextJS(seoData);
+  return {
+    title: `${post.title} — Rejish Khanal`,
+    description: post.excerpt,
+    keywords: post.tags?.join(", "),
+    alternates: {
+      canonical: `https://rejishkhanal.com.np/blog/${slug}`,
+    },
+    openGraph: {
+      title: `${post.title} — Rejish Khanal`,
+      description: post.excerpt,
+      type: "article",
+      publishedTime: post.publishedAt,
+      authors: [post.author || "Rejish Khanal"],
+      images: post.image ? [{ url: post.image }] : [],
+    },
+  };
 }
 
 export default async function BlogPostPage({
@@ -55,40 +71,44 @@ export default async function BlogPostPage({
     notFound();
   }
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image ? [post.image] : undefined,
+    datePublished: post.publishedAt,
+    dateModified: post.updatedAt || post.publishedAt,
+    author: {
+      "@type": "Person",
+      name: post.author || "Rejish Khanal",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Rejish Khanal",
+      url: "https://rejishkhanal.com.np",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://rejishkhanal.com.np/blog/${slug}`,
+    },
+    keywords: post.tags?.join(", "),
+    articleSection: "Technology",
+    wordCount: post.content?.split(/\s+/).length || 0,
+  };
+
   return (
     <article className="pt-24 pb-24">
-      {/* Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": post.title,
-            "description": post.excerpt,
-            "image": post.image ? [post.image] : undefined,
-            "datePublished": post.publishedAt,
-            "dateModified": post.publishedAt,
-            "author": {
-              "@type": "Person",
-              "name": post.author || "Rejish Khanal"
-            },
-            "publisher": {
-              "@type": "Person",
-              "name": "Rejish Khanal",
-              "url": "https://rejishkhanal.com.np"
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": `https://rejishkhanal.com.np/blog/${slug}`
-            },
-            "keywords": post.tags?.join(", "),
-            "articleSection": "Technology",
-            "wordCount": post.content?.split(/\s+/).length || 0
-          })
-        }}
-      />
+      <SchemaScript schema={articleSchema} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Breadcrumb
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Blog", href: "/blog" },
+            { label: post.title },
+          ]}
+        />
+
         {/* Back button */}
         <Link href="/blog">
           <Button variant="ghost" className="mb-8">
@@ -128,6 +148,20 @@ export default async function BlogPostPage({
             </div>
           )}
         </header>
+
+        {/* Featured Image */}
+        {post.image && (
+          <div className="aspect-video relative overflow-hidden rounded-lg bg-accent mb-12">
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={1200}
+              height={675}
+              className="w-full h-full object-cover"
+              priority={true}
+            />
+          </div>
+        )}
 
         {/* Content */}
         <div className="prose prose-lg dark:prose-invert max-w-none">

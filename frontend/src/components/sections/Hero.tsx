@@ -10,7 +10,7 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
-      
+
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -26,7 +26,7 @@ export function Hero() {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-               Welcome to my portfolio
+              Welcome to my portfolio
             </span>
           </motion.div>
 
@@ -38,13 +38,12 @@ export function Hero() {
             className="space-y-4"
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
-              <span className="block text-foreground">Hi, I&apos;m</span>
               <span className="block bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
-                Rejish Khanal
+                Technical SEO Specialist & Full Stack Developer
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground font-light">
-              Full-Stack Developer & SEO Specialist
+              I&apos;m Rejish Khanal, based in Kathmandu, Nepal
             </p>
           </motion.div>
 
@@ -66,15 +65,15 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link href="/projects">
+            <Link href="/services">
               <Button size="lg" className="group">
-                View My Work
+                Explore My Services
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="/contact">
+            <Link href="/tech-stack">
               <Button size="lg" variant="outline">
-                Get in Touch
+                My Tech Stack
               </Button>
             </Link>
             <a href="/assets/cv/rejish khanal.pdf" download>

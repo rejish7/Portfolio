@@ -25,6 +25,7 @@ export function About() {
   return (
     <section className="py-20 md:py-24 bg-gradient-to-b from-background to-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-12">About Rejish Khanal</h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left side - Text content + personal touch */}
           <motion.div
@@ -36,25 +37,31 @@ export function About() {
           >
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I'm passionate about creating clean, fast-loading web applications that users love and search engines rank well. With hands-on experience in{" "}
-                <span className="text-primary font-medium">Python, Django, FastAPI, PHP, Laravel, Vue.js, HTML5, CSS, JavaScript, PostgreSQL, MySQL, Redis</span>, 
-                I've built end-to-end projects like a Hospital Management System (Django) and Student Registration System (PHP/MySQL).
+                I&apos;m passionate about creating clean, fast-loading web applications that users love and search engines rank well. As a <span className="text-primary font-medium">Technical SEO Specialist and Full Stack Developer</span>, I combine deep expertise in <span className="text-primary font-medium">Python (Django, FastAPI), PHP (Laravel), JavaScript frameworks (Vue.js, Next.js), Node.js, PostgreSQL, and MySQL</span> with proven SEO methodologies.
               </p>
 
               <p>
-                I focus heavily on performance — optimizing database queries, refactoring code, and tuning for Core Web Vitals to deliver exceptional page speed and user experience.
+                I&apos;ve built production applications like a <span className="text-primary font-medium">Hospital Management System using Django with PostgreSQL</span> and <span className="text-primary font-medium">Student Registration Systems with PHP/MySQL</span>, always prioritizing <span className="text-primary font-medium">performance, scalability, and SEO optimization</span>.
               </p>
 
               <p>
-                On the SEO side, I implement technical best practices: schema markup, clean URLs, mobile optimization, keyword research with GA4 & Google Search Console, and on-page elements. In recent roles, these efforts helped client sites achieve significant organic traffic growth.
+                I focus heavily on <span className="text-primary font-medium">Core Web Vitals optimization</span> — improving LCP (Largest Contentful Paint), CLS (Cumulative Layout Shift), and INP (Interaction to Next Paint) through code splitting, lazy loading, AVIF/WebP image formats, database query optimization, and server response time improvements. Better page speed = better rankings + higher conversion rates.
               </p>
 
               <p>
-                Before web development, I worked as a Junior Quality Assurance Officer in pharmaceuticals — where I developed precision, strong documentation habits, regulatory compliance mindset, and problem-solving under strict standards. These skills translate perfectly to writing testable code, debugging, and collaborating in agile teams.
+                On the <span className="text-primary font-medium">SEO/SEM side</span>, I implement technical best practices: <span className="text-primary font-medium">schema markup (JSON-LD), clean URL structures, mobile optimization, sitemap/robots.txt configuration, Google Search Console setup</span>, keyword research with GA4, and on-page optimization. In recent roles, these efforts helped client websites achieve 40%+ organic traffic growth.
+              </p>
+
+              <p>
+                I specialize in <span className="text-primary font-medium">JavaScript SEO</span> — properly implementing server-side rendering, dynamic meta tags, canonical URLs, and ensuring crawlable content for Next.js and Vue.js applications that Google can index effectively.
+              </p>
+
+              <p>
+                Before tech, I worked as a <span className="text-primary font-medium">QA Engineer in pharmaceuticals</span> — developing precision, documentation discipline, regulatory compliance mindset, and structured problem-solving. These skills transfer directly to writing testable code, thorough debugging, and working collaboratively in agile teams.
               </p>
 
               <p className="font-medium text-foreground">
-                I'm still growing — recently completed training in Python/Django and Generative AI — and excited to bring fresh energy to entry-level or mid-level roles as Python Developer, PHP Web Developer, Backend Developer, QA Engineer, or SEO Specialist.
+                I&apos;m available for <span className="text-primary">Python/Django projects, PHP/Laravel web development, Next.js applications, Technical SEO audits, and full-stack custom development</span>. Open to entry-level or mid-level roles, contract work, or consulting.
               </p>
             </div>
 

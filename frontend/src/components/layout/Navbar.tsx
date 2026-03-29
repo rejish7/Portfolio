@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
+  { name: "Services", path: "/services" },
+  // { name: "Tech Stack", path: "/tech-stack" },
   { name: "Projects", path: "/projects" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },

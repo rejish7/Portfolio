@@ -4,11 +4,11 @@ import type { BlogPost } from "@/lib/types";
 import { blogsAPI } from "@/lib/api";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Technical SEO Blog — Rejish Khanal",
   description:
-    "Technical articles, tutorials, and insights on web development, SEO, and modern technologies.",
+    "Practical articles on Technical SEO, Core Web Vitals, JavaScript SEO, and web development from an SEO specialist in Nepal.",
   alternates: {
-    canonical: "/blog",
+    canonical: "https://rejishkhanal.com.np/blog",
   },
 };
 
@@ -55,8 +55,8 @@ export default async function BlogPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Blog",
-            "name": "Rejish Khanal's Blog",
-            "description": "Technical articles, tutorials, and insights on web development, SEO, and modern technologies.",
+            "name": "Technical SEO Blog — Rejish Khanal",
+            "description": "Practical articles on Technical SEO, Core Web Vitals, JavaScript SEO, and web development from an SEO specialist in Nepal.",
             "url": "https://rejishkhanal.com.np/blog",
             "author": {
               "@type": "Person",
@@ -69,9 +69,9 @@ export default async function BlogPage() {
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Blog</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Technical SEO Blog</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Thoughts, tutorials, and insights on web development, SEO, and technology
+            Practical articles on Technical SEO, Core Web Vitals, JavaScript SEO, and web development
           </p>
         </div>
 
