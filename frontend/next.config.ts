@@ -6,7 +6,16 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["rejishkhanal.com.np"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "rejishkhanal.com.np",
+      },
+      {
+        protocol: "https",
+        hostname: "*.rejishkhanal.com.np",
+      },
+    ],
   },
 };
 

@@ -37,6 +37,7 @@ export interface BlogPost {
   content?: string;
   image?: string;
   publishedAt: string;
+  updatedAt?: string;
   readTime?: string;
   tags?: string[];
   author?: string;
