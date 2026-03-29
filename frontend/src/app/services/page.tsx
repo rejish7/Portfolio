@@ -108,11 +108,11 @@ export default function ServicesPage() {
                                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </Link>
-                        <Link href="/projects">
+                        {/* <Link href="/projects">
                             <Button size="lg" variant="outline">
                                 See Case Studies
                             </Button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </section>

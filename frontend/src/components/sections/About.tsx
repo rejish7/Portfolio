@@ -57,7 +57,7 @@ export function About() {
               </p>
 
               <p>
-                Before tech, I worked as a <span className="text-primary font-medium">QA Engineer in pharmaceuticals</span> — developing precision, documentation discipline, regulatory compliance mindset, and structured problem-solving. These skills transfer directly to writing testable code, thorough debugging, and working collaboratively in agile teams.
+                Before tech, I worked as a <span className="text-primary font-medium"> Junior QA in pharmaceuticals</span> — developing precision, documentation discipline, regulatory compliance mindset, and structured problem-solving. These skills transfer directly to writing testable code, thorough debugging, and working collaboratively in agile teams.
               </p>
 
               <p className="font-medium text-foreground">

@@ -71,11 +71,11 @@ export function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="/tech-stack">
+            {/* <Link href="/tech-stack">
               <Button size="lg" variant="outline">
                 My Tech Stack
               </Button>
-            </Link>
+            </Link> */}
             <a href="/assets/cv/rejish khanal.pdf" download>
               <Button size="lg" variant="ghost">
                 <Download className="mr-2 h-4 w-4" />

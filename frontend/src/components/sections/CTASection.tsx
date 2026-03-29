@@ -15,9 +15,9 @@ export function CTASection() {
           <Button asChild size="lg" variant="secondary">
             <Link href="/contact">Get in touch</Link>
           </Button>
-          <Button asChild size="lg" variant="outline">
+          {/* <Button asChild size="lg" variant="outline">
             <Link href="/projects">Explore my projects</Link>
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>

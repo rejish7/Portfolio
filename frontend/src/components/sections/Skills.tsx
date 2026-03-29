@@ -7,17 +7,17 @@ const skillsData = [
   {
     category: "Frontend",
     icon: Code2,
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "HTML/CSS"],
+    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "HTML/CSS"],
   },
   {
     category: "Backend",
     icon: Server,
-    skills: ["Node.js", "Python", "Express", "Django", "REST APIs"],
+    skills: ["Python", "Express", "Django", "REST APIs"],
   },
   {
     category: "Database",
     icon: Database,
-    skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
+    skills: ["PostgreSQL", "MongoDB", "MySQL",],
   },
   {
     category: "DevOps & Tools",
