@@ -37,31 +37,35 @@ export function About() {
           >
             <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I&apos;m passionate about creating clean, fast-loading web applications that users love and search engines rank well. As a <span className="text-primary font-medium">Technical SEO Specialist and Full Stack Developer</span>, I combine deep expertise in <span className="text-primary font-medium">Python (Django, FastAPI), PHP (Laravel), JavaScript frameworks (Vue.js, Next.js), Node.js, PostgreSQL, and MySQL</span> with proven SEO methodologies.
+                I'm a <span className="text-primary font-medium">SEO Specialist </span> with deep expertise in <span className="text-primary font-medium">Technical SEO, Full Stack Web Development (Python/Django, PHP/Laravel, Next.js)</span>, and <span className="text-primary font-medium">performance optimization</span>. My approach: combine developer-level technical skills with SEO expertise to build fast, crawlable, high-performing websites.
               </p>
 
               <p>
-                I&apos;ve built production applications like a <span className="text-primary font-medium">Hospital Management System using Django with PostgreSQL</span> and <span className="text-primary font-medium">Student Registration Systems with PHP/MySQL</span>, always prioritizing <span className="text-primary font-medium">performance, scalability, and SEO optimization</span>.
+                <span className="text-primary font-medium">Proven Results:</span> Driven <span className="text-primary font-medium">40-60% organic traffic increases</span> across multiple client projects through technical SEO audits, on-page optimization, keyword research, and competitive analysis using GA4 and Google Search Console.
               </p>
 
               <p>
-                I focus heavily on <span className="text-primary font-medium">Core Web Vitals optimization</span> — improving LCP (Largest Contentful Paint), CLS (Cumulative Layout Shift), and INP (Interaction to Next Paint) through code splitting, lazy loading, AVIF/WebP image formats, database query optimization, and server response time improvements. Better page speed = better rankings + higher conversion rates.
+                <span className="text-primary font-medium">Technical Expertise:</span> Specialize in <span className="text-primary font-medium">Core Web Vitals optimization</span> — improving LCP, CLS, and INP through code splitting, image optimization, database query refinement, and server response time improvements. I've reduced page load times from 5.2s to 1.9s, directly impacting rankings and conversions.
               </p>
 
               <p>
-                On the <span className="text-primary font-medium">SEO/SEM side</span>, I implement technical best practices: <span className="text-primary font-medium">schema markup (JSON-LD), clean URL structures, mobile optimization, sitemap/robots.txt configuration, Google Search Console setup</span>, keyword research with GA4, and on-page optimization. In recent roles, these efforts helped client websites achieve 40%+ organic traffic growth.
+                <span className="text-primary font-medium">SEO Implementation:</span> Lead comprehensive technical SEO audits implementing <span className="text-primary font-medium">schema markup, clean URL structures, mobile-first design, crawlability enhancements, and proper indexing</span>. I optimize on-page elements (meta tags, headings, internal linking) and conduct keyword research, competitive analysis, and search intent mapping.
               </p>
 
               <p>
-                I specialize in <span className="text-primary font-medium">JavaScript SEO</span> — properly implementing server-side rendering, dynamic meta tags, canonical URLs, and ensuring crawlable content for Next.js and Vue.js applications that Google can index effectively.
+                <span className="text-primary font-medium">Development Stack:</span> Full-stack proficiency in <span className="text-primary font-medium">Python (Django, FastAPI), PHP (Laravel), Vue.js, Next.js, PostgreSQL, MySQL, Redis</span>. All applications are built with <span className="text-primary font-medium">Core Web Vitals, schema markup, and proper rendering strategies</span> for SEO from day one.
               </p>
 
               <p>
-                Before tech, I worked as a <span className="text-primary font-medium"> Junior QA in pharmaceuticals</span> — developing precision, documentation discipline, regulatory compliance mindset, and structured problem-solving. These skills transfer directly to writing testable code, thorough debugging, and working collaboratively in agile teams.
+                <span className="text-primary font-medium">JavaScript SEO Specialist:</span> Expert in <span className="text-primary font-medium">server-side rendering, dynamic metadata, canonical URLs, and ensuring crawlable content</span> for Next.js and Vue.js applications that Google can effectively index.
+              </p>
+
+              <p>
+                Previously worked in <span className="text-primary font-medium">pharmaceutical quality assurance</span> — developing precision, documentation discipline, and regulatory compliance mindset that translate to writing testable, maintainable code and structured problem-solving in agile teams.
               </p>
 
               <p className="font-medium text-foreground">
-                I&apos;m available for <span className="text-primary">Python/Django projects, PHP/Laravel web development, Next.js applications, Technical SEO audits, and full-stack custom development</span>. Open to entry-level or mid-level roles, contract work, or consulting.
+                Available for <span className="text-primary">Technical SEO consulting, SEO audits, full-stack web development, Python/Django projects, Laravel development, Next.js applications, and performance optimization</span>.
               </p>
             </div>
 

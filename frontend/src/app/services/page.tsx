@@ -19,9 +19,16 @@ import {
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-    title: "SEO & Web Development Services — Rejish Khanal",
+    title: "SEO & Web Development Services in Nepal — Rejish Khanal",
     description:
-        "Technical SEO audits, Local SEO, and Full Stack Web Development services. Helping international businesses rank and convert with clean code and solid SEO strategy.",
+        "Technical SEO, local SEO, SEO audits, Core Web Vitals optimization, and SEO-friendly web development. Helping Nepal and international businesses rank higher and grow organic traffic.",
+    keywords: [
+        "SEO services Nepal",
+        "web development services",
+        "technical SEO services",
+        "local SEO services",
+        "SEO audit Nepal",
+    ],
     alternates: {
         canonical: "https://rejishkhanal.com.np/services",
     },
@@ -120,56 +127,127 @@ export default function ServicesPage() {
             {/* Services Grid */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto">
-                    <div className="grid md:grid-cols-3 gap-8 mb-16">
-                        {services.map((service, idx) => {
-                            const Icon = service.icon;
-                            return (
-                                <Card key={idx} className="flex flex-col h-full">
-                                    <CardHeader>
-                                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                                            <Icon className="w-6 h-6 text-primary" />
-                                        </div>
-                                        <CardTitle>{service.title}</CardTitle>
-                                        <CardDescription>{service.description}</CardDescription>
-                                    </CardHeader>
-                                    <CardContent className="flex-1 flex flex-col">
-                                        <div className="space-y-3 mb-6 flex-1">
-                                            <p className="font-semibold text-sm text-foreground">
-                                                Key Services:
-                                            </p>
-                                            <ul className="space-y-2">
-                                                {service.features.map((feature, fidx) => (
-                                                    <li key={fidx} className="flex gap-3 text-sm">
-                                                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                                                        <span className="text-muted-foreground">
-                                                            {feature}
-                                                        </span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
+                    <h2 className="text-4xl font-bold tracking-tight mb-12 text-center">
+                        Detailed Service Pages
+                    </h2>
+                    
+                    <div className="grid md:grid-cols-3 gap-6 mb-16">
+                        <Link href="/technical-seo-specialist-nepal">
+                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                                <CardHeader>
+                                    <CardTitle>Technical SEO Specialist</CardTitle>
+                                    <CardDescription>Optimize crawlability and Core Web Vitals</CardDescription>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-sm text-muted-foreground mb-4">Fix technical issues preventing your site from ranking. Schema, Core Web Vitals, JavaScript SEO, and more.</p>
+                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
+                                </CardContent>
+                            </Card>
+                        </Link>
+                        
+                        <Link href="/seo-expert-nepal">
+                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                                <CardHeader>
+                                    <CardTitle>SEO Expert Services</CardTitle>
+                                    <CardDescription>Full SEO strategy and execution</CardDescription>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-sm text-muted-foreground mb-4">Comprehensive SEO approach including technical, on-page, content, and backlink strategy.</p>
+                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
+                                </CardContent>
+                            </Card>
+                        </Link>
+                        
+                        <Link href="/seo-audit-nepal">
+                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                                <CardHeader>
+                                    <CardTitle>SEO Audit Nepal</CardTitle>
+                                    <CardDescription>Identify ranking barriers</CardDescription>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-sm text-muted-foreground mb-4">50-100+ page detailed audit report with priorities, competitive analysis, and implementation roadmap.</p>
+                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
+                                </CardContent>
+                            </Card>
+                        </Link>
+                        
+                        <Link href="/local-seo-services-nepal">
+                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                                <CardHeader>
+                                    <CardTitle>Local SEO Services</CardTitle>
+                                    <CardDescription>Rank on Google Maps</CardDescription>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-sm text-muted-foreground mb-4">Get your business visible on local search and Google Maps. Perfect for Kathmandu and Nepal businesses.</p>
+                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
+                                </CardContent>
+                            </Card>
+                        </Link>
+                        
+                        <Link href="/core-web-vitals-optimization">
+                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                                <CardHeader>
+                                    <CardTitle>Core Web Vitals</CardTitle>
+                                    <CardDescription>Faster websites, better rankings</CardDescription>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-sm text-muted-foreground mb-4">Optimize LCP, CLS, and INP. Improve page speed, user experience, and rankings simultaneously.</p>
+                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
+                                </CardContent>
+                            </Card>
+                        </Link>
+                        
+                        <Link href="/web-development-nepal">
+                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                                <CardHeader>
+                                    <CardTitle>Web Development</CardTitle>
+                                    <CardDescription>Build for SEO from day one</CardDescription>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-sm text-muted-foreground mb-4">Next.js, React, Django, Laravel. SEO-optimized websites that rank and convert.</p>
+                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
+                                </CardContent>
+                            </Card>
+                        </Link>
+                    </div>
 
-                                        <div className="space-y-4">
-                                            <div className="pt-4 border-t">
-                                                <p className="text-sm font-semibold mb-2">
-                                                    Perfect for:
-                                                </p>
-                                                <p className="text-sm text-muted-foreground">
-                                                    {service.forWho}
-                                                </p>
-                                            </div>
-
-                                            <Link href="/contact" className="block">
-                                                <Button variant="outline" className="w-full group">
-                                                    {service.cta}
-                                                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                                                </Button>
-                                            </Link>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            );
-                        })}
+                    <h3 className="text-2xl font-bold mb-6 text-center">Framework-Specific Development</h3>
+                    <div className="grid md:grid-cols-3 gap-6 mb-16">
+                        <Link href="/nextjs-seo-services">
+                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                                <CardHeader>
+                                    <CardTitle>Next.js SEO Services</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-sm text-muted-foreground mb-4">App Router, Server Components, and SSG optimization for search engines.</p>
+                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
+                                </CardContent>
+                            </Card>
+                        </Link>
+                        
+                        <Link href="/django-developer-nepal">
+                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                                <CardHeader>
+                                    <CardTitle>Django Developer</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-sm text-muted-foreground mb-4">Python backend development with SEO-friendly architecture and performance optimization.</p>
+                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
+                                </CardContent>
+                            </Card>
+                        </Link>
+                        
+                        <Link href="/laravel-developer-nepal">
+                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                                <CardHeader>
+                                    <CardTitle>Laravel Developer</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-sm text-muted-foreground mb-4">PHP backend development for fast, SEO-ready Laravel applications and websites.</p>
+                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
+                                </CardContent>
+                            </Card>
+                        </Link>
                     </div>
                 </div>
             </section>

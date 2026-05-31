@@ -5,24 +5,29 @@ import { Code2, Database, Server, Wrench } from "lucide-react";
 
 const skillsData = [
   {
+    category: "SEO & Digital Marketing",
+    icon: Code2,
+    skills: ["Technical SEO", "On-Page SEO", "Schema Markup", "Core Web Vitals", "Keyword Research", "GA4", "Google Search Console", "Competitor Analysis", "AI-Assisted SEO"],
+  },
+  {
     category: "Frontend",
     icon: Code2,
-    skills: ["Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "HTML/CSS"],
+    skills: ["Next.js", "Vue.js", "TypeScript", "HTML5", "CSS", "Tailwind CSS", "JavaScript"],
   },
   {
     category: "Backend",
     icon: Server,
-    skills: ["Python", "Express", "Django", "REST APIs"],
+    skills: ["Python", "Django", "FastAPI", "PHP", "Laravel", "REST APIs"],
   },
   {
     category: "Database",
     icon: Database,
-    skills: ["PostgreSQL", "MongoDB", "MySQL",],
+    skills: ["PostgreSQL", "MySQL", "Redis", "Database Optimization"],
   },
   {
     category: "DevOps & Tools",
     icon: Wrench,
-    skills: ["Docker", "Git","Vercel", "CI/CD", "Linux"],
+    skills: ["Git", "Linux Server Admin", "Docker", "CI/CD", "Selenium", "Jenkins", "Playwright", "Jira"],
   },
 ];
 

@@ -43,7 +43,7 @@ export function Hero() {
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground font-light">
-              I&apos;m Rejish Khanal, based in Kathmandu, Nepal
+              SEO Specialist | Full Stack Developer | Kathmandu, Nepal
             </p>
           </motion.div>
 
@@ -54,8 +54,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="max-w-2xl mx-auto text-lg text-muted-foreground"
           >
-            I build modern, scalable web applications with cutting-edge technologies.
-            Passionate about creating exceptional digital experiences that drive results.
+            I drive organic growth through technical SEO optimization, full-stack web development, and data-backed strategy.
+            Proven track record: 40-60% organic traffic increases, consistent first-page rankings, and Core Web Vitals optimization.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -65,18 +65,18 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Link href="/services">
+            <Link href="/seo-audit-nepal">
               <Button size="lg" className="group">
-                Explore My Services
+                Get a Technical SEO Audit
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            {/* <Link href="/tech-stack">
+            <Link href="/services">
               <Button size="lg" variant="outline">
-                My Tech Stack
+                View All Services
               </Button>
-            </Link> */}
-            <a href="/assets/cv/rejish khanal.pdf" download>
+            </Link>
+            <a href="/assets/cv/Rejish_Khanal_Resume.pdf" download>
               <Button size="lg" variant="ghost">
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
@@ -101,7 +101,7 @@ export function Hero() {
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com/in/rejish-khanal"
+              href="https://linkedin.com/in/rejish-khanal-259395402"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-accent hover:bg-accent/80 text-foreground transition-colors"

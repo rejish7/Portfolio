@@ -5,9 +5,9 @@ import { Experience } from "@/components/sections/Experience";
 import { Skills } from "@/components/sections/Skills";
 
 export const metadata: Metadata = {
-  title: "About Rejish Khanal — Technical SEO Specialist in Kathmandu",
+  title: "About Rejish Khanal — SEO Specialist & Full Stack Developer",
   description:
-    "SEO Specialist at Gripas Marketing with a background in full-stack web development. Helping international clients with Technical SEO and web development from Kathmandu, Nepal.",
+    "SEO Specialist at Gripas Marketing with 40-60% proven organic traffic increases. Full-stack developer proficient in Python (Django), PHP (Laravel), Next.js, and technical SEO. Based in Kathmandu, Nepal.",
   alternates: {
     canonical: "https://rejishkhanal.com.np/about",
   },

@@ -9,18 +9,18 @@ import Link from "next/link";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
-    description: "Writing maintainable, scalable, and well-documented code following best practices.",
+    title: "Technical Implementation",
+    description: "I implement SEO fixes directly in code—no developer handoff delays. Full-stack proficiency in Python, Django, Laravel, and Next.js.",
   },
   {
     icon: Target,
-    title: "Results-Driven",
-    description: "Focused on delivering solutions that meet business objectives and user needs.",
+    title: "Proven Results",
+    description: "40-60% organic traffic increases across client projects. Data-driven strategies using GA4, GSC, and continuous optimization.",
   },
   {
     icon: Sparkles,
-    title: "Innovative",
-    description: "Always exploring new technologies and approaches to solve complex problems.",
+    title: "Core Web Vitals Expertise",
+    description: "Specialized in optimizing LCP, CLS, and INP through code-level improvements—reduced load times from 5.2s to 1.9s.",
   },
 ];
 
@@ -39,20 +39,17 @@ export function AboutTeaser() {
               >
                 <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
                   <p>
-                    I&apos;m passionate about creating clean, fast-loading web applications that users love and search engines rank well. With Knowledge of
-                    Python, Django, FastAPI, PHP, Laravel, Vue.js, HTML5, CSS, JavaScript, PostgreSQL, MySQL, Redis, 
+                    I'm an <span className="text-primary font-medium">SEO Specialist </span> managing multi-client campaigns across Nepal and Australia. Unlike most SEO consultants, I implement technical fixes directly eliminating handoff delays through hands-on development in <span className="text-primary font-medium">Next.js, Django, FastAPI, Laravel, and PHP</span>.
                   </p>
-    
-                  
-    
-                  <p className="space-y-5 text-lg leading-relaxed text-muted-foreground">
-                    I&apos;m still growing — recently completed training in Python/Django and Generative AI — and excited to bring fresh energy to entry-level or mid-level roles as Python Developer, PHP Web Developer, Backend Developer, QA Engineer, or SEO Specialist.
+
+                  <p>
+                    My proven track record: <span className="text-primary font-medium">40–60% organic traffic increases</span>, consistent first-page rankings, and <span className="text-primary font-medium">Core Web Vitals optimization</span>. I've reduced page load times from 5.2s to 1.9s, implemented schema markup across complex architectures, and executed entity optimization strategies for AI search visibility (Google AI Overviews, ChatGPT Search, Perplexity).
                   </p>
                 </div>
     
                 <div className="pt-4">
                   <p className="text-muted-foreground italic">
-                    Open to opportunities, mentorship, code discussions, or SEO tips — let&apos;s connect!
+                    Available for Technical SEO audits, full-stack development, and SEO consulting across any industry.
                   </p>
                 </div>
                 <Button asChild size="lg">

@@ -3,6 +3,7 @@ import { AboutTeaser } from "@/components/sections/AboutTeaser";
 import { Skills } from "@/components/sections/Skills";
 import { ExperienceTeaser } from "@/components/sections/ExperienceTeaser";
 import { Projects } from "@/components/sections/Projects";
+import { ServiceShowcase } from "@/components/sections/ServiceShowcase";
 import { CTASection } from "@/components/sections/CTASection";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 import { FAQSection } from "@/components/FAQSection";
@@ -11,14 +12,16 @@ import type { Project, BlogPost } from "@/lib/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rejish Khanal — Technical SEO Specialist & Full Stack Developer",
+  title: "Rejish Khanal — SEO Specialist & Full Stack Developer in Nepal",
   description:
-    "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal. I help businesses rank higher and build faster using SEO audits, Core Web Vitals fixes, and modern web development.",
+    "SEO Specialist at Gripas Marketing. I drive 40-60% organic traffic increases through technical SEO, schema markup, Core Web Vitals optimization, and full-stack web development using Django, Laravel, and Next.js.",
   keywords: [
-    "technical SEO specialist",
+    "SEO specialist Nepal",
+    "technical SEO expert Kathmandu",
     "full stack developer Nepal",
-    "SEO expert Kathmandu",
-    "hire SEO specialist",
+    "Django developer",
+    "Core Web Vitals optimization",
+    "web development Nepal",
   ],
   alternates: {
     canonical: "https://rejishkhanal.com.np",
@@ -106,7 +109,90 @@ export default async function Home() {
 
   return (
     <>
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Rejish Khanal",
+            "url": "https://rejishkhanal.com.np",
+            "image": "https://rejishkhanal.com.np/assets/cv/rejish-photo.jpg",
+            "description": "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal",
+            "jobTitle": "Technical SEO Specialist & Full Stack Developer",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "NP",
+              "addressLocality": "Kathmandu",
+            },
+            "sameAs": [
+              "https://linkedin.com/in/rejish-khanal",
+              "https://github.com/rejish7",
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Rejish Khanal - Technical SEO & Web Development",
+            "url": "https://rejishkhanal.com.np",
+            "areaServed": "NP",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "NP",
+              "addressLocality": "Kathmandu",
+            },
+            "serviceType": [
+              "Technical SEO Optimization",
+              "Web Development",
+              "SEO Audit",
+              "Core Web Vitals Optimization",
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://rejishkhanal.com.np",
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": homepageFAQs.map((faq) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       <Hero />
+      <ServiceShowcase />
       <AboutTeaser />
       <Skills />
       <ExperienceTeaser />

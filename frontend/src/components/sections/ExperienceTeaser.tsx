@@ -8,13 +8,22 @@ import { Button } from "@/components/ui/button";
 
 const experiences = [
   {
-    company: "E-Prabidhi Pvt. Ltd",
-    role: "SEO Specialist & Web Developer",
-    period: "April 2025 – February 2026",
+    company: "Gripas Marketing",
+    role: "SEO Specialist",
+    period: "March 2026 – Present",
     current: true,
     location: "Kathmandu, Nepal",
-    description: "Leading technical SEO audits, optimizations, and full-stack web development for client projects, focusing on performance, Core Web Vitals, and organic growth.",
-    technologies: ["Technical SEO", "Django", "Laravel", "PHP", "Vue.js", "PostgreSQL", "MySQL", "Redis", "GA4", "Google Search Console"],
+    description: "Leading comprehensive technical SEO audits, keyword research, competitive analysis, and strategy execution. Focusing on Core Web Vitals optimization, structured data implementation, and E-E-A-T signal enhancements.",
+    technologies: ["Technical SEO", "GA4", "Google Search Console", "Schema Markup", "Core Web Vitals", "Keyword Research", "Competitive Analysis", "Entity Optimization", "AI-Assisted SEO"],
+  },
+  {
+    company: "E-Prabidhi Pvt. Ltd",
+    role: "SEO Specialist & Web Developer",
+    period: "May 2024 – February 2026",
+    current: false,
+    location: "Kathmandu, Nepal",
+    description: "Led technical SEO audits and full-stack web development. Drove 40-60% organic traffic increases through keyword research, on-page optimization, and backend performance tuning. Collaborated on SEO strategies and content optimization.",
+    technologies: ["Technical SEO", "Django", "Laravel", "PHP", "Vue.js", "PostgreSQL", "MySQL", "Redis", "GA4", "HTML5", "CSS", "JavaScript"],
   },
   {
     company: "E-Prabidhi Pvt. Ltd",
@@ -22,9 +31,8 @@ const experiences = [
     period: "September 2024 – March 2025",
     current: false,
     location: "Kathmandu, Nepal",
-    description: "Developed and optimized RESTful APIs and backend modules with a strong emphasis on technical SEO best practices and performance improvements.",
-    
-    technologies: ["Django", "Laravel", "PHP", "Vue.js", "PostgreSQL", "MySQL", "Selenium", "HTML5", "CSS", "JavaScript"],
+    description: "Developed RESTful APIs and backend modules using Django, PHP, and Laravel. Optimized database queries, implemented SEO best practices, and performed technical site audits using Selenium.",
+    technologies: ["Django", "Laravel", "PHP", "PostgreSQL", "MySQL", "Selenium", "RESTful APIs", "Testing"],
   },
   {
     company: "Florid Laboratories Pvt. Ltd",
@@ -32,8 +40,8 @@ const experiences = [
     period: "February 2022 – July 2024",
     current: false,
     location: "Lalitpur, Nepal",
-    description: "Ensured GMP/SOP compliance and product quality through process validation, sampling, inspections, and documentation in a regulated pharmaceutical environment.",
-    technologies: ["GMP/SOP Compliance", "Process Validation", "Documentation Management", "CAPA", "Audit Readiness"],
+    description: "Ensured GMP/SOP compliance through process validation, sampling, inspections, and documentation. Led CAPA follow-ups and supported audit readiness in pharmaceutical environment.",
+    technologies: ["GMP/SOP Compliance", "Process Validation", "Documentation", "CAPA", "Audit Readiness"],
   },
 ];
 
