@@ -3,416 +3,808 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { FAQSection } from "@/components/FAQSection";
 import Link from "next/link";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card";
 import {
-    BarChart3,
-    Code2,
-    MapPin,
-    CheckCircle2,
-    ArrowRight,
+  BarChart3,
+  Code2,
+  MapPin,
+  CheckCircle2,
+  ArrowRight,
+  Search,
+  FileSearch,
+  Gauge,
+  Globe2,
+  Server,
+  Layers,
+  Bot,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-    title: "SEO & Web Development Services in Nepal — Rejish Khanal",
+  title: "SEO Services in Nepal | Technical SEO & Web Development",
+  description:
+    "SEO services in Nepal by Rejish Khanal. Technical SEO, SEO audits, local SEO, Core Web Vitals, AEO, GEO, and SEO-friendly web development for organic growth.",
+  keywords: [
+    "SEO services in Nepal",
+    "SEO services Nepal",
+    "SEO expert in Nepal",
+    "SEO expert Nepal",
+    "technical SEO services Nepal",
+    "technical SEO specialist Nepal",
+    "SEO audit Nepal",
+    "local SEO services Nepal",
+    "Core Web Vitals optimization Nepal",
+    "web development Nepal",
+    "SEO friendly web development",
+    "Next.js SEO services",
+    "Django developer Nepal",
+    "Laravel developer Nepal",
+    "AEO expert Nepal",
+    "GEO expert Nepal",
+  ],
+  alternates: {
+    canonical: "https://rejishkhanal.com.np/services",
+  },
+  openGraph: {
+    title: "SEO Services in Nepal | Technical SEO, Local SEO & Web Development",
     description:
-        "Technical SEO, local SEO, SEO audits, Core Web Vitals optimization, and SEO-friendly web development. Helping Nepal and international businesses rank higher and grow organic traffic.",
-    keywords: [
-        "SEO services Nepal",
-        "web development services",
-        "technical SEO services",
-        "local SEO services",
-        "SEO audit Nepal",
-    ],
-    alternates: {
-        canonical: "https://rejishkhanal.com.np/services",
-    },
+      "Technical SEO, SEO audits, local SEO, Core Web Vitals optimization, AEO, GEO, and SEO-friendly web development services by Rejish Khanal.",
+    url: "https://rejishkhanal.com.np/services",
+    siteName: "Rejish Khanal",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SEO Services in Nepal | Rejish Khanal",
+    description:
+      "SEO services in Nepal for technical SEO, local SEO, SEO audits, Core Web Vitals, AEO, GEO, and SEO-friendly web development.",
+  },
 };
 
-const services = [
-    {
-        icon: BarChart3,
-        title: "Technical SEO",
-        description:
-            "Comprehensive technical audits and optimization to improve search rankings and user experience.",
-        features: [
-            "Crawl audit & issue fixing",
-            "Core Web Vitals optimization (LCP, CLS, INP)",
-            "JavaScript SEO (rendering, hydration issues)",
-            "Schema markup implementation",
-            "Google Search Console setup & monitoring",
-        ],
-        forWho:
-            "SaaS platforms, ecommerce sites, and any website with technical ranking issues.",
-        cta: "Start Technical SEO Audit",
-    },
-    {
-        icon: Code2,
-        title: "Full Stack Web Development",
-        description:
-            "Custom-built web applications and websites optimized for performance from day one.",
-        features: [
-            "Next.js, Vue.js, Django, Laravel, PHP",
-            "PostgreSQL & modern databases",
-            "Custom web apps & websites",
-            "Performance-first architecture",
-            "SEO-ready from inception",
-        ],
-        forWho:
-            "Startups and businesses needing a custom website or web application with SEO built-in.",
-        cta: "Build Your Website",
-    },
-    {
-        icon: MapPin,
-        title: "Local SEO",
-        description:
-            "Dominate local search results and drive foot traffic to your business.",
-        features: [
-            "Google Business Profile optimization",
-            "Local citations & NAP consistency",
-            "Local schema markup setup",
-            "Review strategy & management",
-            "Local link building",
-        ],
-        forWho:
-            "Restaurants, local businesses, and diaspora businesses in AU, UK, and US.",
-        cta: "Optimize Local Presence",
-    },
+const detailedServices = [
+  {
+    icon: BarChart3,
+    title: "Technical SEO Services in Nepal",
+    description:
+      "Improve crawlability, indexing, Core Web Vitals, schema markup, redirects, canonical tags, JavaScript SEO, and technical website performance.",
+    href: "/technical-seo-specialist-nepal",
+    cta: "Explore Technical SEO Services",
+  },
+  {
+    icon: Search,
+    title: "SEO Expert Services in Nepal",
+    description:
+      "Complete SEO strategy covering keyword research, on-page SEO, content optimization, local SEO, AEO, GEO, and organic growth planning.",
+    href: "/seo-expert-nepal",
+    cta: "Hire an SEO Expert in Nepal",
+  },
+  {
+    icon: FileSearch,
+    title: "SEO Audit Services in Nepal",
+    description:
+      "Find technical SEO errors, indexing problems, content gaps, Core Web Vitals issues, internal linking problems, and ranking barriers.",
+    href: "/seo-audit-nepal",
+    cta: "Request an SEO Audit",
+  },
+  {
+    icon: MapPin,
+    title: "Local SEO Services in Nepal",
+    description:
+      "Improve local search visibility for Kathmandu and Nepal-based businesses with Google Business Profile, local pages, citations, and map ranking strategy.",
+    href: "/local-seo-services-nepal",
+    cta: "Improve Local SEO Rankings",
+  },
+  {
+    icon: Gauge,
+    title: "Core Web Vitals Optimization",
+    description:
+      "Optimize LCP, INP, CLS, mobile performance, page speed, JavaScript execution, image loading, and user experience for stronger SEO performance.",
+    href: "/core-web-vitals-optimization",
+    cta: "Optimize Core Web Vitals",
+  },
+  {
+    icon: Code2,
+    title: "SEO-Friendly Web Development in Nepal",
+    description:
+      "Build fast, responsive, crawlable, and conversion-focused websites with clean code, structured data, strong architecture, and SEO-ready foundations.",
+    href: "/web-development-nepal",
+    cta: "Build an SEO-Friendly Website",
+  },
+];
+
+const frameworkServices = [
+  {
+    icon: Globe2,
+    title: "Next.js SEO Services",
+    description:
+      "Optimize Next.js websites for App Router, metadata, server-side rendering, static generation, structured data, crawlability, and Core Web Vitals.",
+    href: "/nextjs-seo-services",
+    cta: "Optimize a Next.js Website",
+  },
+  {
+    icon: Server,
+    title: "Django Developer in Nepal",
+    description:
+      "Build secure, scalable, and SEO-friendly Django websites with clean URL structure, performance optimization, structured content, and strong backend architecture.",
+    href: "/django-developer-nepal",
+    cta: "Hire a Django Developer",
+  },
+  {
+    icon: Layers,
+    title: "Laravel Developer in Nepal",
+    description:
+      "Create fast, structured, and SEO-ready Laravel websites with clean backend logic, optimized performance, secure architecture, and search-friendly pages.",
+    href: "/laravel-developer-nepal",
+    cta: "Hire a Laravel Developer",
+  },
+];
+
+const coreServices = [
+  {
+    icon: BarChart3,
+    title: "Technical SEO",
+    description:
+      "Comprehensive technical SEO audits and implementation to improve crawling, indexing, speed, structured data, and organic visibility.",
+    features: [
+      "Crawl audit and technical issue fixing",
+      "Core Web Vitals optimization for LCP, CLS, and INP",
+      "JavaScript SEO for rendering and hydration issues",
+      "Schema markup implementation",
+      "Google Search Console monitoring",
+      "Robots.txt and XML sitemap optimization",
+      "Canonical tag and redirect cleanup",
+      "Internal linking and site architecture improvements",
+    ],
+    forWho:
+      "Best for SaaS platforms, ecommerce websites, service websites, blogs, and businesses with technical ranking issues.",
+  },
+  {
+    icon: Code2,
+    title: "Full Stack Web Development",
+    description:
+      "Custom websites and web applications built with performance, SEO, scalability, and conversion-focused architecture from the beginning.",
+    features: [
+      "Next.js, Vue.js, Django, Laravel, and PHP development",
+      "PostgreSQL, MySQL, and modern database architecture",
+      "Custom websites and web applications",
+      "Performance-first frontend and backend structure",
+      "SEO-ready URLs, metadata, and page structure",
+      "Responsive and mobile-friendly design",
+      "Secure backend development",
+      "Analytics and conversion tracking setup",
+    ],
+    forWho:
+      "Best for startups, service businesses, personal brands, and companies that need a custom website or web application with SEO built in.",
+  },
+  {
+    icon: MapPin,
+    title: "Local SEO",
+    description:
+      "Local SEO services to help businesses appear in Google Maps, local search results, location-based service searches, and nearby customer queries.",
+    features: [
+      "Google Business Profile optimization",
+      "Local landing page strategy",
+      "Local citation and NAP consistency",
+      "LocalBusiness schema markup",
+      "Review strategy and reputation signals",
+      "Location keyword optimization",
+      "Google Maps ranking improvements",
+      "Local content and internal linking",
+    ],
+    forWho:
+      "Best for restaurants, clinics, consultants, agencies, local service providers, ecommerce businesses, and Nepal-based businesses targeting local customers.",
+  },
+];
+
+const process = [
+  {
+    step: "1",
+    title: "SEO and Business Discovery",
+    description:
+      "I understand your business, target audience, services, current website, competitors, search goals, and the keywords you want to rank for.",
+  },
+  {
+    step: "2",
+    title: "Website Audit and Strategy",
+    description:
+      "I review your technical SEO, content, page structure, indexing status, Core Web Vitals, user experience, internal links, and search performance.",
+  },
+  {
+    step: "3",
+    title: "SEO and Development Implementation",
+    description:
+      "I implement technical fixes, optimize important pages, improve site structure, add schema markup, enhance content, and build SEO-friendly features.",
+  },
+  {
+    step: "4",
+    title: "Tracking and Ongoing Optimization",
+    description:
+      "I monitor rankings, impressions, clicks, traffic, Core Web Vitals, conversions, and technical health to improve performance over time.",
+  },
+];
+
+const industries = [
+  "SaaS and Technology",
+  "Ecommerce",
+  "Restaurants and Hospitality",
+  "Local Businesses",
+  "Marketing Agencies",
+  "Startups",
+  "Digital Products",
+  "Professional Services",
+  "Education Consultancies",
+  "Finance and Loan Websites",
+  "Real Estate Businesses",
+  "Personal Brands",
+];
+
+const faqs = [
+  {
+    question: "What SEO services do you provide in Nepal?",
+    answer:
+      "I provide SEO services in Nepal including technical SEO, SEO audits, local SEO, on-page SEO, keyword research, content optimization, Core Web Vitals optimization, JavaScript SEO, schema markup, AEO, GEO, and SEO-friendly web development.",
+  },
+  {
+    question: "Why should I hire an SEO expert in Nepal?",
+    answer:
+      "Hiring an SEO expert in Nepal helps your business improve Google visibility, attract qualified organic traffic, and compete for local and national search terms. I combine technical SEO, content strategy, local SEO, and development knowledge to build practical SEO systems.",
+  },
+  {
+    question: "What is technical SEO and why is it important?",
+    answer:
+      "Technical SEO improves your website structure so search engines can crawl, render, index, and understand your content properly. It includes Core Web Vitals, JavaScript SEO, sitemap optimization, robots.txt, schema markup, canonical tags, redirects, mobile usability, and internal linking.",
+  },
+  {
+    question: "How long does SEO take to show results?",
+    answer:
+      "SEO usually takes time because Google needs to crawl, process, and evaluate changes. Some technical improvements may show results within a few weeks, while stronger ranking and traffic growth usually takes three to six months depending on competition, website condition, and content quality.",
+  },
+  {
+    question: "Do you provide SEO audits in Nepal?",
+    answer:
+      "Yes, I provide SEO audits in Nepal for service websites, ecommerce websites, blogs, SaaS websites, and custom web applications. My audits review technical SEO, indexing, Core Web Vitals, content gaps, page structure, schema markup, internal linking, and search performance.",
+  },
+  {
+    question: "Can you help with local SEO in Kathmandu and Nepal?",
+    answer:
+      "Yes, I help businesses improve local SEO in Kathmandu and across Nepal. This includes local landing pages, Google Business Profile optimization, LocalBusiness schema, location-based keywords, local citations, reviews, and Google Maps visibility.",
+  },
+  {
+    question: "What is the difference between SEO, AEO, and GEO?",
+    answer:
+      "SEO focuses on improving search engine rankings and organic traffic. AEO, or Answer Engine Optimization, focuses on making content suitable for direct answers, featured snippets, People Also Ask, and voice search. GEO, or Generative Engine Optimization, focuses on improving visibility in AI-powered and generative search experiences.",
+  },
+  {
+    question: "Can you build SEO-friendly websites?",
+    answer:
+      "Yes, I build SEO-friendly websites using modern frameworks such as Next.js, Django, Laravel, Vue.js, and PHP. I focus on clean code, fast loading speed, mobile responsiveness, structured data, crawlable pages, clean URLs, and conversion-focused architecture.",
+  },
+  {
+    question: "Do you optimize Core Web Vitals?",
+    answer:
+      "Yes, I optimize Core Web Vitals including LCP, INP, and CLS. I improve page speed, image delivery, JavaScript execution, server response time, caching, layout stability, and mobile performance.",
+  },
+  {
+    question: "Who can benefit from your SEO and web development services?",
+    answer:
+      "My services are suitable for startups, local businesses, ecommerce websites, agencies, consultants, SaaS companies, service providers, personal brands, and international businesses that want better rankings, faster websites, and long-term organic growth.",
+  },
 ];
 
 export default function ServicesPage() {
-    return (
-        <main className="min-h-screen">
-            {/* Hero Section */}
-            <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 via-background to-background">
-                <div className="max-w-4xl mx-auto">
-                    <Breadcrumb
-                        items={[
-                            { label: "Home", href: "/" },
-                            { label: "Services" },
-                        ]}
-                    />
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "SEO and Web Development Services in Nepal",
+    description:
+      "SEO services in Nepal including technical SEO, SEO audits, local SEO, Core Web Vitals optimization, AEO, GEO, and SEO-friendly web development.",
+    serviceType: [
+      "Technical SEO",
+      "SEO Audit",
+      "Local SEO",
+      "Core Web Vitals Optimization",
+      "Web Development",
+      "AEO",
+      "GEO",
+    ],
+    url: "https://rejishkhanal.com.np/services",
+    provider: {
+      "@type": "Person",
+      name: "Rejish Khanal",
+      url: "https://rejishkhanal.com.np",
+      jobTitle: "SEO Expert in Nepal and Full Stack Developer",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "NP",
+        addressLocality: "Kathmandu",
+      },
+      sameAs: [
+        "https://github.com/rejish7",
+        "https://linkedin.com/in/rejish-khanal-259395402",
+      ],
+    },
+    areaServed: [
+      {
+        "@type": "Country",
+        name: "Nepal",
+      },
+      {
+        "@type": "City",
+        name: "Kathmandu",
+      },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "SEO and Web Development Services",
+      itemListElement: [...detailedServices, ...frameworkServices].map(
+        (service) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service.title,
+            description: service.description,
+            url: `https://rejishkhanal.com.np${service.href}`,
+          },
+        })
+      ),
+    },
+  };
 
-                    <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6">
-                        SEO & Web Development Services
-                    </h1>
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "SEO and Web Development Services in Nepal",
+    url: "https://rejishkhanal.com.np/services",
+    description:
+      "SEO services in Nepal for technical SEO, local SEO, SEO audits, Core Web Vitals, AEO, GEO, and SEO-friendly web development.",
+    inLanguage: "en",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Rejish Khanal",
+      url: "https://rejishkhanal.com.np",
+    },
+    about: [
+      "SEO Services in Nepal",
+      "Technical SEO Services",
+      "SEO Audit Nepal",
+      "Local SEO Services Nepal",
+      "Web Development Nepal",
+      "Core Web Vitals Optimization",
+    ],
+  };
 
-                    <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-                        I help international businesses rank higher and convert better through
-                        technical SEO, custom web development, and local SEO strategies. Based
-                        in Kathmandu, serving clients worldwide.
-                    </p>
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://rejishkhanal.com.np",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://rejishkhanal.com.np/services",
+      },
+    ],
+  };
 
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <Link href="/contact">
-                            <Button size="lg" className="group">
-                                Get Started
-                                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                            </Button>
-                        </Link>
-                        {/* <Link href="/projects">
-                            <Button size="lg" variant="outline">
-                                See Case Studies
-                            </Button>
-                        </Link> */}
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
+  return (
+    <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(webPageSchema),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-primary/5 via-background to-background">
+        <div className="max-w-5xl mx-auto">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Services" },
+            ]}
+          />
+
+          <p className="text-sm font-semibold text-primary mb-4">
+            SEO Services in Nepal | Technical SEO | Local SEO | Web Development
+          </p>
+
+          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-6">
+            SEO and Web Development Services in Nepal for Organic Growth
+          </h1>
+
+          <p className="text-xl text-muted-foreground mb-6 max-w-3xl">
+            I am Rejish Khanal, an SEO expert in Nepal and full stack developer
+            based in Kathmandu. I help businesses improve search visibility,
+            technical SEO, Core Web Vitals, local SEO, AEO, GEO, and website
+            performance.
+          </p>
+
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl">
+            Whether you need an SEO audit, technical SEO specialist, local SEO
+            strategy, Next.js SEO support, or a fast SEO-friendly website, I can
+            help you build a stronger foundation for long-term organic traffic
+            and lead generation.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link href="/contact">
+              <Button size="lg" className="group">
+                Book an SEO Consultation
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+
+            <Link href="/seo-audit-nepal">
+              <Button size="lg" variant="outline">
+                Request an SEO Audit
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Detailed Service Pages */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-bold tracking-tight mb-4">
+              SEO Services Designed to Improve Rankings, Traffic, and Conversions
+            </h2>
+
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Explore my main SEO and web development services. Each service is
+              built to solve a specific business problem, from technical SEO
+              errors and slow page speed to local rankings, content visibility,
+              and conversion-focused website development.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            {detailedServices.map((service) => {
+              const Icon = service.icon;
+
+              return (
+                <Link
+                  key={service.href}
+                  href={service.href}
+                  aria-label={service.cta}
+                >
+                  <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                    <CardHeader>
+                      <div className="h-11 w-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                        <Icon className="h-5 w-5 text-primary" />
+                      </div>
+
+                      <CardTitle>{service.title}</CardTitle>
+
+                      <CardDescription className="text-base leading-relaxed">
+                        {service.description}
+                      </CardDescription>
+                    </CardHeader>
+
+                    <CardContent>
+                      <div className="flex items-center text-primary font-semibold text-sm">
+                        {service.cta}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-4">
+              Framework-Specific SEO and Development Services
+            </h2>
+
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Modern frameworks need clean technical implementation to perform
+              well in search. I help optimize Next.js, Django, and Laravel
+              websites for speed, crawlability, structured data, and SEO-ready
+              architecture.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            {frameworkServices.map((service) => {
+              const Icon = service.icon;
+
+              return (
+                <Link
+                  key={service.href}
+                  href={service.href}
+                  aria-label={service.cta}
+                >
+                  <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                    <CardHeader>
+                      <div className="h-11 w-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                        <Icon className="h-5 w-5 text-primary" />
+                      </div>
+
+                      <CardTitle>{service.title}</CardTitle>
+
+                      <CardDescription className="text-base leading-relaxed">
+                        {service.description}
+                      </CardDescription>
+                    </CardHeader>
+
+                    <CardContent>
+                      <div className="flex items-center text-primary font-semibold text-sm">
+                        {service.cta}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Core Services */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/5">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-4xl font-bold tracking-tight mb-4">
+              Complete SEO and Web Development Support
+            </h2>
+
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              My services combine strategy, technical implementation, and
+              performance-focused development so your website can rank better,
+              load faster, and convert more visitors.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-6">
+            {coreServices.map((service) => {
+              const Icon = service.icon;
+
+              return (
+                <Card key={service.title} className="h-full">
+                  <CardHeader>
+                    <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                      <Icon className="h-6 w-6 text-primary" />
                     </div>
+
+                    <CardTitle>{service.title}</CardTitle>
+
+                    <CardDescription className="text-base leading-relaxed">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+
+                  <CardContent>
+                    <div className="space-y-3 mb-6">
+                      {service.features.map((feature) => (
+                        <div key={feature} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                          <p className="text-sm text-muted-foreground">
+                            {feature}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="p-4 rounded-lg bg-accent/40 border">
+                      <p className="text-sm font-semibold mb-1">Best for:</p>
+                      <p className="text-sm text-muted-foreground">
+                        {service.forWho}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* AEO and GEO Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-start gap-5">
+            <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+              <Bot className="h-6 w-6 text-primary" />
+            </div>
+
+            <div>
+              <h2 className="text-4xl font-bold tracking-tight mb-6">
+                AEO and GEO Services for AI Search Visibility
+              </h2>
+
+              <div className="space-y-5 text-lg text-muted-foreground">
+                <p>
+                  Search is changing. People now use AI Overviews, featured
+                  snippets, People Also Ask, voice search, and generative AI
+                  platforms to find direct answers. That means your website
+                  should not only rank in traditional search results. It should
+                  also be structured to become a clear and trusted answer.
+                </p>
+
+                <p>
+                  I optimize content for AEO, or Answer Engine Optimization,
+                  by creating direct answers, FAQ sections, structured headings,
+                  schema-ready content, and clear definitions. I also support
+                  GEO, or Generative Engine Optimization, by improving topical
+                  depth, entity clarity, internal links, and technical
+                  accessibility for AI-powered search experiences.
+                </p>
+              </div>
+
+              <div className="mt-8">
+                <Link href="/seo-expert-nepal">
+                  <Button size="lg" variant="outline">
+                    Learn About SEO, AEO, and GEO
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/5">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold tracking-tight mb-12 text-center">
+            How I Work With SEO and Web Development Clients
+          </h2>
+
+          <div className="space-y-8">
+            {process.map((item) => (
+              <div key={item.step} className="flex gap-6">
+                <div className="shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
+                  {item.step}
                 </div>
-            </section>
 
-            {/* Services Grid */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl font-bold tracking-tight mb-12 text-center">
-                        Detailed Service Pages
-                    </h2>
-                    
-                    <div className="grid md:grid-cols-3 gap-6 mb-16">
-                        <Link href="/technical-seo-specialist-nepal">
-                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
-                                <CardHeader>
-                                    <CardTitle>Technical SEO Specialist</CardTitle>
-                                    <CardDescription>Optimize crawlability and Core Web Vitals</CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground mb-4">Fix technical issues preventing your site from ranking. Schema, Core Web Vitals, JavaScript SEO, and more.</p>
-                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
-                                </CardContent>
-                            </Card>
-                        </Link>
-                        
-                        <Link href="/seo-expert-nepal">
-                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
-                                <CardHeader>
-                                    <CardTitle>SEO Expert Services</CardTitle>
-                                    <CardDescription>Full SEO strategy and execution</CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground mb-4">Comprehensive SEO approach including technical, on-page, content, and backlink strategy.</p>
-                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
-                                </CardContent>
-                            </Card>
-                        </Link>
-                        
-                        <Link href="/seo-audit-nepal">
-                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
-                                <CardHeader>
-                                    <CardTitle>SEO Audit Nepal</CardTitle>
-                                    <CardDescription>Identify ranking barriers</CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground mb-4">50-100+ page detailed audit report with priorities, competitive analysis, and implementation roadmap.</p>
-                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
-                                </CardContent>
-                            </Card>
-                        </Link>
-                        
-                        <Link href="/local-seo-services-nepal">
-                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
-                                <CardHeader>
-                                    <CardTitle>Local SEO Services</CardTitle>
-                                    <CardDescription>Rank on Google Maps</CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground mb-4">Get your business visible on local search and Google Maps. Perfect for Kathmandu and Nepal businesses.</p>
-                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
-                                </CardContent>
-                            </Card>
-                        </Link>
-                        
-                        <Link href="/core-web-vitals-optimization">
-                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
-                                <CardHeader>
-                                    <CardTitle>Core Web Vitals</CardTitle>
-                                    <CardDescription>Faster websites, better rankings</CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground mb-4">Optimize LCP, CLS, and INP. Improve page speed, user experience, and rankings simultaneously.</p>
-                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
-                                </CardContent>
-                            </Card>
-                        </Link>
-                        
-                        <Link href="/web-development-nepal">
-                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
-                                <CardHeader>
-                                    <CardTitle>Web Development</CardTitle>
-                                    <CardDescription>Build for SEO from day one</CardDescription>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground mb-4">Next.js, React, Django, Laravel. SEO-optimized websites that rank and convert.</p>
-                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
-                                </CardContent>
-                            </Card>
-                        </Link>
-                    </div>
-
-                    <h3 className="text-2xl font-bold mb-6 text-center">Framework-Specific Development</h3>
-                    <div className="grid md:grid-cols-3 gap-6 mb-16">
-                        <Link href="/nextjs-seo-services">
-                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
-                                <CardHeader>
-                                    <CardTitle>Next.js SEO Services</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground mb-4">App Router, Server Components, and SSG optimization for search engines.</p>
-                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
-                                </CardContent>
-                            </Card>
-                        </Link>
-                        
-                        <Link href="/django-developer-nepal">
-                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
-                                <CardHeader>
-                                    <CardTitle>Django Developer</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground mb-4">Python backend development with SEO-friendly architecture and performance optimization.</p>
-                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
-                                </CardContent>
-                            </Card>
-                        </Link>
-                        
-                        <Link href="/laravel-developer-nepal">
-                            <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
-                                <CardHeader>
-                                    <CardTitle>Laravel Developer</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-sm text-muted-foreground mb-4">PHP backend development for fast, SEO-ready Laravel applications and websites.</p>
-                                    <Button variant="outline" size="sm" className="w-full">Learn More</Button>
-                                </CardContent>
-                            </Card>
-                        </Link>
-                    </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.description}</p>
                 </div>
-            </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Process Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/5">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl font-bold tracking-tight mb-12 text-center">
-                        How I Work
-                    </h2>
+      {/* Industries Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold tracking-tight mb-6 text-center">
+            Industries I Help With SEO and Website Growth
+          </h2>
 
-                    <div className="space-y-8">
-                        {[
-                            {
-                                step: "1",
-                                title: "Discovery Call",
-                                description:
-                                    "We discuss your goals, challenges, and target audience. I analyze your current situation.",
-                            },
-                            {
-                                step: "2",
-                                title: "Audit & Strategy",
-                                description:
-                                    "Deep technical analysis. I create a tailored strategy with clear deliverables and timeline.",
-                            },
-                            {
-                                step: "3",
-                                title: "Implementation",
-                                description:
-                                    "I execute the strategy, providing regular updates and transparent communication.",
-                            },
-                            {
-                                step: "4",
-                                title: "Monitoring & Optimization",
-                                description:
-                                    "Ongoing tracking of results, monthly reporting, and continuous optimization.",
-                            },
-                        ].map((item, idx) => (
-                            <div key={idx} className="flex gap-6">
-                                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">
-                                    {item.step}
-                                </div>
-                                <div>
-                                    <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                                    <p className="text-muted-foreground">{item.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-12">
+            I work with businesses that need stronger organic visibility, faster
+            websites, better search performance, and higher-quality leads from
+            Google and other discovery platforms.
+          </p>
 
-            {/* Industries Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl font-bold tracking-tight mb-12 text-center">
-                        Industries I Serve
-                    </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industries.map((industry) => (
+              <div
+                key={industry}
+                className="p-6 rounded-lg border bg-card hover:bg-accent/50 transition-colors"
+              >
+                <p className="font-semibold">{industry}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                    <div className="grid sm:grid-cols-2 gap-6">
-                        {[
-                            "SaaS & Technology",
-                            "Ecommerce",
-                            "Restaurants & Hospitality",
-                            "Local Businesses",
-                            "Marketing Agencies",
-                            "Startups",
-                            "Digital Products",
-                            "Professional Services",
-                        ].map((industry, idx) => (
-                            <div
-                                key={idx}
-                                className="p-6 rounded-lg border bg-card hover:bg-accent/50 transition-colors"
-                            >
-                                <p className="font-semibold">{industry}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+      {/* Why Work With Me */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-accent/5">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold tracking-tight mb-8 text-center">
+            Why Work With Rejish Khanal?
+          </h2>
 
-            {/* CTA Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary/10 to-primary/5">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold tracking-tight mb-6">
-                        Ready to Rank Higher and Convert Better?
-                    </h2>
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              "I combine SEO strategy with developer-level technical implementation.",
+              "I understand technical SEO, full stack development, Core Web Vitals, JavaScript SEO, and structured data.",
+              "I build websites with SEO-ready architecture instead of treating SEO as an afterthought.",
+              "I help Nepal-based and international businesses improve organic visibility.",
+              "I focus on search intent, technical clarity, content structure, and conversion-focused pages.",
+              "I support traditional SEO, AEO, GEO, and AI search readiness.",
+            ].map((point) => (
+              <div key={point} className="flex items-start gap-3 p-5 rounded-lg border bg-background">
+                <CheckCircle2 className="h-5 w-5 text-primary mt-1 shrink-0" />
+                <p className="text-muted-foreground">{point}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                    <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                        Let&apos;s discuss how I can help your business achieve its goals through
-                        SEO and web development.
-                    </p>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-r from-primary/10 to-primary/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold tracking-tight mb-6">
+            Ready to Improve Your Rankings, Traffic, and Website Performance?
+          </h2>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/contact">
-                            <Button size="lg" className="group">
-                                Schedule Consultation
-                                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                            </Button>
-                        </Link>
-                        <a href="mailto:contact@rejishkhanal.com.np">
-                            <Button size="lg" variant="outline">
-                                Email Me
-                            </Button>
-                        </a>
-                    </div>
-                </div>
-            </section>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Let&apos;s discuss how technical SEO, local SEO, content
+            optimization, and SEO-friendly web development can help your
+            business grow.
+          </p>
 
-            {/* FAQ Section */}
-            <FAQSection
-                title="Frequently Asked Questions About SEO & Web Development"
-                items={[
-                    {
-                        question: "What is Technical SEO and why is it important?",
-                        answer:
-                            "Technical SEO is the optimization of your website's technical infrastructure to help search engines crawl, index, and rank your content. It includes improving Core Web Vitals (LCP, CLS, INP), fixing JavaScript SEO issues, implementing schema markup, optimizing site speed, mobile responsiveness, and ensuring proper crawlability. Technical SEO is crucial because poor technical implementation can prevent even great content from ranking, regardless of keyword relevance.",
-                    },
-                    {
-                        question: "How long does it take to see SEO results?",
-                        answer:
-                            "SEO is a long-term strategy. While technical improvements can show results in 4-8 weeks, significant ranking improvements typically take 3-6 months, depending on competition level, current website health, and the keywords you're targeting. Consistent content creation, backlink building, and ongoing optimization accelerate results. I provide monthly reports so you can track progress transparently.",
-                    },
-                    {
-                        question: "What programming languages and frameworks do you specialize in?",
-                        answer:
-                            "I specialize in full-stack development using Python (Django, FastAPI), PHP (Laravel), JavaScript (Node.js, Vue.js, Next.js), and modern databases like PostgreSQL and MySQL. I build SEO-optimized applications from day one, ensuring proper server-side rendering, dynamic meta tags, canonical URLs, and structured data implementation. Each technology is chosen based on your project requirements.",
-                    },
-                    {
-                        question: "What is Local SEO and how does it help my business?",
-                        answer:
-                            "Local SEO optimizes your online presence to attract local customers searching for your services. It includes Google Business Profile optimization, local citations (NAP consistency), local schema markup, review management, and local link building. For restaurants, clinics, and service-based businesses, Local SEO drives foot traffic and phone calls. It's especially effective for businesses in US, UK, and Australia markets.",
-                    },
-                    {
-                        question: "Can you help with Core Web Vitals optimization?",
-                        answer:
-                            "Yes, Core Web Vitals are critical ranking factors. I specialize in optimizing LCP (Largest Contentful Paint), CLS (Cumulative Layout Shift), and INP (Interaction to Next Paint) through code splitting, lazy loading, image optimization with AVIF/WebP formats, reducing JavaScript bundles, database query optimization, and server response time improvements. These optimizations also improve user experience and conversion rates.",
-                    },
-                    {
-                        question: "How do you approach JavaScript SEO?",
-                        answer:
-                            "JavaScript SEO requires proper server-side rendering, dynamic meta tags, next/head optimization, and ensuring crawlable content for search engines. I implement Next.js with getStaticProps/getServerSideProps, structured data injection, JavaScript framework best practices, and proper hydration. This ensures Google can crawl, index, and rank your content effectively while maintaining excellent performance.",
-                    },
-                    {
-                        question: "What should be included in a technical SEO audit?",
-                        answer:
-                            "A comprehensive technical SEO audit includes: crawlability analysis, indexation status, Core Web Vitals assessment, mobile friendliness, schema markup validation, XML sitemap review, robots.txt analysis, redirect chains, duplicate content detection, SSL/HTTPS verification, server response times, image optimization, JavaScript rendering issues, and internal linking structure. I use tools like Google Search Console, PageSpeed Insights, and Screaming Frog.",
-                    },
-                    {
-                        question: "How is web development different from template-based websites?",
-                        answer:
-                            "Custom web development builds applications tailored to your unique business needs with responsive design, optimal performance, scalability, and SEO best practices built-in. Template-based sites are quicker but often limited in customization and performance. Full-stack development with Next.js, Django, or Laravel provides better SEO ranking potential, faster load times (better Core Web Vitals), easier maintenance, and competitive advantage.",
-                    },
-                    {
-                        question: "Do you provide post-launch support and maintenance?",
-                        answer:
-                            "Yes. I offer ongoing support including monthly SEO monitoring reports, Core Web Vitals tracking, search ranking updates, technical optimization adjustments, security patches, and performance monitoring. For custom-built applications, I provide maintenance, hosting guidance, updates, and optimization based on analytics data.",
-                    },
-                    {
-                        question: "What is schema markup and how does it help SEO?",
-                        answer:
-                            "Schema markup (structured data) helps search engines understand your content better, leading to richer SERP snippets, featured snippets, knowledge panels, and better rankings. I implement schemas for Person (for your profile), WebSite, Article, BreadcrumbList, FAQ, Organization, LocalBusiness, Product, and more. Proper schema markup improves CTR and visibility in search results across all traffic sources.",
-                    },
-                ]}
-            />
-        </main>
-    );
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact">
+              <Button size="lg" className="group">
+                Schedule an SEO Consultation
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+
+            <Link href="/seo-audit-nepal">
+              <Button size="lg" variant="outline">
+                Request an SEO Audit
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FAQSection
+        title="Frequently Asked Questions About SEO and Web Development Services"
+        items={faqs}
+      />
+    </main>
+  );
 }

@@ -20,9 +20,12 @@ const navItems = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
+    setMounted(true);
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
@@ -31,11 +34,14 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const activePathname = mounted ? pathname : "";
+  const isScrolled = mounted && scrolled;
+
   return (
     <nav
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled
+        isScrolled
           ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm"
           : "bg-transparent"
       )}
@@ -46,7 +52,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 rounded-lg blur-lg group-hover:bg-primary/30 transition-all" />
-              <span className="relative text-xl font-bold font-mono bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              <span className="relative text-xl font-bold font-mono bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                 RK
               </span>
             </div>
@@ -60,13 +66,13 @@ export function Navbar() {
                 href={item.path}
                 className={cn(
                   "px-4 py-2 rounded-md text-sm font-medium transition-colors relative group",
-                  pathname === item.path
+                  activePathname === item.path
                     ? "text-primary"
                     : "text-foreground/60 hover:text-foreground"
                 )}
               >
                 {item.name}
-                {pathname === item.path && (
+                {activePathname === item.path && (
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary rounded-full" />
                 )}
               </Link>
@@ -99,7 +105,7 @@ export function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={cn(
                   "block px-3 py-2 rounded-md text-base font-medium transition-colors",
-                  pathname === item.path
+                  activePathname === item.path
                     ? "text-primary bg-primary/10"
                     : "text-foreground/60 hover:text-foreground hover:bg-accent"
                 )}

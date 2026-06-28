@@ -196,7 +196,7 @@ export default async function Home() {
       <AboutTeaser />
       <Skills />
       <ExperienceTeaser />
-      <Projects projects={featuredProjects} />
+      {/* <Projects projects={featuredProjects} /> */}
       <BlogPreview posts={recentBlogs} />
       <FAQSection title="Questions About SEO & Web Development?" items={homepageFAQs} />
       <CTASection />

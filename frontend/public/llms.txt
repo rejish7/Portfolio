@@ -1,0 +1,87 @@
+# Rejish Khanal - Technical SEO Specialist & Full Stack Developer
+
+## About Rejish Khanal
+
+Rejish Khanal is a Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal. He works at Gripas Marketing and helps businesses improve organic traffic by 40-60% through technical SEO, schema markup, Core Web Vitals optimization, and full-stack web development using Django, Laravel, and Next.js.
+
+## Services
+
+### SEO Services
+- Technical SEO optimization and audits
+- Core Web Vitals optimization (LCP, INP, CLS)
+- Local SEO for Kathmandu and Nepal businesses
+- Schema markup implementation
+- AEO (Answer Engine Optimization)
+- GEO (Generative Engine Optimization)
+- JavaScript SEO for rendering issues
+- Google Search Console monitoring
+
+### Web Development Services
+- Next.js development with SEO optimization
+- Django backend development
+- Laravel and PHP development
+- Vue.js frontend development
+- PostgreSQL and MySQL databases
+- SEO-friendly website architecture
+
+## Industries Served
+
+- SaaS and Technology
+- Ecommerce
+- Restaurants and Hospitality
+- Local Businesses
+- Marketing Agencies
+- Startups
+- Digital Products
+- Professional Services
+- Education Consultancies
+- Finance and Loan Websites
+- Real Estate Businesses
+- Personal Brands
+
+## Contact Information
+
+- Email: contact@rejishkhanal.com.np
+- Location: Kathmandu, Nepal
+- Phone: +977 9862766994
+- Website: https://rejishkhanal.com.np
+
+## Social Profiles
+
+- GitHub: https://github.com/rejish7
+- LinkedIn: https://linkedin.com/in/rejish-khanal-259395402
+- Twitter: https://twitter.com/KhanalRejish
+
+## Key Pages
+
+- Home: https://rejishkhanal.com.np
+- Services: https://rejishkhanal.com.np/services
+- About: https://rejishkhanal.com.np/about
+- Blog: https://rejishkhanal.com.np/blog
+- Projects: https://rejishkhanal.com.np/projects
+- Contact: https://rejishkhanal.com.np/contact
+- Technical SEO: https://rejishkhanal.com.np/technical-seo-specialist-nepal
+- SEO Expert: https://rejishkhanal.com.np/seo-expert-nepal
+- SEO Audit: https://rejishkhanal.com.np/seo-audit-nepal
+- Local SEO: https://rejishkhanal.com.np/local-seo-services-nepal
+- Core Web Vitals: https://rejishkhanal.com.np/core-web-vitals-optimization
+- Web Development: https://rejishkhanal.com.np/web-development-nepal
+- Next.js SEO: https://rejishkhanal.com.np/nextjs-seo-services
+- Django Developer: https://rejishkhanal.com.np/django-developer-nepal
+- Laravel Developer: https://rejishkhanal.com.np/laravel-developer-nepal
+
+## Work Process
+
+1. SEO and Business Discovery - Understanding business goals, target audience, and search objectives
+2. Website Audit and Strategy - Reviewing technical SEO, content, page structure, and Core Web Vitals
+3. SEO and Development Implementation - Implementing technical fixes, schema markup, and SEO features
+4. Tracking and Ongoing Optimization - Monitoring rankings, traffic, conversions, and technical health
+
+## Key Differentiators
+
+- Combines SEO strategy with developer-level technical implementation
+- Understands technical SEO, full stack development, Core Web Vitals, JavaScript SEO, and structured data
+- Builds websites with SEO-ready architecture from the start
+- Supports traditional SEO, AEO, GEO, and AI search readiness
+- Focuses on search intent, technical clarity, content structure, and conversion-focused pages
+- Helps Nepal-based and international businesses improve organic visibility

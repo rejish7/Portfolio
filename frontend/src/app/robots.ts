@@ -1,12 +1,26 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-    return {
-        rules: {
-            userAgent: "*",
-            allow: "/",
-            disallow: "/api/",
-        },
-        sitemap: "https://rejishkhanal.com.np/sitemap.xml",
-    };
+  const baseUrl = "https://rejishkhanal.com.np";
+
+  return {
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: [
+          "/api/",
+          "/admin/",
+          "/dashboard/",
+          "/login/",
+          "/register/",
+          "/preview/",
+          "/private/",
+          "/_next/",
+        ],
+      },
+    ],
+    sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
+  };
 }
