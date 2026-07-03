@@ -22,6 +22,11 @@ import {
   Server,
   Layers,
   Bot,
+  User,
+  MessageSquare,
+  Sparkles,
+  Palette,
+  Database,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -142,6 +147,49 @@ const frameworkServices = [
       "Create fast, structured, and SEO-ready Laravel websites with clean backend logic, optimized performance, secure architecture, and search-friendly pages.",
     href: "/laravel-developer-nepal",
     cta: "Hire a Laravel Developer",
+  },
+];
+
+const specializedServices = [
+  {
+    icon: User,
+    title: "SEO Specialist in Kathmandu",
+    description:
+      "Kathmandu-focused SEO services for local businesses, service providers, and brands targeting Kathmandu and Nepal-based organic search visibility.",
+    href: "/seo-specialist-kathmandu",
+    cta: "Hire SEO Specialist in Kathmandu",
+  },
+  {
+    icon: MessageSquare,
+    title: "AEO Expert in Nepal",
+    description:
+      "Answer Engine Optimization for AI Overviews, featured snippets, People Also Ask, voice search, and direct answer visibility in search results.",
+    href: "/aeo-expert-nepal",
+    cta: "Hire an AEO Expert in Nepal",
+  },
+  {
+    icon: Sparkles,
+    title: "GEO Expert in Nepal",
+    description:
+      "Generative Engine Optimization to improve visibility in AI-powered search platforms including ChatGPT, Gemini, Perplexity, and Google AI Overviews.",
+    href: "/geo-expert-nepal",
+    cta: "Hire a GEO Expert in Nepal",
+  },
+  {
+    icon: Palette,
+    title: "WordPress SEO Expert in Nepal",
+    description:
+      "WordPress SEO services including page speed optimization, Core Web Vitals, Yoast/Rank Math setup, schema markup, caching, and technical SEO for WordPress sites.",
+    href: "/wordpress-seo-expert-nepal",
+    cta: "Hire a WordPress SEO Expert",
+  },
+  {
+    icon: Database,
+    title: "Google Search Console Expert in Nepal",
+    description:
+      "Google Search Console setup, indexing analysis, coverage issue fixing, Core Web Vitals monitoring, query performance review, and technical SEO insights.",
+    href: "/google-search-console-expert-nepal",
+    cta: "Hire a Google Search Console Expert",
   },
 ];
 
@@ -342,7 +390,7 @@ export default function ServicesPage() {
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "SEO and Web Development Services",
-      itemListElement: [...detailedServices, ...frameworkServices].map(
+      itemListElement: [...detailedServices, ...frameworkServices, ...specializedServices].map(
         (service) => ({
           "@type": "Offer",
           itemOffered: {
@@ -376,6 +424,11 @@ export default function ServicesPage() {
       "Local SEO Services Nepal",
       "Web Development Nepal",
       "Core Web Vitals Optimization",
+      "SEO Specialist Kathmandu",
+      "AEO Expert Nepal",
+      "GEO Expert Nepal",
+      "WordPress SEO Nepal",
+      "Google Search Console Nepal",
     ],
   };
 
@@ -556,6 +609,53 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {frameworkServices.map((service) => {
+              const Icon = service.icon;
+
+              return (
+                <Link
+                  key={service.href}
+                  href={service.href}
+                  aria-label={service.cta}
+                >
+                  <Card className="h-full hover:shadow-lg hover:border-primary/50 transition-all cursor-pointer">
+                    <CardHeader>
+                      <div className="h-11 w-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                        <Icon className="h-5 w-5 text-primary" />
+                      </div>
+
+                      <CardTitle>{service.title}</CardTitle>
+
+                      <CardDescription className="text-base leading-relaxed">
+                        {service.description}
+                      </CardDescription>
+                    </CardHeader>
+
+                    <CardContent>
+                      <div className="flex items-center text-primary font-semibold text-sm">
+                        {service.cta}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="text-center mb-10 mt-16">
+            <h2 className="text-3xl font-bold mb-4">
+              Specialized SEO Services in Nepal
+            </h2>
+
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Targeted SEO services for Kathmandu-based businesses, AI search
+              visibility, WordPress optimization, and Google Search Console
+              expertise to cover every aspect of organic growth.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {specializedServices.map((service) => {
               const Icon = service.icon;
 
               return (

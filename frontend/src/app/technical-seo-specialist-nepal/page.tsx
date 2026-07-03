@@ -433,18 +433,18 @@ export default function TechnicalSEOPage() {
           </h1>
 
           <p className="text-xl text-muted-foreground mb-6">
-            I am Rejish Khanal, a technical SEO specialist in Kathmandu, Nepal.
-            I help businesses fix technical SEO problems, improve Core Web
-            Vitals, solve indexing issues, optimize JavaScript SEO, implement
-            schema markup, and build websites that search engines can crawl,
-            render, understand, and rank properly.
-          </p>
+I am Rejish Khanal, a technical SEO specialist in Kathmandu, Nepal.
+             I help businesses fix technical SEO problems, improve Core Web
+             Vitals, solve indexing issues, optimize JavaScript SEO, implement
+             schema markup, and build websites that search engines can crawl,
+             render, understand, and rank properly.
+           </p>
 
-          <p className="text-lg text-muted-foreground mb-8">
-            If your website is slow, not ranking, not indexed properly, or
-            losing organic traffic, the problem may not be your content alone.
-            Your website may have technical SEO issues that are preventing
-            Google and other search engines from understanding your pages.
+           <p className="text-lg text-muted-foreground mb-8">
+             If your website is slow, not ranking, not indexed properly, or
+             losing organic traffic, the problem may not be your content alone.
+             Your website may have technical SEO issues that are preventing
+             Google and other search engines from understanding your pages.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
