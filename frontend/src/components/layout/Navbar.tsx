@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTheme } from "next-themes";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
@@ -22,6 +24,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+  const { theme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -36,6 +39,7 @@ export function Navbar() {
 
   const activePathname = mounted ? pathname : "";
   const isScrolled = mounted && scrolled;
+  const logoSrc = "/assets/images/light_logo_rk.webp";
 
   return (
     <nav
@@ -52,9 +56,14 @@ export function Navbar() {
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 rounded-lg blur-lg group-hover:bg-primary/30 transition-all" />
-              <span className="relative text-xl font-bold font-mono bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-                RK
-              </span>
+              <Image
+                src={logoSrc}
+                alt="RK Logo"
+                width={120}
+                height={40}
+                className="relative h-10 w-auto"
+                priority
+              />
             </div>
           </Link>
 

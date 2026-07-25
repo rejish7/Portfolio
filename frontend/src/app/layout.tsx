@@ -32,6 +32,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Rejish Khanal", url: "https://rejishkhanal.com.np" }],
   creator: "Rejish Khanal",
   metadataBase: new URL("https://rejishkhanal.com.np"),
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
