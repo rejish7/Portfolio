@@ -42,14 +42,14 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} — Rejish Khanal`,
+    title: `${post.title}`,
     description: post.excerpt,
     keywords: post.tags?.join(", "),
     alternates: {
       canonical: `https://rejishkhanal.com.np/blog/${slug}`,
     },
     openGraph: {
-      title: `${post.title} — Rejish Khanal`,
+      title: `${post.title}`,
       description: post.excerpt,
       type: "article",
       publishedTime: post.publishedAt,
