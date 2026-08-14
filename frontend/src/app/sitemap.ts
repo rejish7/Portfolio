@@ -105,6 +105,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/seo-specialist-uk-technical-seo-wordpress`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
     // Case Studies
     {
       url: `${baseUrl}/case-studies`,

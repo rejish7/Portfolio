@@ -191,6 +191,14 @@ const specializedServices = [
     href: "/google-search-console-expert-nepal",
     cta: "Hire a Google Search Console Expert",
   },
+  {
+    icon: Globe2,
+    title: "SEO Specialist for UK Businesses",
+    description:
+      "Remote technical SEO and WordPress specialist for UK businesses covering technical audits, Core Web Vitals, ecommerce SEO, AEO, and GEO.",
+    href: "/seo-specialist-uk-technical-seo-wordpress",
+    cta: "Hire a UK SEO Specialist",
+  },
 ];
 
 const coreServices = [
