@@ -41,20 +41,32 @@ export async function generateMetadata({
     };
   }
 
+  const metaTitle = post.seo?.title
+    ? post.seo.title.slice(0, 60)
+    : post.title.slice(0, 60);
+
+  const metaDescription = post.seo?.description
+    ? post.seo.description.slice(0, 160)
+    : post.excerpt?.slice(0, 160) || "";
+
   return {
-    title: `${post.title}`,
-    description: post.excerpt,
-    keywords: post.tags?.join(", "),
+    title: metaTitle,
+    description: metaDescription,
+    keywords: post.seo?.keywords?.join(", ") || post.tags?.join(", "),
     alternates: {
       canonical: `https://rejishkhanal.com.np/blog/${slug}`,
     },
     openGraph: {
-      title: `${post.title}`,
-      description: post.excerpt,
+      title: post.seo?.ogTitle?.slice(0, 60) || metaTitle,
+      description: post.seo?.ogDescription?.slice(0, 160) || metaDescription,
       type: "article",
       publishedTime: post.publishedAt,
       authors: [post.author || "Rejish Khanal"],
-      images: post.image ? [{ url: post.image }] : [],
+      images: post.seo?.ogImage
+        ? [{ url: post.seo.ogImage }]
+        : post.image
+          ? [{ url: post.image }]
+          : [],
     },
   };
 }

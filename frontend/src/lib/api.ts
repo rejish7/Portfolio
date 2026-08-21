@@ -69,17 +69,18 @@ const transformProject = (project: any): Project => {
 export const contactAPI = {
   submit: async (data: ContactFormData): Promise<ApiResponse<any>> => {
     try {
-      const response = await api.post("/api/contact", data);
-      return {
-        success: true,
-        data: response.data,
-        message: "Message sent successfully!",
-      };
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        return { success: false, error: result.error || "Failed to send message" };
+      }
+      return { success: true, data: result, message: result.message || "Message sent successfully!" };
     } catch (error: any) {
-      return {
-        success: false,
-        error: error.message || "Failed to send message",
-      };
+      return { success: false, error: error.message || "Failed to send message" };
     }
   },
 };

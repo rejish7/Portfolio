@@ -2,45 +2,25 @@ import nodemailer from "nodemailer";
 import config from "../config/config.js";
 import logger from "./logger.js";
 
-// Check if email is properly configured
-const isEmailConfigured = () => {
-  return (
-    (config.email.host &&
-      config.email.user &&
-      config.email.pass &&
-      config.email.host !== "smtp.gmail.com") || // Not default placeholder
-    (config.email.user !== "your-email@gmail.com" &&
-      config.email.pass !== "your-app-password")
-  );
-};
+const transporter = nodemailer.createTransport({
+  host: config.email.host,
+  port: config.email.port,
+  secure: false,
+  auth: {
+    user: config.email.user,
+    pass: config.email.pass,
+  },
+});
 
-let transporter = null;
-
-if (isEmailConfigured()) {
-  transporter = nodemailer.createTransport({
-    host: config.email.host,
-    port: config.email.port,
-    secure: false,
-    auth: {
-      user: config.email.user,
-      pass: config.email.pass,
-    },
-  });
-}
-
-const sendEmail = async ({ to, subject, text }) => {
-  // Skip if email is not configured
-  if (!transporter) {
-    logger.warn("Email not configured. Skipping email notification.");
-    return { success: false, message: "Email service not configured" };
-  }
-
+const sendEmail = async ({ to, subject, text, html, from, replyTo }) => {
   try {
     await transporter.sendMail({
-      from: config.email.user,
+      from: from || config.email.user,
       to,
       subject,
       text,
+      html,
+      replyTo,
     });
     logger.info(`Email sent successfully to ${to}`);
     return { success: true, message: "Email sent successfully" };
