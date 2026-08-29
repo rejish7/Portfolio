@@ -338,8 +338,8 @@ export default function SEOSpecialistKathmanduPage() {
       url: "https://rejishkhanal.com.np",
       jobTitle: "SEO Specialist and Technical SEO Expert",
       sameAs: [
-        "https://linkedin.com/in/rejish-khanal",
         "https://github.com/rejish7",
+        "https://x.com/KhanalRejish",
       ],
     },
     serviceType: [
@@ -378,8 +378,8 @@ export default function SEOSpecialistKathmanduPage() {
       "Next.js SEO",
     ],
     sameAs: [
-      "https://linkedin.com/in/rejish-khanal",
       "https://github.com/rejish7",
+      "https://x.com/KhanalRejish",
     ],
   };
 

@@ -227,8 +227,8 @@ export default function SEOSpecialistUKPage() {
       url: "https://rejishkhanal.com.np",
       jobTitle: "Technical SEO Specialist and Full Stack Developer",
       sameAs: [
-        "https://linkedin.com/in/rejish-khanal-259395402",
         "https://github.com/rejish7",
+        "https://x.com/KhanalRejish",
       ],
     },
     areaServed: {
@@ -264,8 +264,8 @@ export default function SEOSpecialistUKPage() {
       url: "https://rejishkhanal.com.np",
       jobTitle: "Technical SEO Specialist and Full Stack Developer",
       sameAs: [
-        "https://linkedin.com/in/rejish-khanal-259395402",
         "https://github.com/rejish7",
+        "https://x.com/KhanalRejish",
       ],
     },
     serviceType: [
@@ -300,8 +300,8 @@ export default function SEOSpecialistUKPage() {
       "Full Stack Development",
     ],
     sameAs: [
-      "https://linkedin.com/in/rejish-khanal-259395402",
       "https://github.com/rejish7",
+      "https://x.com/KhanalRejish",
     ],
   };
 

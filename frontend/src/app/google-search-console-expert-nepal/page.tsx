@@ -275,8 +275,8 @@ export default function GoogleSearchConsoleExpertPage() {
         addressLocality: "Kathmandu",
       },
       sameAs: [
-        "https://linkedin.com/in/rejish-khanal",
         "https://github.com/rejish7",
+        "https://x.com/KhanalRejish",
       ],
     },
     areaServed: [
@@ -326,8 +326,8 @@ export default function GoogleSearchConsoleExpertPage() {
       "XML Sitemaps",
     ],
     sameAs: [
-      "https://linkedin.com/in/rejish-khanal",
       "https://github.com/rejish7",
+      "https://x.com/KhanalRejish",
     ],
   };
 

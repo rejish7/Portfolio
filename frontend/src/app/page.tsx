@@ -126,8 +126,8 @@ export default async function Home() {
               "addressLocality": "Kathmandu",
             },
             "sameAs": [
-              "https://linkedin.com/in/rejish-khanal",
               "https://github.com/rejish7",
+              "https://x.com/KhanalRejish",
             ],
           }),
         }}

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import {
   Github,
-  Linkedin,
   Mail,
   MapPin,
   ArrowRight,
@@ -17,9 +16,13 @@ const socialLinks = [
     icon: Github,
   },
   {
-    name: "Rejish Khanal LinkedIn Profile",
-    url: "https://linkedin.com/in/rejish-khanal-259395402",
-    icon: Linkedin,
+    name: "Rejish Khanal on X",
+    url: "https://x.com/KhanalRejish",
+    icon: () => (
+      <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+      </svg>
+    ),
   },
   {
     name: "Email Rejish Khanal",
@@ -135,12 +138,12 @@ export function Footer() {
       jobTitle: "SEO Expert in Nepal and Technical SEO Specialist",
       sameAs: [
         "https://github.com/rejish7",
-        "https://linkedin.com/in/rejish-khanal-259395402",
+        "https://x.com/KhanalRejish",
       ],
     },
     sameAs: [
       "https://github.com/rejish7",
-      "https://linkedin.com/in/rejish-khanal-259395402",
+      "https://x.com/KhanalRejish",
     ],
     knowsAbout: [
       "SEO Expert in Nepal",

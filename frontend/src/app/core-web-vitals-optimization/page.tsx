@@ -303,7 +303,7 @@ export default function CoreWebVitalsPage() {
       },
       sameAs: [
         "https://github.com/rejish7",
-        "https://linkedin.com/in/rejish-khanal-259395402",
+        "https://x.com/KhanalRejish",
       ],
     },
     areaServed: [

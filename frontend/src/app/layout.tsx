@@ -81,7 +81,7 @@ export default function RootLayout({
       addressLocality: "Kathmandu",
       addressCountry: "NP",
     },
-    sameAs: ["https://twitter.com/KhanalRejish"],
+    sameAs: ["https://x.com/KhanalRejish"],
   };
 
   const websiteSchema = {

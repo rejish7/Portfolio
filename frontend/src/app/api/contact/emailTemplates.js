@@ -177,11 +177,11 @@ const clientConfirmationTemplate = (name, message) => `
               <table cellpadding="0" cellspacing="0" align="center">
                 <tr>
                   <td style="padding:0 6px;">
-                    <a href="https://linkedin.com/in/rejishkhanal" style="color:#94a3b8;font-size:12px;text-decoration:none;">LinkedIn</a>
+                    <a href="https://github.com/rejishkhanal" style="color:#94a3b8;font-size:12px;text-decoration:none;">GitHub</a>
                   </td>
                   <td style="color:#334155;">·</td>
                   <td style="padding:0 6px;">
-                    <a href="https://github.com/rejishkhanal" style="color:#94a3b8;font-size:12px;text-decoration:none;">GitHub</a>
+                    <a href="https://x.com/KhanalRejish" style="color:#94a3b8;font-size:12px;text-decoration:none;">X</a>
                   </td>
                   <td style="color:#334155;">·</td>
                   <td style="padding:0 6px;">

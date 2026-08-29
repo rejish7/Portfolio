@@ -234,8 +234,8 @@ export default function SEOExpertPage() {
       url: "https://rejishkhanal.com.np",
       jobTitle: "SEO Expert and Technical SEO Specialist",
       sameAs: [
-        "https://linkedin.com/in/rejish-khanal",
         "https://github.com/rejish7",
+        "https://x.com/KhanalRejish",
       ],
     },
     serviceType: [
@@ -270,8 +270,8 @@ export default function SEOExpertPage() {
       "Organic Growth",
     ],
     sameAs: [
-      "https://linkedin.com/in/rejish-khanal",
       "https://github.com/rejish7",
+      "https://x.com/KhanalRejish",
     ],
   };
 

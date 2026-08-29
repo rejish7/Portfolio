@@ -274,8 +274,8 @@ export default function TechnicalSEOPage() {
         addressLocality: "Kathmandu",
       },
       sameAs: [
-        "https://linkedin.com/in/rejish-khanal",
         "https://github.com/rejish7",
+        "https://x.com/KhanalRejish",
       ],
     },
     areaServed: [
@@ -325,8 +325,8 @@ export default function TechnicalSEOPage() {
       "GEO",
     ],
     sameAs: [
-      "https://linkedin.com/in/rejish-khanal",
       "https://github.com/rejish7",
+      "https://x.com/KhanalRejish",
     ],
   };
 
