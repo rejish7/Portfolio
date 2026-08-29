@@ -31,6 +31,11 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 </span>
               </div>
             </div>
+            {project.category && (
+              <span className="text-xs font-semibold text-primary uppercase tracking-wider">
+                {project.category}
+              </span>
+            )}
             <CardTitle className="group-hover:text-primary transition-colors">
               {project.title}
             </CardTitle>

@@ -24,9 +24,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Technical SEO Specialist in Nepal | Core Web Vitals & SEO Audit",
+  title: "Technical SEO Specialist Nepal | CWV & Audits",
   description:
-    "Hire Rejish Khanal, a technical SEO specialist in Nepal helping websites improve crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and organic rankings.",
+    "Technical SEO specialist in Nepal. Improve crawlability, indexing, Core Web Vitals, schema markup, and rankings.",
   keywords: [
     "technical SEO specialist Nepal",
     "technical SEO specialist in Nepal",

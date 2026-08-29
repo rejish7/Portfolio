@@ -5,9 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Next.js SEO Services | Build Crawlable, Fast, Rankable Web Apps",
+  title: "Next.js SEO Services | Crawlable & Fast Web Apps",
   description:
-    "Next.js SEO services for crawlable, fast, and rankable web applications. App Router, server components, and static generation optimized for search engines.",
+    "Next.js SEO services. Build crawlable, fast, and rankable web applications with App Router and static generation.",
   keywords: [
     "Next.js SEO services",
     "JavaScript SEO",

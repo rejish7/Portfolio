@@ -27,9 +27,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Core Web Vitals Optimization Nepal | LCP, INP & CLS Fixes",
+  title: "Core Web Vitals Optimization Nepal | CWV Fixes",
   description:
-    "Core Web Vitals optimization in Nepal by Rejish Khanal. Improve LCP, INP, CLS, page speed, mobile performance, technical SEO, and Google page experience.",
+    "Core Web Vitals optimization in Nepal. Improve LCP, INP, CLS, page speed, and Google page experience.",
   keywords: [
     "Core Web Vitals optimization Nepal",
     "Core Web Vitals expert Nepal",

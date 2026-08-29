@@ -19,9 +19,9 @@ import { Button } from "@/components/ui/button";
 import { SchemaScript } from "@/components/SchemaScript";
 
 export const metadata: Metadata = {
-  title: "Contact SEO Expert in Nepal | Hire Rejish Khanal",
+  title: "Contact SEO Expert Nepal | Hire Rejish Khanal",
   description:
-    "Contact Rejish Khanal, an SEO expert and technical SEO specialist in Kathmandu, Nepal. Hire me for SEO audits, technical SEO, local SEO, AEO, GEO, and web development.",
+    "Contact an SEO expert in Kathmandu for SEO audits, technical SEO, local SEO, AEO, and web development.",
   keywords: [
     "contact SEO expert in Nepal",
     "hire SEO expert Nepal",

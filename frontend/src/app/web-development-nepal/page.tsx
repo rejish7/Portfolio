@@ -26,9 +26,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Web Development Nepal | SEO-Friendly Website Developer",
+  title: "Web Development Nepal | SEO-Friendly Developer",
   description:
-    "SEO-friendly web development services in Nepal by Rejish Khanal. Build fast, crawlable, mobile-friendly, and rankable websites with Next.js, React, Django, Laravel, and SEO-first architecture.",
+    "SEO-friendly web development in Nepal. Build fast, crawlable, mobile-friendly websites with Next.js, Django, and Laravel.",
   keywords: [
     "web development Nepal",
     "web development services Nepal",

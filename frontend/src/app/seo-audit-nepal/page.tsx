@@ -23,9 +23,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Audit Nepal | Technical SEO Audit & Ranking Fixes",
+  title: "SEO Audit Nepal | Technical SEO Audit & Fixes",
   description:
-    "Get a professional SEO audit in Nepal by Rejish Khanal. Find technical SEO issues, indexing problems, Core Web Vitals errors, content gaps, and ranking barriers.",
+    "Professional SEO audit in Nepal. Find technical SEO issues, indexing problems, Core Web Vitals errors, and ranking barriers.",
   keywords: [
     "SEO audit Nepal",
     "SEO audit in Nepal",

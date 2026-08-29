@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Expert in Nepal | Technical SEO & AEO Specialist",
+  title: "SEO Expert Nepal | Technical SEO & AEO Specialist",
   description:
-    "Hire Rejish Khanal, an SEO expert in Nepal and Kathmandu specializing in technical SEO, local SEO, AEO, GEO, content SEO, and organic growth.",
+    "SEO expert in Nepal specializing in technical SEO, local SEO, AEO, GEO, and organic growth.",
   keywords: [
     "SEO expert in Nepal",
     "SEO expert Nepal",

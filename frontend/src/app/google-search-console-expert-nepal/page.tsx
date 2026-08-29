@@ -24,9 +24,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Google Search Console Expert in Nepal | GSC Audit & Optimization",
+  title: "Google Search Console Expert Nepal | GSC Audit",
   description:
-    "Hire Rejish Khanal, a Google Search Console expert in Nepal. Get indexing audit, coverage analysis, Core Web Vitals monitoring, manual action recovery, sitemap optimization, and search performance insights.",
+    "Hire a Google Search Console expert in Nepal for indexing audits, Core Web Vitals monitoring, and search performance optimization.",
   keywords: [
     "Google Search Console expert Nepal",
     "Google Search Console expert in Nepal",

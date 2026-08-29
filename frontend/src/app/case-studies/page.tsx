@@ -5,9 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Case Studies — Technical SEO & Web Development Results",
+  title: "SEO Case Studies — Technical SEO & Web Development",
   description:
-    "Real case studies showing how I've helped businesses improve their technical SEO, rankings, and organic traffic.",
+    "Real case studies showing how I've helped businesses improve technical SEO, rankings, and organic traffic.",
   keywords: [
     "case studies",
     "SEO results",

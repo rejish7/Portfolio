@@ -12,9 +12,8 @@ export const metadata: Metadata = {
   },
 };
 
-// Force dynamic rendering - prevents caching stale data
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+// Enable ISR - revalidate every hour instead of fetching on every request
+export const revalidate = 3600;
 
 async function getProjects(): Promise<Project[]> {
   try {

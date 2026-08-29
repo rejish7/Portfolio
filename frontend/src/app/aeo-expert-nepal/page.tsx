@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AEO Expert in Nepal | Answer Engine Optimization Specialist",
+  title: "AEO Expert Nepal | Answer Engine Optimization",
   description:
-    "Hire Rejish Khanal, an AEO expert in Nepal helping businesses optimize content for featured snippets, People Also Ask, AI Overviews, voice search, and answer engines.",
+    "AEO expert in Nepal. Optimize content for featured snippets, People Also Ask, AI Overviews, and voice search.",
   keywords: [
     "AEO expert in Nepal",
     "Answer Engine Optimization Nepal",

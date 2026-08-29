@@ -25,9 +25,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Local SEO Services in Nepal | Google Maps Ranking Kathmandu",
+  title: "Local SEO Services Nepal | Google Maps Ranking",
   description:
-    "Local SEO services in Nepal by Rejish Khanal. Improve Google Maps ranking, Google Business Profile visibility, local citations, reviews, and local search rankings in Kathmandu and Nepal.",
+    "Local SEO services in Nepal. Improve Google Maps ranking, Business Profile visibility, local citations, and reviews.",
   keywords: [
     "local SEO services Nepal",
     "local SEO services in Nepal",

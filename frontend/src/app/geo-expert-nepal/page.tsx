@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "GEO Expert in Nepal | Generative Engine Optimization Specialist",
+  title: "GEO Expert Nepal | Generative Engine Optimization",
   description:
-    "Hire Rejish Khanal, a GEO expert in Nepal helping businesses optimize content for AI search, generative engines, AI Overviews, ChatGPT Search, and organic visibility.",
+    "GEO expert in Nepal. Optimize content for AI search, generative engines, AI Overviews, and organic visibility.",
   keywords: [
     "GEO expert in Nepal",
     "Generative Engine Optimization Nepal",

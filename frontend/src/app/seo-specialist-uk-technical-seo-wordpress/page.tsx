@@ -24,9 +24,9 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "SEO Specialist for UK Businesses | Technical SEO, WordPress & AEO Expert",
+    "SEO Specialist for UK Businesses | Technical SEO & WordPress",
   description:
-    "Looking for a remote SEO specialist for your UK business? Rejish Khanal helps UK companies fix technical SEO issues, optimise WordPress sites, and improve Google and AI search visibility.",
+    "Remote SEO specialist for UK businesses. Fix technical SEO issues, optimise WordPress sites, and improve Google and AI search visibility.",
   keywords: [
     "SEO Specialist UK",
     "SEO Expert UK",

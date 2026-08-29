@@ -12,9 +12,9 @@ import type { Project, BlogPost } from "@/lib/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rejish Khanal — SEO Specialist & Full Stack Developer in Nepal",
+  title: "Rejish Khanal — SEO Specialist & Full Stack Developer",
   description:
-    "SEO Specialist at Gripas Marketing. I drive 40-60% organic traffic increases through technical SEO, schema markup, Core Web Vitals optimization, and full-stack web development using Django, Laravel, and Next.js.",
+    "SEO specialist and full stack developer in Nepal. 40-60% organic traffic increases through technical SEO, Core Web Vitals, and web development.",
   keywords: [
     "SEO specialist Nepal",
     "technical SEO expert Kathmandu",
@@ -28,9 +28,8 @@ export const metadata: Metadata = {
   },
 };
 
-// Force dynamic rendering - prevents caching stale data
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+// Enable ISR - revalidate every hour instead of fetching on every request
+export const revalidate = 3600;
 
 async function getFeaturedProjects(): Promise<Project[]> {
   try {

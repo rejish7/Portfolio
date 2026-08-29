@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { Database, Globe, Zap, Layers } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Full Stack Developer Tech Stack — Python, PHP, JavaScript | Rejish Khanal",
+    title: "Tech Stack — Django, Laravel, Next.js, Vue.js",
     description:
-        "Expert in Django, FastAPI, Laravel, PHP, Next.js, Vue.js, PostgreSQL, MySQL development. Specializing in performance optimization, SEO-ready architecture, and Core Web Vitals.",
+        "Full stack developer specializing in Django, Laravel, Next.js, Vue.js, PostgreSQL, and SEO-ready architecture.",
     keywords: [
         "Django developer",
         "PHP Laravel developer",
