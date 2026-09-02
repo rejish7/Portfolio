@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   ArrowRight,
   Clock,
+  MessageCircle,
 } from "lucide-react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ContactForm } from "@/components/sections/ContactForm";
@@ -67,10 +68,10 @@ const contactInfo = [
     href: "tel:+9779862766994",
   },
   {
-    icon: MapPin,
-    label: "Location",
-    value: "Kathmandu, Nepal",
-    href: null,
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "Message on WhatsApp",
+    href: "https://wa.me/9779862766994?text=Hi%20Rejish%2C%20I%20need%20help%20with%20SEO%20or%20web%20development.",
   },
 ];
 
@@ -106,11 +107,11 @@ const services = [
 ];
 
 const reasons = [
-  "Work directly with an SEO expert and full stack developer in Nepal.",
+  "Work directly with an SEO expert and full stack developer.",
   "Get support for technical SEO, local SEO, AEO, GEO, and web development.",
   "Receive practical recommendations based on your website, goals, and competition.",
   "Improve crawlability, indexing, Core Web Vitals, content structure, and organic visibility.",
-  "Available for Nepal-based businesses and international remote projects.",
+  "Available for businesses worldwide on remote projects.",
 ];
 
 const faqs = [
@@ -308,8 +309,7 @@ export default function ContactPage() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
             Get in touch to discuss SEO audits, technical SEO, local SEO, Core
             Web Vitals optimization, AEO, GEO, or SEO-friendly web development.
-            I am based in Kathmandu, Nepal and available for Nepal-based and
-            international remote projects.
+            I work with clients worldwide on remote projects.
           </p>
 
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -503,16 +503,21 @@ export default function ContactPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/seo-audit-nepal">
-              <Button size="lg" className="group">
-                Request an SEO Audit
+            <a
+              href="https://wa.me/9779862766994?text=Hi%20Rejish%2C%20I%20need%20help%20with%20SEO%20or%20web%20development."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="group bg-[#25D366] hover:bg-[#1da851] text-white">
+                <MessageCircle className="mr-2 h-4 w-4" />
+                Chat on WhatsApp
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
+            </a>
 
-            <Link href="/services">
+            <Link href="/seo-audit-nepal">
               <Button size="lg" variant="outline">
-                View All Services
+                Request an SEO Audit
               </Button>
             </Link>
           </div>
