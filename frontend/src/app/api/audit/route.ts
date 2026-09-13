@@ -215,7 +215,8 @@ function scoreMetric(value: number | null, good: number, poor: number): "good" |
   return "poor";
 }
 
-function computeScore(onPage: NonNullable<ReturnType<typeof scrapeOnPage>> extends Promise<infer T> ? T : never, mobile: ReturnType<typeof runPageSpeed> extends Promise<infer T> ? T : never) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function computeScore(onPage: any, mobile: any) {
   if (!onPage) return 0;
   let score = 0;
   let maxScore = 0;
@@ -229,8 +230,8 @@ function computeScore(onPage: NonNullable<ReturnType<typeof scrapeOnPage>> exten
   ];
   cwvMetrics.forEach(({ value, good, poor }) => {
     maxScore += 10;
-    if (value !== null && value <= good) score += 10;
-    else if (value !== null && value <= poor) score += 5;
+    if (value !== null && value !== undefined && value <= good) score += 10;
+    else if (value !== null && value !== undefined && value <= poor) score += 5;
   });
 
   // On-page SEO (60 points)
