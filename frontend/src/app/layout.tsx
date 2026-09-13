@@ -115,12 +115,14 @@ export default function RootLayout({
               })(window,document,'script','dataLayer','GTM-NZBWMFZ9');`,
           }}
         />
-        {/* Google AdSense */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6997338914679261"
-          crossOrigin="anonymous"
+
+        {/* reCAPTCHA Enterprise */}
+        <Script
+          id="recaptcha-enterprise"
+          src={`https://www.google.com/recaptcha/enterprise.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          strategy="afterInteractive"
         />
+
       </head>
       <body className={`${inter.variable} antialiased`}>
         {/* Google Tag Manager (noscript fallback) */}
