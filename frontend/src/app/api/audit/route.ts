@@ -216,6 +216,7 @@ function scoreMetric(value: number | null, good: number, poor: number): "good" |
 }
 
 function computeScore(onPage: NonNullable<ReturnType<typeof scrapeOnPage>> extends Promise<infer T> ? T : never, mobile: ReturnType<typeof runPageSpeed> extends Promise<infer T> ? T : never) {
+  if (!onPage) return 0;
   let score = 0;
   let maxScore = 0;
 
@@ -303,17 +304,18 @@ function buildRecommendations(onPage: Record<string, unknown>, mobile: Record<st
   }
 
   // Core Web Vitals
-  if (mobile?.lcp && mobile.lcp > 2500) {
-    recs.push({ category: "Performance", title: "Improve LCP", description: `LCP is ${(mobile.lcp / 1000).toFixed(1)}s. Optimize images, use CDN, reduce server response time.`, priority: "high" });
+  const m = mobile as { lcp?: number | null; cls?: number | null; inp?: number | null; ttfb?: number | null } | null;
+  if (m?.lcp && m.lcp > 2500) {
+    recs.push({ category: "Performance", title: "Improve LCP", description: `LCP is ${(m.lcp / 1000).toFixed(1)}s. Optimize images, use CDN, reduce server response time.`, priority: "high" });
   }
-  if (mobile?.cls && mobile.cls > 0.1) {
-    recs.push({ category: "Performance", title: "Fix Layout Shifts", description: `CLS is ${mobile.cls.toFixed(3)}. Set image dimensions, avoid dynamic content insertion.`, priority: "high" });
+  if (m?.cls && m.cls > 0.1) {
+    recs.push({ category: "Performance", title: "Fix Layout Shifts", description: `CLS is ${m.cls.toFixed(3)}. Set image dimensions, avoid dynamic content insertion.`, priority: "high" });
   }
-  if (mobile?.inp && mobile.inp > 200) {
-    recs.push({ category: "Performance", title: "Improve Responsiveness", description: `INP is ${mobile.inp}ms. Reduce JavaScript execution time and break up long tasks.`, priority: "high" });
+  if (m?.inp && m.inp > 200) {
+    recs.push({ category: "Performance", title: "Improve Responsiveness", description: `INP is ${m.inp}ms. Reduce JavaScript execution time and break up long tasks.`, priority: "high" });
   }
-  if (mobile?.ttfb && mobile.ttfb > 800) {
-    recs.push({ category: "Performance", title: "Reduce Server Response Time", description: `TTFB is ${mobile.ttfb}ms. Use server-side caching, optimize database queries, use a CDN.`, priority: "medium" });
+  if (m?.ttfb && m.ttfb > 800) {
+    recs.push({ category: "Performance", title: "Reduce Server Response Time", description: `TTFB is ${m.ttfb}ms. Use server-side caching, optimize database queries, use a CDN.`, priority: "medium" });
   }
 
   return recs;
