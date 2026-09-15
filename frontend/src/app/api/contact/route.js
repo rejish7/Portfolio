@@ -19,9 +19,9 @@ export async function POST(req) {
       },
     });
 
-    // 1. Notify yourself — from noreply on your domain, reply goes to the visitor
+    // 1. Notify yourself — from your Gmail, reply goes to the visitor
     await transporter.sendMail({
-      from: '"Rejish Khanal Website" <noreply@rejishkhanal.com.np>',
+      from: process.env.GMAIL_USER,
       to: process.env.CONTACT_TO_EMAIL,
       replyTo: email,
       subject: `New contact form message from ${name}`,
