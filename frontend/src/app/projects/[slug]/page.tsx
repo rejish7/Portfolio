@@ -12,7 +12,7 @@ export const revalidate = 0;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
-const getProject = async (slug: string) => {
+const getProject = async (slug: string): Promise<Project | null> => {
     try {
         const res = await fetch(`${API_BASE_URL}/api/projects/slug/${slug}`);
 
