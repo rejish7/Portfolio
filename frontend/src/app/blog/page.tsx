@@ -52,8 +52,6 @@ export const revalidate = 3600;
 async function getBlogs(): Promise<BlogPost[]> {
   try {
     const response = await blogsAPI.getAll();
-    console.log("response: ", response)
-
     if (response.success && response.data) {
       return response.data;
     }

@@ -235,17 +235,18 @@ function computeScore(onPage: any, mobile: any) {
   });
 
   // On-page SEO (60 points)
+  const p = onPage!;
   const onPageChecks: Array<{ met: boolean; points: number }> = [
-    { met: onPage.titleLength >= 30 && onPage.titleLength <= 60, points: 10 },
-    { met: onPage.metaDescriptionLength >= 120 && onPage.metaDescriptionLength <= 160, points: 10 },
-    { met: onPage.h1Count === 1, points: 8 },
-    { met: onPage.imagesMissingAlt === 0 && onPage.totalImages > 0, points: 6 },
-    { met: onPage.hasSchema, points: 8 },
-    { met: onPage.ogTitle !== "", points: 4 },
-    { met: onPage.ogImage !== "", points: 4 },
-    { met: onPage.canonical !== "", points: 4 },
-    { met: onPage.lang !== "", points: 3 },
-    { met: onPage.viewport !== "", points: 3 },
+    { met: p.titleLength >= 30 && p.titleLength <= 60, points: 10 },
+    { met: p.metaDescriptionLength >= 120 && p.metaDescriptionLength <= 160, points: 10 },
+    { met: p.h1Count === 1, points: 8 },
+    { met: p.imagesMissingAlt === 0 && p.totalImages > 0, points: 6 },
+    { met: p.hasSchema, points: 8 },
+    { met: p.ogTitle !== "", points: 4 },
+    { met: p.ogImage !== "", points: 4 },
+    { met: p.canonical !== "", points: 4 },
+    { met: p.lang !== "", points: 3 },
+    { met: p.viewport !== "", points: 3 },
   ];
   onPageChecks.forEach(({ met, points }) => {
     maxScore += points;
