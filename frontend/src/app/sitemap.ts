@@ -22,8 +22,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectEntries: MetadataRoute.Sitemap = projects.map((project) => ({
     url: `${baseUrl}/projects/${project.slug}`,
     lastModified: project.updatedAt ? new Date(project.updatedAt) : new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
   }));
 
   const blogEntries: MetadataRoute.Sitemap = blogs.map((post) => ({
@@ -33,152 +31,130 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       : post.publishedAt
         ? new Date(post.publishedAt)
         : new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.7,
   }));
 
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 1.0,
     },
     {
       url: `${baseUrl}/services`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
     },
-    // SEO Service Landing Pages
     {
       url: `${baseUrl}/technical-seo-specialist-nepal`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/seo-expert-nepal`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/seo-audit-nepal`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/local-seo-services-nepal`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/core-web-vitals-optimization`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
     },
     {
       url: `${baseUrl}/web-development-nepal`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
     },
     {
       url: `${baseUrl}/nextjs-seo-services`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
     },
     {
       url: `${baseUrl}/django-developer-nepal`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
     },
     {
       url: `${baseUrl}/laravel-developer-nepal`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
     },
     {
       url: `${baseUrl}/seo-specialist-uk-technical-seo-wordpress`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
     },
-    // Case Studies
+    {
+      url: `${baseUrl}/aeo-expert-nepal`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/geo-expert-nepal`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/google-search-console-expert-nepal`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/seo-specialist-kathmandu`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/wordpress-seo-expert-nepal`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/tools`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/tools/core-web-vitals-checker`,
+      lastModified: new Date(),
+    },
     {
       url: `${baseUrl}/case-studies`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
     },
     {
       url: `${baseUrl}/case-studies/technical-seo-ecommerce`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
     },
     {
       url: `${baseUrl}/case-studies/core-web-vitals-saas`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
     },
     {
       url: `${baseUrl}/case-studies/local-seo-restaurant`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
     },
     {
       url: `${baseUrl}/tech-stack`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
     },
     {
       url: `${baseUrl}/projects`,
       lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
     },
     ...projectEntries,
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 0.8,
     },
     ...blogEntries,
     {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
     },
     {
-      url: `${baseUrl}/free-seo-review/`,
+      url: `${baseUrl}/free-seo-review`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.9,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.6,
     },
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),
-      changeFrequency: "yearly" as const,
-      priority: 0.3,
     },
   ];
 }

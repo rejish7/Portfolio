@@ -7,17 +7,48 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: [
-          "OAI-SearchBot",
-          "ChatGPT-User",
-          "PerplexityBot",
-          "ClaudeBot",
-          "Claude-SearchBot",
-          "Google-Extended",
-          "Applebot-Extended",
+          // OpenAI - Training
           "GPTBot",
+          // OpenAI - Search & Citations
+          "OAI-SearchBot",
+          // OpenAI - User-triggered fetch
+          "ChatGPT-User",
+          // Anthropic - Training
           "ClaudeBot",
+          "anthropic-ai",
+          // Anthropic - Retrieval
+          "Claude-User",
+          "Claude-Web",
+          // Perplexity - Search & Citations
+          "PerplexityBot",
+          "Perplexity-User",
+          // Google - AI Training (Gemini)
+          "Google-Extended",
+          // Apple - AI Training
+          "Applebot-Extended",
+          // Common Crawl - Training corpus
+          "CCBot",
+          // Amazon
           "Amazonbot",
+          // Meta - Llama Training
           "Meta-ExternalAgent",
+          "FacebookBot",
+          // ByteDance
+          "Bytespider",
+          // Cohere
+          "cohere-ai",
+          // You.com
+          "YouBot",
+          // Phind
+          "PhindBot",
+          // DuckDuckGo
+          "DuckAssistBot",
+          // Kagi
+          "KagiBot",
+          // Mistral
+          "MistralAI-User",
+          // xAI
+          "GrokBot",
         ],
         allow: ["/"],
         disallow: ["/api/", "/admin/", "/private/"],
