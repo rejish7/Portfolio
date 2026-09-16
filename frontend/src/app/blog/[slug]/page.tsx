@@ -7,13 +7,14 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { SchemaScript } from "@/components/SchemaScript";
 import { formatDate } from "@/lib/utils";
 import { notFound } from "next/navigation";
+import type { BlogPost } from "@/lib/types";
 
 // Enable ISR - revalidate every hour instead of fetching on every request
 export const revalidate = 3600;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
-const getBlogPost = async (slug: string) => {
+const getBlogPost = async (slug: string): Promise<BlogPost | null> => {
   try {
     const res = await fetch(`${API_BASE_URL}/api/blogs/${slug}`, {
       next: { revalidate: 3600 },
