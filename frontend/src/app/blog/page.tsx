@@ -125,7 +125,7 @@ export default async function BlogPage() {
     name: "SEO Blog Nepal",
     url: `${baseUrl}/blog`,
     description:
-      "A collection of SEO, technical SEO, Core Web Vitals, JavaScript SEO, AEO, GEO, local SEO, and web development articles by Rejish Khanal.",
+      "A collection of SEO tips, technical SEO, Core Web Vitals, JavaScript SEO, AEO, GEO, local SEO, and web development articles by Rejish Khanal.",
     inLanguage: "en",
     isPartOf: {
       "@type": "WebSite",
