@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ExternalLink, Github, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { projectsAPI } from "@/lib/api";
 import { notFound } from "next/navigation";
 import type { Project } from "@/lib/types";
 
@@ -11,13 +10,31 @@ import type { Project } from "@/lib/types";
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
+
 const getProject = async (slug: string) => {
     try {
-        const response = await projectsAPI.getBySlug(slug);
-        if (response.success && response.data) {
-            return response.data;
+        const res = await fetch(`${API_BASE_URL}/api/projects/slug/${slug}`);
+
+        if (!res.ok) {
+            return null;
         }
-        return null;
+
+        const project = await res.json();
+
+        return {
+            id: project._id || project.id,
+            slug: project.slug || project._id,
+            title: project.title,
+            description: project.description,
+            fullDescription: project.fullDescription,
+            image: project.image,
+            technologies: project.technologies || [],
+            liveUrl: project.liveUrl,
+            githubUrl: project.githubUrl,
+            featured: project.featured,
+            category: project.category,
+        };
     } catch (error) {
         console.error("Failed to fetch project:", error);
         return null;

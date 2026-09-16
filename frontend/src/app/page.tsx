@@ -7,7 +7,6 @@ import { ServiceShowcase } from "@/components/sections/ServiceShowcase";
 import { CTASection } from "@/components/sections/CTASection";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 import { FAQSection } from "@/components/FAQSection";
-import { projectsAPI, blogsAPI } from "@/lib/api";
 import type { Project, BlogPost } from "@/lib/types";
 import type { Metadata } from "next";
 
@@ -31,13 +30,36 @@ export const metadata: Metadata = {
 // Enable ISR - revalidate every hour instead of fetching on every request
 export const revalidate = 3600;
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
+
 async function getFeaturedProjects(): Promise<Project[]> {
   try {
-    const response = await projectsAPI.getAll();
-    if (response.success && response.data) {
-      return response.data.filter(p => p.featured).slice(0, 3);
-    }
-    return [];
+    const res = await fetch(`${API_BASE_URL}/api/projects`, {
+      next: { revalidate: 3600 },
+    });
+
+    if (!res.ok) return [];
+
+    const data = await res.json();
+
+    if (!Array.isArray(data)) return [];
+
+    return data
+      .map((project: any) => ({
+        id: project._id || project.id,
+        slug: project.slug || project._id,
+        title: project.title,
+        description: project.description,
+        fullDescription: project.fullDescription,
+        image: project.image,
+        technologies: project.technologies || [],
+        liveUrl: project.liveUrl,
+        githubUrl: project.githubUrl,
+        featured: project.featured,
+        category: project.category,
+      }))
+      .filter((p: Project) => p.featured)
+      .slice(0, 3);
   } catch (error) {
     console.error("Failed to fetch projects:", error);
     return [];
@@ -46,11 +68,32 @@ async function getFeaturedProjects(): Promise<Project[]> {
 
 async function getRecentBlogs(): Promise<BlogPost[]> {
   try {
-    const response = await blogsAPI.getAll();
-    if (response.success && response.data) {
-      return response.data.slice(0, 3);
-    }
-    return [];
+    const res = await fetch(`${API_BASE_URL}/api/blogs`, {
+      next: { revalidate: 3600 },
+    });
+
+    if (!res.ok) return [];
+
+    const data = await res.json();
+
+    if (!Array.isArray(data)) return [];
+
+    return data
+      .map((post: any) => ({
+        id: post._id || post.id,
+        slug: post.slug || post._id,
+        title: post.title,
+        excerpt: post.excerpt,
+        content: post.content,
+        image: post.image,
+        publishedAt: post.publishedAt,
+        updatedAt: post.updatedAt,
+        readTime: post.readTime,
+        tags: post.tags,
+        author: post.author,
+        seo: post.seo,
+      }))
+      .slice(0, 3);
   } catch (error) {
     console.error("Failed to fetch blogs:", error);
     return [];

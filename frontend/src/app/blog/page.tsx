@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BlogCard } from "@/components/BlogCard";
 import type { BlogPost } from "@/lib/types";
-import { blogsAPI } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen, Search, Gauge, Code2, Bot } from "lucide-react";
 import { SchemaScript } from "@/components/SchemaScript";
@@ -49,14 +48,40 @@ export const metadata: Metadata = {
 // Enable ISR - revalidate every hour instead of fetching on every request
 export const revalidate = 3600;
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
+
 async function getBlogs(): Promise<BlogPost[]> {
   try {
-    const response = await blogsAPI.getAll();
-    if (response.success && response.data) {
-      return response.data;
+    const res = await fetch(`${API_BASE_URL}/api/blogs`, {
+      next: { revalidate: 3600 },
+    });
+
+    if (!res.ok) {
+      console.error(`Blog API returned ${res.status}: ${res.statusText}`);
+      return [];
     }
 
-    return [];
+    const data = await res.json();
+
+    if (!Array.isArray(data)) {
+      console.error("Blog API returned non-array:", typeof data);
+      return [];
+    }
+
+    return data.map((post: any) => ({
+      id: post._id || post.id,
+      slug: post.slug || post._id,
+      title: post.title,
+      excerpt: post.excerpt,
+      content: post.content,
+      image: post.image,
+      publishedAt: post.publishedAt,
+      updatedAt: post.updatedAt,
+      readTime: post.readTime,
+      tags: post.tags,
+      author: post.author,
+      seo: post.seo,
+    }));
   } catch (error) {
     console.error("Failed to fetch blogs:", error);
     return [];

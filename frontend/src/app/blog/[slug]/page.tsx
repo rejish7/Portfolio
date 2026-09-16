@@ -6,19 +6,39 @@ import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { SchemaScript } from "@/components/SchemaScript";
 import { formatDate } from "@/lib/utils";
-import { blogsAPI } from "@/lib/api";
 import { notFound } from "next/navigation";
 
 // Enable ISR - revalidate every hour instead of fetching on every request
 export const revalidate = 3600;
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
+
 const getBlogPost = async (slug: string) => {
   try {
-    const response = await blogsAPI.getBySlug(slug);
-    if (response.success && response.data) {
-      return response.data;
+    const res = await fetch(`${API_BASE_URL}/api/blogs/${slug}`, {
+      next: { revalidate: 3600 },
+    });
+
+    if (!res.ok) {
+      return null;
     }
-    return null;
+
+    const post = await res.json();
+
+    return {
+      id: post._id || post.id,
+      slug: post.slug || post._id,
+      title: post.title,
+      excerpt: post.excerpt,
+      content: post.content,
+      image: post.image,
+      publishedAt: post.publishedAt,
+      updatedAt: post.updatedAt,
+      readTime: post.readTime,
+      tags: post.tags,
+      author: post.author,
+      seo: post.seo,
+    };
   } catch (error) {
     console.error("Failed to fetch blog post:", error);
     return null;
