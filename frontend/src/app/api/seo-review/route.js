@@ -181,8 +181,10 @@ function seoReviewConfirmationTemplate(name) {
 }
 
 export async function POST(req) {
+  console.log("[SEO-REVIEW] Hit /api/seo-review", { method: req.method, url: req.url });
   try {
     const data = await req.json();
+    console.log("[SEO-REVIEW] Received:", { fullName: data.fullName, businessName: data.businessName });
 
     // Honeypot check
     if (data.website_confirm) {
@@ -259,7 +261,7 @@ export async function POST(req) {
       message: "Your SEO review request has been received.",
     });
   } catch (err) {
-    console.error("SEO review form error:", err);
+    console.error("[SEO-REVIEW] Error:", err.message, err.stack);
     return Response.json(
       { error: "Failed to submit request" },
       { status: 500 }

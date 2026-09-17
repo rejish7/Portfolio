@@ -387,14 +387,18 @@ async function sendAuditEmail(to: string, result: Record<string, unknown>) {
 
 // ── Handler ──
 export async function POST(req: NextRequest) {
+  console.log("[AUDIT] Hit /api/audit", { method: req.method, url: req.url });
   try {
     const ip = getClientIP(req);
+    console.log("[AUDIT] Request from IP:", ip);
     if (!checkRateLimit(ip)) {
+      console.log("[AUDIT] Rate limited IP:", ip);
       return NextResponse.json({ error: "Rate limit exceeded. Max 5 requests per hour." }, { status: 429 });
     }
 
     const body = await req.json();
     const { url, email, source } = body as { url?: string; email?: string; source?: string };
+    console.log("[AUDIT] Received:", { url, email, source });
 
     if (!url || typeof url !== "string") {
       return NextResponse.json({ error: "URL is required." }, { status: 400 });
