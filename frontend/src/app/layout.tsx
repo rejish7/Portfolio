@@ -116,13 +116,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* reCAPTCHA Enterprise */}
-        <Script
-          id="recaptcha-enterprise"
-          src={`https://www.google.com/recaptcha/enterprise.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
-          strategy="afterInteractive"
-        />
-
       </head>
       <body className={`${inter.variable} antialiased`}>
         {/* Google Tag Manager (noscript fallback) */}

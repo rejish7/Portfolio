@@ -11,46 +11,49 @@ export const metadata: Metadata = {
   },
 };
 
-// Enable ISR - revalidate every hour instead of fetching on every request
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
 async function getProjects(): Promise<Project[]> {
-  try {
-    const res = await fetch(`${API_BASE_URL}/api/projects`, {
-      next: { revalidate: 3600 },
-    });
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(`${API_BASE_URL}/api/projects`, {
+        signal: AbortSignal.timeout(30000),
+      });
 
-    if (!res.ok) {
-      console.error(`Projects API returned ${res.status}: ${res.statusText}`);
+      if (!res.ok) {
+        if (attempt < 3) continue;
+        return [];
+      }
+
+      const data = await res.json();
+
+      if (!Array.isArray(data)) {
+        console.error("Projects API returned non-array:", typeof data);
+        return [];
+      }
+
+      return data.map((project: any) => ({
+        id: project._id || project.id,
+        slug: project.slug || project._id,
+        title: project.title,
+        description: project.description,
+        fullDescription: project.fullDescription,
+        image: project.image,
+        technologies: project.technologies || [],
+        liveUrl: project.liveUrl,
+        githubUrl: project.githubUrl,
+        featured: project.featured,
+        category: project.category,
+      }));
+    } catch (error) {
+      console.error(`Failed to fetch projects (attempt ${attempt}):`, error);
+      if (attempt < 3) continue;
       return [];
     }
-
-    const data = await res.json();
-
-    if (!Array.isArray(data)) {
-      console.error("Projects API returned non-array:", typeof data);
-      return [];
-    }
-
-    return data.map((project: any) => ({
-      id: project._id || project.id,
-      slug: project.slug || project._id,
-      title: project.title,
-      description: project.description,
-      fullDescription: project.fullDescription,
-      image: project.image,
-      technologies: project.technologies || [],
-      liveUrl: project.liveUrl,
-      githubUrl: project.githubUrl,
-      featured: project.featured,
-      category: project.category,
-    }));
-  } catch (error) {
-    console.error("Failed to fetch projects:", error);
-    return [];
   }
+  return [];
 }
 
 export default async function ProjectsPage() {

@@ -10,17 +10,6 @@ import {
   TrendingUp, ChevronDown, ChevronUp, ExternalLink,
 } from "lucide-react";
 
-declare global {
-  interface Window {
-    grecaptcha: {
-      enterprise: {
-        ready: (cb: () => void) => void;
-        execute: (key: string, opts: { action: string }) => Promise<string>;
-      };
-    };
-  }
-}
-
 interface CoreWebVitalsData {
   mobile: MetricSet;
   desktop: MetricSet;
@@ -188,23 +177,10 @@ export function CoreWebVitalsChecker() {
     setLoading(true);
 
     try {
-      let token = "";
-      try {
-        if (typeof window !== "undefined" && window.grecaptcha?.enterprise) {
-          token = await new Promise<string>((resolve, reject) => {
-            window.grecaptcha.enterprise.ready(() => {
-              window.grecaptcha.enterprise
-                .execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!, { action: "audit" })
-                .then(resolve).catch(reject);
-            });
-          });
-        }
-      } catch { /* continue without token */ }
-
       const res = await fetch("/api/audit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url, email: email || undefined, source: "core-web-vitals-checker", recaptchaToken: token }),
+        body: JSON.stringify({ url, email: email || undefined, source: "core-web-vitals-checker" }),
       });
 
       const data = await res.json();

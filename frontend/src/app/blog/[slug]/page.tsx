@@ -9,41 +9,45 @@ import { formatDate } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import type { BlogPost } from "@/lib/types";
 
-// Enable ISR - revalidate every hour instead of fetching on every request
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
 const getBlogPost = async (slug: string): Promise<BlogPost | null> => {
-  try {
-    const res = await fetch(`${API_BASE_URL}/api/blogs/${slug}`, {
-      next: { revalidate: 3600 },
-    });
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(`${API_BASE_URL}/api/blogs/${slug}`, {
+        signal: AbortSignal.timeout(30000),
+      });
 
-    if (!res.ok) {
+      if (!res.ok) {
+        if (attempt < 3) continue;
+        return null;
+      }
+
+      const post = await res.json();
+
+      return {
+        id: post._id || post.id,
+        slug: post.slug || post._id,
+        title: post.title,
+        excerpt: post.excerpt,
+        content: post.content,
+        image: post.image,
+        publishedAt: post.publishedAt,
+        updatedAt: post.updatedAt,
+        readTime: post.readTime,
+        tags: post.tags,
+        author: post.author,
+        seo: post.seo,
+      };
+    } catch (error) {
+      console.error(`Failed to fetch blog post (attempt ${attempt}):`, error);
+      if (attempt < 3) continue;
       return null;
     }
-
-    const post = await res.json();
-
-    return {
-      id: post._id || post.id,
-      slug: post.slug || post._id,
-      title: post.title,
-      excerpt: post.excerpt,
-      content: post.content,
-      image: post.image,
-      publishedAt: post.publishedAt,
-      updatedAt: post.updatedAt,
-      readTime: post.readTime,
-      tags: post.tags,
-      author: post.author,
-      seo: post.seo,
-    };
-  } catch (error) {
-    console.error("Failed to fetch blog post:", error);
-    return null;
   }
+  return null;
 };
 
 export async function generateMetadata({

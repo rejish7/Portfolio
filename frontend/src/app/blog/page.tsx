@@ -45,47 +45,52 @@ export const metadata: Metadata = {
   },
 };
 
-// Enable ISR - revalidate every hour instead of fetching on every request
-export const revalidate = 3600;
+// Force dynamic - always fetch fresh data from API (Render instances sleep after inactivity)
+export const dynamic = "force-dynamic";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
 async function getBlogs(): Promise<BlogPost[]> {
-  try {
-    const res = await fetch(`${API_BASE_URL}/api/blogs`, {
-      next: { revalidate: 3600 },
-    });
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(`${API_BASE_URL}/api/blogs`, {
+        signal: AbortSignal.timeout(30000),
+      });
 
-    if (!res.ok) {
-      console.error(`Blog API returned ${res.status}: ${res.statusText}`);
+      if (!res.ok) {
+        console.error(`Blog API returned ${res.status}: ${res.statusText} (attempt ${attempt})`);
+        if (attempt < 3) continue;
+        return [];
+      }
+
+      const data = await res.json();
+
+      if (!Array.isArray(data)) {
+        console.error("Blog API returned non-array:", typeof data);
+        return [];
+      }
+
+      return data.map((post: any) => ({
+        id: post._id || post.id,
+        slug: post.slug || post._id,
+        title: post.title,
+        excerpt: post.excerpt,
+        content: post.content,
+        image: post.image,
+        publishedAt: post.publishedAt,
+        updatedAt: post.updatedAt,
+        readTime: post.readTime,
+        tags: post.tags,
+        author: post.author,
+        seo: post.seo,
+      }));
+    } catch (error) {
+      console.error(`Failed to fetch blogs (attempt ${attempt}):`, error);
+      if (attempt < 3) continue;
       return [];
     }
-
-    const data = await res.json();
-
-    if (!Array.isArray(data)) {
-      console.error("Blog API returned non-array:", typeof data);
-      return [];
-    }
-
-    return data.map((post: any) => ({
-      id: post._id || post.id,
-      slug: post.slug || post._id,
-      title: post.title,
-      excerpt: post.excerpt,
-      content: post.content,
-      image: post.image,
-      publishedAt: post.publishedAt,
-      updatedAt: post.updatedAt,
-      readTime: post.readTime,
-      tags: post.tags,
-      author: post.author,
-      seo: post.seo,
-    }));
-  } catch (error) {
-    console.error("Failed to fetch blogs:", error);
-    return [];
   }
+  return [];
 }
 
 export default async function BlogPage() {

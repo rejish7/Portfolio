@@ -4,7 +4,7 @@ import cors from "cors";
 const allowedOrigins = [
   "https://rejishkhanal.com.np",
   "https://www.rejishkhanal.com.np",
-  "http://localhost:3000", // For local development
+  "http://localhost:3000",
 ];
 
 export default cors({

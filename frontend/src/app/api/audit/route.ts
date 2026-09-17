@@ -323,21 +323,6 @@ function buildRecommendations(onPage: Record<string, unknown>, mobile: Record<st
   return recs;
 }
 
-// ── reCAPTCHA (optional) ──
-async function verifyRecaptchaOptional(token?: string): Promise<boolean> {
-  if (!token) return true;
-  if (process.env.RECAPTCHA_ENABLED !== "true") return true;
-  const key = process.env.RECAPTCHA_SECRET_KEY;
-  if (!key || key.startsWith("your_")) return true;
-  try {
-    const { verifyRecaptcha } = await import("@/lib/recaptcha");
-    const result = await verifyRecaptcha(token);
-    return result.success;
-  } catch {
-    return true;
-  }
-}
-
 // ── Cache helpers (optional) ──
 async function getCached(url: string) {
   try {
@@ -409,12 +394,7 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json();
-    const { url, email, source, recaptchaToken } = body as { url?: string; email?: string; source?: string; recaptchaToken?: string };
-
-    const captchaOk = await verifyRecaptchaOptional(recaptchaToken);
-    if (!captchaOk) {
-      return NextResponse.json({ error: "reCAPTCHA verification failed." }, { status: 403 });
-    }
+    const { url, email, source } = body as { url?: string; email?: string; source?: string };
 
     if (!url || typeof url !== "string") {
       return NextResponse.json({ error: "URL is required." }, { status: 400 });
