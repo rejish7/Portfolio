@@ -75,12 +75,12 @@ interface AuditResult {
 
 // ── Helpers ──
 function formatMs(ms: number | null): string {
-  if (ms === null) return "—";
+  if (ms === null) return "-";
   return ms < 1000 ? `${Math.round(ms)}ms` : `${(ms / 1000).toFixed(2)}s`;
 }
 
 function formatSeconds(ms: number | null): string {
-  if (ms === null) return "—";
+  if (ms === null) return "-";
   return `${(ms / 1000).toFixed(2)}s`;
 }
 
@@ -229,7 +229,7 @@ export function CoreWebVitalsChecker() {
             )}
             <Button type="submit" disabled={loading} className="w-full h-14 text-base font-bold" size="lg">
               {loading ? (
-                <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Analyzing website — this takes 15-30 seconds...</>
+                <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Analyzing website, this takes 15-30 seconds...</>
               ) : (
                 <><Search className="mr-2 h-5 w-5" /> Run Full SEO Audit</>
               )}
@@ -276,10 +276,10 @@ export function CoreWebVitalsChecker() {
           {result.isOwnWebsite && (
             <Card className="border-2 border-green-300 dark:border-green-700 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20">
               <CardContent className="pt-8 pb-8 text-center">
-                <div className="text-6xl mb-4">🎉</div>
+                <div className="text-6xl mb-4">100</div>
                 <h3 className="text-2xl font-bold mb-3 text-green-800 dark:text-green-300">Obviously 100/100!</h3>
                 <p className="text-green-700 dark:text-green-400 mb-4 max-w-lg mx-auto leading-relaxed">
-                  This is my own website — <strong>rejishkhanal.com.np</strong> — of course it&apos;s fully optimized!
+                  This is my own website, <strong>rejishkhanal.com.np</strong>, of course it&apos;s fully optimized!
                   I built it with Next.js, implemented Core Web Vitals, schema markup, technical SEO, and every trick in the book.
                 </p>
                 <p className="text-sm text-green-600 dark:text-green-500 mb-6">
@@ -323,8 +323,8 @@ export function CoreWebVitalsChecker() {
                       {[
                         { label: "FCP", value: formatMs(result.coreWebVitals.mobile.fcp), good: "< 1.8s" },
                         { label: "LCP", value: formatMs(result.coreWebVitals.mobile.lcp), good: "< 2.5s" },
-                        { label: "TBT", value: "—", good: "< 200ms" },
-                        { label: "CLS", value: result.coreWebVitals.mobile.cls !== null ? result.coreWebVitals.mobile.cls.toFixed(3) : "—", good: "< 0.1" },
+                        { label: "TBT", value: "-", good: "< 200ms" },
+                        { label: "CLS", value: result.coreWebVitals.mobile.cls !== null ? result.coreWebVitals.mobile.cls.toFixed(3) : "-", good: "< 0.1" },
                       ].map((m) => (
                         <div key={m.label} className="p-2 rounded-lg bg-muted/30">
                           <div className="text-xs text-muted-foreground">{m.label}</div>
@@ -365,12 +365,12 @@ export function CoreWebVitalsChecker() {
             </Card>
           )}
 
-          {/* ═══ CORE WEB VITALS — MOBILE ═══ */}
+          {/* ═══ CORE WEB VITALS - MOBILE ═══ */}
           <Card>
             <CardHeader className="pb-3">
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2 text-lg">
-                  <Globe className="h-5 w-5 text-primary" /> Core Web Vitals — Mobile
+                  <Globe className="h-5 w-5 text-primary" /> Core Web Vitals - Mobile
                 </CardTitle>
                 <span className="text-xs font-bold px-3 py-1 rounded-full bg-primary/10 text-primary">PRIORITY</span>
               </div>
@@ -388,7 +388,7 @@ export function CoreWebVitalsChecker() {
                   <MetricBar score={result.coreWebVitals.mobile.clsScore} label="Cumulative Layout Shift (CLS)" />
                   <div className="flex items-center justify-between -mt-3 ml-1">
                     <span className="text-xs text-muted-foreground">How much the page layout shifts unexpectedly during loading</span>
-                    <span className="text-sm font-bold">{result.coreWebVitals.mobile.cls !== null ? result.coreWebVitals.mobile.cls.toFixed(4) : "—"}</span>
+                    <span className="text-sm font-bold">{result.coreWebVitals.mobile.cls !== null ? result.coreWebVitals.mobile.cls.toFixed(4) : "-"}</span>
                   </div>
 
                   <MetricBar score={result.coreWebVitals.mobile.inpScore} label="Interaction to Next Paint (INP)" />
@@ -418,11 +418,11 @@ export function CoreWebVitalsChecker() {
             </CardContent>
           </Card>
 
-          {/* ═══ CORE WEB VITALS — DESKTOP ═══ */}
+          {/* ═══ CORE WEB VITALS - DESKTOP ═══ */}
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2 text-lg">
-                <Globe className="h-5 w-5 text-muted-foreground" /> Core Web Vitals — Desktop
+                <Globe className="h-5 w-5 text-muted-foreground" /> Core Web Vitals - Desktop
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -436,7 +436,7 @@ export function CoreWebVitalsChecker() {
                 <MetricBar score={result.coreWebVitals.desktop.clsScore} label="CLS" />
                 <div className="flex items-center justify-between -mt-3 ml-1">
                   <span className="text-xs text-muted-foreground">Cumulative Layout Shift</span>
-                  <span className="text-sm font-bold">{result.coreWebVitals.desktop.cls !== null ? result.coreWebVitals.desktop.cls.toFixed(4) : "—"}</span>
+                  <span className="text-sm font-bold">{result.coreWebVitals.desktop.cls !== null ? result.coreWebVitals.desktop.cls.toFixed(4) : "-"}</span>
                 </div>
 
                 <MetricBar score={result.coreWebVitals.desktop.inpScore} label="INP" />
@@ -469,7 +469,7 @@ export function CoreWebVitalsChecker() {
                   label="Title Tag"
                   passed={result.onPage.titleLength >= 30 && result.onPage.titleLength <= 60}
                   detail={`${result.onPage.titleLength} chars`}
-                  tip={result.onPage.titleLength === 0 ? "Add a title tag with your target keyword (30-60 characters)" : `Current: "${result.onPage.title}" — should be 30-60 characters`}
+                  tip={result.onPage.titleLength === 0 ? "Add a title tag with your target keyword (30-60 characters)" : `Current: "${result.onPage.title}" - should be 30-60 characters`}
                 />
 
                 {/* Meta Description */}
@@ -485,7 +485,7 @@ export function CoreWebVitalsChecker() {
                   label="H1 Heading"
                   passed={result.onPage.h1Count === 1}
                   detail={result.onPage.h1Count === 0 ? "Missing" : `${result.onPage.h1Count} found`}
-                  tip={result.onPage.h1Count === 0 ? "Every page needs exactly one H1 tag containing the target keyword" : result.onPage.h1Count > 1 ? "Use only one H1 per page — use H2-H6 for subheadings" : ""}
+                  tip={result.onPage.h1Count === 0 ? "Every page needs exactly one H1 tag containing the target keyword" : result.onPage.h1Count > 1 ? "Use only one H1 per page - use H2-H6 for subheadings" : ""}
                 />
 
                 {/* Images */}
@@ -493,7 +493,7 @@ export function CoreWebVitalsChecker() {
                   label="Image Alt Text"
                   passed={result.onPage.imagesMissingAlt === 0 && result.onPage.totalImages > 0}
                   detail={result.onPage.totalImages > 0 ? `${result.onPage.imagesWithAlt}/${result.onPage.totalImages} have alt` : "No images"}
-                  tip={result.onPage.imagesMissingAlt > 0 ? `${result.onPage.imagesMissingAlt} images missing descriptive alt text — this hurts accessibility and image SEO` : ""}
+                  tip={result.onPage.imagesMissingAlt > 0 ? `${result.onPage.imagesMissingAlt} images missing descriptive alt text - this hurts accessibility and image SEO` : ""}
                 />
 
                 {/* Schema */}
@@ -557,7 +557,7 @@ export function CoreWebVitalsChecker() {
                   label="Content Length"
                   passed={result.onPage.wordCount >= 300}
                   detail={`${result.onPage.wordCount.toLocaleString()} words`}
-                  tip={result.onPage.wordCount < 300 ? `Only ${result.onPage.wordCount} words — aim for 300+ words for better SEO` : ""}
+                  tip={result.onPage.wordCount < 300 ? `Only ${result.onPage.wordCount} words - aim for 300+ words for better SEO` : ""}
                 />
 
                 {/* Links */}

@@ -1,97 +1,120 @@
-import { Hero } from "@/components/sections/Hero";
-import { AboutTeaser } from "@/components/sections/AboutTeaser";
-import { Skills } from "@/components/sections/Skills";
-import { ExperienceTeaser } from "@/components/sections/ExperienceTeaser";
-import { Projects } from "@/components/sections/Projects";
-import { ServiceShowcase } from "@/components/sections/ServiceShowcase";
-import { CTASection } from "@/components/sections/CTASection";
+import { HomepageHero } from "@/components/sections/HomepageHero";
+import { WhoIsRejish } from "@/components/sections/WhoIsRejish";
+import { KeyExpertise } from "@/components/sections/KeyExpertise";
+import { HomepageProblems } from "@/components/sections/HomepageProblems";
+import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { HomepageProcess } from "@/components/sections/HomepageProcess";
+import { WhyChoose } from "@/components/sections/WhyChoose";
+import { AboutSummary } from "@/components/sections/AboutSummary";
+import { TechnicalStack } from "@/components/sections/TechnicalStack";
+import { CaseStudiesPreview } from "@/components/sections/CaseStudiesPreview";
+import { HomepageKeyFacts } from "@/components/sections/HomepageKeyFacts";
 import { BlogPreview } from "@/components/sections/BlogPreview";
-import { FAQSection } from "@/components/FAQSection";
-import type { Project, BlogPost } from "@/lib/types";
+import { HomepageFAQ } from "@/components/sections/HomepageFAQ";
+import { HomepageCTA } from "@/components/sections/HomepageCTA";
+import type { BlogPost } from "@/lib/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rejish Khanal — SEO Specialist & Full Stack Developer",
+  title: "Technical SEO Expert in Nepal | Rejish Khanal",
   description:
-    "SEO specialist and full stack developer in Nepal. 40-60% organic traffic increases through technical SEO, Core Web Vitals, and web development.",
+    "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
   keywords: [
-    "SEO specialist Nepal",
-    "technical SEO expert Kathmandu",
-    "full stack developer Nepal",
-    "Django developer",
-    "Core Web Vitals optimization",
-    "web development Nepal",
+    "technical SEO expert in Nepal",
+    "SEO expert in Nepal",
+    "AEO expert Nepal",
+    "GEO expert Nepal",
+    "technical SEO specialist Nepal",
+    "Core Web Vitals expert Nepal",
+    "SEO specialist Kathmandu",
+    "Next.js SEO expert Nepal",
+    "technical SEO audit Nepal",
+    "JavaScript SEO specialist Nepal",
+    "Answer Engine Optimization Nepal",
+    "Generative Engine Optimization Nepal",
+    "Django developer Nepal",
+    "Laravel developer Nepal",
+    "full-stack developer Nepal",
+    "Schema markup implementation Nepal",
+    "crawlability optimization Nepal",
+    "indexation management Nepal",
+    "structured data expert Nepal",
+    "AI search optimization Nepal",
+    "ChatGPT Search optimization",
+    "Perplexity SEO",
+    "Google AI Overviews optimization",
+    "hire SEO expert Nepal",
   ],
+  authors: [{ name: "Rejish Khanal", url: "https://rejishkhanal.com.np" }],
+  creator: "Rejish Khanal",
+  publisher: "Rejish Khanal",
   alternates: {
     canonical: "https://rejishkhanal.com.np",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Technical SEO Expert in Nepal | Rejish Khanal",
+    description:
+      "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
+    url: "https://rejishkhanal.com.np",
+    siteName: "Rejish Khanal",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://rejishkhanal.com.np/assets/images/rejish-khanal-technical-seo-expert-nepal.webp",
+        width: 800,
+        height: 800,
+        alt: "Rejish Khanal - Technical SEO Expert in Nepal",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Technical SEO Expert in Nepal | Rejish Khanal",
+    description:
+      "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
+    images: ["https://rejishkhanal.com.np/assets/images/rejish-khanal-technical-seo-expert-nepal.webp"],
+    creator: "@KhanalRejish",
+  },
 };
 
-// Enable ISR - revalidate every hour instead of fetching on every request
 export const revalidate = 3600;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
-
-async function getFeaturedProjects(): Promise<Project[]> {
-  try {
-    const res = await fetch(`${API_BASE_URL}/api/projects`, {
-      next: { revalidate: 3600 },
-    });
-
-    if (!res.ok) return [];
-
-    const data = await res.json();
-
-    if (!Array.isArray(data)) return [];
-
-    return data
-      .map((project: any) => ({
-        id: project._id || project.id,
-        slug: project.slug || project._id,
-        title: project.title,
-        description: project.description,
-        fullDescription: project.fullDescription,
-        image: project.image,
-        technologies: project.technologies || [],
-        liveUrl: project.liveUrl,
-        githubUrl: project.githubUrl,
-        featured: project.featured,
-        category: project.category,
-      }))
-      .filter((p: Project) => p.featured)
-      .slice(0, 3);
-  } catch (error) {
-    console.error("Failed to fetch projects:", error);
-    return [];
-  }
-}
 
 async function getRecentBlogs(): Promise<BlogPost[]> {
   try {
     const res = await fetch(`${API_BASE_URL}/api/blogs`, {
       next: { revalidate: 3600 },
     });
-
     if (!res.ok) return [];
-
     const data = await res.json();
-
     if (!Array.isArray(data)) return [];
-
     return data
-      .map((post: any) => ({
-        id: post._id || post.id,
-        slug: post.slug || post._id,
-        title: post.title,
-        excerpt: post.excerpt,
-        content: post.content,
-        image: post.image,
-        publishedAt: post.publishedAt,
-        updatedAt: post.updatedAt,
-        readTime: post.readTime,
-        tags: post.tags,
-        author: post.author,
-        seo: post.seo,
+      .map((post: Record<string, unknown>) => ({
+        id: (post._id || post.id) as string,
+        slug: (post.slug || post._id) as string,
+        title: post.title as string,
+        excerpt: post.excerpt as string,
+        content: post.content as string,
+        image: post.image as string,
+        publishedAt: post.publishedAt as string,
+        updatedAt: post.updatedAt as string,
+        readTime: post.readTime as string,
+        tags: post.tags as string[],
+        author: post.author as string,
+        seo: post.seo as BlogPost["seo"],
       }))
       .slice(0, 3);
   } catch (error) {
@@ -101,147 +124,123 @@ async function getRecentBlogs(): Promise<BlogPost[]> {
 }
 
 export default async function Home() {
-  const [featuredProjects, recentBlogs] = await Promise.all([
-    getFeaturedProjects(),
-    getRecentBlogs(),
-  ]);
+  const recentBlogs = await getRecentBlogs();
 
-  const homepageFAQs = [
-    {
-      question: "What does a Technical SEO Specialist do?",
-      answer:
-        "A Technical SEO Specialist optimizes your website's technical infrastructure to help search engines (Google, Bing) crawl, index, and rank your content effectively. This includes improving Core Web Vitals, fixing JavaScript rendering issues, implementing schema markup, optimizing server response times, ensuring mobile responsiveness, and setting up proper redirect chains. I audit your site, identify issues, and implement solutions to improve rankings and user experience.",
+  const siteUrl = "https://rejishkhanal.com.np";
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${siteUrl}/#person`,
+    name: "Rejish Khanal",
+    alternateName: ["Rejish", "Khanal Rejish"],
+    url: siteUrl,
+    image: `${siteUrl}/assets/images/rejish-khanal-technical-seo-expert-nepal.webp`,
+    description:
+      "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
+    jobTitle: ["Technical SEO Expert", "Full-Stack Developer"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Kathmandu",
+      addressRegion: "Bagmati",
+      addressCountry: "NP",
     },
-    {
-      question: "How are Full Stack Developers different from Frontend or Backend developers?",
-      answer:
-        "Full Stack Developers like myself have expertise across the entire application: frontend (HTML, CSS, JavaScript, React, Vue.js), backend (Node.js, Python Django, PHP Laravel), databases (PostgreSQL, MySQL), DevOps, and deployment. This means faster development, better architecture decisions, and seamless integration. Full Stack development is ideal for startups and businesses that need comprehensive solutions without coordinating multiple specialists.",
+    geo: { "@type": "GeoCoordinates", latitude: 27.7172, longitude: 85.324 },
+    knowsAbout: [
+      "Technical SEO", "Search Engine Optimization", "Answer Engine Optimization",
+      "Generative Engine Optimization", "Core Web Vitals", "JavaScript SEO",
+      "Structured Data", "JSON-LD", "Google Search Console", "Google Analytics",
+      "Next.js", "Django", "Laravel", "Python", "PHP", "PostgreSQL", "MySQL",
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/rejishkhanalseo/",
+      "https://github.com/rejish7",
+      "https://x.com/KhanalRejish",
+    ],
+    email: "contact@rejishkhanal.com.np",
+  };
+
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${siteUrl}/#professionalservice`,
+    name: "Rejish Khanal - Technical SEO Expert in Nepal",
+    url: siteUrl,
+    description:
+      "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
+    email: "contact@rejishkhanal.com.np",
+    areaServed: [
+      { "@type": "Country", name: "Nepal" },
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "Australia" },
+    ],
+    address: { "@type": "PostalAddress", addressLocality: "Kathmandu", addressCountry: "NP" },
+    geo: { "@type": "GeoCoordinates", latitude: 27.7172, longitude: 85.324 },
+    founder: { "@type": "Person", "@id": `${siteUrl}/#person`, name: "Rejish Khanal" },
+    serviceType: [
+      "Technical SEO Audit", "Core Web Vitals Optimization", "Answer Engine Optimization",
+      "Generative Engine Optimization", "JavaScript SEO", "Structured Data Implementation",
+      "SEO-Friendly Web Development", "Next.js Development", "Django Development", "Laravel Development",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "SEO & Web Development Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Technical SEO Audit", description: "Comprehensive technical SEO audit covering crawlability, indexing, Core Web Vitals, structured data, and JavaScript rendering." } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Core Web Vitals Optimization", description: "Optimization of LCP, INP, and CLS metrics through code splitting, image optimization, and server performance improvements." } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "AEO & GEO Optimization", description: "Answer Engine Optimization and Generative Engine Optimization for AI search visibility in ChatGPT, Perplexity, and Google AI Overviews." } },
+      ],
     },
-    {
-      question: "What is Core Web Vitals and why should I care?",
-      answer:
-        "Core Web Vitals are three key performance metrics Google uses for ranking: LCP (page load speed), CLS (visual stability), and INP (responsiveness). Poor Core Web Vitals hurt your Google rankings and user experience. I optimize these metrics through code splitting, image optimization, lazy loading, reducing JavaScript bundles, and improving server performance. Better metrics = better rankings + higher conversion rates.",
+  };
+
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Rejish Khanal - Technical SEO Expert in Nepal",
+    url: siteUrl,
+    description: "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
+    author: { "@type": "Person", "@id": `${siteUrl}/#person`, name: "Rejish Khanal" },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: { "@type": "EntryPoint", urlTemplate: `${siteUrl}/blog?q={search_term_string}` },
+      "query-input": "required name=search_term_string",
     },
-    {
-      question: "How can I improve my website's Google ranking?",
-      answer:
-        "Ranking on Google requires a multi-pronged approach: 1) Technical SEO (fix crawlability, Core Web Vitals, schema markup), 2) On-page SEO (keywords, meta tags, headings, internal linking), 3) Content SEO (quality, relevance, length), 4) Backlink building (authority signals), 5) Local SEO (if applicable). I provide comprehensive audits and implement strategies tailored to your industry and target keywords.",
-    },
-    {
-      question: "What technologies do you use to build websites?",
-      answer:
-        "I specialize in modern, performant tech stacks: Next.js and Vue.js for frontend (excellent for SEO), Django and FastAPI for Python backends, Laravel and PHP for traditional backends, PostgreSQL and MySQL for databases, and Redis for caching. Each technology choice prioritizes SEO, performance, and scalability. All applications are built with Core Web Vitals, schema markup, and proper rendering strategies in mind.",
-    },
-    {
-      question: "Can you help if my website isn't ranking?",
-      answer:
-        "Yes. I start with a comprehensive technical SEO audit to identify issues preventing ranking. Common problems include poor Core Web Vitals, improper schema markup, JavaScript rendering issues, thin content, missing meta tags, poor internal linking, or technical crawlability issues. Once I identify the root causes, I create a prioritized action plan and implement solutions. Most clients see ranking improvements within 2-4 months.",
-    },
-    {
-      question: "Do you work with international clients?",
-      answer:
-        "Yes, I work with clients worldwide, particularly from the US, UK, and Australia. I'm based in Kathmandu, Nepal, and available for remote work with flexible hours. Time zone differences are not an issue — I provide detailed email updates, monthly reports, and scheduled calls during overlapping hours.",
-    },
-    {
-      question: "How do you measure SEO success?",
-      answer:
-        "I track metrics that matter: keyword rankings (tracked via Google Search Console and rank trackers), organic traffic (Google Analytics), click-through rate (CTR) from SERPs, conversion rate, and revenue. I focus on commercial keywords that drive business results, not vanity metrics. Monthly reports show progress on keywords, traffic, and whether your investment is paying off.",
-    },
-  ];
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+    ],
+  };
 
   return (
     <>
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Rejish Khanal",
-            "url": "https://rejishkhanal.com.np",
-            "image": "https://rejishkhanal.com.np/assets/cv/rejish-photo.jpg",
-            "description": "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal",
-            "jobTitle": "Technical SEO Specialist & Full Stack Developer",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "NP",
-              "addressLocality": "Kathmandu",
-            },
-            "sameAs": [
-              "https://github.com/rejish7",
-              "https://x.com/KhanalRejish",
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Rejish Khanal - Technical SEO & Web Development",
-            "url": "https://rejishkhanal.com.np",
-            "areaServed": "NP",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "NP",
-              "addressLocality": "Kathmandu",
-            },
-            "serviceType": [
-              "Technical SEO Optimization",
-              "Web Development",
-              "SEO Audit",
-              "Core Web Vitals Optimization",
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://rejishkhanal.com.np",
-              },
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": homepageFAQs.map((faq) => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer,
-              },
-            })),
-          }),
-        }}
-      />
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <Hero />
-      <ServiceShowcase />
-      <AboutTeaser />
-      <Skills />
-      <ExperienceTeaser />
-      {/* <Projects projects={featuredProjects} /> */}
-      <BlogPreview posts={recentBlogs} />
-      <FAQSection title="Questions About SEO & Web Development?" items={homepageFAQs} />
-      <CTASection />
+      {/* Sections */}
+      <main id="main-content" aria-label="Rejish Khanal - Technical SEO Expert in Nepal Homepage">
+        <HomepageHero />
+        <WhoIsRejish />
+        <KeyExpertise />
+        <HomepageProblems />
+        <ServicesGrid />
+        <HomepageProcess />
+        <WhyChoose />
+        <AboutSummary />
+        <TechnicalStack />
+        <CaseStudiesPreview />
+        <HomepageKeyFacts />
+        <BlogPreview posts={recentBlogs} />
+        <HomepageFAQ />
+        <HomepageCTA />
+      </main>
     </>
   );
 }

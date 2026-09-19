@@ -19,7 +19,7 @@ interface CaseStudy {
 
 const caseStudies: Record<string, CaseStudy> = {
   "technical-seo-ecommerce": {
-    title: "Technical SEO Audit — E-Commerce Site",
+    title: "Technical SEO Audit - E-Commerce Site",
     description: "Improved crawlability and Core Web Vitals leading to 45% traffic increase",
     overview:
       "An e-commerce website was struggling with poor search visibility, slow page loads, and indexing issues. A comprehensive technical SEO audit and implementation plan was needed to unlock organic growth.",
@@ -67,7 +67,7 @@ const caseStudies: Record<string, CaseStudy> = {
     ],
   },
   "local-seo-restaurant": {
-    title: "Local SEO Setup — Kathmandu Restaurant",
+    title: "Local SEO Setup - Kathmandu Restaurant",
     description: "Google Business Profile optimization and local citations for visibility",
     overview:
       "A restaurant in Kathmandu wanted to improve its visibility in local search results, Google Maps, and voice search queries for food-related searches.",
@@ -110,7 +110,7 @@ export async function generateMetadata({
   if (!study) return { title: "Case Study Not Found" };
 
   return {
-    title: `${study.title} — Case Study`,
+    title: `${study.title} - Case Study`,
     description: study.description,
     alternates: {
       canonical: `https://rejishkhanal.com.np/case-studies/${slug}`,

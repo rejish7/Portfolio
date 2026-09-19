@@ -729,7 +729,7 @@ export default function LocalSEOPage() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/seo-expert-nepal">
+            <Link href="/seo-expert-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 SEO Expert in Nepal
               </p>
@@ -738,7 +738,7 @@ export default function LocalSEOPage() {
               </p>
             </Link>
 
-            <Link href="/seo-audit-nepal">
+            <Link href="/seo-audit-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 SEO Audit Services in Nepal
               </p>
@@ -747,7 +747,7 @@ export default function LocalSEOPage() {
               </p>
             </Link>
 
-            <Link href="/technical-seo-specialist-nepal">
+            <Link href="/technical-seo-specialist-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 Technical SEO Specialist in Nepal
               </p>

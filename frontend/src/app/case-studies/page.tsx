@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Case Studies — Technical SEO & Web Development",
+  title: "SEO Case Studies - Technical SEO & Web Development",
   description:
     "Real case studies showing how I've helped businesses improve technical SEO, rankings, and organic traffic.",
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-    title: "Technical SEO Audit — E-Commerce Site",
+    title: "Technical SEO Audit - E-Commerce Site",
     description: "Improved crawlability and Core Web Vitals leading to 45% traffic increase",
     metrics: [
       { label: "Traffic Increase", value: "45%" },
@@ -41,7 +41,7 @@ const caseStudies = [
     slug: "core-web-vitals-saas",
   },
   {
-    title: "Local SEO Setup — Kathmandu Restaurant",
+    title: "Local SEO Setup - Kathmandu Restaurant",
     description: "Google Business Profile optimization and local citations for visibility",
     metrics: [
       { label: "Google Maps Views", value: "+156%" },

@@ -21,44 +21,45 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Expert Nepal | Technical SEO & AEO Specialist",
+  title: "SEO Expert in Nepal | Technical SEO & AEO Specialist",
   description:
-    "SEO expert in Nepal specializing in technical SEO, local SEO, AEO, GEO, and organic growth.",
+    "Rejish Khanal is an SEO expert in Nepal for technical SEO, local SEO, AEO, GEO, content strategy, and organic growth. Based in Kathmandu, serving Nepal and international markets.",
   keywords: [
     "SEO expert in Nepal",
-    "SEO expert Nepal",
-    "SEO expert in Kathmandu",
     "SEO specialist in Kathmandu",
-    "SEO specialist Nepal",
-    "SEO consultant Nepal",
-    "freelance SEO expert Nepal",
-    "technical SEO in Nepal",
-    "technical SEO expert Nepal",
-    "local SEO expert Kathmandu",
+    "SEO freelancer in Nepal",
+    "independent SEO consultant in Nepal",
+    "technical SEO expert in Nepal",
     "AEO expert in Nepal",
     "GEO expert in Nepal",
-    "organic growth specialist Nepal",
-    "SEO audit Nepal",
     "SEO services in Nepal",
-    "SEO services Kathmandu",
   ],
   alternates: {
     canonical: "https://rejishkhanal.com.np/seo-expert-nepal",
   },
   openGraph: {
-    title: "SEO Expert in Nepal | Technical SEO, AEO, GEO & Organic Growth",
+    title: "SEO Expert in Nepal | Technical SEO, AEO & GEO Specialist",
     description:
-      "Work with Rejish Khanal, an SEO expert in Kathmandu, Nepal helping businesses improve Google rankings, technical SEO, local visibility, AI search presence, and organic leads.",
+      "Work with Rejish Khanal, an SEO expert in Kathmandu, Nepal. Technical SEO, AEO, GEO, content strategy, and organic growth for businesses in Nepal and international markets.",
     url: "https://rejishkhanal.com.np/seo-expert-nepal",
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "https://rejishkhanal.com.np/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rejish Khanal - SEO Expert in Nepal",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "SEO Expert in Nepal | Technical SEO & AEO Specialist",
     description:
       "Technical SEO, local SEO, AEO, GEO, content SEO, and organic growth services for businesses in Nepal and international markets.",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
 };
 
@@ -145,21 +146,6 @@ export default function SEOExpertPage() {
     "Biratnagar",
     "Nepal",
     "International Clients",
-  ];
-
-  const targetKeywords = [
-    "SEO expert in Nepal",
-    "SEO expert in Kathmandu",
-    "SEO specialist in Kathmandu",
-    "SEO consultant in Nepal",
-    "Technical SEO in Nepal",
-    "Technical SEO expert Nepal",
-    "AEO expert in Nepal",
-    "GEO expert in Nepal",
-    "Local SEO expert Kathmandu",
-    "SEO audit Nepal",
-    "SEO services in Nepal",
-    "Organic growth specialist Nepal",
   ];
 
   const faqs = [
@@ -252,6 +238,7 @@ export default function SEOExpertPage() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://rejishkhanal.com.np/#person",
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
     jobTitle: "SEO Expert in Nepal",
@@ -270,6 +257,7 @@ export default function SEOExpertPage() {
       "Organic Growth",
     ],
     sameAs: [
+      "https://www.linkedin.com/in/rejishkhanalseo/",
       "https://github.com/rejish7",
       "https://x.com/KhanalRejish",
     ],
@@ -398,8 +386,7 @@ export default function SEOExpertPage() {
           </p>
 
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            SEO Expert in Nepal Helping Businesses Rank Higher, Get More Traffic,
-            and Grow Organically
+            SEO Expert in Nepal for Technical SEO and Organic Growth
           </h1>
 
           <p className="text-xl text-muted-foreground mb-6">
@@ -657,25 +644,6 @@ export default function SEOExpertPage() {
                   <p className="text-muted-foreground">{step.description}</p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-6">
-            SEO Keywords This Page Is Built to Target
-          </h2>
-
-          <p className="text-lg text-muted-foreground mb-6">
-            This page is structured to target high-intent search terms related
-            to SEO services, technical SEO, AEO, GEO, and local SEO in Nepal.
-          </p>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {targetKeywords.map((keyword) => (
-              <div key={keyword} className="p-4 rounded-lg border bg-background">
-                <p className="font-medium">{keyword}</p>
-              </div>
             ))}
           </div>
         </section>

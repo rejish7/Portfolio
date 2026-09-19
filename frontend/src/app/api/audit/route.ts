@@ -380,7 +380,7 @@ async function sendAuditEmail(to: string, result: Record<string, unknown>) {
     from: process.env.GMAIL_USER,
     to,
     replyTo: process.env.CONTACT_TO_EMAIL || process.env.GMAIL_USER,
-    subject: `Your SEO Audit Report — ${r.url} (Score: ${r.score}/100)`,
+    subject: `Your SEO Audit Report - ${r.url} (Score: ${r.score}/100)`,
     html: auditReportTemplate(r),
   });
 }
@@ -428,7 +428,7 @@ export async function POST(req: NextRequest) {
             desktop: { lcp: 800, lcpScore: "good" as const, cls: 0.01, clsScore: "good" as const, inp: 40, inpScore: "good" as const, ttfb: 180, ttfbScore: "good" as const, fcp: 600, si: 1200, performance: 1.0 },
           },
           onPage: {
-            title: "Rejish Khanal — Technical SEO Specialist & Full Stack Developer",
+            title: "Rejish Khanal - Technical SEO Specialist & Full Stack Developer",
             titleLength: 60,
             metaDescription: "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal.",
             metaDescriptionLength: 80,
@@ -439,7 +439,7 @@ export async function POST(req: NextRequest) {
             h1Count: 1,
             h2Count: 6,
             h3Count: 4,
-            ogTitle: "Rejish Khanal — Technical SEO Specialist",
+            ogTitle: "Rejish Khanal - Technical SEO Specialist",
             ogDescription: "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal.",
             ogImage: "https://rejishkhanal.com.np/og-image.jpg",
             canonical: "https://rejishkhanal.com.np/",

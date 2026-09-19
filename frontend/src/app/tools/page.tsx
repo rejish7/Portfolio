@@ -4,7 +4,7 @@ import { SchemaScript } from "@/components/SchemaScript";
 import { Gauge, Search, Code2, BarChart3 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Free SEO Tools — Core Web Vitals Checker, Website Audit | Rejish Khanal",
+  title: "Free SEO Tools - Core Web Vitals Checker, Website Audit | Rejish Khanal",
   description:
     "Free online SEO tools by Rejish Khanal. Check Core Web Vitals, run website audits, test page speed, and get actionable SEO recommendations.",
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/tools",
   },
   openGraph: {
-    title: "Free SEO Tools — Core Web Vitals Checker, Website Audit",
+    title: "Free SEO Tools - Core Web Vitals Checker, Website Audit",
     description:
       "Free online SEO tools to check Core Web Vitals, run website audits, and get actionable recommendations.",
     url: "https://rejishkhanal.com.np/tools",

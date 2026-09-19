@@ -4,7 +4,7 @@ import { SchemaScript } from "@/components/SchemaScript";
 import { CoreWebVitalsChecker } from "./CoreWebVitalsChecker";
 
 export const metadata: Metadata = {
-  title: "Free Core Web Vitals & SEO Checker — Test Website Speed Nepal",
+  title: "Free Core Web Vitals & SEO Checker - Test Website Speed Nepal",
   description:
     "Free online tool to check Core Web Vitals (LCP, CLS, INP), on-page SEO, and website performance. Get instant PageSpeed Insights results, SEO score, and actionable recommendations. Built by an SEO specialist in Nepal.",
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/tools/core-web-vitals-checker",
   },
   openGraph: {
-    title: "Free Core Web Vitals & SEO Checker — Test Website Performance",
+    title: "Free Core Web Vitals & SEO Checker - Test Website Performance",
     description:
       "Check your website's Core Web Vitals, on-page SEO, and performance. Free tool with instant results and SEO recommendations.",
     url: "https://rejishkhanal.com.np/tools/core-web-vitals-checker",
@@ -74,7 +74,7 @@ const faqs = [
   {
     question: "Why is this tool better than other free SEO checkers?",
     answer:
-      "This tool provides a complete SEO audit with a single check — Core Web Vitals (mobile and desktop), on-page SEO checklist, technical SEO elements, and prioritized recommendations. Unlike basic tools, it gives you an overall SEO score out of 100 and specific fix recommendations sorted by priority. It is built by a technical SEO specialist with real-world experience optimizing websites for Google rankings.",
+      "This tool provides a complete SEO audit with a single check: Core Web Vitals (mobile and desktop), on-page SEO checklist, technical SEO elements, and prioritized recommendations. Unlike basic tools, it gives you an overall SEO score out of 100 and specific fix recommendations sorted by priority. It is built by a technical SEO specialist with real-world experience optimizing websites for Google rankings.",
   },
   {
     question: "How often should I check my Core Web Vitals?",

@@ -3,7 +3,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import type { Project } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "SEO & Web Development Portfolio — Rejish Khanal",
+  title: "SEO & Web Development Portfolio - Rejish Khanal",
   description:
     "Real case studies showing SEO results and web development work. Clients include restaurants, marketing agencies, and local businesses across Australia and Nepal.",
   alternates: {

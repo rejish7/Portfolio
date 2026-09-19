@@ -74,7 +74,7 @@ const clientConfirmationTemplate = (name, message) => `
                     <table cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <td width="40" valign="top">
-                          <div style="width:36px;height:36px;background-color:#0f3460;border-radius:8px;text-align:center;line-height:36px;font-size:16px;">📝</div>
+                          <div style="width:36px;height:36px;background-color:#0f3460;border-radius:8px;text-align:center;line-height:36px;font-size:16px;">B</div>
                         </td>
                         <td style="padding-left:14px;">
                           <a href="https://rejishkhanal.com.np/blog" style="color:#1a1a2e;font-size:14px;font-weight:600;text-decoration:none;">Read My SEO Blog</a>
@@ -93,7 +93,7 @@ const clientConfirmationTemplate = (name, message) => `
                     <table cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <td width="40" valign="top">
-                          <div style="width:36px;height:36px;background-color:#0f3460;border-radius:8px;text-align:center;line-height:36px;font-size:16px;">🚀</div>
+                          <div style="width:36px;height:36px;background-color:#0f3460;border-radius:8px;text-align:center;line-height:36px;font-size:16px;">S</div>
                         </td>
                         <td style="padding-left:14px;">
                           <a href="https://rejishkhanal.com.np/services" style="color:#1a1a2e;font-size:14px;font-weight:600;text-decoration:none;">View My Services</a>
@@ -112,7 +112,7 @@ const clientConfirmationTemplate = (name, message) => `
                     <table cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <td width="40" valign="top">
-                          <div style="width:36px;height:36px;background-color:#0f3460;border-radius:8px;text-align:center;line-height:36px;font-size:16px;">📊</div>
+                          <div style="width:36px;height:36px;background-color:#0f3460;border-radius:8px;text-align:center;line-height:36px;font-size:16px;">C</div>
                         </td>
                         <td style="padding-left:14px;">
                           <a href="https://rejishkhanal.com.np/case-studies" style="color:#1a1a2e;font-size:14px;font-weight:600;text-decoration:none;">See Case Studies</a>
@@ -168,7 +168,7 @@ const clientConfirmationTemplate = (name, message) => `
           <tr>
             <td style="background-color:#1a1a2e;padding:32px 48px;text-align:center;">
               <p style="margin:0 0 12px;color:#94a3b8;font-size:13px;">
-                Rejish Khanal — Technical SEO Specialist & Full Stack Developer
+                Rejish Khanal - Technical SEO Specialist & Full Stack Developer
               </p>
               <p style="margin:0 0 16px;color:#64748b;font-size:12px;">
                 Kathmandu, Nepal

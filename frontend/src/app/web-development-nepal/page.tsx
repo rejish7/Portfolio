@@ -384,9 +384,36 @@ export default function WebDevelopmentPage() {
     })),
   };
 
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://rejishkhanal.com.np/#person",
+    name: "Rejish Khanal",
+    url: "https://rejishkhanal.com.np",
+    jobTitle: "Full Stack Developer and SEO Expert in Nepal",
+    description:
+      "Rejish Khanal is a full stack developer and SEO expert in Nepal building fast, crawlable, and SEO-friendly websites using Next.js, Django, Laravel, and modern web technologies.",
+    knowsAbout: [
+      "Web Development",
+      "Next.js",
+      "React",
+      "Django",
+      "Laravel",
+      "Technical SEO",
+      "Core Web Vitals",
+      "SEO-Friendly Development",
+      "Full Stack Development",
+    ],
+    sameAs: [
+      "https://github.com/rejish7",
+      "https://x.com/KhanalRejish",
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <SchemaScript schema={serviceSchema} />
+      <SchemaScript schema={personSchema} />
       <SchemaScript schema={webPageSchema} />
       <SchemaScript schema={breadcrumbSchema} />
       <SchemaScript schema={faqSchema} />
@@ -742,7 +769,7 @@ export default function WebDevelopmentPage() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/nextjs-seo-services">
+            <Link href="/nextjs-seo-services" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 Next.js SEO Services
               </p>
@@ -752,7 +779,7 @@ export default function WebDevelopmentPage() {
               </p>
             </Link>
 
-            <Link href="/django-developer-nepal">
+            <Link href="/django-developer-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 Django Developer in Nepal
               </p>
@@ -762,7 +789,7 @@ export default function WebDevelopmentPage() {
               </p>
             </Link>
 
-            <Link href="/laravel-developer-nepal">
+            <Link href="/laravel-developer-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 Laravel Developer in Nepal
               </p>
@@ -777,7 +804,7 @@ export default function WebDevelopmentPage() {
         {/* Additional Related SEO Links */}
         <section className="mt-10">
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/technical-seo-specialist-nepal">
+            <Link href="/technical-seo-specialist-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 Technical SEO Specialist in Nepal
               </p>
@@ -787,7 +814,7 @@ export default function WebDevelopmentPage() {
               </p>
             </Link>
 
-            <Link href="/core-web-vitals-optimization">
+            <Link href="/core-web-vitals-optimization" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 Core Web Vitals Optimization
               </p>
@@ -797,7 +824,7 @@ export default function WebDevelopmentPage() {
               </p>
             </Link>
 
-            <Link href="/seo-expert-nepal">
+            <Link href="/seo-expert-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 SEO Expert in Nepal
               </p>

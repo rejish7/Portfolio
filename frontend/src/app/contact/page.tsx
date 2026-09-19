@@ -45,12 +45,21 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "https://rejishkhanal.com.np/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Contact Rejish Khanal - SEO Expert in Nepal",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Contact SEO Expert in Nepal | Rejish Khanal",
     description:
       "Contact Rejish Khanal for SEO audits, technical SEO, local SEO, Core Web Vitals, AEO, GEO, and web development services.",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
 };
 
@@ -64,7 +73,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+977 9862766994",
+    value: "9862766994",
     href: "tel:+9779862766994",
   },
   {
@@ -118,7 +127,7 @@ const faqs = [
   {
     question: "How can I contact Rejish Khanal for SEO services?",
     answer:
-      "You can contact Rejish Khanal through the contact form, email at contact@rejishkhanal.com.np, or phone at +977 9862766994. You can ask about SEO audits, technical SEO, local SEO, AEO, GEO, Core Web Vitals, and web development projects.",
+      "You can contact Rejish Khanal through the contact form, email at contact@rejishkhanal.com.np, or phone at 9862766994. You can ask about SEO audits, technical SEO, local SEO, AEO, GEO, Core Web Vitals, and web development projects.",
   },
   {
     question: "Do you provide SEO consultation in Nepal?",
@@ -172,9 +181,9 @@ export default function ContactPage() {
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
     description:
-      "Rejish Khanal is an SEO expert in Nepal, technical SEO specialist, and full stack developer based in Kathmandu.",
+      "Rejish Khanal is an independent technical SEO specialist and full-stack developer based in Kathmandu, Nepal.",
     email: "contact@rejishkhanal.com.np",
-    telephone: "+9779862766994",
+    telephone: "9862766994",
     areaServed: [
       {
         "@type": "Country",
@@ -192,25 +201,15 @@ export default function ContactPage() {
     },
     founder: {
       "@type": "Person",
+      "@id": "https://rejishkhanal.com.np/#person",
       name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "SEO Expert in Nepal and Technical SEO Specialist",
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
     },
-    sameAs: [
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
     serviceType: [
       "SEO Audit",
       "Technical SEO",
-      "Local SEO",
+      "Answer Engine Optimization",
+      "Generative Engine Optimization",
       "Core Web Vitals Optimization",
-      "AEO",
-      "GEO",
       "Web Development",
     ],
   };
@@ -218,20 +217,19 @@ export default function ContactPage() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://rejishkhanal.com.np/#person",
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
     email: "contact@rejishkhanal.com.np",
-    telephone: "+9779862766994",
-    jobTitle: "SEO Expert in Nepal and Full Stack Developer",
+    telephone: "9862766994",
+    jobTitle: ["Technical SEO Specialist", "Full-Stack Developer"],
     address: {
       "@type": "PostalAddress",
       addressCountry: "NP",
       addressLocality: "Kathmandu",
     },
     knowsAbout: [
-      "SEO",
       "Technical SEO",
-      "Local SEO",
       "SEO Audit",
       "Core Web Vitals",
       "JavaScript SEO",
@@ -244,6 +242,7 @@ export default function ContactPage() {
       "Laravel",
     ],
     sameAs: [
+      "https://www.linkedin.com/in/rejishkhanalseo/",
       "https://github.com/rejish7",
       "https://x.com/KhanalRejish",
     ],

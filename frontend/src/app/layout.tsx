@@ -16,19 +16,21 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Rejish Khanal — Technical SEO Specialist & Full Stack Developer",
+    default: "Technical SEO Specialist in Nepal | Rejish Khanal",
     template: "%s | Rejish Khanal",
   },
   description:
-    "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal. I help businesses rank higher and build faster using SEO audits, Core Web Vitals fixes, and modern web development.",
+    "Technical SEO specialist in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues with direct code implementation. Serving US, UK, AU & worldwide.",
   keywords: [
-    "technical SEO specialist",
-    "full stack developer Nepal",
-    "SEO expert Kathmandu",
-    "hire SEO specialist",
-    "SEO audits",
-    "Core Web Vitals",
-    "JavaScript SEO",
+    "technical SEO specialist in Nepal",
+    "SEO expert in Nepal",
+    "AEO expert in Nepal",
+    "GEO expert in Nepal",
+    "full-stack developer Nepal",
+    "Core Web Vitals expert Nepal",
+    "JavaScript SEO expert Nepal",
+    "Next.js SEO expert Nepal",
+    "SEO specialist Kathmandu",
   ],
   authors: [{ name: "Rejish Khanal", url: "https://rejishkhanal.com.np" }],
   creator: "Rejish Khanal",
@@ -40,17 +42,26 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://rejishkhanal.com.np",
-    title: "Rejish Khanal — Technical SEO Specialist & Full Stack Developer",
+    title: "Technical SEO Specialist in Nepal | Rejish Khanal",
     description:
-      "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal. I help businesses rank higher and build faster using SEO audits, Core Web Vitals fixes, and modern web development.",
+      "Technical SEO specialist in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues with direct code implementation. Serving US, UK, AU & worldwide.",
     siteName: "Rejish Khanal",
+    images: [
+      {
+        url: "https://rejishkhanal.com.np/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rejish Khanal - Technical SEO Specialist in Nepal",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rejish Khanal — Technical SEO Specialist & Full Stack Developer",
+    title: "Technical SEO Specialist in Nepal | Rejish Khanal",
     description:
-      "Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal.",
+      "Technical SEO specialist in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues.",
     creator: "@KhanalRejish",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -73,16 +84,37 @@ export default function RootLayout({
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://rejishkhanal.com.np/#person",
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
-    jobTitle: "Technical SEO Specialist & Full Stack Developer",
+    image: "https://rejishkhanal.com.np/assets/images/rejish-khanal.webp",
+    jobTitle: ["Technical SEO Specialist", "Full-Stack Developer"],
+    description:
+      "Rejish Khanal is an independent technical SEO specialist and full-stack developer based in Kathmandu, Nepal. His work covers technical SEO, Core Web Vitals, structured data, JavaScript SEO, AEO, GEO, and code-level SEO implementation.",
     email: "contact@rejishkhanal.com.np",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Kathmandu",
       addressCountry: "NP",
     },
-    sameAs: ["https://x.com/KhanalRejish"],
+    knowsAbout: [
+      "Technical SEO",
+      "Search Engine Optimization",
+      "Answer Engine Optimization",
+      "Generative Engine Optimization",
+      "Core Web Vitals",
+      "JavaScript SEO",
+      "Structured Data",
+      "Google Search Console",
+      "Next.js",
+      "Django",
+      "Laravel",
+    ],
+    sameAs: [
+      "https://www.linkedin.com/in/rejishkhanalseo/",
+      "https://github.com/rejish7",
+      "https://x.com/KhanalRejish",
+    ],
   };
 
   const websiteSchema = {

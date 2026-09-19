@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Database, Globe, Zap, Layers } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Tech Stack — Django, Laravel, Next.js, Vue.js",
+    title: "Tech Stack - Django, Laravel, Next.js, Vue.js",
     description:
         "Full stack developer specializing in Django, Laravel, Next.js, Vue.js, PostgreSQL, and SEO-ready architecture.",
     keywords: [
@@ -53,7 +53,7 @@ const techStacks = [
             {
                 name: "JavaScript",
                 description:
-                    "Core language for interactive web. I specialize in JavaScript SEO — ensuring content is crawlable, avoiding hydration issues, and optimizing for Core Web Vitals in dynamic applications.",
+                    "Core language for interactive web. I specialize in JavaScript SEO - ensuring content is crawlable, avoiding hydration issues, and optimizing for Core Web Vitals in dynamic applications.",
                 expertise: "Expert",
                 use: "Interactive features, API calls, browser APIs, performance optimization",
             },
@@ -224,7 +224,7 @@ export default function TechStackPage() {
 
                     <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                         <p>
-                            <span className="font-semibold text-foreground">Performance First:</span> Every technology choice prioritizes Core Web Vitals, fast page loads, and optimization. Next.js and Vue.js for frontend, Django/FastAPI for backend, PostgreSQL for databases — all chosen for speed and scalability.
+                            <span className="font-semibold text-foreground">Performance First:</span> Every technology choice prioritizes Core Web Vitals, fast page loads, and optimization. Next.js and Vue.js for frontend, Django/FastAPI for backend, PostgreSQL for databases, all chosen for speed and scalability.
                         </p>
 
                         <p>
@@ -232,7 +232,7 @@ export default function TechStackPage() {
                         </p>
 
                         <p>
-                            <span className="font-semibold text-foreground">Production Proven:</span> These are battle-tested technologies used by thousands of successful applications worldwide. You're not betting on experimental tools — you're getting industry-standard solutions.
+                            <span className="font-semibold text-foreground">Production Proven:</span> These are battle-tested technologies used by thousands of successful applications worldwide. You're not betting on experimental tools, you're getting industry-standard solutions.
                         </p>
 
                         <p>

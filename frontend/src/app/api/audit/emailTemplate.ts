@@ -1,5 +1,5 @@
 function formatMs(ms: number | null): string {
-  if (ms === null) return "—";
+  if (ms === null) return "-";
   return ms < 1000 ? `${Math.round(ms)}ms` : `${(ms / 1000).toFixed(2)}s`;
 }
 
@@ -117,7 +117,7 @@ export function auditReportTemplate(result: {
                 </tr>
                 <tr>
                   <td style="padding:10px 16px;font-size:13px;color:#1a1a2e;border-bottom:1px solid #f1f5f9;">CLS</td>
-                  <td style="padding:10px 16px;font-size:13px;color:#1a1a2e;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:600;">${m.cls !== null ? m.cls.toFixed(3) : "—"}</td>
+                  <td style="padding:10px 16px;font-size:13px;color:#1a1a2e;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:600;">${m.cls !== null ? m.cls.toFixed(3) : "-"}</td>
                   <td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;text-align:right;"><span style="color:${statusColor(m.clsScore)};font-size:12px;font-weight:600;">${statusLabel(m.clsScore)}</span></td>
                 </tr>
                 <tr>
@@ -146,7 +146,7 @@ export function auditReportTemplate(result: {
                 </tr>
                 <tr>
                   <td style="padding:10px 16px;font-size:13px;color:#1a1a2e;border-bottom:1px solid #f1f5f9;">CLS</td>
-                  <td style="padding:10px 16px;font-size:13px;color:#1a1a2e;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:600;">${d.cls !== null ? d.cls.toFixed(3) : "—"}</td>
+                  <td style="padding:10px 16px;font-size:13px;color:#1a1a2e;border-bottom:1px solid #f1f5f9;text-align:right;font-weight:600;">${d.cls !== null ? d.cls.toFixed(3) : "-"}</td>
                   <td style="padding:10px 16px;border-bottom:1px solid #f1f5f9;text-align:right;"><span style="color:${statusColor(d.clsScore)};font-size:12px;font-weight:600;">${statusLabel(d.clsScore)}</span></td>
                 </tr>
                 <tr>
@@ -250,7 +250,7 @@ export function auditReportTemplate(result: {
           <!-- Footer -->
           <tr>
             <td style="background-color:#1a1a2e;padding:32px 48px;text-align:center;">
-              <p style="margin:0 0 12px;color:#94a3b8;font-size:13px;">Rejish Khanal — Technical SEO Specialist & Full Stack Developer</p>
+              <p style="margin:0 0 12px;color:#94a3b8;font-size:13px;">Rejish Khanal - Technical SEO Specialist & Full Stack Developer</p>
               <p style="margin:0 0 16px;color:#64748b;font-size:12px;">Kathmandu, Nepal</p>
               <table cellpadding="0" cellspacing="0" align="center">
                 <tr>

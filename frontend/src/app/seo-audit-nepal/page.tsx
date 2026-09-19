@@ -54,12 +54,21 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "https://rejishkhanal.com.np/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rejish Khanal - SEO Audit Services in Nepal",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "SEO Audit Nepal | Rejish Khanal",
     description:
       "Find what is hurting your Google rankings with a technical SEO audit, content audit, Core Web Vitals audit, and Search Console analysis.",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
 };
 
@@ -301,18 +310,8 @@ export default function SEOAuditPage() {
     url: "https://rejishkhanal.com.np/seo-audit-nepal",
     provider: {
       "@type": "Person",
+      "@id": "https://rejishkhanal.com.np/#person",
       name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "SEO Expert in Nepal and Technical SEO Specialist",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "NP",
-        addressLocality: "Kathmandu",
-      },
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
     },
     areaServed: [
       {
@@ -392,12 +391,46 @@ export default function SEOAuditPage() {
     })),
   };
 
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://rejishkhanal.com.np/#person",
+    name: "Rejish Khanal",
+    url: "https://rejishkhanal.com.np",
+    jobTitle: "SEO Expert and Technical SEO Specialist in Nepal",
+    description:
+      "Rejish Khanal is an SEO expert and technical SEO specialist in Nepal helping businesses find and fix technical SEO issues, indexing problems, Core Web Vitals errors, and ranking barriers.",
+    knowsAbout: [
+      "SEO Audit",
+      "Technical SEO",
+      "Core Web Vitals",
+      "Google Search Console",
+      "Indexing",
+      "Crawlability",
+      "Schema Markup",
+      "JavaScript SEO",
+      "AEO",
+      "GEO",
+    ],
+    sameAs: [
+      "https://github.com/rejish7",
+      "https://x.com/KhanalRejish",
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-linear-to-b from-background to-background/95">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(personSchema),
         }}
       />
 

@@ -57,14 +57,14 @@ export async function generateMetadata({
     }
 
     return {
-        title: `${project.title} — SEO & Dev Case Study | Rejish Khanal`,
+            title: `${project.title} - SEO & Dev Case Study | Rejish Khanal`,
         description: project.description,
         keywords: project.technologies.join(", "),
         alternates: {
             canonical: `https://rejishkhanal.com.np/projects/${slug}`,
         },
         openGraph: {
-            title: `${project.title} — SEO & Dev Case Study | Rejish Khanal`,
+        title: `${project.title} - SEO & Dev Case Study | Rejish Khanal`,
             description: project.description,
             images: project.image ? [{ url: project.image, alt: project.title }] : [],
         },
@@ -153,7 +153,7 @@ export default async function ProjectPage({
                     <div className="aspect-video relative overflow-hidden rounded-lg bg-accent mb-8">
                         <Image
                             src={project.image}
-                            alt={`${project.title} — SEO & Dev Case Study`}
+                            alt={`${project.title} - SEO & Dev Case Study`}
                             width={1200}
                             height={675}
                             className="w-full h-full object-cover"

@@ -2,7 +2,7 @@
 
 ## About Rejish Khanal
 
-Rejish Khanal is a Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal. He works at Gripas Marketing and helps businesses improve organic traffic by 40-60% through technical SEO, schema markup, Core Web Vitals optimization, and full-stack web development using Django, Laravel, and Next.js.
+Rejish Khanal is an independent Technical SEO Specialist and Full Stack Developer based in Kathmandu, Nepal. He helps businesses improve organic visibility through technical SEO audits, schema markup, Core Web Vitals optimization, and full-stack web development using Django, Laravel, and Next.js. He previously worked as an SEO Specialist at Gripas Marketing and E-Prabidhi Pvt. Ltd.
 
 ## Services
 

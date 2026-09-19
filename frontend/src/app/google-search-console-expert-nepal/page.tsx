@@ -56,12 +56,21 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "https://rejishkhanal.com.np/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rejish Khanal - Google Search Console Expert in Nepal",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Google Search Console Expert in Nepal",
     description:
       "Improve indexing, coverage, crawl efficiency, Core Web Vitals, and search performance with expert Google Search Console analysis.",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
 };
 
@@ -306,6 +315,7 @@ export default function GoogleSearchConsoleExpertPage() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://rejishkhanal.com.np/#person",
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
     jobTitle: "Google Search Console Expert in Nepal",
@@ -326,6 +336,7 @@ export default function GoogleSearchConsoleExpertPage() {
       "XML Sitemaps",
     ],
     sameAs: [
+      "https://www.linkedin.com/in/rejishkhanalseo/",
       "https://github.com/rejish7",
       "https://x.com/KhanalRejish",
     ],
@@ -792,7 +803,7 @@ export default function GoogleSearchConsoleExpertPage() {
           <Zap className="h-12 w-12 text-primary mx-auto mb-5" />
 
           <h2 className="text-3xl font-bold mb-4">
-            Ready to Unlock Your Search Console Data?
+            Ready to Improve Your Search Performance?
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

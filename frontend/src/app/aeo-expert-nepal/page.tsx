@@ -12,7 +12,6 @@ import {
   CheckCircle2,
   Search,
   FileSearch,
-  TrendingUp,
   Bot,
   BarChart3,
   MessageSquareText,
@@ -21,21 +20,17 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AEO Expert Nepal | Answer Engine Optimization",
+  title: "AEO Expert in Nepal | Answer Engine Optimization",
   description:
-    "AEO expert in Nepal. Optimize content for featured snippets, People Also Ask, AI Overviews, and voice search.",
+    "Rejish Khanal is an AEO expert in Nepal for featured snippets, People Also Ask, AI Overviews, voice search, and answer-focused content optimization.",
   keywords: [
     "AEO expert in Nepal",
-    "Answer Engine Optimization Nepal",
+    "answer engine optimization expert in Nepal",
     "AEO services in Nepal",
-    "AEO specialist Nepal",
     "featured snippet optimization Nepal",
     "People Also Ask optimization Nepal",
-    "voice search SEO Nepal",
     "AI Overview optimization Nepal",
-    "SEO for answer engines Nepal",
-    "SEO expert in Nepal",
-    "SEO specialist in Kathmandu",
+    "voice search SEO Nepal",
   ],
   alternates: {
     canonical: "https://rejishkhanal.com.np/aeo-expert-nepal",
@@ -48,12 +43,21 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "https://rejishkhanal.com.np/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rejish Khanal - AEO Expert in Nepal",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "AEO Expert in Nepal | Answer Engine Optimization Specialist",
     description:
       "AEO services in Nepal for featured snippets, People Also Ask, voice search, AI Overviews, and direct answer visibility.",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
 };
 
@@ -130,18 +134,6 @@ export default function AEOExpertNepalPage() {
     },
   ];
 
-  const targetKeywords = [
-    "AEO expert in Nepal",
-    "Answer Engine Optimization Nepal",
-    "AEO services in Nepal",
-    "featured snippet optimization Nepal",
-    "People Also Ask optimization Nepal",
-    "voice search SEO Nepal",
-    "AI Overview optimization Nepal",
-    "answer engine SEO Nepal",
-    "SEO for AI answers Nepal",
-  ];
-
   const faqs = [
     {
       question: "What is AEO?",
@@ -180,8 +172,8 @@ export default function AEOExpertNepalPage() {
       "Answer Engine Optimization services in Nepal for featured snippets, People Also Ask, voice search, AI Overviews, and answer-based search visibility.",
     provider: {
       "@type": "Person",
+      "@id": "https://rejishkhanal.com.np/#person",
       name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
     },
     areaServed: {
       "@type": "Country",
@@ -380,20 +372,6 @@ export default function AEOExpertNepalPage() {
                   <p className="text-muted-foreground">{step.description}</p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-6">
-            Keywords This Page Targets
-          </h2>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {targetKeywords.map((keyword) => (
-              <div key={keyword} className="p-4 rounded-lg border bg-background">
-                <p className="font-medium">{keyword}</p>
-              </div>
             ))}
           </div>
         </section>

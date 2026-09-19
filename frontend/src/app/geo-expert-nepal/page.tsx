@@ -13,7 +13,6 @@ import {
   Bot,
   Globe2,
   FileSearch,
-  TrendingUp,
   Network,
   BrainCircuit,
   Search,
@@ -21,21 +20,16 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "GEO Expert Nepal | Generative Engine Optimization",
+  title: "GEO Expert in Nepal | Generative Engine Optimization",
   description:
-    "GEO expert in Nepal. Optimize content for AI search, generative engines, AI Overviews, and organic visibility.",
+    "Rejish Khanal is a GEO expert in Nepal for AI search optimization, generative engines, AI Overviews, entity SEO, and verifiable AI search visibility.",
   keywords: [
     "GEO expert in Nepal",
-    "Generative Engine Optimization Nepal",
+    "generative engine optimization expert in Nepal",
+    "AI search optimization expert in Nepal",
     "GEO services in Nepal",
-    "AI search optimization Nepal",
     "AI Overview optimization Nepal",
-    "SEO for AI search Nepal",
-    "generative AI SEO specialist Nepal",
-    "ChatGPT SEO optimization Nepal",
-    "AEO expert in Nepal",
-    "SEO expert in Nepal",
-    "technical SEO specialist Nepal",
+    "entity SEO Nepal",
   ],
   alternates: {
     canonical: "https://rejishkhanal.com.np/geo-expert-nepal",
@@ -48,12 +42,21 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "https://rejishkhanal.com.np/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rejish Khanal - GEO Expert in Nepal",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "GEO Expert in Nepal | AI Search Optimization Specialist",
     description:
       "GEO services in Nepal for AI search, generative engines, AI Overviews, entity SEO, and topical authority building.",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
 };
 
@@ -134,18 +137,6 @@ export default function GEOExpertNepalPage() {
     "Track search performance and improve over time",
   ];
 
-  const targetKeywords = [
-    "GEO expert in Nepal",
-    "Generative Engine Optimization Nepal",
-    "GEO services in Nepal",
-    "AI search optimization Nepal",
-    "AI Overview optimization Nepal",
-    "SEO for AI search Nepal",
-    "generative AI SEO specialist Nepal",
-    "ChatGPT SEO optimization Nepal",
-    "AEO and GEO expert Nepal",
-  ];
-
   const pageUrl = "https://rejishkhanal.com.np/geo-expert-nepal";
 
   const serviceSchema = {
@@ -156,8 +147,8 @@ export default function GEOExpertNepalPage() {
       "Generative Engine Optimization services in Nepal for AI search visibility, AI Overviews, entity SEO, topic clusters, and generative search optimization.",
     provider: {
       "@type": "Person",
+      "@id": "https://rejishkhanal.com.np/#person",
       name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
     },
     areaServed: {
       "@type": "Country",
@@ -325,20 +316,6 @@ export default function GEOExpertNepalPage() {
               <div key={index} className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <p className="text-foreground">{item}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-6">
-            Keywords This Page Targets
-          </h2>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {targetKeywords.map((keyword) => (
-              <div key={keyword} className="p-4 rounded-lg border bg-background">
-                <p className="font-medium">{keyword}</p>
               </div>
             ))}
           </div>

@@ -24,43 +24,44 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Technical SEO Specialist Nepal | CWV & Audits",
+  title: "Technical SEO Specialist in Nepal | Core Web Vitals & JavaScript SEO",
   description:
-    "Technical SEO specialist in Nepal. Improve crawlability, indexing, Core Web Vitals, schema markup, and rankings.",
+    "Rejish Khanal is a technical SEO specialist in Nepal for crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and developer-level SEO implementation.",
   keywords: [
-    "technical SEO specialist Nepal",
     "technical SEO specialist in Nepal",
-    "technical SEO consultant Nepal",
-    "technical SEO expert Nepal",
-    "technical SEO in Nepal",
-    "Core Web Vitals expert Nepal",
-    "JavaScript SEO specialist Nepal",
-    "schema markup Nepal",
-    "SEO audit Nepal",
-    "technical SEO audit Nepal",
-    "website performance optimization Nepal",
+    "technical SEO expert in Nepal",
+    "Core Web Vitals expert in Nepal",
+    "JavaScript SEO expert in Nepal",
+    "Next.js SEO expert in Nepal",
     "SEO specialist Kathmandu",
-    "SEO expert Nepal",
-    "Next.js SEO specialist Nepal",
-    "crawlability indexing SEO Nepal",
+    "technical SEO consultant Nepal",
   ],
   alternates: {
     canonical: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
   },
   openGraph: {
-    title: "Technical SEO Specialist in Nepal | Core Web Vitals, Schema & SEO Audit",
+    title: "Technical SEO Specialist in Nepal | Core Web Vitals & JavaScript SEO",
     description:
-      "Technical SEO services in Nepal for faster, crawlable, indexable, and search-friendly websites. Improve Core Web Vitals, JavaScript SEO, schema markup, and rankings.",
+      "Technical SEO services in Nepal for crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and website performance optimization.",
     url: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "https://rejishkhanal.com.np/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rejish Khanal - Technical SEO Specialist in Nepal",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Technical SEO Specialist in Nepal",
     description:
-      "Improve website crawlability, indexing, page speed, Core Web Vitals, JavaScript SEO, schema markup, and technical search performance.",
+      "Improve crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and technical search performance.",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
 };
 
@@ -305,6 +306,7 @@ export default function TechnicalSEOPage() {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://rejishkhanal.com.np/#person",
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
     jobTitle: "Technical SEO Specialist in Nepal",
@@ -325,6 +327,7 @@ export default function TechnicalSEOPage() {
       "GEO",
     ],
     sameAs: [
+      "https://www.linkedin.com/in/rejishkhanalseo/",
       "https://github.com/rejish7",
       "https://x.com/KhanalRejish",
     ],
@@ -429,7 +432,7 @@ export default function TechnicalSEOPage() {
           </p>
 
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            Technical SEO Specialist in Nepal for Faster, Crawlable, and Search-Friendly Websites
+            Technical SEO Specialist in Nepal for Complex Website Issues
           </h1>
 
           <p className="text-xl text-muted-foreground mb-6">
