@@ -9,8 +9,8 @@ const keyFacts = [
   "Achieved 40-60% organic traffic growth for clients at E-Prabidhi Pvt. Ltd.",
   "Specializes in Next.js, Django, and Laravel with direct code implementation.",
   "Expert in Core Web Vitals (LCP, INP, CLS) optimization and JavaScript SEO.",
-  "AEO and GEO specialist for ChatGPT Search, Perplexity, and Google AI Overviews.",
-  "Former SEO Specialist at Gripas Marketing and E-Prabidhi Pvt. Ltd.",
+  "AEO and GEO expert for ChatGPT Search, Perplexity, and Google AI Overviews.",
+  "Former SEO Expert at Gripas Marketing and E-Prabidhi Pvt. Ltd.",
   "Provides technical SEO audits with implemented fixes, not just PDF reports.",
 ];
 

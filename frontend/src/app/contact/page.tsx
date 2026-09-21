@@ -181,7 +181,7 @@ export default function ContactPage() {
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
     description:
-      "Rejish Khanal is an independent technical SEO expert and full-stack developer based in Kathmandu, Nepal.",
+      "Rejish Khanal is a technical SEO expert and full-stack developer based in Kathmandu, Nepal.",
     email: "contact@rejishkhanal.com.np",
     telephone: "9862766994",
     areaServed: [

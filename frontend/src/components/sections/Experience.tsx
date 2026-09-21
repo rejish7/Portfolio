@@ -88,7 +88,7 @@ export function Experience() {
             SEO &amp; Development Experience in Nepal
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            My professional journey as a technical SEO specialist and full-stack developer in Kathmandu, Nepal
+            My professional journey as a technical SEO expert and full-stack developer in Kathmandu, Nepal
           </p>
         </motion.div>
 

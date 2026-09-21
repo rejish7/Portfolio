@@ -90,7 +90,7 @@ export default function RootLayout({
     image: "https://rejishkhanal.com.np/assets/images/rejish-khanal.webp",
     jobTitle: ["Technical SEO Expert", "Full-Stack Developer"],
     description:
-      "Rejish Khanal is an independent technical SEO expert and full-stack developer based in Kathmandu, Nepal. His work covers technical SEO, Core Web Vitals, structured data, JavaScript SEO, AEO, GEO, and code-level SEO implementation.",
+      "Rejish Khanal is a technical SEO expert and full-stack developer based in Kathmandu, Nepal. His work covers technical SEO, Core Web Vitals, structured data, JavaScript SEO, AEO, GEO, and code-level SEO implementation.",
     email: "contact@rejishkhanal.com.np",
     address: {
       "@type": "PostalAddress",

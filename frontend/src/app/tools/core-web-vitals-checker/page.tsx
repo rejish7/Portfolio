@@ -214,7 +214,7 @@ export default function CoreWebVitalsCheckerPage() {
                 <p className="text-sm text-muted-foreground mt-1">Professional Core Web Vitals fixes for better Google rankings.</p>
               </Link>
               <Link href="/technical-seo-specialist-nepal" className="p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
-                <h3 className="font-semibold hover:text-primary transition-colors">Technical SEO Specialist Nepal</h3>
+                <h3 className="font-semibold hover:text-primary transition-colors">Technical SEO Expert Nepal</h3>
                 <p className="text-sm text-muted-foreground mt-1">Expert technical SEO services for businesses in Nepal.</p>
               </Link>
               <Link href="/contact" className="p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">

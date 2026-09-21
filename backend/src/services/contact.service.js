@@ -54,7 +54,7 @@ const createContact = async (data) => {
         <p style="color: #555; line-height: 1.6;">
           Best regards,<br>
           <strong>Rejish Khanal</strong><br>
-          Technical SEO Specialist & Full Stack Developer
+          Technical SEO Expert & Full Stack Developer
         </p>
         <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
         <p style="color: #999; font-size: 12px;">

@@ -14,8 +14,8 @@ const highlights = [
   },
   {
     icon: Target,
-    title: "Independent Professional",
-    description: "I work as an independent technical SEO expert and full-stack developer, giving clients direct access to the person doing the work.",
+    title: "Direct Professional Access",
+    description: "I work as a technical SEO expert and full-stack developer, giving clients direct access to the person doing the work.",
   },
   {
     icon: Sparkles,
@@ -58,11 +58,11 @@ const stats = [
 
 const keyFacts = [
   "Based in Kathmandu, Nepal. Serving clients in the US, UK, Australia, and worldwide.",
-  "Former SEO Specialist at Gripas Marketing and E-Prabidhi Pvt. Ltd.",
+  "Former SEO Expert at Gripas Marketing and E-Prabidhi Pvt. Ltd.",
   "Achieved 40-60% organic traffic growth for e-commerce clients.",
   "Specializes in Next.js, Django, and Laravel with direct code implementation.",
   "Expert in Core Web Vitals (LCP, INP, CLS) optimization and JavaScript SEO.",
-  "AEO and GEO specialist for ChatGPT Search, Perplexity, and Google AI Overviews.",
+  "AEO and GEO expert for ChatGPT Search, Perplexity, and Google AI Overviews.",
 ];
 
 export function About() {
@@ -134,7 +134,7 @@ export function About() {
                   className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary mb-6"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                  Independent Professional
+                  Direct Professional Access
                 </motion.p>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
@@ -151,8 +151,8 @@ export function About() {
 
               <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
                 <p>
-                  I am an{" "}
-                  <span className="text-foreground font-medium">independent technical SEO expert</span>{" "}
+                  I am a{" "}
+                  <span className="text-foreground font-medium">technical SEO expert</span>{" "}
                   and{" "}
                   <span className="text-foreground font-medium">full-stack developer</span>{" "}
                   based in <span className="text-foreground font-medium">Kathmandu, Nepal</span>. I help businesses identify and fix the technical problems that prevent search engines from crawling, indexing, and ranking their pages effectively.

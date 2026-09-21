@@ -80,7 +80,7 @@ export function auditReportTemplate(result: {
           <tr>
             <td style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding:40px 48px; text-align:center;">
               <h1 style="margin:0;color:#ffffff;font-size:26px;font-weight:700;">Rejish Khanal</h1>
-              <p style="margin:8px 0 0;color:#94a3b8;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;">Technical SEO Specialist & Full Stack Developer</p>
+              <p style="margin:8px 0 0;color:#94a3b8;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;">Technical SEO Expert & Full Stack Developer</p>
             </td>
           </tr>
 
@@ -250,7 +250,7 @@ export function auditReportTemplate(result: {
           <!-- Footer -->
           <tr>
             <td style="background-color:#1a1a2e;padding:32px 48px;text-align:center;">
-              <p style="margin:0 0 12px;color:#94a3b8;font-size:13px;">Rejish Khanal - Technical SEO Specialist & Full Stack Developer</p>
+              <p style="margin:0 0 12px;color:#94a3b8;font-size:13px;">Rejish Khanal - Technical SEO Expert & Full Stack Developer</p>
               <p style="margin:0 0 16px;color:#64748b;font-size:12px;">Kathmandu, Nepal</p>
               <table cellpadding="0" cellspacing="0" align="center">
                 <tr>

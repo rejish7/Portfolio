@@ -24,18 +24,18 @@ import {
 
 export const metadata: Metadata = {
   title:
-    "SEO Specialist for UK Businesses | Technical SEO & WordPress",
+    "SEO Expert for UK Businesses | Technical SEO & WordPress",
   description:
-    "Remote SEO specialist for UK businesses. Fix technical SEO issues, optimise WordPress sites, and improve Google and AI search visibility.",
+    "Remote SEO expert for UK businesses. Fix technical SEO issues, optimise WordPress sites, and improve Google and AI search visibility.",
   keywords: [
-    "SEO Specialist UK",
+    "SEO Expert UK",
     "SEO Expert UK",
     "WordPress SEO UK",
     "Technical SEO UK",
-    "Remote SEO Specialist",
+    "Remote SEO Expert",
     "AEO GEO UK",
     "Ecommerce SEO UK",
-    "Hire SEO Specialist UK",
+    "Hire SEO Expert UK",
     "UK SEO services",
     "WordPress technical SEO UK",
     "Core Web Vitals UK",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "SEO Specialist for UK Businesses | Technical SEO, WordPress & AEO Expert",
+      "SEO Expert for UK Businesses | Technical SEO, WordPress & AEO Expert",
     description:
-      "Remote SEO specialist helping UK businesses fix technical SEO, optimise WordPress sites, and improve Google and AI search visibility.",
+      "Remote SEO expert helping UK businesses fix technical SEO, optimise WordPress sites, and improve Google and AI search visibility.",
     url: "https://rejishkhanal.com.np/seo-specialist-uk-technical-seo-wordpress",
     siteName: "Rejish Khanal",
     type: "website",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Specialist for UK Businesses | Technical SEO & WordPress Expert",
+    title: "SEO Expert for UK Businesses | Technical SEO & WordPress Expert",
     description:
       "Technical SEO, WordPress optimisation, Core Web Vitals, ecommerce SEO, and AEO/GEO support for UK businesses.",
   },
@@ -114,13 +114,13 @@ export default function SEOSpecialistUKPage() {
       icon: ShieldCheck,
       title: "Lower Overhead, Same Technical Depth",
       description:
-        "UK agency retainers carry the cost of office space, account management, and layered staffing. As an independent specialist, that overhead does not exist, so your budget goes toward the actual technical work rather than the agency structure around it.",
+        "UK agency retainers carry the cost of office space, account management, and layered staffing. As an SEO expert, that overhead does not exist, so your budget goes toward the actual technical work rather than the agency structure around it.",
     },
     {
       icon: Globe2,
       title: "Remote, Working Across UK Hours",
       description:
-        "SEO work is entirely screen-based: audits, code, and reporting, none of which require physical presence. Remote specialists working across UK hours are now a standard part of how UK companies get technical work done.",
+        "SEO work is entirely screen-based: audits, code, and reporting, none of which require physical presence. Remote experts working across UK hours are now a standard part of how UK companies get technical work done.",
     },
   ];
 
@@ -154,12 +154,12 @@ export default function SEOSpecialistUKPage() {
 
   const faqs = [
     {
-      question: "Can a remote SEO specialist actually work well with a UK business?",
+      question: "Can a remote SEO expert actually work well with a UK business?",
       answer:
         "Yes. SEO work is audit, strategy, code, and reporting, none of which requires physical presence. Communication happens over email, calls, and shared reporting, the same way it would with an in-house hire or a local agency account manager.",
     },
     {
-      question: "Why choose a specialist over a UK SEO agency?",
+      question: "Why choose an expert over a UK SEO agency?",
       answer:
         "Direct access to the person doing the work, lower overhead than an agency retainer, and technical implementation handled by the same person who did the audit, rather than passed to a separate development team.",
     },
@@ -217,15 +217,15 @@ export default function SEOSpecialistUKPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "SEO Specialist for UK Businesses",
+    name: "SEO Expert for UK Businesses",
     description:
-      "Remote SEO specialist for UK businesses providing technical SEO, WordPress SEO, Core Web Vitals optimization, ecommerce SEO, SEO audits, and AEO/GEO optimization.",
+      "Remote SEO expert for UK businesses providing technical SEO, WordPress SEO, Core Web Vitals optimization, ecommerce SEO, SEO audits, and AEO/GEO optimization.",
     url: "https://rejishkhanal.com.np/seo-specialist-uk-technical-seo-wordpress",
     provider: {
       "@type": "Person",
       name: "Rejish Khanal",
       url: "https://rejishkhanal.com.np",
-      jobTitle: "Technical SEO Specialist and Full Stack Developer",
+      jobTitle: "Technical SEO Expert and Full Stack Developer",
       sameAs: [
         "https://github.com/rejish7",
         "https://x.com/KhanalRejish",
@@ -249,9 +249,9 @@ export default function SEOSpecialistUKPage() {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Rejish Khanal - SEO Specialist for UK Businesses",
+    name: "Rejish Khanal - SEO Expert for UK Businesses",
     description:
-      "Remote SEO specialist for UK businesses providing technical SEO, WordPress SEO, Core Web Vitals optimization, ecommerce SEO, SEO audits, and AEO/GEO optimization.",
+      "Remote SEO expert for UK businesses providing technical SEO, WordPress SEO, Core Web Vitals optimization, ecommerce SEO, SEO audits, and AEO/GEO optimization.",
     url: "https://rejishkhanal.com.np/seo-specialist-uk-technical-seo-wordpress",
     image: "https://rejishkhanal.com.np/og-image.jpg",
     areaServed: {
@@ -262,7 +262,7 @@ export default function SEOSpecialistUKPage() {
       "@type": "Person",
       name: "Rejish Khanal",
       url: "https://rejishkhanal.com.np",
-      jobTitle: "Technical SEO Specialist and Full Stack Developer",
+      jobTitle: "Technical SEO Expert and Full Stack Developer",
       sameAs: [
         "https://github.com/rejish7",
         "https://x.com/KhanalRejish",
@@ -308,10 +308,10 @@ export default function SEOSpecialistUKPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "SEO Specialist for UK Businesses",
+    name: "SEO Expert for UK Businesses",
     url: "https://rejishkhanal.com.np/seo-specialist-uk-technical-seo-wordpress",
     description:
-      "Remote SEO specialist for UK businesses providing technical SEO, WordPress SEO, Core Web Vitals optimization, ecommerce SEO, SEO audits, and AEO/GEO optimization.",
+      "Remote SEO expert for UK businesses providing technical SEO, WordPress SEO, Core Web Vitals optimization, ecommerce SEO, SEO audits, and AEO/GEO optimization.",
     inLanguage: "en-GB",
     isPartOf: {
       "@type": "WebSite",
@@ -319,10 +319,10 @@ export default function SEOSpecialistUKPage() {
       url: "https://rejishkhanal.com.np",
     },
     about: [
-      "SEO Specialist UK",
+      "SEO Expert UK",
       "Technical SEO UK",
       "WordPress SEO UK",
-      "Remote SEO Specialist",
+      "Remote SEO Expert",
       "Ecommerce SEO UK",
       "AEO GEO UK",
     ],
@@ -347,7 +347,7 @@ export default function SEOSpecialistUKPage() {
       {
         "@type": "ListItem",
         position: 3,
-        name: "SEO Specialist for UK Businesses",
+        name: "SEO Expert for UK Businesses",
         item: "https://rejishkhanal.com.np/seo-specialist-uk-technical-seo-wordpress",
       },
     ],
@@ -413,12 +413,12 @@ export default function SEOSpecialistUKPage() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <section className="mb-20">
           <p className="text-sm font-semibold text-primary mb-4">
-            SEO Specialist for UK Businesses | Technical SEO | WordPress | AEO |
+            SEO Expert for UK Businesses | Technical SEO | WordPress | AEO |
             GEO
           </p>
 
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            SEO Specialist for UK Businesses: Technical SEO and WordPress,
+            SEO Expert for UK Businesses: Technical SEO and WordPress,
             Handled Directly
           </h1>
 
@@ -458,13 +458,13 @@ export default function SEOSpecialistUKPage() {
 
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-8">
-            Why UK Businesses Work With a Remote SEO Specialist
+            Why UK Businesses Work With a Remote SEO Expert
           </h2>
 
           <div className="space-y-5 text-muted-foreground text-lg">
             <p>
               Many UK businesses default to hiring a local agency because it
-              feels safer. In practice, remote specialists working across UK
+              feels safer. In practice, remote experts working across UK
               hours are now a standard part of how UK companies get technical
               work done, and for SEO specifically, the work is entirely
               screen-based: audits, code, and reporting, none of which require
@@ -525,7 +525,7 @@ export default function SEOSpecialistUKPage() {
 
         <section className="mb-20 p-8 bg-accent/50 rounded-lg border">
           <h2 className="text-3xl font-bold mb-6">
-            Why Work With Me as Your UK SEO Specialist?
+            Why Work With Me as Your UK SEO Expert?
           </h2>
 
           <div className="space-y-4">
@@ -592,7 +592,7 @@ export default function SEOSpecialistUKPage() {
           <TrendingUp className="h-12 w-12 text-primary mx-auto mb-5" />
 
           <h2 className="text-3xl font-bold mb-4">
-            Work With an SEO Specialist for Your UK Business
+            Work With an SEO Expert for Your UK Business
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

@@ -23,27 +23,27 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Specialist Kathmandu | Technical & Local SEO",
+  title: "SEO Expert Kathmandu | Technical & Local SEO",
   description:
-    "Hire an SEO specialist in Kathmandu for technical SEO, local SEO, AEO, GEO, and organic growth.",
+    "Hire an SEO expert in Kathmandu for technical SEO, local SEO, AEO, GEO, and organic growth.",
   keywords: [
-    "SEO specialist in Kathmandu",
+    "SEO expert in Kathmandu",
     "SEO expert in Kathmandu",
     "SEO consultant in Kathmandu",
-    "freelance SEO specialist in Kathmandu",
-    "technical SEO specialist in Kathmandu",
+    "freelance SEO expert in Kathmandu",
+    "technical SEO expert in Kathmandu",
     "technical SEO expert Kathmandu",
     "local SEO expert Kathmandu",
     "SEO services in Kathmandu",
     "SEO audit Kathmandu",
     "Google ranking expert Kathmandu",
     "SEO expert in Nepal",
-    "SEO specialist Nepal",
+    "SEO expert Nepal",
     "technical SEO in Nepal",
     "local SEO Kathmandu",
     "AEO expert in Nepal",
     "GEO expert in Nepal",
-    "organic growth specialist Kathmandu",
+    "organic growth expert Kathmandu",
     "SEO consultant Nepal",
   ],
   alternates: {
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "SEO Specialist in Kathmandu | Technical SEO, Local SEO, AEO & GEO",
+      "SEO Expert in Kathmandu | Technical SEO, Local SEO, AEO & GEO",
     description:
-      "Work with Rejish Khanal, an SEO specialist in Kathmandu helping local businesses improve Google rankings, technical SEO, local visibility, AEO, GEO, and organic leads.",
+      "Work with Rejish Khanal, an SEO expert in Kathmandu helping local businesses improve Google rankings, technical SEO, local visibility, AEO, GEO, and organic leads.",
     url: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
     siteName: "Rejish Khanal",
     type: "website",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Specialist in Kathmandu | Technical SEO & Local SEO Expert",
+    title: "SEO Expert in Kathmandu | Technical SEO & Local SEO Expert",
     description:
       "Technical SEO, local SEO, AEO, GEO, SEO audits, and organic growth services for businesses in Kathmandu and Nepal.",
   },
@@ -77,7 +77,7 @@ export default function SEOSpecialistKathmanduPage() {
     },
     {
       icon: Code2,
-      title: "Technical SEO Specialist in Kathmandu",
+      title: "Technical SEO Expert in Kathmandu",
       description:
         "Fix crawlability, indexing, Core Web Vitals, redirects, canonical tags, XML sitemaps, robots.txt, schema markup, JavaScript SEO, and site architecture issues.",
     },
@@ -159,20 +159,20 @@ export default function SEOSpecialistKathmanduPage() {
   ];
 
   const targetKeywords = [
-    "SEO specialist in Kathmandu",
+    "SEO expert in Kathmandu",
     "SEO expert in Kathmandu",
     "SEO consultant in Kathmandu",
-    "freelance SEO specialist in Kathmandu",
-    "technical SEO specialist in Kathmandu",
+    "freelance SEO expert in Kathmandu",
+    "technical SEO expert in Kathmandu",
     "local SEO expert Kathmandu",
     "SEO services in Kathmandu",
     "SEO audit Kathmandu",
     "Google ranking expert Kathmandu",
-    "SEO specialist Nepal",
+    "SEO expert Nepal",
     "technical SEO in Nepal",
     "AEO expert in Nepal",
     "GEO expert in Nepal",
-    "organic growth specialist Kathmandu",
+    "organic growth expert Kathmandu",
     "SEO for small business Kathmandu",
   ];
 
@@ -250,14 +250,14 @@ export default function SEOSpecialistKathmanduPage() {
 
   const faqs = [
     {
-      question: "Who is an SEO specialist in Kathmandu?",
+      question: "Who is an SEO expert in Kathmandu?",
       answer:
-        "An SEO specialist in Kathmandu is a professional who helps businesses improve visibility on Google through technical SEO, local SEO, keyword research, content optimization, SEO audits, and performance tracking. I help Kathmandu-based businesses build search-friendly websites that attract qualified organic traffic and leads.",
+        "An SEO expert in Kathmandu is a professional who helps businesses improve visibility on Google through technical SEO, local SEO, keyword research, content optimization, SEO audits, and performance tracking. I help Kathmandu-based businesses build search-friendly websites that attract qualified organic traffic and leads.",
     },
     {
-      question: "Why should I hire an SEO specialist in Kathmandu?",
+      question: "Why should I hire an SEO expert in Kathmandu?",
       answer:
-        "You should hire an SEO specialist in Kathmandu if your business wants to rank for local keywords, improve Google visibility, generate more organic leads, and compete with other businesses in your market. A Kathmandu-focused SEO strategy can help your website target customers who are already searching for your services.",
+        "You should hire an SEO expert in Kathmandu if your business wants to rank for local keywords, improve Google visibility, generate more organic leads, and compete with other businesses in your market. A Kathmandu-focused SEO strategy can help your website target customers who are already searching for your services.",
     },
     {
       question: "What SEO services do you provide in Kathmandu?",
@@ -304,9 +304,9 @@ export default function SEOSpecialistKathmanduPage() {
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Rejish Khanal - SEO Specialist in Kathmandu",
+    name: "Rejish Khanal - SEO Expert in Kathmandu",
     description:
-      "SEO specialist in Kathmandu providing technical SEO, local SEO, SEO audits, content optimization, AEO, GEO, Core Web Vitals optimization, and organic growth strategy.",
+      "SEO expert in Kathmandu providing technical SEO, local SEO, SEO audits, content optimization, AEO, GEO, Core Web Vitals optimization, and organic growth strategy.",
     url: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
     image: "https://rejishkhanal.com.np/og-image.jpg",
     areaServed: [
@@ -336,14 +336,14 @@ export default function SEOSpecialistKathmanduPage() {
       "@type": "Person",
       name: "Rejish Khanal",
       url: "https://rejishkhanal.com.np",
-      jobTitle: "SEO Specialist and Technical SEO Expert",
+      jobTitle: "SEO Expert and Technical SEO Expert",
       sameAs: [
         "https://github.com/rejish7",
         "https://x.com/KhanalRejish",
       ],
     },
     serviceType: [
-      "SEO Specialist in Kathmandu",
+      "SEO Expert in Kathmandu",
       "Technical SEO",
       "Local SEO",
       "SEO Audit",
@@ -360,9 +360,9 @@ export default function SEOSpecialistKathmanduPage() {
     "@type": "Person",
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
-    jobTitle: "SEO Specialist in Kathmandu",
+    jobTitle: "SEO Expert in Kathmandu",
     description:
-      "Rejish Khanal is an SEO specialist in Kathmandu, Nepal specializing in technical SEO, local SEO, SEO audits, AEO, GEO, content optimization, and organic growth.",
+      "Rejish Khanal is an SEO expert in Kathmandu, Nepal specializing in technical SEO, local SEO, SEO audits, AEO, GEO, content optimization, and organic growth.",
     knowsAbout: [
       "SEO",
       "Technical SEO",
@@ -386,7 +386,7 @@ export default function SEOSpecialistKathmanduPage() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "SEO Specialist in Kathmandu",
+    name: "SEO Expert in Kathmandu",
     description:
       "Technical SEO, local SEO, SEO audits, AEO, GEO, content optimization, and organic growth services for businesses in Kathmandu and Nepal.",
     provider: {
@@ -410,10 +410,10 @@ export default function SEOSpecialistKathmanduPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "SEO Specialist in Kathmandu",
+    name: "SEO Expert in Kathmandu",
     url: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
     description:
-      "SEO specialist in Kathmandu for technical SEO, local SEO, SEO audits, AEO, GEO, content SEO, and organic growth.",
+      "SEO expert in Kathmandu for technical SEO, local SEO, SEO audits, AEO, GEO, content SEO, and organic growth.",
     inLanguage: "en",
     isPartOf: {
       "@type": "WebSite",
@@ -421,9 +421,9 @@ export default function SEOSpecialistKathmanduPage() {
       url: "https://rejishkhanal.com.np",
     },
     about: [
-      "SEO Specialist in Kathmandu",
       "SEO Expert in Kathmandu",
-      "Technical SEO Specialist in Kathmandu",
+      "SEO Expert in Kathmandu",
+      "Technical SEO Expert in Kathmandu",
       "Local SEO Expert Kathmandu",
       "SEO Services in Kathmandu",
       "AEO Expert in Nepal",
@@ -450,7 +450,7 @@ export default function SEOSpecialistKathmanduPage() {
       {
         "@type": "ListItem",
         position: 3,
-        name: "SEO Specialist in Kathmandu",
+        name: "SEO Expert in Kathmandu",
         item: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
       },
     ],
@@ -516,16 +516,16 @@ export default function SEOSpecialistKathmanduPage() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <section className="mb-20">
           <p className="text-sm font-semibold text-primary mb-4">
-            SEO Specialist in Kathmandu | Technical SEO | Local SEO | AEO | GEO
+            SEO Expert in Kathmandu | Technical SEO | Local SEO | AEO | GEO
           </p>
 
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            SEO Specialist in Kathmandu Helping Businesses Rank Higher, Get More
+            SEO Expert in Kathmandu Helping Businesses Rank Higher, Get More
             Traffic, and Generate Better Leads
           </h1>
 
           <p className="text-xl text-muted-foreground mb-6">
-            I am Rejish Khanal, an SEO specialist in Kathmandu, Nepal. I help
+            I am Rejish Khanal, an SEO expert in Kathmandu, Nepal. I help
             local businesses, startups, service providers, ecommerce brands,
             agencies, consultancies, and personal websites improve Google
             visibility through technical SEO, local SEO, on-page SEO, SEO
@@ -534,15 +534,15 @@ export default function SEOSpecialistKathmanduPage() {
 
           <p className="text-lg text-muted-foreground mb-8">
             If you are looking for an SEO expert in Kathmandu, SEO consultant in
-            Kathmandu, freelance SEO specialist in Kathmandu, technical SEO
-            specialist, or local SEO expert for your business, I can help you
+            Kathmandu, freelance SEO expert in Kathmandu, technical SEO
+            expert, or local SEO expert for your business, I can help you
             build a practical, measurable, and long-term search strategy.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact">
               <Button size="lg" className="group">
-                Hire Me as Your SEO Specialist
+                Hire Me as Your SEO Expert
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -618,7 +618,7 @@ export default function SEOSpecialistKathmanduPage() {
 
         <section className="mb-20 p-8 bg-accent/50 rounded-lg border">
           <h2 className="text-3xl font-bold mb-6">
-            Why Work With Me as Your SEO Specialist in Kathmandu?
+            Why Work With Me as Your SEO Expert in Kathmandu?
           </h2>
 
           <div className="space-y-4">
@@ -641,7 +641,7 @@ export default function SEOSpecialistKathmanduPage() {
 
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-6">
-            Technical SEO Specialist in Kathmandu for Better Crawling, Indexing,
+            Technical SEO Expert in Kathmandu for Better Crawling, Indexing,
             and Website Performance
           </h2>
 
@@ -895,7 +895,7 @@ export default function SEOSpecialistKathmanduPage() {
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Work with an SEO specialist in Kathmandu who understands technical
+            Work with an SEO expert in Kathmandu who understands technical
             SEO, local SEO, content strategy, AEO, GEO, and search-focused
             website optimization.
           </p>

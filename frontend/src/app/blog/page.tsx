@@ -135,7 +135,7 @@ export default async function BlogPage() {
       "@type": "Person",
       name: "Rejish Khanal",
       url: baseUrl,
-      jobTitle: "SEO Expert in Nepal and Technical SEO Specialist",
+      jobTitle: "SEO Expert in Nepal and Technical SEO Expert",
       sameAs: [
         "https://github.com/rejish7",
         "https://x.com/KhanalRejish",

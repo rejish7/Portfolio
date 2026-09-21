@@ -25,7 +25,7 @@ const benefits = [
   },
   {
     icon: Brain,
-    title: "AEO + GEO Specialist",
+    title: "AEO + GEO Expert",
     description:
       "I optimize for AI search engines, ChatGPT Search, Perplexity, Google AI Overviews, not just traditional Google.",
   },

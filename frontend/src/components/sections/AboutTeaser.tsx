@@ -13,7 +13,7 @@ const highlights = [
   },
   {
     icon: Target,
-    title: "Independent Specialist",
+    title: "Direct Expert Access",
     description: "Direct access to the person diagnosing and implementing. Based in Kathmandu, serving worldwide.",
   },
   {
@@ -36,16 +36,16 @@ export function AboutTeaser() {
             transition={{ duration: 0.7 }}
             className="space-y-5"
           >
-            <h2 id="about-heading" className="text-2xl sm:text-3xl font-bold">About Rejish Khanal - Technical SEO Specialist in Nepal</h2>
+            <h2 id="about-heading" className="text-2xl sm:text-3xl font-bold">About Rejish Khanal - Technical SEO Expert in Nepal</h2>
             <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
               <p>
-                <strong className="text-foreground">Rejish Khanal</strong> is an independent technical SEO specialist and full-stack developer based in <strong className="text-foreground">Kathmandu, Nepal</strong>.
+                <strong className="text-foreground">Rejish Khanal</strong> is a technical SEO expert and full-stack developer based in <strong className="text-foreground">Kathmandu, Nepal</strong>.
               </p>
               <p>
                 He helps businesses fix crawlability, indexing, Core Web Vitals, structured data, and JavaScript SEO problems. Unlike consultants who only provide reports, Rejish implements fixes directly in <span className="text-primary font-medium">Next.js, Django, Laravel, PHP, React, and Vue.js</span>.
               </p>
               <p>
-                Experience includes <strong className="text-foreground">SEO Specialist at Gripas Marketing</strong> and <strong className="text-foreground">SEO Specialist & Web Developer at E-Prabidhi Pvt. Ltd</strong>, achieving 40-60% organic traffic growth for clients.
+                Experience includes <strong className="text-foreground">SEO Expert at Gripas Marketing</strong> and <strong className="text-foreground">SEO Expert & Web Developer at E-Prabidhi Pvt. Ltd</strong>, achieving 40-60% organic traffic growth for clients.
               </p>
             </div>
             <p className="text-sm text-muted-foreground italic">

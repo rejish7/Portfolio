@@ -41,7 +41,7 @@ export function HomepageHero() {
               custom={1}
               className="text-xs font-semibold uppercase tracking-wider text-primary font-mono"
             >
-              Technical SEO Specialist &amp; Full-Stack Developer, Kathmandu, Nepal
+              Technical SEO Expert &amp; Full-Stack Developer, Kathmandu, Nepal
             </motion.p>
 
             {/* H1 */}

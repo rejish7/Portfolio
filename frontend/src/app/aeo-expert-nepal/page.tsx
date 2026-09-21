@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/aeo-expert-nepal",
   },
   openGraph: {
-    title: "AEO Expert in Nepal | Answer Engine Optimization Specialist",
+    title: "AEO Expert in Nepal | Answer Engine Optimization Expert",
     description:
       "Work with Rejish Khanal to optimize your website content for featured snippets, People Also Ask, voice search, AI Overviews, and answer engines.",
     url: "https://rejishkhanal.com.np/aeo-expert-nepal",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AEO Expert in Nepal | Answer Engine Optimization Specialist",
+    title: "AEO Expert in Nepal | Answer Engine Optimization Expert",
     description:
       "AEO services in Nepal for featured snippets, People Also Ask, voice search, AI Overviews, and direct answer visibility.",
     images: ["https://rejishkhanal.com.np/og-image.jpg"],

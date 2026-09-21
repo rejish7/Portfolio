@@ -10,7 +10,7 @@ const timeline = [
     company: "Self-Employed",
     location: "Kathmandu, Nepal",
     description:
-      "I work independently with businesses and website owners that need technical SEO analysis, AEO and GEO readiness, Core Web Vitals improvement, structured data, JavaScript SEO, and code-level implementation. My work focuses on observable technical conditions, including crawler access, indexation signals, rendered content, website performance, entity consistency, accessibility, and implementation quality.",
+      "I work with businesses and website owners that need technical SEO analysis, AEO and GEO readiness, Core Web Vitals improvement, structured data, JavaScript SEO, and code-level implementation. My work focuses on observable technical conditions, including crawler access, indexation signals, rendered content, website performance, entity consistency, accessibility, and implementation quality.",
   },
   {
     period: "March 2026 – September 2026",
@@ -103,7 +103,7 @@ export function AboutTimeline() {
             </span>
             <p className="text-sm text-muted-foreground">
               100% transparent track record. When you engage Rejish Khanal, you collaborate directly
-              with an experienced engineer and SEO specialist — not junior account managers or
+              with an experienced engineer and SEO expert — not junior account managers or
               delegated offshore pools.
             </p>
           </div>

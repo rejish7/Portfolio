@@ -47,10 +47,10 @@ export function Hero() {
               className="flex flex-col gap-2"
             >
               <span className="text-xs font-semibold uppercase tracking-wider text-primary font-mono">
-                Technical SEO Specialist &amp; Full-Stack Developer, Kathmandu, Nepal
+                Technical SEO Expert &amp; Full-Stack Developer, Kathmandu, Nepal
               </span>
               <h1 id="hero-heading" className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-                Technical SEO Specialist in Nepal | Rejish Khanal
+                Technical SEO Expert in Nepal | Rejish Khanal
               </h1>
             </motion.div>
 
@@ -61,7 +61,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg text-muted-foreground max-w-2xl leading-relaxed"
             >
-              I am Rejish Khanal, an independent <strong className="text-foreground">technical SEO specialist</strong> and <strong className="text-foreground">full-stack developer</strong> based in <strong className="text-foreground">Kathmandu, Nepal</strong>. I audit and fix <strong className="text-foreground">crawlability</strong>, <strong className="text-foreground">indexing</strong>, <strong className="text-foreground">Core Web Vitals</strong>, <strong className="text-foreground">structured data</strong>, and <strong className="text-foreground">JavaScript rendering</strong> issues, then implement the fixes directly in your codebase. No handoff delays. Serving clients in the US, UK, Australia, and worldwide.
+              I am Rejish Khanal, a <strong className="text-foreground">technical SEO expert</strong> and <strong className="text-foreground">full-stack developer</strong> based in <strong className="text-foreground">Kathmandu, Nepal</strong>. I audit and fix <strong className="text-foreground">crawlability</strong>, <strong className="text-foreground">indexing</strong>, <strong className="text-foreground">Core Web Vitals</strong>, <strong className="text-foreground">structured data</strong>, and <strong className="text-foreground">JavaScript rendering</strong> issues, then implement the fixes directly in your codebase. No handoff delays. Serving clients in the US, UK, Australia, and worldwide.
             </motion.p>
 
             {/* Stats strip */}
@@ -90,7 +90,7 @@ export function Hero() {
             >
               <Link href="/contact">
                 <Button size="lg" className="group">
-                  Hire a Technical SEO Specialist
+                  Hire a Technical SEO Expert
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>

@@ -6,7 +6,7 @@ export function CTASection() {
     <section className="py-24 text-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Ready to Hire a Technical SEO Specialist in Nepal?
+          Ready to Hire a Technical SEO Expert in Nepal?
         </h2>
         <p className="text-lg md:text-xl mb-10 opacity-90 max-w-2xl mx-auto">
           I am available for technical SEO audits, Core Web Vitals optimization, AEO/GEO readiness, and SEO-friendly web development. Based in Kathmandu, serving clients worldwide.

@@ -21,7 +21,7 @@ export function AboutLocation() {
               Location and Availability
             </span>
             <h2 id="seo-specialist-kathmandu" className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Technical SEO Specialist Based in Kathmandu, Nepal
+              Technical SEO Expert Based in Kathmandu, Nepal
             </h2>
           </motion.div>
 

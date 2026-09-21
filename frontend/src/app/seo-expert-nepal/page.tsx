@@ -21,14 +21,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Expert in Nepal | Technical SEO & AEO Specialist",
+  title: "SEO Expert in Nepal | Technical SEO & AEO Expert",
   description:
     "Rejish Khanal is an SEO expert in Nepal for technical SEO, local SEO, AEO, GEO, content strategy, and organic growth. Based in Kathmandu, serving Nepal and international markets.",
   keywords: [
     "SEO expert in Nepal",
-    "SEO specialist in Kathmandu",
+    "SEO expert in Kathmandu",
     "SEO freelancer in Nepal",
-    "independent SEO consultant in Nepal",
+    "SEO consultant in Nepal",
     "technical SEO expert in Nepal",
     "AEO expert in Nepal",
     "GEO expert in Nepal",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/seo-expert-nepal",
   },
   openGraph: {
-    title: "SEO Expert in Nepal | Technical SEO, AEO & GEO Specialist",
+    title: "SEO Expert in Nepal | Technical SEO, AEO & GEO Expert",
     description:
       "Work with Rejish Khanal, an SEO expert in Kathmandu, Nepal. Technical SEO, AEO, GEO, content strategy, and organic growth for businesses in Nepal and international markets.",
     url: "https://rejishkhanal.com.np/seo-expert-nepal",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Expert in Nepal | Technical SEO & AEO Specialist",
+    title: "SEO Expert in Nepal | Technical SEO & AEO Expert",
     description:
       "Technical SEO, local SEO, AEO, GEO, content SEO, and organic growth services for businesses in Nepal and international markets.",
     images: ["https://rejishkhanal.com.np/og-image.jpg"],
@@ -157,7 +157,7 @@ export default function SEOExpertPage() {
     {
       question: "Why should I hire an SEO expert in Kathmandu?",
       answer:
-        "Hiring an SEO expert in Kathmandu helps your business compete for local and national search terms that your customers are already using. A Kathmandu-based SEO specialist also understands the Nepali market, local search behavior, competition, and location-based ranking opportunities.",
+        "Hiring an SEO expert in Kathmandu helps your business compete for local and national search terms that your customers are already using. A Kathmandu-based SEO expert also understands the Nepali market, local search behavior, competition, and location-based ranking opportunities.",
     },
     {
       question: "What is technical SEO and why is it important?",
@@ -218,7 +218,7 @@ export default function SEOExpertPage() {
       "@type": "Person",
       name: "Rejish Khanal",
       url: "https://rejishkhanal.com.np",
-      jobTitle: "SEO Expert and Technical SEO Specialist",
+      jobTitle: "SEO Expert and Technical SEO Expert",
       sameAs: [
         "https://github.com/rejish7",
         "https://x.com/KhanalRejish",
@@ -399,8 +399,8 @@ export default function SEOExpertPage() {
 
           <p className="text-lg text-muted-foreground mb-8">
             If you are looking for an SEO expert in Nepal, SEO expert in
-            Kathmandu, SEO specialist in Kathmandu, technical SEO expert in
-            Nepal, or AEO and GEO specialist, I can help you build a search
+            Kathmandu, SEO expert in Kathmandu, technical SEO expert in
+            Nepal, or AEO and GEO expert, I can help you build a search
             strategy that is practical, measurable, and built for long-term
             visibility.
           </p>
@@ -683,7 +683,7 @@ export default function SEOExpertPage() {
               {
                 title: "International Clients",
                 description:
-                  "Work remotely with a Nepal-based SEO specialist experienced in global SEO, technical audits, and content-led organic growth.",
+                  "Work remotely with a Nepal-based SEO expert experienced in global SEO, technical audits, and content-led organic growth.",
               },
             ].map((item, index) => (
               <Card key={index}>
@@ -779,7 +779,7 @@ export default function SEOExpertPage() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/technical-seo-specialist-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
+            <Link href="/technical-seo-expert-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 Technical SEO Expert in Nepal
               </p>

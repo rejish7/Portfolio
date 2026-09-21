@@ -52,7 +52,7 @@ export function AboutAdvantage() {
               Combined Expertise
             </span>
             <h2 id="technical-seo-specialist-who-codes" className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Why Work With a Technical SEO Specialist Who Understands Code?
+              Why Work With a Technical SEO Expert Who Understands Code?
             </h2>
             <p className="text-muted-foreground text-lg">
               SEO audits and development work are often handled by separate teams. This

@@ -866,7 +866,7 @@ export default function GoogleSearchConsoleExpertPage() {
 
             <Link href="/seo-specialist-kathmandu" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
-                SEO Specialist in Kathmandu
+                SEO Expert in Kathmandu
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 Local SEO expertise for businesses in Kathmandu valley.

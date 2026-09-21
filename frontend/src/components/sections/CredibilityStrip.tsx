@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const items = [
-  "Technical SEO Specialist in Nepal",
+  "Technical SEO Expert in Nepal",
   "Next.js, Django & Laravel Developer",
   "Core Web Vitals & JavaScript SEO",
   "AEO & GEO Expert Nepal",

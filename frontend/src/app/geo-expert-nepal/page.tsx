@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/geo-expert-nepal",
   },
   openGraph: {
-    title: "GEO Expert in Nepal | Generative Engine Optimization Specialist",
+    title: "GEO Expert in Nepal | Generative Engine Optimization Expert",
     description:
       "Improve your website visibility in AI-powered search experiences with GEO, entity SEO, structured content, topical authority, and AI search optimization.",
     url: "https://rejishkhanal.com.np/geo-expert-nepal",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GEO Expert in Nepal | AI Search Optimization Specialist",
+    title: "GEO Expert in Nepal | AI Search Optimization Expert",
     description:
       "GEO services in Nepal for AI search, generative engines, AI Overviews, entity SEO, and topical authority building.",
     images: ["https://rejishkhanal.com.np/og-image.jpg"],

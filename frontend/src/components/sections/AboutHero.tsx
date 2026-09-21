@@ -23,7 +23,7 @@ export function AboutHero() {
               <div className="relative rounded-2xl overflow-hidden bg-muted aspect-[4/5] shadow-xl">
                 <Image
                   src="/assets/images/rejish-khanal.webp"
-                  alt="Rejish Khanal — Technical SEO Specialist and Full-Stack Developer in Kathmandu, Nepal"
+                  alt="Rejish Khanal — Technical SEO Expert and Full-Stack Developer in Kathmandu, Nepal"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 40vw"
@@ -72,14 +72,14 @@ export function AboutHero() {
 
             {/* H1 */}
             <h1 id="about-rejish-khanal" className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.12]">
-              Technical SEO Specialist and Full-Stack Developer in{" "}
+              Technical SEO Expert and Full-Stack Developer in{" "}
               <span className="text-primary">Nepal</span>
             </h1>
 
             {/* Bio */}
             <div className="flex flex-col gap-4 text-muted-foreground leading-relaxed">
               <p>
-                I am <strong className="text-foreground font-semibold">Rejish Khanal</strong>, an independent technical SEO specialist
+                I am <strong className="text-foreground font-semibold">Rejish Khanal</strong>, a technical SEO expert
                 and full-stack developer based in Kathmandu, Nepal. I identify and resolve
                 the technical problems that prevent websites from being crawled, rendered,
                 indexed, understood, and discovered across traditional and AI-powered

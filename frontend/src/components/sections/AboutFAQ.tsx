@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "Who is Rejish Khanal?",
     answer:
-      "Rejish Khanal is an independent technical SEO specialist and full-stack developer based in Kathmandu, Nepal. He works on technical SEO audits, Core Web Vitals, JavaScript SEO, structured data, AEO, GEO, Next.js, Django, Laravel, and code-level search implementation.",
+      "Rejish Khanal is a technical SEO expert and full-stack developer based in Kathmandu, Nepal. He works on technical SEO audits, Core Web Vitals, JavaScript SEO, structured data, AEO, GEO, Next.js, Django, Laravel, and code-level search implementation.",
   },
   {
     question: "What does Rejish Khanal specialize in?",

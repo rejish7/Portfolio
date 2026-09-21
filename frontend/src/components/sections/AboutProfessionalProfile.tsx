@@ -31,7 +31,7 @@ export function AboutProfessionalProfile() {
           >
             <p>
               <strong className="text-foreground">
-                Rejish Khanal is an independent technical SEO specialist and full-stack
+                Rejish Khanal is a technical SEO expert and full-stack
                 developer based in Kathmandu, Nepal.
               </strong>{" "}
               He helps businesses improve crawling, indexation, website performance,

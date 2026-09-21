@@ -265,7 +265,7 @@ export default function LocalSEOPage() {
       "@type": "Person",
       name: "Rejish Khanal",
       url: "https://rejishkhanal.com.np",
-      jobTitle: "SEO Expert in Nepal and Local SEO Specialist",
+      jobTitle: "SEO Expert in Nepal and Local SEO Expert",
       address: {
         "@type": "PostalAddress",
         addressCountry: "NP",

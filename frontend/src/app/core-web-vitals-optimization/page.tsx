@@ -295,7 +295,7 @@ export default function CoreWebVitalsPage() {
       "@type": "Person",
       name: "Rejish Khanal",
       url: "https://rejishkhanal.com.np",
-      jobTitle: "Technical SEO Specialist and Core Web Vitals Expert in Nepal",
+      jobTitle: "Technical SEO Expert and Core Web Vitals Expert in Nepal",
       address: {
         "@type": "PostalAddress",
         addressCountry: "NP",

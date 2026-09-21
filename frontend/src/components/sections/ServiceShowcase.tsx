@@ -24,7 +24,7 @@ import {
 
 const services = [
   {
-    title: "Technical SEO Specialist in Nepal",
+    title: "Technical SEO Expert in Nepal",
     description:
       "Fix crawlability, indexing, Core Web Vitals, schema markup, redirects, canonicals, JavaScript SEO, and technical website issues that affect Google rankings.",
     href: "/technical-seo-specialist-nepal",
