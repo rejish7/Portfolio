@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   keywords: [
     "contact SEO expert in Nepal",
     "hire SEO expert Nepal",
-    "hire technical SEO specialist Nepal",
+    "hire technical SEO expert Nepal",
     "SEO consultation Nepal",
     "technical SEO audit Nepal",
     "local SEO Kathmandu",
@@ -181,7 +181,7 @@ export default function ContactPage() {
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
     description:
-      "Rejish Khanal is an independent technical SEO specialist and full-stack developer based in Kathmandu, Nepal.",
+      "Rejish Khanal is an independent technical SEO expert and full-stack developer based in Kathmandu, Nepal.",
     email: "contact@rejishkhanal.com.np",
     telephone: "9862766994",
     areaServed: [
@@ -222,7 +222,7 @@ export default function ContactPage() {
     url: "https://rejishkhanal.com.np",
     email: "contact@rejishkhanal.com.np",
     telephone: "9862766994",
-    jobTitle: ["Technical SEO Specialist", "Full-Stack Developer"],
+    jobTitle: ["Technical SEO Expert", "Full-Stack Developer"],
     address: {
       "@type": "PostalAddress",
       addressCountry: "NP",

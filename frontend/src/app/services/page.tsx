@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     "Laravel developer Nepal",
     "WordPress SEO Nepal",
     "local SEO services Nepal",
-    "SEO specialist Kathmandu",
-    "technical SEO specialist Nepal",
+    "SEO expert Kathmandu",
+    "technical SEO expert Nepal",
     "SEO-friendly web development",
     "schema markup implementation Nepal",
     "crawlability optimization Nepal",
@@ -430,7 +430,7 @@ export default function ServicesPage() {
             >
               <Code2 className="h-5 w-5 text-primary mb-3" />
               <p className="font-semibold mb-2 text-foreground">
-                Technical SEO Specialist in Nepal
+                Technical SEO Expert in Nepal
               </p>
               <p className="text-sm text-muted-foreground">
                 Improve crawlability, indexing, Core Web Vitals, schema, and website performance.

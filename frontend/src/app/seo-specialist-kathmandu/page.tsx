@@ -211,7 +211,7 @@ export default function SEOSpecialistKathmanduPage() {
 
   const relatedServices = [
     {
-      title: "Technical SEO Specialist in Nepal",
+      title: "Technical SEO Expert in Nepal",
       href: "/technical-seo-specialist-nepal",
       description:
         "Fix crawl, index, speed, schema, JavaScript SEO, and technical website issues.",
@@ -653,7 +653,7 @@ export default function SEOSpecialistKathmanduPage() {
             </p>
 
             <p>
-              As a technical SEO specialist in Kathmandu, I review the technical
+              As a technical SEO expert in Kathmandu, I review the technical
               foundation of your website and identify issues that may be stopping
               your pages from ranking. This includes site speed, Core Web Vitals,
               sitemaps, robots.txt, canonical tags, redirects, duplicate

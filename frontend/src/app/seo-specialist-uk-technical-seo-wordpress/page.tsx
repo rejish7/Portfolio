@@ -177,7 +177,7 @@ export default function SEOSpecialistUKPage() {
 
   const relatedServices = [
     {
-      title: "Technical SEO Specialist in Nepal",
+      title: "Technical SEO Expert in Nepal",
       href: "/technical-seo-specialist-nepal",
       description:
         "Fix crawl, index, speed, schema, JavaScript SEO, and technical website issues.",
@@ -284,9 +284,9 @@ export default function SEOSpecialistUKPage() {
     "@type": "Person",
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
-    jobTitle: "SEO Specialist and Technical SEO Expert",
+    jobTitle: "SEO Expert and Technical SEO Expert",
     description:
-      "Rejish Khanal is a technical SEO specialist and full stack developer working remotely with UK businesses on technical SEO, WordPress optimization, Core Web Vitals, ecommerce SEO, SEO audits, and AEO/GEO.",
+      "Rejish Khanal is a technical SEO expert and full stack developer working remotely with UK businesses on technical SEO, WordPress optimization, Core Web Vitals, ecommerce SEO, SEO audits, and AEO/GEO.",
     knowsAbout: [
       "Technical SEO",
       "WordPress SEO",
@@ -433,7 +433,7 @@ export default function SEOSpecialistUKPage() {
           </p>
 
           <p className="text-lg text-muted-foreground mb-8">
-            I am Rejish Khanal, a technical SEO specialist and full-stack
+            I am Rejish Khanal, a technical SEO expert and full-stack
             developer working remotely with UK businesses. I combine SEO strategy
             with hands-on development, so when an audit finds a fix, I implement
             it directly in code rather than handing a list of recommendations to

@@ -394,7 +394,7 @@ export default function WordPressSEOExpertNepalPage() {
           <div className="grid md:grid-cols-3 gap-4">
             <Link href="/technical-seo-specialist-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
-                Technical SEO Specialist in Nepal
+                Technical SEO Expert in Nepal
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 Fix crawlability, indexing, speed, schema, and technical SEO issues.

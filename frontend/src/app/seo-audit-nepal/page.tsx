@@ -397,9 +397,9 @@ export default function SEOAuditPage() {
     "@id": "https://rejishkhanal.com.np/#person",
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
-    jobTitle: "SEO Expert and Technical SEO Specialist in Nepal",
+    jobTitle: "SEO Expert and Technical SEO Expert in Nepal",
     description:
-      "Rejish Khanal is an SEO expert and technical SEO specialist in Nepal helping businesses find and fix technical SEO issues, indexing problems, Core Web Vitals errors, and ranking barriers.",
+      "Rejish Khanal is an SEO expert and technical SEO expert in Nepal helping businesses find and fix technical SEO issues, indexing problems, Core Web Vitals errors, and ranking barriers.",
     knowsAbout: [
       "SEO Audit",
       "Technical SEO",
@@ -467,7 +467,7 @@ export default function SEOAuditPage() {
           </h1>
 
           <p className="text-xl text-muted-foreground mb-6">
-            I am Rejish Khanal, an SEO expert and technical SEO specialist in
+            I am Rejish Khanal, an SEO expert and technical SEO expert in
             Nepal. I provide professional SEO audit services to help businesses
             find technical issues, indexing problems, Core Web Vitals errors,
             content gaps, and ranking barriers that may be stopping their
@@ -816,7 +816,7 @@ export default function SEOAuditPage() {
           <div className="grid md:grid-cols-3 gap-4">
             <Link href="/technical-seo-specialist-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
-                Technical SEO Specialist in Nepal
+                Technical SEO Expert in Nepal
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 Fix crawlability, indexing, Core Web Vitals, schema, and technical SEO issues.

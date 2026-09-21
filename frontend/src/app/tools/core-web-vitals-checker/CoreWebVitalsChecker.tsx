@@ -627,7 +627,7 @@ export function CoreWebVitalsChecker() {
               <Shield className="h-14 w-14 text-primary mx-auto mb-5" />
               <h3 className="text-2xl font-bold mb-3">Need help fixing these issues?</h3>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto leading-relaxed">
-                I am a technical SEO specialist based in Nepal. I provide comprehensive SEO audits,
+                I am a technical SEO expert based in Nepal. I provide comprehensive SEO audits,
                 Core Web Vitals optimization, and ongoing SEO strategy for businesses worldwide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

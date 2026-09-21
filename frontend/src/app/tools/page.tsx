@@ -98,7 +98,7 @@ export default function ToolsPage() {
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Free tools to check your website&apos;s performance, SEO health, and
-              Core Web Vitals. Built by a technical SEO specialist to help you rank higher.
+              Core Web Vitals. Built by a technical SEO expert to help you rank higher.
             </p>
           </header>
 

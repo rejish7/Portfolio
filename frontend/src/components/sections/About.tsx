@@ -15,11 +15,11 @@ const highlights = [
   {
     icon: Target,
     title: "Independent Professional",
-    description: "I work as an independent technical SEO specialist and full-stack developer, giving clients direct access to the person doing the work.",
+    description: "I work as an independent technical SEO expert and full-stack developer, giving clients direct access to the person doing the work.",
   },
   {
     icon: Sparkles,
-    title: "AEO and GEO Specialist",
+    title: "AEO and GEO Expert",
     description: "I help businesses prepare content for AI-assisted search experiences, answer engines, featured snippets, and generative search platforms.",
   },
 ];
@@ -93,7 +93,7 @@ export function About() {
                 <div className="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-2xl overflow-hidden border border-border/50 shadow-2xl">
                   <Image
                     src="/assets/images/rejish-khanal.webp"
-                    alt="Rejish Khanal - Technical SEO Specialist in Kathmandu, Nepal"
+                    alt="Rejish Khanal - Technical SEO Expert in Kathmandu, Nepal"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 40vw"
@@ -152,7 +152,7 @@ export function About() {
               <div className="space-y-5 text-lg leading-relaxed text-muted-foreground">
                 <p>
                   I am an{" "}
-                  <span className="text-foreground font-medium">independent technical SEO specialist</span>{" "}
+                  <span className="text-foreground font-medium">independent technical SEO expert</span>{" "}
                   and{" "}
                   <span className="text-foreground font-medium">full-stack developer</span>{" "}
                   based in <span className="text-foreground font-medium">Kathmandu, Nepal</span>. I help businesses identify and fix the technical problems that prevent search engines from crawling, indexing, and ranking their pages effectively.
@@ -206,12 +206,12 @@ export function About() {
 
               {/* CTAs */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <Link href="/contact">
-                  <Button size="lg" className="group">
-                    Hire a Technical SEO Specialist
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+<Link href="/contact">
+                    <Button size="lg" className="group">
+                      Hire a Technical SEO Expert
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 <Link href="/seo-audit-nepal">
                   <Button size="lg" variant="outline">
                     Request an SEO Audit
@@ -362,7 +362,7 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Hire a Technical SEO Specialist?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Hire a Technical SEO Expert?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               I am available for technical SEO audits, Core Web Vitals optimization, AEO/GEO readiness, and SEO-friendly web development. Based in Kathmandu, serving clients worldwide.
             </p>

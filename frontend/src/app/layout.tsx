@@ -16,13 +16,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Technical SEO Specialist in Nepal | Rejish Khanal",
+    default: "Technical SEO Expert in Nepal | Rejish Khanal",
     template: "%s | Rejish Khanal",
   },
   description:
-    "Technical SEO specialist in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues with direct code implementation. Serving US, UK, AU & worldwide.",
+    "Technical SEO expert in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues with direct code implementation. Serving US, UK, AU & worldwide.",
   keywords: [
-    "technical SEO specialist in Nepal",
+    "technical SEO expert in Nepal",
     "SEO expert in Nepal",
     "AEO expert in Nepal",
     "GEO expert in Nepal",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Core Web Vitals expert Nepal",
     "JavaScript SEO expert Nepal",
     "Next.js SEO expert Nepal",
-    "SEO specialist Kathmandu",
+    "SEO expert Kathmandu",
   ],
   authors: [{ name: "Rejish Khanal", url: "https://rejishkhanal.com.np" }],
   creator: "Rejish Khanal",
@@ -42,24 +42,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://rejishkhanal.com.np",
-    title: "Technical SEO Specialist in Nepal | Rejish Khanal",
+    title: "Technical SEO Expert in Nepal | Rejish Khanal",
     description:
-      "Technical SEO specialist in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues with direct code implementation. Serving US, UK, AU & worldwide.",
+      "Technical SEO expert in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues with direct code implementation. Serving US, UK, AU & worldwide.",
     siteName: "Rejish Khanal",
     images: [
       {
         url: "https://rejishkhanal.com.np/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rejish Khanal - Technical SEO Specialist in Nepal",
+        alt: "Rejish Khanal - Technical SEO Expert in Nepal",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Technical SEO Specialist in Nepal | Rejish Khanal",
+    title: "Technical SEO Expert in Nepal | Rejish Khanal",
     description:
-      "Technical SEO specialist in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues.",
+      "Technical SEO expert in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues.",
     creator: "@KhanalRejish",
     images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
@@ -88,9 +88,9 @@ export default function RootLayout({
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
     image: "https://rejishkhanal.com.np/assets/images/rejish-khanal.webp",
-    jobTitle: ["Technical SEO Specialist", "Full-Stack Developer"],
+    jobTitle: ["Technical SEO Expert", "Full-Stack Developer"],
     description:
-      "Rejish Khanal is an independent technical SEO specialist and full-stack developer based in Kathmandu, Nepal. His work covers technical SEO, Core Web Vitals, structured data, JavaScript SEO, AEO, GEO, and code-level SEO implementation.",
+      "Rejish Khanal is an independent technical SEO expert and full-stack developer based in Kathmandu, Nepal. His work covers technical SEO, Core Web Vitals, structured data, JavaScript SEO, AEO, GEO, and code-level SEO implementation.",
     email: "contact@rejishkhanal.com.np",
     address: {
       "@type": "PostalAddress",

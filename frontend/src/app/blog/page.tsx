@@ -258,7 +258,7 @@ export default async function BlogPage() {
 
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-6">
             Read practical SEO articles by Rejish Khanal, an SEO expert and
-            technical SEO specialist in Nepal. This blog covers technical SEO,
+            technical SEO expert in Nepal. This blog covers technical SEO,
             Core Web Vitals, JavaScript SEO, SEO audits, local SEO, AEO, GEO,
             and SEO-friendly web development.
           </p>
@@ -367,7 +367,7 @@ export default async function BlogPage() {
 
             <Link href="/technical-seo-specialist-nepal">
               <p className="font-semibold hover:text-primary transition-colors">
-                Technical SEO Specialist in Nepal
+                Technical SEO Expert in Nepal
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 Improve crawlability, indexing, Core Web Vitals, schema, and website architecture.

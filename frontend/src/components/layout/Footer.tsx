@@ -73,7 +73,7 @@ const seoServiceLinks = [
     href: "/seo-expert-nepal",
   },
   {
-    label: "Technical SEO Specialist in Nepal",
+    label: "Technical SEO Expert in Nepal",
     href: "/technical-seo-specialist-nepal",
   },
   {
@@ -119,7 +119,7 @@ export function Footer() {
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
     description:
-      "Rejish Khanal is an independent technical SEO specialist and full-stack developer based in Kathmandu, Nepal. He helps businesses improve crawlability, indexing, Core Web Vitals, structured data, and organic search visibility.",
+      "Rejish Khanal is an independent technical SEO expert and full-stack developer based in Kathmandu, Nepal. He helps businesses improve crawlability, indexing, Core Web Vitals, structured data, and organic search visibility.",
     email: "contact@rejishkhanal.com.np",
     areaServed: [
       {
@@ -164,7 +164,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-              Independent technical SEO specialist and full-stack developer
+              Independent technical SEO expert and full-stack developer
               based in Kathmandu, Nepal. I help businesses improve search
               visibility through technical SEO audits, AEO, GEO, Core Web
               Vitals optimization, and SEO-friendly web development.
@@ -300,7 +300,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
               © {currentYear} Rejish Khanal. Independent Technical SEO
-              Specialist and Full-Stack Developer. All rights reserved.
+              Expert and Full-Stack Developer. All rights reserved.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 text-sm">

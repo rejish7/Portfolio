@@ -24,23 +24,23 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Technical SEO Specialist in Nepal | Core Web Vitals & JavaScript SEO",
+  title: "Technical SEO Expert in Nepal | Core Web Vitals & JavaScript SEO",
   description:
-    "Rejish Khanal is a technical SEO specialist in Nepal for crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and developer-level SEO implementation.",
+    "Rejish Khanal is a technical SEO expert in Nepal for crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and developer-level SEO implementation.",
   keywords: [
-    "technical SEO specialist in Nepal",
     "technical SEO expert in Nepal",
+    "technical SEO specialist in Nepal",
     "Core Web Vitals expert in Nepal",
     "JavaScript SEO expert in Nepal",
     "Next.js SEO expert in Nepal",
-    "SEO specialist Kathmandu",
+    "SEO expert Kathmandu",
     "technical SEO consultant Nepal",
   ],
   alternates: {
     canonical: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
   },
   openGraph: {
-    title: "Technical SEO Specialist in Nepal | Core Web Vitals & JavaScript SEO",
+    title: "Technical SEO Expert in Nepal | Core Web Vitals & JavaScript SEO",
     description:
       "Technical SEO services in Nepal for crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and website performance optimization.",
     url: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
@@ -52,13 +52,13 @@ export const metadata: Metadata = {
         url: "https://rejishkhanal.com.np/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rejish Khanal - Technical SEO Specialist in Nepal",
+        alt: "Rejish Khanal - Technical SEO Expert in Nepal",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Technical SEO Specialist in Nepal",
+    title: "Technical SEO Expert in Nepal",
     description:
       "Improve crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and technical search performance.",
     images: ["https://rejishkhanal.com.np/og-image.jpg"],
@@ -205,9 +205,9 @@ export default function TechnicalSEOPage() {
 
   const faqs = [
     {
-      question: "What does a technical SEO specialist do?",
+      question: "What does a technical SEO expert do?",
       answer:
-        "A technical SEO specialist improves the technical foundation of a website so search engines can crawl, render, index, and understand the content properly. This includes fixing Core Web Vitals, crawl errors, indexing problems, JavaScript SEO issues, schema markup, redirects, canonical tags, internal links, mobile usability, and website architecture.",
+        "A technical SEO expert improves the technical foundation of a website so search engines can crawl, render, index, and understand the content properly. This includes fixing Core Web Vitals, crawl errors, indexing problems, JavaScript SEO issues, schema markup, redirects, canonical tags, internal links, mobile usability, and website architecture.",
     },
     {
       question: "Why is technical SEO important for websites in Nepal?",
@@ -250,16 +250,16 @@ export default function TechnicalSEOPage() {
         "The cost of a technical SEO audit in Nepal depends on website size, number of pages, CMS or framework, technical complexity, and whether implementation support is required. Small website audits usually cost less than ecommerce, enterprise, or JavaScript-heavy website audits.",
     },
     {
-      question: "Who should hire a technical SEO specialist?",
+      question: "Who should hire a technical SEO expert?",
       answer:
-        "You should hire a technical SEO specialist if your website is slow, not ranking, not indexed properly, losing organic traffic, failing Core Web Vitals, showing crawl errors, or built with a framework that requires technical SEO knowledge.",
+        "You should hire a technical SEO expert if your website is slow, not ranking, not indexed properly, losing organic traffic, failing Core Web Vitals, showing crawl errors, or built with a framework that requires technical SEO knowledge.",
     },
   ];
 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Technical SEO Specialist in Nepal",
+    name: "Technical SEO Expert in Nepal",
     description:
       "Technical SEO services in Nepal for improving crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, site architecture, and search performance.",
     serviceType: "Technical SEO",
@@ -268,7 +268,7 @@ export default function TechnicalSEOPage() {
       "@type": "Person",
       name: "Rejish Khanal",
       url: "https://rejishkhanal.com.np",
-      jobTitle: "Technical SEO Specialist in Nepal",
+      jobTitle: "Technical SEO Expert in Nepal",
       address: {
         "@type": "PostalAddress",
         addressCountry: "NP",
@@ -309,9 +309,9 @@ export default function TechnicalSEOPage() {
     "@id": "https://rejishkhanal.com.np/#person",
     name: "Rejish Khanal",
     url: "https://rejishkhanal.com.np",
-    jobTitle: "Technical SEO Specialist in Nepal",
+    jobTitle: "Technical SEO Expert in Nepal",
     description:
-      "Rejish Khanal is a technical SEO specialist in Nepal helping businesses improve crawlability, indexing, Core Web Vitals, schema markup, JavaScript SEO, and organic search performance.",
+      "Rejish Khanal is a technical SEO expert in Nepal helping businesses improve crawlability, indexing, Core Web Vitals, schema markup, JavaScript SEO, and organic search performance.",
     knowsAbout: [
       "Technical SEO",
       "Core Web Vitals",
@@ -336,10 +336,10 @@ export default function TechnicalSEOPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Technical SEO Specialist in Nepal",
+    name: "Technical SEO Expert in Nepal",
     url: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
     description:
-      "Technical SEO specialist in Nepal for faster, crawlable, indexable, and SEO-friendly websites.",
+      "Technical SEO expert in Nepal for faster, crawlable, indexable, and SEO-friendly websites.",
     inLanguage: "en",
     isPartOf: {
       "@type": "WebSite",
@@ -347,7 +347,7 @@ export default function TechnicalSEOPage() {
       url: "https://rejishkhanal.com.np",
     },
     about: [
-      "Technical SEO Specialist in Nepal",
+      "Technical SEO Expert in Nepal",
       "Core Web Vitals Optimization",
       "JavaScript SEO",
       "Schema Markup",
@@ -369,7 +369,7 @@ export default function TechnicalSEOPage() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Technical SEO Specialist in Nepal",
+        name: "Technical SEO Expert in Nepal",
         item: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
       },
     ],
@@ -427,21 +427,21 @@ export default function TechnicalSEOPage() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <section className="mb-20">
-          <p className="text-sm font-semibold text-primary mb-4">
-            Technical SEO Specialist in Nepal | Core Web Vitals | JavaScript SEO | Schema Markup
+<p className="text-sm font-semibold text-primary mb-4">
+            Technical SEO Expert in Nepal | Core Web Vitals | JavaScript SEO | Schema Markup
           </p>
 
           <h1 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight">
-            Technical SEO Specialist in Nepal for Complex Website Issues
+            Technical SEO Expert in Nepal for Complex Website Issues
           </h1>
 
           <p className="text-xl text-muted-foreground mb-6">
-I am Rejish Khanal, a technical SEO specialist in Kathmandu, Nepal.
-             I help businesses fix technical SEO problems, improve Core Web
-             Vitals, solve indexing issues, optimize JavaScript SEO, implement
-             schema markup, and build websites that search engines can crawl,
-             render, understand, and rank properly.
-           </p>
+I am Rejish Khanal, a technical SEO expert in Kathmandu, Nepal.
+              I help businesses fix technical SEO problems, improve Core Web
+              Vitals, solve indexing issues, optimize JavaScript SEO, implement
+              schema markup, and build websites that search engines can crawl,
+              render, understand, and rank properly.
+            </p>
 
            <p className="text-lg text-muted-foreground mb-8">
              If your website is slow, not ranking, not indexed properly, or
@@ -497,12 +497,12 @@ I am Rejish Khanal, a technical SEO specialist in Kathmandu, Nepal.
 
         <section className="mb-20 p-8 bg-accent/50 rounded-lg border">
           <h2 className="text-3xl font-bold mb-6">
-            Why Choose Me as Your Technical SEO Specialist?
+            Why Choose Me as Your Technical SEO Expert?
           </h2>
 
           <div className="space-y-4">
             {[
-              "I combine technical SEO knowledge with developer-level implementation skills.",
+              "I combine technical SEO expertise with developer-level implementation skills.",
               "I understand how search engines crawl, render, index, and evaluate modern websites.",
               "I work with Next.js, React, WordPress, Django, Laravel, Shopify, and custom-coded websites.",
               "I can identify SEO problems that basic SEO tools often miss.",

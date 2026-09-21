@@ -74,7 +74,7 @@ const faqs = [
   {
     question: "Why is this tool better than other free SEO checkers?",
     answer:
-      "This tool provides a complete SEO audit with a single check: Core Web Vitals (mobile and desktop), on-page SEO checklist, technical SEO elements, and prioritized recommendations. Unlike basic tools, it gives you an overall SEO score out of 100 and specific fix recommendations sorted by priority. It is built by a technical SEO specialist with real-world experience optimizing websites for Google rankings.",
+      "This tool provides a complete SEO audit with a single check: Core Web Vitals (mobile and desktop), on-page SEO checklist, technical SEO elements, and prioritized recommendations. Unlike basic tools, it gives you an overall SEO score out of 100 and specific fix recommendations sorted by priority. It is built by a technical SEO expert with real-world experience optimizing websites for Google rankings.",
   },
   {
     question: "How often should I check my Core Web Vitals?",

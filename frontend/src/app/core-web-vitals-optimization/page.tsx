@@ -405,7 +405,7 @@ export default function CoreWebVitalsPage() {
           </h1>
 
           <p className="text-xl text-muted-foreground mb-6">
-            I am Rejish Khanal, a technical SEO specialist and full stack
+            I am Rejish Khanal, a technical SEO expert and full stack
             developer in Kathmandu, Nepal. I help businesses improve Core Web
             Vitals, page speed, mobile performance, technical SEO, and user
             experience by optimizing LCP, INP, and CLS.
@@ -796,7 +796,7 @@ export default function CoreWebVitalsPage() {
           <div className="grid md:grid-cols-3 gap-4">
             <Link href="/technical-seo-specialist-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
-                Technical SEO Specialist in Nepal
+                Technical SEO Expert in Nepal
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 Improve crawlability, indexing, schema, Core Web Vitals, and technical SEO performance.

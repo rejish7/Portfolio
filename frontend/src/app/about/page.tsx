@@ -21,29 +21,29 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "About Rejish Khanal | Technical SEO Expert in Nepal",
   description:
-    "Meet Rejish Khanal, a technical SEO specialist and full-stack developer in Nepal specializing in AEO, GEO, Core Web Vitals and JavaScript SEO.",
+    "Meet Rejish Khanal, a technical SEO expert and full-stack developer in Nepal specializing in AEO, GEO, Core Web Vitals and JavaScript SEO.",
   keywords: [
     "about Rejish Khanal",
-    "technical SEO specialist Nepal",
+    "technical SEO expert Nepal",
     "SEO expert Kathmandu",
     "full-stack developer Nepal",
     "independent SEO consultant Nepal",
-    "AEO specialist Nepal",
-    "GEO specialist Nepal",
+    "AEO expert Nepal",
+    "GEO expert Nepal",
     "Answer Engine Optimization expert",
     "Generative Engine Optimization expert",
     "Core Web Vitals optimization",
-    "Next.js SEO specialist",
+    "Next.js SEO expert",
     "Django developer Nepal",
     "Laravel developer Nepal",
-    "structured data specialist",
+    "structured data expert",
     "JavaScript SEO Nepal",
     "technical SEO audit Nepal",
     "AI search optimization",
     "Google AI Overviews optimization",
     "ChatGPT Search visibility",
     "Perplexity SEO",
-    "schema markup specialist Nepal",
+    "schema markup expert Nepal",
     "crawl budget optimization",
     "Googlebot diagnostics",
     "search engine optimization Nepal",
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/about",
   },
   openGraph: {
-    title: "About Rejish Khanal | Technical SEO Specialist in Nepal",
+    title: "About Rejish Khanal | Technical SEO Expert in Nepal",
     description:
-      "Learn about Rejish Khanal, an independent technical SEO specialist and full-stack developer in Kathmandu specializing in technical SEO, AEO, GEO, Core Web Vitals and JavaScript SEO.",
+      "Learn about Rejish Khanal, an independent technical SEO expert and full-stack developer in Kathmandu specializing in technical SEO, AEO, GEO, Core Web Vitals and JavaScript SEO.",
     url: "https://rejishkhanal.com.np/about",
     siteName: "Rejish Khanal",
     type: "profile",
@@ -64,15 +64,15 @@ export const metadata: Metadata = {
         url: "https://rejishkhanal.com.np/assets/images/rejish-khanal.webp",
         width: 800,
         height: 800,
-        alt: "Rejish Khanal - Technical SEO Specialist in Nepal",
+        alt: "Rejish Khanal - Technical SEO Expert in Nepal",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Rejish Khanal | Technical SEO Specialist in Nepal",
+    title: "About Rejish Khanal | Technical SEO Expert in Nepal",
     description:
-      "Learn about Rejish Khanal, an independent technical SEO specialist and full-stack developer in Kathmandu specializing in technical SEO, AEO, GEO, Core Web Vitals and JavaScript SEO.",
+      "Learn about Rejish Khanal, an independent technical SEO expert and full-stack developer in Kathmandu specializing in technical SEO, AEO, GEO, Core Web Vitals and JavaScript SEO.",
     images: ["https://rejishkhanal.com.np/assets/images/rejish-khanal.webp"],
   },
 };
@@ -87,9 +87,9 @@ export default function AboutPage() {
       name: "Rejish Khanal",
       url: "https://rejishkhanal.com.np",
       image: "https://rejishkhanal.com.np/assets/images/rejish-khanal.webp",
-      jobTitle: ["Technical SEO Specialist", "Full-Stack Developer", "AEO Specialist", "GEO Specialist"],
+      jobTitle: ["Technical SEO Expert", "Full-Stack Developer", "AEO Expert", "GEO Expert"],
       description:
-        "Rejish Khanal is an independent technical SEO specialist and full-stack developer based in Kathmandu, Nepal. He specializes in AEO (Answer Engine Optimization), GEO (Generative Engine Optimization), Core Web Vitals, structured data, JavaScript SEO, and code-level SEO implementation using Next.js, Django, and Laravel.",
+        "Rejish Khanal is an independent technical SEO expert and full-stack developer based in Kathmandu, Nepal. He specializes in AEO (Answer Engine Optimization), GEO (Generative Engine Optimization), Core Web Vitals, structured data, JavaScript SEO, and code-level SEO implementation using Next.js, Django, and Laravel.",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Kathmandu",
@@ -126,7 +126,7 @@ export default function AboutPage() {
       hasOccupation: [
         {
           "@type": "Occupation",
-          name: "Technical SEO Specialist",
+          name: "Technical SEO Expert",
           occupationLocation: {
             "@type": "City",
             name: "Kathmandu",
@@ -150,7 +150,7 @@ export default function AboutPage() {
         name: "Who is Rejish Khanal?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Rejish Khanal is an independent technical SEO specialist and full-stack developer based in Kathmandu, Nepal. He works on technical SEO audits, Core Web Vitals, JavaScript SEO, structured data, AEO, GEO, Next.js, Django, Laravel, and code-level search implementation.",
+          text: "Rejish Khanal is an independent technical SEO expert and full-stack developer based in Kathmandu, Nepal. He works on technical SEO audits, Core Web Vitals, JavaScript SEO, structured data, AEO, GEO, Next.js, Django, Laravel, and code-level search implementation.",
         },
       },
       {

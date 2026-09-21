@@ -749,7 +749,7 @@ export default function LocalSEOPage() {
 
             <Link href="/technical-seo-specialist-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
-                Technical SEO Specialist in Nepal
+                Technical SEO Expert in Nepal
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 Improve crawlability, indexing, Core Web Vitals, schema, and website performance.
