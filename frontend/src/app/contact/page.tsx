@@ -97,7 +97,7 @@ const services = [
     title: "Technical SEO",
     description:
       "Fix crawlability, indexing, JavaScript SEO, schema markup, internal links, redirects, and technical ranking issues.",
-    href: "/technical-seo-specialist-nepal",
+    href: "/technical-seo-expert-nepal",
   },
   {
     icon: MapPin,

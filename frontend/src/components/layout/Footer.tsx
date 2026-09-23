@@ -74,7 +74,7 @@ const seoServiceLinks = [
   },
   {
     label: "Technical SEO Expert in Nepal",
-    href: "/technical-seo-specialist-nepal",
+    href: "/technical-seo-expert-nepal",
   },
   {
     label: "SEO Audit Services in Nepal",

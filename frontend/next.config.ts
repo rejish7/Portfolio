@@ -17,6 +17,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/technical-seo-specialist-nepal/:path*",
+        destination: "/technical-seo-expert-nepal/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

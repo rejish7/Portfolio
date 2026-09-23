@@ -213,7 +213,7 @@ export default async function BlogPage() {
       title: "Technical SEO",
       description:
         "Crawlability, indexing, schema markup, internal links, website architecture, and SEO audits.",
-      href: "/technical-seo-specialist-nepal",
+      href: "/technical-seo-expert-nepal",
     },
     {
       icon: Gauge,
@@ -365,7 +365,7 @@ export default async function BlogPage() {
               </p>
             </Link>
 
-            <Link href="/technical-seo-specialist-nepal">
+            <Link href="/technical-seo-expert-nepal">
               <p className="font-semibold hover:text-primary transition-colors">
                 Technical SEO Expert in Nepal
               </p>

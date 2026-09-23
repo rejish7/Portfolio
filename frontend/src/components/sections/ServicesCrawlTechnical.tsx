@@ -17,7 +17,7 @@ const cards = [
     ],
     deliverable: { label: "Repo Audit", value: "Actionable PRs" },
     cta: "Request Technical Audit →",
-    href: "/technical-seo-specialist-nepal",
+    href: "/technical-seo-expert-nepal",
   },
   {
     tag: "JAVASCRIPT SEO",
@@ -31,7 +31,7 @@ const cards = [
     ],
     frameworks: "Next.js • React • Vue",
     cta: "Fix JavaScript Rendering →",
-    href: "/technical-seo-specialist-nepal",
+    href: "/technical-seo-expert-nepal",
   },
   {
     tag: "CWV & CRUX PASSING",
@@ -46,7 +46,7 @@ const cards = [
     ],
     targets: "LCP < 2.0s • INP < 150ms",
     cta: "Optimize Web Vitals →",
-    href: "/technical-seo-specialist-nepal",
+    href: "/technical-seo-expert-nepal",
   },
 ];
 

@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     "technical SEO consultant Nepal",
   ],
   alternates: {
-    canonical: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
+    canonical: "https://rejishkhanal.com.np/technical-seo-expert-nepal",
   },
   openGraph: {
     title: "Technical SEO Expert in Nepal | Core Web Vitals & JavaScript SEO",
     description:
       "Technical SEO services in Nepal for crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and website performance optimization.",
-    url: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
+    url: "https://rejishkhanal.com.np/technical-seo-expert-nepal",
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
@@ -263,7 +263,7 @@ export default function TechnicalSEOPage() {
     description:
       "Technical SEO services in Nepal for improving crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, site architecture, and search performance.",
     serviceType: "Technical SEO",
-    url: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
+    url: "https://rejishkhanal.com.np/technical-seo-expert-nepal",
     provider: {
       "@type": "Person",
       name: "Rejish Khanal",
@@ -337,7 +337,7 @@ export default function TechnicalSEOPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Technical SEO Expert in Nepal",
-    url: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
+    url: "https://rejishkhanal.com.np/technical-seo-expert-nepal",
     description:
       "Technical SEO expert in Nepal for faster, crawlable, indexable, and SEO-friendly websites.",
     inLanguage: "en",
@@ -370,7 +370,7 @@ export default function TechnicalSEOPage() {
         "@type": "ListItem",
         position: 2,
         name: "Technical SEO Expert in Nepal",
-        item: "https://rejishkhanal.com.np/technical-seo-specialist-nepal",
+        item: "https://rejishkhanal.com.np/technical-seo-expert-nepal",
       },
     ],
   };

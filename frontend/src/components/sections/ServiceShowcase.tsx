@@ -27,7 +27,7 @@ const services = [
     title: "Technical SEO Expert in Nepal",
     description:
       "Fix crawlability, indexing, Core Web Vitals, schema markup, redirects, canonicals, JavaScript SEO, and technical website issues that affect Google rankings.",
-    href: "/technical-seo-specialist-nepal",
+    href: "/technical-seo-expert-nepal",
     cta: "Explore Technical SEO Services",
     icon: Settings,
   },

@@ -804,7 +804,7 @@ export default function WebDevelopmentPage() {
         {/* Additional Related SEO Links */}
         <section className="mt-10">
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/technical-seo-specialist-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
+            <Link href="/technical-seo-expert-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
               <p className="font-semibold hover:text-primary transition-colors">
                 Technical SEO Expert in Nepal
               </p>

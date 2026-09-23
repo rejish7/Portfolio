@@ -12,7 +12,7 @@ const services = [
     title: "Technical SEO",
     description: "Crawl diagnostics, indexation fixes, canonical conflicts, Search Console validation, and Core Web Vitals optimization.",
     tags: ["Crawl Audits", "JS SEO", "GSC", "Schema"],
-    link: "/technical-seo-specialist-nepal",
+    link: "/technical-seo-expert-nepal",
     linkText: "Explore Technical SEO",
   },
   {

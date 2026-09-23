@@ -178,7 +178,7 @@ export default function SEOSpecialistUKPage() {
   const relatedServices = [
     {
       title: "Technical SEO Expert in Nepal",
-      href: "/technical-seo-specialist-nepal",
+      href: "/technical-seo-expert-nepal",
       description:
         "Fix crawl, index, speed, schema, JavaScript SEO, and technical website issues.",
     },

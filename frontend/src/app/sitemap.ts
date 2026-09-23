@@ -57,7 +57,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/technical-seo-specialist-nepal`,
+      url: `${baseUrl}/technical-seo-expert-nepal`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,

@@ -425,7 +425,7 @@ export default function ServicesPage() {
             </Link>
 
             <Link
-              href="/technical-seo-specialist-nepal"
+              href="/technical-seo-expert-nepal"
               className="block p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md hover:border-primary/50 transition-all"
             >
               <Code2 className="h-5 w-5 text-primary mb-3" />

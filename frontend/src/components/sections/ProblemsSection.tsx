@@ -9,7 +9,7 @@ const problems = [
     icon: Search,
     title: "Pages not getting indexed",
     description: "Crawl loops, noindex errors, and render budget limits block search bots from indexing your important pages.",
-    link: "/technical-seo-specialist-nepal",
+    link: "/technical-seo-expert-nepal",
     linkText: "Fix indexing",
   },
   {
