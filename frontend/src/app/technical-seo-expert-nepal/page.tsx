@@ -774,6 +774,20 @@ I am Rejish Khanal, a technical SEO expert in Kathmandu, Nepal.
           </div>
         </section>
 
+        <section className="mb-20 p-6 rounded-lg border bg-accent/30">
+          <p className="text-lg text-muted-foreground">
+            If you require an independent technical review or a roadmap for your
+            development team, I also provide{" "}
+            <Link
+              href="/seo-consultant-nepal"
+              className="text-primary underline hover:text-primary/80"
+            >
+              technical SEO consulting in Nepal
+            </Link>
+            .
+          </p>
+        </section>
+
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-8">
             Frequently Asked Questions

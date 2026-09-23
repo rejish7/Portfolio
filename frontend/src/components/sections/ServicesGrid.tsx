@@ -21,6 +21,7 @@ import {
   MapPin,
   GraduationCap,
   CheckCircle2,
+  Lightbulb,
 } from "lucide-react";
 
 const services = [
@@ -131,6 +132,18 @@ const services = [
       "Ongoing mentorship",
     ],
     icon: GraduationCap,
+  },
+  {
+    title: "SEO Consultant in Nepal",
+    description:
+      "Get independent SEO advice, technical reviews, strategic roadmaps, migration planning, and practical guidance for your website or internal team.",
+    bullets: [
+      "Strategic SEO roadmaps",
+      "Technical audits & second opinions",
+      "Migration planning & QA",
+      "Team consultation & training",
+    ],
+    icon: Lightbulb,
   },
 ];
 

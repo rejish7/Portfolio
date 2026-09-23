@@ -10,6 +10,7 @@ import {
   Globe2,
   MapPin,
   ShieldCheck,
+  Lightbulb,
 } from "lucide-react";
 import { ServicesHero } from "@/components/sections/ServicesHero";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
@@ -434,6 +435,19 @@ export default function ServicesPage() {
               </p>
               <p className="text-sm text-muted-foreground">
                 Improve crawlability, indexing, Core Web Vitals, schema, and website performance.
+              </p>
+            </Link>
+
+            <Link
+              href="/seo-consultant-nepal"
+              className="block p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md hover:border-primary/50 transition-all"
+            >
+              <Lightbulb className="h-5 w-5 text-primary mb-3" />
+              <p className="font-semibold mb-2 text-foreground">
+                SEO Consultant in Nepal
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Independent SEO advice, technical reviews, strategic roadmaps, and migration planning.
               </p>
             </Link>
           </div>
