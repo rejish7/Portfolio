@@ -626,7 +626,8 @@ export default function SEOConsultantPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{item.description}</p>
-                </CardContent              </Card>
+                </CardContent>
+                </Card>
             ))}
           </div>
         </section>
@@ -698,7 +699,8 @@ export default function SEOConsultantPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">{faq.answer}</p>
-                </CardContent              </Card>
+                </CardContent>
+                </Card>
             ))}
           </div>
         </section>
