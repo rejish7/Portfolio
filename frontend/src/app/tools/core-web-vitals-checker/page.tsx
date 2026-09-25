@@ -4,9 +4,9 @@ import { SchemaScript } from "@/components/SchemaScript";
 import { CoreWebVitalsChecker } from "./CoreWebVitalsChecker";
 
 export const metadata: Metadata = {
-  title: "Free Core Web Vitals & SEO Checker - Test Website Speed Nepal",
+  title: "Free Core Web Vitals Checker",
   description:
-    "Free online tool to check Core Web Vitals (LCP, CLS, INP), on-page SEO, and website performance. Get instant PageSpeed Insights results, SEO score, and actionable recommendations. Built by an SEO specialist in Nepal.",
+    "Check Core Web Vitals and identify website performance issues affecting LCP, INP, CLS, user experience, and technical SEO.",
   keywords: [
     "core web vitals checker nepal",
     "website speed test nepal",
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/tools/core-web-vitals-checker",
   },
   openGraph: {
-    title: "Free Core Web Vitals & SEO Checker - Test Website Performance",
+    title: "Free Core Web Vitals Checker | Rejish Khanal",
     description:
-      "Check your website's Core Web Vitals, on-page SEO, and performance. Free tool with instant results and SEO recommendations.",
+      "Check Core Web Vitals and identify website performance issues affecting LCP, INP, CLS, user experience, and technical SEO.",
     url: "https://rejishkhanal.com.np/tools/core-web-vitals-checker",
     siteName: "Rejish Khanal",
     type: "website",
@@ -97,7 +97,7 @@ export default function CoreWebVitalsCheckerPage() {
     applicationCategory: "WebApplication",
     operatingSystem: "Web Browser",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-    author: { "@type": "Person", name: "Rejish Khanal", url: "https://rejishkhanal.com.np" },
+    author: { "@type": "Person", "@id": "https://rejishkhanal.com.np/#person" },
     description:
       "Free online tool to check Core Web Vitals (LCP, CLS, INP), on-page SEO, and website performance using Google PageSpeed Insights. Get instant results with SEO score and actionable recommendations.",
   };

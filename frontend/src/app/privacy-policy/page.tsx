@@ -4,9 +4,17 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy for rejishkhanal.com.np. Learn how personal data is collected, used, and protected.",
+    "Read the privacy policy for rejishkhanal.com.np, including information about website data, communications, analytics, and visitor privacy.",
   alternates: {
     canonical: "https://rejishkhanal.com.np/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Rejish Khanal",
+    description:
+      "Read the privacy policy for rejishkhanal.com.np, including information about website data, communications, analytics, and visitor privacy.",
+    url: "https://rejishkhanal.com.np/privacy-policy",
+    siteName: "Rejish Khanal",
+    type: "website",
   },
 };
 

@@ -23,9 +23,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Expert Kathmandu | Technical & Local SEO",
+  title: "SEO Specialist in Kathmandu",
   description:
-    "Hire an SEO expert in Kathmandu for technical SEO, local SEO, AEO, GEO, and organic growth.",
+    "Work with an SEO specialist in Kathmandu for technical SEO, local SEO, keyword strategy, content optimization, AEO, GEO, and website improvements.",
   keywords: [
     "SEO expert in Kathmandu",
     "SEO expert in Kathmandu",
@@ -50,10 +50,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
   },
   openGraph: {
-    title:
-      "SEO Expert in Kathmandu | Technical SEO, Local SEO, AEO & GEO",
+    title: "SEO Specialist in Kathmandu | Rejish Khanal",
     description:
-      "Work with Rejish Khanal, an SEO expert in Kathmandu helping local businesses improve Google rankings, technical SEO, local visibility, AEO, GEO, and organic leads.",
+      "Work with an SEO specialist in Kathmandu for technical SEO, local SEO, keyword strategy, content optimization, AEO, GEO, and website improvements.",
     url: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
     siteName: "Rejish Khanal",
     type: "website",
@@ -334,13 +333,7 @@ export default function SEOSpecialistKathmanduPage() {
     },
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "SEO Expert and Technical SEO Expert",
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     serviceType: [
       "SEO Expert in Kathmandu",
@@ -355,34 +348,6 @@ export default function SEOSpecialistKathmanduPage() {
     ],
   };
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    jobTitle: "SEO Expert in Kathmandu",
-    description:
-      "Rejish Khanal is an SEO expert in Kathmandu, Nepal specializing in technical SEO, local SEO, SEO audits, AEO, GEO, content optimization, and organic growth.",
-    knowsAbout: [
-      "SEO",
-      "Technical SEO",
-      "Local SEO",
-      "SEO Audit",
-      "AEO",
-      "GEO",
-      "Content SEO",
-      "Google Search Console",
-      "Core Web Vitals",
-      "Schema Markup",
-      "Organic Growth",
-      "Next.js SEO",
-    ],
-    sameAs: [
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
-  };
-
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -391,8 +356,7 @@ export default function SEOSpecialistKathmanduPage() {
       "Technical SEO, local SEO, SEO audits, AEO, GEO, content optimization, and organic growth services for businesses in Kathmandu and Nepal.",
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     areaServed: [
       {
@@ -415,11 +379,6 @@ export default function SEOSpecialistKathmanduPage() {
     description:
       "SEO expert in Kathmandu for technical SEO, local SEO, SEO audits, AEO, GEO, content SEO, and organic growth.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "SEO Expert in Kathmandu",
       "SEO Expert in Kathmandu",
@@ -475,13 +434,6 @@ export default function SEOSpecialistKathmanduPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(professionalServiceSchema),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
         }}
       />
 

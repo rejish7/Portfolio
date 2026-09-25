@@ -115,6 +115,13 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://rejishkhanal.com.np/case-studies/${slug}`,
     },
+    openGraph: {
+      title: `${study.title} - Case Study | Rejish Khanal`,
+      description: study.description,
+      url: `https://rejishkhanal.com.np/case-studies/${slug}`,
+      siteName: "Rejish Khanal",
+      type: "website",
+    },
   };
 }
 

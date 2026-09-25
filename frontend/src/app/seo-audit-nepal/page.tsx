@@ -23,9 +23,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Audit Nepal | Technical SEO Audit & Fixes",
+  title: "SEO Audit Services in Nepal",
   description:
-    "Professional SEO audit in Nepal. Find technical SEO issues, indexing problems, Core Web Vitals errors, and ranking barriers.",
+    "Get an SEO audit covering crawlability, indexing, metadata, canonicals, internal links, schema, Core Web Vitals, content, and technical problems.",
   keywords: [
     "SEO audit Nepal",
     "SEO audit in Nepal",
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/seo-audit-nepal",
   },
   openGraph: {
-    title: "SEO Audit Nepal | Technical SEO Audit & Ranking Fixes",
+    title: "SEO Audit Services in Nepal | Rejish Khanal",
     description:
-      "Professional SEO audit services in Nepal to identify technical SEO problems, indexing issues, Core Web Vitals errors, content gaps, and ranking barriers.",
+      "Get an SEO audit covering crawlability, indexing, metadata, canonicals, internal links, schema, Core Web Vitals, content, and technical problems.",
     url: "https://rejishkhanal.com.np/seo-audit-nepal",
     siteName: "Rejish Khanal",
     type: "website",
@@ -345,11 +345,6 @@ export default function SEOAuditPage() {
     description:
       "SEO audit services in Nepal for technical SEO, Core Web Vitals, indexing, content gaps, backlinks, and ranking improvements.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "SEO Audit Nepal",
       "Technical SEO Audit Nepal",
@@ -391,46 +386,12 @@ export default function SEOAuditPage() {
     })),
   };
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://rejishkhanal.com.np/#person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    jobTitle: "SEO Expert and Technical SEO Expert in Nepal",
-    description:
-      "Rejish Khanal is an SEO expert and technical SEO expert in Nepal helping businesses find and fix technical SEO issues, indexing problems, Core Web Vitals errors, and ranking barriers.",
-    knowsAbout: [
-      "SEO Audit",
-      "Technical SEO",
-      "Core Web Vitals",
-      "Google Search Console",
-      "Indexing",
-      "Crawlability",
-      "Schema Markup",
-      "JavaScript SEO",
-      "AEO",
-      "GEO",
-    ],
-    sameAs: [
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
-  };
-
   return (
     <main className="min-h-screen bg-linear-to-b from-background to-background/95">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
         }}
       />
 

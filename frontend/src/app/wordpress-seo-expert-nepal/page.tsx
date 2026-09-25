@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "WordPress SEO Expert Nepal | Technical SEO",
+  title: "WordPress SEO Expert in Nepal",
   description:
-    "Hire a WordPress SEO expert in Nepal to fix technical SEO, Core Web Vitals, schema, and organic rankings.",
+    "Improve WordPress crawling, indexing, speed, metadata, schema, internal links, Core Web Vitals, plugin configuration, and organic visibility.",
   keywords: [
     "WordPress SEO expert in Nepal",
     "WordPress SEO Nepal",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/wordpress-seo-expert-nepal",
   },
   openGraph: {
-    title: "WordPress SEO Expert in Nepal | Technical SEO & Speed Optimization",
+    title: "WordPress SEO Expert in Nepal | Rejish Khanal",
     description:
-      "Improve your WordPress website rankings with technical SEO, speed optimization, Core Web Vitals, schema, indexing fixes, and content optimization.",
+      "Improve WordPress crawling, indexing, speed, metadata, schema, internal links, Core Web Vitals, plugin configuration, and organic visibility.",
     url: "https://rejishkhanal.com.np/wordpress-seo-expert-nepal",
     siteName: "Rejish Khanal",
     type: "website",
@@ -146,8 +146,7 @@ export default function WordPressSEOExpertNepalPage() {
       "WordPress SEO services in Nepal for technical SEO, SEO audits, speed optimization, Core Web Vitals, indexing fixes, schema, and content optimization.",
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     areaServed: {
       "@type": "Country",

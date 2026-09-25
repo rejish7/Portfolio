@@ -5,9 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Django Developer in Nepal | SEO-Friendly Web Applications",
+  title: "Django Developer in Nepal",
   description:
-    "Django developer in Nepal for SEO-friendly web applications. Python, backend development, and full stack solutions for startups and enterprises.",
+    "Hire a Django developer in Nepal for secure, scalable, SEO-friendly web applications, backend systems, APIs, and performance-focused development.",
   keywords: [
     "Django developer Nepal",
     "Python developer Nepal",
@@ -17,6 +17,14 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://rejishkhanal.com.np/django-developer-nepal",
+  },
+  openGraph: {
+    title: "Django Developer in Nepal | Rejish Khanal",
+    description:
+      "Hire a Django developer in Nepal for secure, scalable, SEO-friendly web applications, backend systems, APIs, and performance-focused development.",
+    url: "https://rejishkhanal.com.np/django-developer-nepal",
+    siteName: "Rejish Khanal",
+    type: "website",
   },
 };
 

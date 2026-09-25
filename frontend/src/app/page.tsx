@@ -16,9 +16,11 @@ import type { BlogPost } from "@/lib/types";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Technical SEO Expert in Nepal | Rejish Khanal",
+  title: {
+    absolute: "Rejish Khanal | SEO Expert and Web Developer",
+  },
   description:
-    "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
+    "Rejish Khanal is an SEO expert and web developer in Nepal providing technical SEO, AEO, GEO, Core Web Vitals, audits, and development.",
   keywords: [
     "technical SEO expert in Nepal",
     "SEO expert in Nepal",
@@ -49,7 +51,7 @@ export const metadata: Metadata = {
   creator: "Rejish Khanal",
   publisher: "Rejish Khanal",
   alternates: {
-    canonical: "https://rejishkhanal.com.np",
+    canonical: "https://rejishkhanal.com.np/",
   },
   robots: {
     index: true,
@@ -63,10 +65,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Technical SEO Expert in Nepal | Rejish Khanal",
+    title: "Rejish Khanal | SEO Expert and Web Developer",
     description:
-      "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
-    url: "https://rejishkhanal.com.np",
+      "Rejish Khanal is an SEO expert and web developer in Nepal providing technical SEO, AEO, GEO, Core Web Vitals, audits, and development.",
+    url: "https://rejishkhanal.com.np/",
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
@@ -75,15 +77,15 @@ export const metadata: Metadata = {
         url: "https://rejishkhanal.com.np/assets/images/rejish-khanal-technical-seo-expert-nepal.webp",
         width: 800,
         height: 800,
-        alt: "Rejish Khanal - Technical SEO Expert in Nepal",
+        alt: "Rejish Khanal - SEO Expert and Web Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Technical SEO Expert in Nepal | Rejish Khanal",
+    title: "Rejish Khanal | SEO Expert and Web Developer",
     description:
-      "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
+      "Rejish Khanal is an SEO expert and web developer in Nepal providing technical SEO, AEO, GEO, Core Web Vitals, audits, and development.",
     images: ["https://rejishkhanal.com.np/assets/images/rejish-khanal-technical-seo-expert-nepal.webp"],
     creator: "@KhanalRejish",
   },
@@ -128,47 +130,16 @@ export default async function Home() {
 
   const siteUrl = "https://rejishkhanal.com.np";
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": `${siteUrl}/#person`,
-    name: "Rejish Khanal",
-    alternateName: ["Rejish", "Khanal Rejish"],
-    url: siteUrl,
-    image: `${siteUrl}/assets/images/rejish-khanal-technical-seo-expert-nepal.webp`,
-    description:
-      "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
-    jobTitle: ["Technical SEO Expert", "Full-Stack Developer"],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Kathmandu",
-      addressRegion: "Bagmati",
-      addressCountry: "NP",
-    },
-    geo: { "@type": "GeoCoordinates", latitude: 27.7172, longitude: 85.324 },
-    knowsAbout: [
-      "Technical SEO", "Search Engine Optimization", "Answer Engine Optimization",
-      "Generative Engine Optimization", "Core Web Vitals", "JavaScript SEO",
-      "Structured Data", "JSON-LD", "Google Search Console", "Google Analytics",
-      "Next.js", "Django", "Laravel", "Python", "PHP", "PostgreSQL", "MySQL",
-    ],
-    sameAs: [
-      "https://www.linkedin.com/in/rejishkhanalseo/",
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
-    email: "contact@rejishkhanal.com.np",
-  };
-
   const professionalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": `${siteUrl}/#professionalservice`,
-    name: "Rejish Khanal - Technical SEO Expert in Nepal",
-    url: siteUrl,
+    name: "Rejish Khanal - SEO Expert and Web Developer",
+    url: `${siteUrl}/`,
     description:
-      "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
+      "Rejish Khanal is an SEO expert and web developer in Nepal providing technical SEO, AEO, GEO, Core Web Vitals, audits, and development.",
     email: "contact@rejishkhanal.com.np",
+    telephone: "9862766994",
     areaServed: [
       { "@type": "Country", name: "Nepal" },
       { "@type": "Country", name: "United States" },
@@ -194,35 +165,22 @@ export default async function Home() {
     },
   };
 
-  const webSiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Rejish Khanal - Technical SEO Expert in Nepal",
-    url: siteUrl,
-    description: "Rejish Khanal is a technical SEO, AEO and GEO expert in Nepal providing audits, Core Web Vitals, JavaScript SEO and direct implementation.",
-    author: { "@type": "Person", "@id": `${siteUrl}/#person`, name: "Rejish Khanal" },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: { "@type": "EntryPoint", urlTemplate: `${siteUrl}/blog?q={search_term_string}` },
-      "query-input": "required name=search_term_string",
-    },
-  };
-
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      { "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/` },
     ],
   };
+
+  const stringifySchema = (schema: Record<string, unknown>) =>
+    JSON.stringify(schema).replace(/</g, "\\u003c");
 
   return (
     <>
       {/* JSON-LD Structured Data */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifySchema(professionalServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifySchema(breadcrumbSchema) }} />
 
       {/* Sections */}
       <main id="main-content" aria-label="Rejish Khanal - Technical SEO Expert in Nepal Homepage">

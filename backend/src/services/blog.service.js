@@ -11,8 +11,8 @@ const generateBlogSEOMetadata = (blogData, baseUrl = "https://rejishkhanal.com.n
   const canonicalUrl = `${baseUrl}/blog/${blogData.slug}`;
 
   // Generate meta title (max 60 characters for optimal SEO)
-  const metaTitle = blogData.seo?.title ||
-    `${blogData.title} | Rejish Khanal's Blog`.slice(0, 60);
+  // The frontend title template appends "| Rejish Khanal" — do not add it here.
+  const metaTitle = blogData.seo?.title || blogData.title.slice(0, 60);
 
   // Generate meta description (max 160 characters for optimal SEO)
   const metaDescription = blogData.seo?.description ||

@@ -15,12 +15,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rejishkhanal.com.np"),
+  applicationName: "Rejish Khanal",
   title: {
-    default: "Technical SEO Expert in Nepal | Rejish Khanal",
+    default: "Rejish Khanal | SEO Expert and Web Developer",
     template: "%s | Rejish Khanal",
   },
   description:
-    "Technical SEO expert in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues with direct code implementation. Serving US, UK, AU & worldwide.",
+    "Rejish Khanal is an SEO expert and web developer in Nepal providing technical SEO, AEO, GEO, Core Web Vitals, audits, and development.",
   keywords: [
     "technical SEO expert in Nepal",
     "SEO expert in Nepal",
@@ -34,32 +36,34 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Rejish Khanal", url: "https://rejishkhanal.com.np" }],
   creator: "Rejish Khanal",
-  metadataBase: new URL("https://rejishkhanal.com.np"),
   icons: {
     icon: "/favicon.png",
+  },
+  alternates: {
+    canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://rejishkhanal.com.np",
-    title: "Technical SEO Expert in Nepal | Rejish Khanal",
+    url: "https://rejishkhanal.com.np/",
+    title: "Rejish Khanal | SEO Expert and Web Developer",
     description:
-      "Technical SEO expert in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues with direct code implementation. Serving US, UK, AU & worldwide.",
+      "Technical SEO, AEO, GEO, Core Web Vitals, SEO audits, and web development services.",
     siteName: "Rejish Khanal",
     images: [
       {
         url: "https://rejishkhanal.com.np/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Rejish Khanal - Technical SEO Expert in Nepal",
+        alt: "Rejish Khanal - SEO Expert and Web Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Technical SEO Expert in Nepal | Rejish Khanal",
+    title: "Rejish Khanal | SEO Expert and Web Developer",
     description:
-      "Technical SEO expert in Kathmandu, Nepal. I fix crawlability, indexing, Core Web Vitals, and JavaScript SEO issues.",
+      "Technical SEO, AEO, GEO, Core Web Vitals, SEO audits, and web development services.",
     creator: "@KhanalRejish",
     images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
@@ -81,59 +85,72 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const personSchema = {
+  const globalSchema = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://rejishkhanal.com.np/#person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    image: "https://rejishkhanal.com.np/assets/images/rejish-khanal.webp",
-    jobTitle: ["Technical SEO Expert", "Full-Stack Developer"],
-    description:
-      "Rejish Khanal is a technical SEO expert and full-stack developer based in Kathmandu, Nepal. His work covers technical SEO, Core Web Vitals, structured data, JavaScript SEO, AEO, GEO, and code-level SEO implementation.",
-    email: "contact@rejishkhanal.com.np",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Kathmandu",
-      addressCountry: "NP",
-    },
-    knowsAbout: [
-      "Technical SEO",
-      "Search Engine Optimization",
-      "Answer Engine Optimization",
-      "Generative Engine Optimization",
-      "Core Web Vitals",
-      "JavaScript SEO",
-      "Structured Data",
-      "Google Search Console",
-      "Next.js",
-      "Django",
-      "Laravel",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://rejishkhanal.com.np/#website",
+        url: "https://rejishkhanal.com.np/",
+        name: "Rejish Khanal",
+        alternateName: ["Rejish", "Rejish Khanal SEO"],
+        inLanguage: "en",
+        publisher: {
+          "@id": "https://rejishkhanal.com.np/#person",
+        },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://rejishkhanal.com.np/blog?q={search_term_string}",
+          },
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "Person",
+        "@id": "https://rejishkhanal.com.np/#person",
+        name: "Rejish Khanal",
+        alternateName: ["Rejish", "Rejish Khanal SEO"],
+        url: "https://rejishkhanal.com.np/",
+        image: "https://rejishkhanal.com.np/assets/images/rejish-khanal.webp",
+        jobTitle: ["Technical SEO Expert", "Full-Stack Developer"],
+        description:
+          "Rejish Khanal is an SEO expert and web developer in Nepal providing technical SEO, AEO, GEO, Core Web Vitals, audits, and development.",
+        email: "contact@rejishkhanal.com.np",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Kathmandu",
+          addressRegion: "Bagmati",
+          addressCountry: "NP",
+        },
+        geo: { "@type": "GeoCoordinates", latitude: 27.7172, longitude: 85.324 },
+        knowsAbout: [
+          "Technical SEO",
+          "Search Engine Optimization",
+          "Answer Engine Optimization",
+          "Generative Engine Optimization",
+          "Core Web Vitals",
+          "JavaScript SEO",
+          "Structured Data",
+          "Google Search Console",
+          "Next.js",
+          "Django",
+          "Laravel",
+        ],
+        sameAs: [
+          "https://www.linkedin.com/in/rejishkhanalseo/",
+          "https://github.com/rejish7",
+          "https://x.com/KhanalRejish",
+        ],
+      },
     ],
-    sameAs: [
-      "https://www.linkedin.com/in/rejishkhanalseo/",
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://rejishkhanal.com.np/blog?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   };
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <SchemaScript schema={personSchema} />
-        <SchemaScript schema={websiteSchema} />
+        <SchemaScript schema={globalSchema} />
 
         {/* Google Tag Manager */}
         <Script

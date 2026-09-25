@@ -24,9 +24,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Google Search Console Expert Nepal | GSC Audit",
+  title: "Google Search Console Expert in Nepal",
   description:
-    "Hire a Google Search Console expert in Nepal for indexing audits, Core Web Vitals monitoring, and search performance optimization.",
+    "Get help with Google Search Console indexing, crawl reports, sitemap errors, performance data, Core Web Vitals, manual actions, and technical issues.",
   keywords: [
     "Google Search Console expert Nepal",
     "Google Search Console expert in Nepal",
@@ -48,10 +48,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/google-search-console-expert-nepal",
   },
   openGraph: {
-    title:
-      "Google Search Console Expert in Nepal | Indexing, Core Web Vitals & Coverage Analysis",
+    title: "Google Search Console Expert in Nepal | Rejish Khanal",
     description:
-      "Google Search Console services in Nepal for indexing audits, coverage analysis, Core Web Vitals, query performance, manual action recovery, and sitemap optimization.",
+      "Get help with Google Search Console indexing, crawl reports, sitemap errors, performance data, Core Web Vitals, manual actions, and technical issues.",
     url: "https://rejishkhanal.com.np/google-search-console-expert-nepal",
     siteName: "Rejish Khanal",
     type: "website",
@@ -275,18 +274,7 @@ export default function GoogleSearchConsoleExpertPage() {
     url: "https://rejishkhanal.com.np/google-search-console-expert-nepal",
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "Google Search Console Expert in Nepal",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "NP",
-        addressLocality: "Kathmandu",
-      },
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     areaServed: [
       {
@@ -312,36 +300,6 @@ export default function GoogleSearchConsoleExpertPage() {
     },
   };
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://rejishkhanal.com.np/#person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    jobTitle: "Google Search Console Expert in Nepal",
-    description:
-      "Rejish Khanal is a Google Search Console expert in Nepal helping businesses analyze indexing, coverage, Core Web Vitals, query performance, and crawl data to improve organic search visibility.",
-    knowsAbout: [
-      "Google Search Console",
-      "Indexing",
-      "Crawl Analysis",
-      "Core Web Vitals",
-      "SEO Audits",
-      "Sitemap Optimization",
-      "Manual Action Recovery",
-      "Search Performance Analysis",
-      "Technical SEO",
-      "Page Experience",
-      "Structured Data",
-      "XML Sitemaps",
-    ],
-    sameAs: [
-      "https://www.linkedin.com/in/rejishkhanalseo/",
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
-  };
-
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -350,11 +308,6 @@ export default function GoogleSearchConsoleExpertPage() {
     description:
       "Google Search Console expert in Nepal for indexing analysis, coverage reports, Core Web Vitals monitoring, and search performance optimization.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "Google Search Console Expert in Nepal",
       "Indexing Analysis",
@@ -409,13 +362,6 @@ export default function GoogleSearchConsoleExpertPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
         }}
       />
 

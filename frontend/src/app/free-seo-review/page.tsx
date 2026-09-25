@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { FreeSEOReviewPage } from "@/components/landing/FreeSEOReviewPage";
 
 export const metadata: Metadata = {
-  title: "Free SEO Review for Service Businesses | Rejish Khanal",
+  title: "Request a Free SEO Review",
   description:
-    "Request a free SEO review covering your website, local visibility and one competitor. Discover practical opportunities to improve your Google presence.",
+    "Request a free initial SEO review to identify potential technical, indexing, performance, on-page, and search visibility issues on your website.",
   keywords: [
     "free SEO review",
     "SEO review for service businesses",
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
     "local SEO audit free",
   ],
   alternates: {
-    canonical: "https://rejishkhanal.com.np/free-seo-review/",
+    canonical: "https://rejishkhanal.com.np/free-seo-review",
   },
   openGraph: {
-    title: "Free SEO Review for Service Businesses | Rejish Khanal",
+    title: "Request a Free SEO Review | Rejish Khanal",
     description:
-      "Request a free SEO review covering your website, local visibility and one competitor. Discover practical opportunities to improve your Google presence.",
-    url: "https://rejishkhanal.com.np/free-seo-review/",
+      "Request a free initial SEO review to identify potential technical, indexing, performance, on-page, and search visibility issues on your website.",
+    url: "https://rejishkhanal.com.np/free-seo-review",
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
@@ -60,11 +60,6 @@ export default function FreeSEOReview() {
     description:
       "Request a free SEO review covering your website, local visibility and one competitor. Discover practical opportunities to improve your Google presence.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "Free SEO Review",
       "Local SEO Review",

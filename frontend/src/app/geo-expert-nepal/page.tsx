@@ -20,9 +20,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "GEO Expert in Nepal | Generative Engine Optimization",
+  title: { absolute: "GEO Expert in Nepal | Generative Engine Optimization" },
   description:
-    "Rejish Khanal is a GEO expert in Nepal for AI search optimization, generative engines, AI Overviews, entity SEO, and verifiable AI search visibility.",
+    "Improve brand visibility across AI-assisted search experiences with generative engine optimization, entity clarity, structured content, and technical SEO.",
   keywords: [
     "GEO expert in Nepal",
     "generative engine optimization expert in Nepal",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/geo-expert-nepal",
   },
   openGraph: {
-    title: "GEO Expert in Nepal | Generative Engine Optimization Expert",
+    title: "GEO Expert in Nepal | Generative Engine Optimization",
     description:
-      "Improve your website visibility in AI-powered search experiences with GEO, entity SEO, structured content, topical authority, and AI search optimization.",
+      "Improve brand visibility across AI-assisted search experiences with generative engine optimization, entity clarity, structured content, and technical SEO.",
     url: "https://rejishkhanal.com.np/geo-expert-nepal",
     siteName: "Rejish Khanal",
     type: "website",

@@ -90,6 +90,7 @@ export function convertSEOMetadataToNextJS(seoData: SEOMetadata): Metadata {
       type: 'article',
       title: seoData.ogTitle || seoData.title,
       description: seoData.ogDescription || seoData.description,
+      siteName: 'Rejish Khanal',
       images: seoData.ogImage ? [{ url: seoData.ogImage, alt: seoData.ogTitle || seoData.title }] : [],
       publishedTime: seoData.publishedTime,
       modifiedTime: seoData.modifiedTime,
@@ -102,6 +103,7 @@ export function convertSEOMetadataToNextJS(seoData: SEOMetadata): Metadata {
       type: 'website',
       title: seoData.ogTitle || seoData.title,
       description: seoData.ogDescription || seoData.description,
+      siteName: 'Rejish Khanal',
       images: seoData.ogImage ? [{ url: seoData.ogImage, alt: seoData.ogTitle || seoData.title }] : [],
     };
   }

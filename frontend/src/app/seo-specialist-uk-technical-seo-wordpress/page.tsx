@@ -23,10 +23,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "SEO Expert for UK Businesses | Technical SEO & WordPress",
+  title: "UK Technical SEO and WordPress Specialist",
   description:
-    "Remote SEO expert for UK businesses. Fix technical SEO issues, optimise WordPress sites, and improve Google and AI search visibility.",
+    "Get remote technical SEO and WordPress support for UK websites, including audits, indexing, Core Web Vitals, schema, and on-page optimization.",
   keywords: [
     "SEO Expert UK",
     "SEO Expert UK",
@@ -46,10 +45,9 @@ export const metadata: Metadata = {
       "https://rejishkhanal.com.np/seo-specialist-uk-technical-seo-wordpress",
   },
   openGraph: {
-    title:
-      "SEO Expert for UK Businesses | Technical SEO, WordPress & AEO Expert",
+    title: "UK Technical SEO and WordPress Specialist | Rejish Khanal",
     description:
-      "Remote SEO expert helping UK businesses fix technical SEO, optimise WordPress sites, and improve Google and AI search visibility.",
+      "Get remote technical SEO and WordPress support for UK websites, including audits, indexing, Core Web Vitals, schema, and on-page optimization.",
     url: "https://rejishkhanal.com.np/seo-specialist-uk-technical-seo-wordpress",
     siteName: "Rejish Khanal",
     type: "website",
@@ -223,13 +221,7 @@ export default function SEOSpecialistUKPage() {
     url: "https://rejishkhanal.com.np/seo-specialist-uk-technical-seo-wordpress",
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "Technical SEO Expert and Full Stack Developer",
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     areaServed: {
       "@type": "Country",
@@ -260,13 +252,7 @@ export default function SEOSpecialistUKPage() {
     },
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "Technical SEO Expert and Full Stack Developer",
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     serviceType: [
       "Technical SEO",
@@ -279,32 +265,6 @@ export default function SEOSpecialistUKPage() {
     ],
   };
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    jobTitle: "SEO Expert and Technical SEO Expert",
-    description:
-      "Rejish Khanal is a technical SEO expert and full stack developer working remotely with UK businesses on technical SEO, WordPress optimization, Core Web Vitals, ecommerce SEO, SEO audits, and AEO/GEO.",
-    knowsAbout: [
-      "Technical SEO",
-      "WordPress SEO",
-      "Core Web Vitals",
-      "Ecommerce SEO",
-      "SEO Audit",
-      "AEO",
-      "GEO",
-      "Google Search Console",
-      "Schema Markup",
-      "Full Stack Development",
-    ],
-    sameAs: [
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
-  };
-
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -313,11 +273,6 @@ export default function SEOSpecialistUKPage() {
     description:
       "Remote SEO expert for UK businesses providing technical SEO, WordPress SEO, Core Web Vitals optimization, ecommerce SEO, SEO audits, and AEO/GEO optimization.",
     inLanguage: "en-GB",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "SEO Expert UK",
       "Technical SEO UK",
@@ -379,13 +334,6 @@ export default function SEOSpecialistUKPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(professionalServiceSchema),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
         }}
       />
 

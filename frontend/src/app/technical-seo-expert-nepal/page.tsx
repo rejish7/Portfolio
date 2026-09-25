@@ -24,9 +24,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Technical SEO Expert in Nepal | Core Web Vitals & JavaScript SEO",
+  title: "Technical SEO Expert in Nepal",
   description:
-    "Rejish Khanal is a technical SEO expert in Nepal for crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and developer-level SEO implementation.",
+    "Hire a technical SEO expert in Nepal for crawling, indexing, schema, JavaScript SEO, Core Web Vitals, canonical, and website architecture issues.",
   keywords: [
     "technical SEO expert in Nepal",
     "technical SEO specialist in Nepal",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/technical-seo-expert-nepal",
   },
   openGraph: {
-    title: "Technical SEO Expert in Nepal | Core Web Vitals & JavaScript SEO",
+    title: "Technical SEO Expert in Nepal | Rejish Khanal",
     description:
-      "Technical SEO services in Nepal for crawlability, indexing, Core Web Vitals, JavaScript SEO, schema markup, and website performance optimization.",
+      "Hire a technical SEO expert in Nepal for crawling, indexing, schema, JavaScript SEO, Core Web Vitals, canonical, and website architecture issues.",
     url: "https://rejishkhanal.com.np/technical-seo-expert-nepal",
     siteName: "Rejish Khanal",
     type: "website",
@@ -266,18 +266,7 @@ export default function TechnicalSEOPage() {
     url: "https://rejishkhanal.com.np/technical-seo-expert-nepal",
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "Technical SEO Expert in Nepal",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "NP",
-        addressLocality: "Kathmandu",
-      },
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     areaServed: [
       {
@@ -303,36 +292,6 @@ export default function TechnicalSEOPage() {
     },
   };
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://rejishkhanal.com.np/#person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    jobTitle: "Technical SEO Expert in Nepal",
-    description:
-      "Rejish Khanal is a technical SEO expert in Nepal helping businesses improve crawlability, indexing, Core Web Vitals, schema markup, JavaScript SEO, and organic search performance.",
-    knowsAbout: [
-      "Technical SEO",
-      "Core Web Vitals",
-      "JavaScript SEO",
-      "Schema Markup",
-      "Google Search Console",
-      "Crawlability",
-      "Indexing",
-      "Next.js SEO",
-      "Website Performance Optimization",
-      "SEO Audits",
-      "AEO",
-      "GEO",
-    ],
-    sameAs: [
-      "https://www.linkedin.com/in/rejishkhanalseo/",
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
-  };
-
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -341,11 +300,6 @@ export default function TechnicalSEOPage() {
     description:
       "Technical SEO expert in Nepal for faster, crawlable, indexable, and SEO-friendly websites.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "Technical SEO Expert in Nepal",
       "Core Web Vitals Optimization",
@@ -394,13 +348,6 @@ export default function TechnicalSEOPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
         }}
       />
 

@@ -26,9 +26,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Web Development Nepal | SEO-Friendly Developer",
+  title: "Web Development Services in Nepal",
   description:
-    "SEO-friendly web development in Nepal. Build fast, crawlable, mobile-friendly websites with Next.js, Django, and Laravel.",
+    "Build a fast, responsive, accessible, scalable, and SEO-friendly website with professional web development services in Nepal.",
   keywords: [
     "web development Nepal",
     "web development services Nepal",
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/web-development-nepal",
   },
   openGraph: {
-    title: "Web Development Nepal | SEO-Friendly Website Developer",
+    title: "Web Development Services in Nepal | Rejish Khanal",
     description:
-      "Build fast, scalable, crawlable, and SEO-ready websites with Rejish Khanal. Next.js, React, Django, Laravel, technical SEO, and Core Web Vitals optimization.",
+      "Build a fast, responsive, accessible, scalable, and SEO-friendly website with professional web development services in Nepal.",
     url: "https://rejishkhanal.com.np/web-development-nepal",
     siteName: "Rejish Khanal",
     type: "website",
@@ -291,18 +291,8 @@ export default function WebDevelopmentPage() {
     url: "https://rejishkhanal.com.np/web-development-nepal",
     provider: {
       "@type": "Person",
+      "@id": "https://rejishkhanal.com.np/#person",
       name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "Full Stack Developer and SEO Expert in Nepal",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "NP",
-        addressLocality: "Kathmandu",
-      },
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
     },
     areaServed: [
       {
@@ -336,11 +326,6 @@ export default function WebDevelopmentPage() {
     description:
       "Web development services in Nepal for SEO-friendly, fast, crawlable, mobile-friendly, and conversion-focused websites.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "Web Development Nepal",
       "SEO-Friendly Web Development",
@@ -384,36 +369,9 @@ export default function WebDevelopmentPage() {
     })),
   };
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://rejishkhanal.com.np/#person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    jobTitle: "Full Stack Developer and SEO Expert in Nepal",
-    description:
-      "Rejish Khanal is a full stack developer and SEO expert in Nepal building fast, crawlable, and SEO-friendly websites using Next.js, Django, Laravel, and modern web technologies.",
-    knowsAbout: [
-      "Web Development",
-      "Next.js",
-      "React",
-      "Django",
-      "Laravel",
-      "Technical SEO",
-      "Core Web Vitals",
-      "SEO-Friendly Development",
-      "Full Stack Development",
-    ],
-    sameAs: [
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
-  };
-
   return (
     <main className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <SchemaScript schema={serviceSchema} />
-      <SchemaScript schema={personSchema} />
       <SchemaScript schema={webPageSchema} />
       <SchemaScript schema={breadcrumbSchema} />
       <SchemaScript schema={faqSchema} />

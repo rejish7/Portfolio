@@ -19,9 +19,9 @@ import { AboutFAQ } from "@/components/sections/AboutFAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "About Rejish Khanal | Technical SEO Expert in Nepal",
+  title: { absolute: "About Rejish Khanal | SEO and Web Development" },
   description:
-    "Meet Rejish Khanal, a technical SEO expert and full-stack developer in Nepal specializing in AEO, GEO, Core Web Vitals and JavaScript SEO.",
+    "Learn about Rejish Khanal, an SEO expert and full-stack developer helping businesses improve technical SEO, search visibility, and website performance.",
   keywords: [
     "about Rejish Khanal",
     "technical SEO expert Nepal",
@@ -52,12 +52,12 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/about",
   },
   openGraph: {
-    title: "About Rejish Khanal | Technical SEO Expert in Nepal",
+    title: "About Rejish Khanal | SEO and Web Development",
     description:
-      "Learn about Rejish Khanal, an technical SEO expert and full-stack developer in Kathmandu specializing in technical SEO, AEO, GEO, Core Web Vitals and JavaScript SEO.",
+      "Learn about Rejish Khanal, an SEO expert and full-stack developer helping businesses improve technical SEO, search visibility, and website performance.",
     url: "https://rejishkhanal.com.np/about",
     siteName: "Rejish Khanal",
-    type: "profile",
+    type: "website",
     locale: "en_US",
     images: [
       {
@@ -84,60 +84,6 @@ export default function AboutPage() {
     mainEntity: {
       "@type": "Person",
       "@id": "https://rejishkhanal.com.np/#person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      image: "https://rejishkhanal.com.np/assets/images/rejish-khanal.webp",
-      jobTitle: ["Technical SEO Expert", "Full-Stack Developer", "AEO Expert", "GEO Expert"],
-      description:
-        "Rejish Khanal is an technical SEO expert and full-stack developer based in Kathmandu, Nepal. He specializes in AEO (Answer Engine Optimization), GEO (Generative Engine Optimization), Core Web Vitals, structured data, JavaScript SEO, and code-level SEO implementation using Next.js, Django, and Laravel.",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Kathmandu",
-        addressRegion: "Bagmati",
-        addressCountry: "NP",
-      },
-      knowsAbout: [
-        "Technical SEO",
-        "Search Engine Optimization",
-        "Answer Engine Optimization",
-        "Generative Engine Optimization",
-        "AEO",
-        "GEO",
-        "Core Web Vitals",
-        "JavaScript SEO",
-        "Structured Data",
-        "Schema.org",
-        "Google Search Console",
-        "Googlebot",
-        "Crawl Budget Optimization",
-        "Next.js",
-        "Django",
-        "Laravel",
-        "Python",
-        "PostgreSQL",
-        "Redis",
-        "Cloudflare Workers",
-        "Vercel Edge Runtime",
-        "AI Search Optimization",
-        "Google AI Overviews",
-        "ChatGPT Search",
-        "Perplexity AI",
-      ],
-      hasOccupation: [
-        {
-          "@type": "Occupation",
-          name: "Technical SEO Expert",
-          occupationLocation: {
-            "@type": "City",
-            name: "Kathmandu",
-          },
-        },
-      ],
-      sameAs: [
-        "https://www.linkedin.com/in/rejishkhanalseo/",
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
     },
   };
 

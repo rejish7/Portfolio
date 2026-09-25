@@ -23,9 +23,9 @@ import ServicesCaseStudies from "@/components/sections/ServicesCaseStudies";
 import { ServicesCTA } from "@/components/sections/ServicesCTA";
 
 export const metadata: Metadata = {
-  title: "Technical SEO Services in Nepal | AEO, GEO & Web Development | Rejish Khanal",
+  title: "SEO and Web Development Services",
   description:
-    "Technical SEO, AEO, GEO, Core Web Vitals, JavaScript SEO, and SEO-friendly web development services by Rejish Khanal in Kathmandu, Nepal. Direct implementation, not just reports.",
+    "Explore technical SEO, SEO audits, local SEO, AEO, GEO, Core Web Vitals, Next.js SEO, and web development services from Rejish Khanal.",
   keywords: [
     "technical SEO services Nepal",
     "SEO services in Nepal",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/services",
   },
   openGraph: {
-    title: "Technical SEO Services in Nepal | AEO, GEO & Web Development | Rejish Khanal",
+    title: "SEO and Web Development Services | Rejish Khanal",
     description:
-      "Technical SEO, AEO, GEO, Core Web Vitals, JavaScript SEO, and SEO-friendly web development services by Rejish Khanal in Kathmandu, Nepal.",
+      "Explore technical SEO, SEO audits, local SEO, AEO, GEO, Core Web Vitals, Next.js SEO, and web development services from Rejish Khanal.",
     url: "https://rejishkhanal.com.np/services",
     siteName: "Rejish Khanal",
     type: "website",
@@ -96,18 +96,7 @@ const serviceSchema = {
   url: "https://rejishkhanal.com.np/services",
   provider: {
     "@type": "Person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    jobTitle: "Technical SEO Expert in Nepal & Full-Stack Developer",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "NP",
-      addressLocality: "Kathmandu",
-    },
-    sameAs: [
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
+    "@id": "https://rejishkhanal.com.np/#person",
   },
   areaServed: [
     { "@type": "Country", name: "Nepal" },
@@ -133,35 +122,6 @@ const serviceSchema = {
   },
 };
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://rejishkhanal.com.np/#person",
-  name: "Rejish Khanal",
-  url: "https://rejishkhanal.com.np",
-  jobTitle: "Technical SEO Expert in Nepal & Full-Stack Developer",
-  description:
-    "Rejish Khanal is a technical SEO expert and full-stack developer in Kathmandu, Nepal. He provides direct implementation for technical SEO, AEO, GEO, Core Web Vitals, JavaScript SEO, and SEO-friendly web development.",
-  knowsAbout: [
-    "Technical SEO",
-    "AEO",
-    "GEO",
-    "Core Web Vitals",
-    "JavaScript SEO",
-    "Schema Markup",
-    "Next.js SEO",
-    "Django Development",
-    "Laravel Development",
-    "WordPress SEO",
-    "Local SEO",
-    "Site Migration SEO",
-  ],
-  sameAs: [
-    "https://github.com/rejish7",
-    "https://x.com/KhanalRejish",
-  ],
-};
-
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -170,11 +130,6 @@ const webPageSchema = {
   description:
     "Technical SEO, AEO, GEO, Core Web Vitals, JavaScript SEO, and SEO-friendly web development services by Rejish Khanal in Kathmandu, Nepal.",
   inLanguage: "en",
-  isPartOf: {
-    "@type": "WebSite",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-  },
   about: [
     "Technical SEO Services Nepal",
     "AEO Expert Nepal",
@@ -248,10 +203,6 @@ export default function ServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
       <script
         type="application/ld+json"

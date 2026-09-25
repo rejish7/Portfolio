@@ -306,13 +306,7 @@ export default function SEOConsultantPage() {
     },
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "SEO Consultant in Nepal",
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     serviceType: [
       "SEO Consulting",
@@ -327,36 +321,6 @@ export default function SEOConsultantPage() {
     ],
   };
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://rejishkhanal.com.np/#person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    jobTitle: "SEO Consultant in Nepal",
-    description:
-      "Rejish Khanal is an SEO consultant in Nepal helping businesses with strategic SEO advice, technical audits, roadmaps, migrations, second opinions, and implementation guidance.",
-    knowsAbout: [
-      "SEO Consulting",
-      "Technical SEO",
-      "SEO Strategy",
-      "Website Migration SEO",
-      "Core Web Vitals",
-      "JavaScript SEO",
-      "Schema Markup",
-      "Google Search Console",
-      "Content Strategy",
-      "Local SEO",
-      "AEO",
-      "GEO",
-    ],
-    sameAs: [
-      "https://www.linkedin.com/in/rejishkhanalseo/",
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
-  };
-
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -365,8 +329,7 @@ export default function SEOConsultantPage() {
       "Strategic SEO consulting, technical audits, roadmaps, migration planning, second opinions, and team guidance for businesses in Nepal and internationally.",
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     areaServed: {
       "@type": "Country",
@@ -383,11 +346,6 @@ export default function SEOConsultantPage() {
     description:
       "SEO consultant in Nepal for practical strategy, technical advice, audits, migrations, second opinions, and actionable SEO roadmaps.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "SEO Consultant in Nepal",
       "SEO Consultancy in Nepal",
@@ -437,13 +395,6 @@ export default function SEOConsultantPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(consultantSchema),
-        }}
-      />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
         }}
       />
 

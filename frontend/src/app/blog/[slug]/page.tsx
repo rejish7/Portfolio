@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { cache } from "react";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -13,16 +14,20 @@ export const dynamic = "force-dynamic";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
-const getBlogPost = async (slug: string): Promise<BlogPost | null> => {
+// Dedupe the API call shared by generateMetadata() and the page component
+// within one render pass (halves API traffic and rate-limit exposure).
+const getBlogPost = cache(async (slug: string): Promise<BlogPost | null> => {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const res = await fetch(`${API_BASE_URL}/api/blogs/${slug}`, {
         signal: AbortSignal.timeout(30000),
       });
 
+      // Genuine "not found" — the only case that should become a 404 page.
+      if (res.status === 404) return null;
+
       if (!res.ok) {
-        if (attempt < 3) continue;
-        return null;
+        throw new Error(`Blog API responded with ${res.status}`);
       }
 
       const post = await res.json();
@@ -43,12 +48,16 @@ const getBlogPost = async (slug: string): Promise<BlogPost | null> => {
       };
     } catch (error) {
       console.error(`Failed to fetch blog post (attempt ${attempt}):`, error);
-      if (attempt < 3) continue;
-      return null;
+      if (attempt === 3) {
+        // Transient API failure (rate limit / 5xx / network): surface a server
+        // error instead of a soft 404 so valid URLs are never reported as missing.
+        throw new Error(`Failed to load /blog/${slug}: ${error}`);
+      }
+      await new Promise((resolve) => setTimeout(resolve, 400 * attempt));
     }
   }
   return null;
-};
+});
 
 export async function generateMetadata({
   params,
@@ -65,24 +74,50 @@ export async function generateMetadata({
     };
   }
 
-  const metaTitle = post.seo?.title
-    ? post.seo.title.slice(0, 60)
-    : post.title.slice(0, 60);
+  const canonicalUrl = `https://rejishkhanal.com.np/blog/${slug}`;
+  const brandSuffix = /\s*\|\s*Rejish Khanal$/i;
+  const BRAND = "| Rejish Khanal";
+  const stopWords = new Set([
+    "a", "an", "and", "at", "by", "for", "in", "is", "of", "on", "the", "to",
+    "that", "with", "your",
+  ]);
 
-  const metaDescription = post.seo?.description
-    ? post.seo.description.slice(0, 160)
-    : post.excerpt?.slice(0, 160) || "";
+  const trimAtWord = (text: string, max: number): string => {
+    const value = text.trim();
+    if (value.length <= max) return value;
+    const cut = value.lastIndexOf(" ", max);
+    const result = (cut > 0 ? value.slice(0, cut) : value.slice(0, max)).trim();
+    const words = result.split(" ");
+    while (words.length > 1 && stopWords.has(words[words.length - 1].toLowerCase())) {
+      words.pop();
+    }
+    return words.join(" ").replace(/[\s,;:|]+$/, "");
+  };
+
+  const baseTitle = (post.seo?.title || post.title).replace(brandSuffix, "").trim();
+  const metaTitle = `${trimAtWord(baseTitle, 60 - BRAND.length - 1)} ${BRAND}`;
+
+  const metaDescription = trimAtWord(
+    post.seo?.description || post.excerpt || post.title,
+    160
+  );
 
   return {
-    title: metaTitle,
+    title: { absolute: metaTitle },
     description: metaDescription,
     keywords: post.seo?.keywords?.join(", ") || post.tags?.join(", "),
     alternates: {
-      canonical: `https://rejishkhanal.com.np/blog/${slug}`,
+      canonical: canonicalUrl,
     },
     openGraph: {
-      title: post.seo?.ogTitle?.slice(0, 60) || metaTitle,
-      description: post.seo?.ogDescription?.slice(0, 160) || metaDescription,
+      title: post.seo?.ogTitle
+        ? trimAtWord(post.seo.ogTitle.replace(brandSuffix, ""), 70)
+        : metaTitle,
+      description: post.seo?.ogDescription
+        ? trimAtWord(post.seo.ogDescription, 160)
+        : metaDescription,
+      url: canonicalUrl,
+      siteName: "Rejish Khanal",
       type: "article",
       publishedTime: post.publishedAt,
       authors: [post.author || "Rejish Khanal"],
@@ -107,26 +142,29 @@ export default async function BlogPostPage({
     notFound();
   }
 
+  const canonicalUrl = `https://rejishkhanal.com.np/blog/${slug}`;
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${canonicalUrl}#article`,
     headline: post.title,
     description: post.excerpt,
+    url: canonicalUrl,
     image: post.image ? [post.image] : undefined,
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
-    author: {
-      "@type": "Person",
-      name: post.author || "Rejish Khanal",
-    },
+    author:
+      post.author && post.author !== "Rejish Khanal"
+        ? { "@type": "Person", name: post.author }
+        : { "@type": "Person", "@id": "https://rejishkhanal.com.np/#person" },
     publisher: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://rejishkhanal.com.np/blog/${slug}`,
+      "@id": canonicalUrl,
     },
     keywords: post.tags?.join(", "),
     articleSection: "Technology",

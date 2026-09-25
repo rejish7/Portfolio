@@ -3,11 +3,19 @@ import { ProjectCard } from "@/components/ProjectCard";
 import type { Project } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "SEO & Web Development Portfolio - Rejish Khanal",
+  title: "SEO and Web Development Projects",
   description:
-    "Real case studies showing SEO results and web development work. Clients include restaurants, marketing agencies, and local businesses across Australia and Nepal.",
+    "View selected SEO and web development projects by Rejish Khanal, including technical optimization, performance improvements, and website development.",
   alternates: {
     canonical: "https://rejishkhanal.com.np/projects",
+  },
+  openGraph: {
+    title: "SEO and Web Development Projects | Rejish Khanal",
+    description:
+      "View selected SEO and web development projects by Rejish Khanal, including technical optimization, performance improvements, and website development.",
+    url: "https://rejishkhanal.com.np/projects",
+    siteName: "Rejish Khanal",
+    type: "website",
   },
 };
 
@@ -68,7 +76,7 @@ export default async function ProjectsPage() {
     "operatingSystem": "Web Browser",
     "author": {
       "@type": "Person",
-      "name": "Rejish Khanal"
+      "@id": "https://rejishkhanal.com.np/#person"
     },
     "offers": project.liveUrl ? {
       "@type": "Offer",
@@ -93,8 +101,7 @@ export default async function ProjectsPage() {
             "url": "https://rejishkhanal.com.np/projects",
             "author": {
               "@type": "Person",
-              "name": "Rejish Khanal",
-              "url": "https://rejishkhanal.com.np"
+              "@id": "https://rejishkhanal.com.np/#person"
             },
             "hasPart": projectsSchema
           })

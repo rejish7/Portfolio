@@ -5,9 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Laravel Developer in Nepal | Fast & SEO-Ready Websites",
+  title: "Laravel Developer in Nepal",
   description:
-    "Laravel developer in Nepal for fast and SEO-ready websites. PHP, backend development, and full stack solutions.",
+    "Hire a Laravel developer in Nepal for scalable web applications, backend development, APIs, performance optimization, and SEO-friendly implementation.",
   keywords: [
     "Laravel developer Nepal",
     "PHP developer Nepal",
@@ -17,6 +17,14 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://rejishkhanal.com.np/laravel-developer-nepal",
+  },
+  openGraph: {
+    title: "Laravel Developer in Nepal | Rejish Khanal",
+    description:
+      "Hire a Laravel developer in Nepal for scalable web applications, backend development, APIs, performance optimization, and SEO-friendly implementation.",
+    url: "https://rejishkhanal.com.np/laravel-developer-nepal",
+    siteName: "Rejish Khanal",
+    type: "website",
   },
 };
 

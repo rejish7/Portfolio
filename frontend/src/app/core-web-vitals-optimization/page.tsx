@@ -27,9 +27,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Core Web Vitals Optimization Nepal | CWV Fixes",
+  title: "Core Web Vitals Optimization Services",
   description:
-    "Core Web Vitals optimization in Nepal. Improve LCP, INP, CLS, page speed, and Google page experience.",
+    "Improve LCP, INP, CLS, page speed, rendering, JavaScript performance, image delivery, user experience, and technical SEO across your website.",
   keywords: [
     "Core Web Vitals optimization Nepal",
     "Core Web Vitals expert Nepal",
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/core-web-vitals-optimization",
   },
   openGraph: {
-    title: "Core Web Vitals Optimization Nepal | LCP, INP & CLS Fixes",
+    title: "Core Web Vitals Optimization Services | Rejish Khanal",
     description:
-      "Improve LCP, INP, CLS, page speed, mobile performance, Core Web Vitals, and technical SEO with Rejish Khanal.",
+      "Improve LCP, INP, CLS, page speed, rendering, JavaScript performance, image delivery, user experience, and technical SEO across your website.",
     url: "https://rejishkhanal.com.np/core-web-vitals-optimization",
     siteName: "Rejish Khanal",
     type: "website",
@@ -293,18 +293,7 @@ export default function CoreWebVitalsPage() {
     url: "https://rejishkhanal.com.np/core-web-vitals-optimization",
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "Technical SEO Expert and Core Web Vitals Expert in Nepal",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "NP",
-        addressLocality: "Kathmandu",
-      },
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     areaServed: [
       {
@@ -338,11 +327,6 @@ export default function CoreWebVitalsPage() {
     description:
       "Core Web Vitals optimization for LCP, INP, CLS, page speed, mobile performance, and technical SEO.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "Core Web Vitals Optimization",
       "LCP Optimization",

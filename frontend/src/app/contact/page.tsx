@@ -20,9 +20,11 @@ import { Button } from "@/components/ui/button";
 import { SchemaScript } from "@/components/SchemaScript";
 
 export const metadata: Metadata = {
-  title: "Contact SEO Expert Nepal | Hire Rejish Khanal",
+  title: {
+    absolute: "Contact Rejish Khanal | SEO and Web Development",
+  },
   description:
-    "Contact an SEO expert in Kathmandu for SEO audits, technical SEO, local SEO, AEO, and web development.",
+    "Contact Rejish Khanal to discuss technical SEO, SEO audits, AEO, GEO, Core Web Vitals, local SEO, or web development requirements.",
   keywords: [
     "contact SEO expert in Nepal",
     "hire SEO expert Nepal",
@@ -38,9 +40,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/contact",
   },
   openGraph: {
-    title: "Contact Rejish Khanal | SEO Expert in Nepal",
+    title: "Contact Rejish Khanal | SEO and Web Development",
     description:
-      "Get in touch with Rejish Khanal for technical SEO audits, local SEO, Core Web Vitals optimization, AEO, GEO, and SEO-friendly web development.",
+      "Contact Rejish Khanal to discuss technical SEO, SEO audits, AEO, GEO, Core Web Vitals, local SEO, or web development requirements.",
     url: "https://rejishkhanal.com.np/contact",
     siteName: "Rejish Khanal",
     type: "website",
@@ -160,91 +162,12 @@ export default function ContactPage() {
     description:
       "Contact Rejish Khanal for SEO audits, technical SEO, local SEO, AEO, GEO, Core Web Vitals optimization, and SEO-friendly web development services in Nepal.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "SEO Consultation Nepal",
       "Technical SEO Audit Nepal",
       "Local SEO Kathmandu",
       "SEO Expert in Nepal",
       "Web Development Nepal",
-    ],
-  };
-
-  const professionalServiceSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": "https://rejishkhanal.com.np/#professionalservice",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    description:
-      "Rejish Khanal is a technical SEO expert and full-stack developer based in Kathmandu, Nepal.",
-    email: "contact@rejishkhanal.com.np",
-    telephone: "9862766994",
-    areaServed: [
-      {
-        "@type": "Country",
-        name: "Nepal",
-      },
-      {
-        "@type": "City",
-        name: "Kathmandu",
-      },
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "NP",
-      addressLocality: "Kathmandu",
-    },
-    founder: {
-      "@type": "Person",
-      "@id": "https://rejishkhanal.com.np/#person",
-      name: "Rejish Khanal",
-    },
-    serviceType: [
-      "SEO Audit",
-      "Technical SEO",
-      "Answer Engine Optimization",
-      "Generative Engine Optimization",
-      "Core Web Vitals Optimization",
-      "Web Development",
-    ],
-  };
-
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://rejishkhanal.com.np/#person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    email: "contact@rejishkhanal.com.np",
-    telephone: "9862766994",
-    jobTitle: ["Technical SEO Expert", "Full-Stack Developer"],
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "NP",
-      addressLocality: "Kathmandu",
-    },
-    knowsAbout: [
-      "Technical SEO",
-      "SEO Audit",
-      "Core Web Vitals",
-      "JavaScript SEO",
-      "Schema Markup",
-      "AEO",
-      "GEO",
-      "Web Development",
-      "Next.js",
-      "Django",
-      "Laravel",
-    ],
-    sameAs: [
-      "https://www.linkedin.com/in/rejishkhanalseo/",
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
     ],
   };
 
@@ -283,8 +206,6 @@ export default function ContactPage() {
   return (
     <main className="pt-24 pb-24">
       <SchemaScript schema={contactPageSchema} />
-      <SchemaScript schema={professionalServiceSchema} />
-      <SchemaScript schema={personSchema} />
       <SchemaScript schema={breadcrumbSchema} />
       <SchemaScript schema={faqSchema} />
 

@@ -20,9 +20,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Next.js SEO Services in Nepal | Crawlable & Fast Web Apps | Rejish Khanal",
+  title: "Next.js SEO Services",
   description:
-    "Next.js SEO services in Nepal by Rejish Khanal. Fix rendering, indexing, Core Web Vitals, and crawlability issues in Next.js App Router applications. Based in Kathmandu, serving globally.",
+    "Improve Next.js crawling, rendering, metadata, canonicals, schema, sitemaps, internal linking, indexability, and Core Web Vitals performance.",
   keywords: [
     "Next.js SEO services Nepal",
     "Next.js SEO expert Nepal",
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/nextjs-seo-services",
   },
   openGraph: {
-    title: "Next.js SEO Services in Nepal | Rejish Khanal",
+    title: "Next.js SEO Services | Rejish Khanal",
     description:
-      "Fix rendering, indexing, Core Web Vitals, and crawlability issues in Next.js applications. Technical SEO for Next.js App Router, SSR, SSG, and ISR.",
+      "Improve Next.js crawling, rendering, metadata, canonicals, schema, sitemaps, internal linking, indexability, and Core Web Vitals performance.",
     url: "https://rejishkhanal.com.np/nextjs-seo-services",
     siteName: "Rejish Khanal",
     type: "website",
@@ -229,18 +229,8 @@ export default function NextJSSEOPage() {
     url: "https://rejishkhanal.com.np/nextjs-seo-services",
     provider: {
       "@type": "Person",
+      "@id": "https://rejishkhanal.com.np/#person",
       name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "Next.js SEO Expert and Full-Stack Developer in Nepal",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "NP",
-        addressLocality: "Kathmandu",
-      },
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
     },
     areaServed: [
       { "@type": "Country", name: "Nepal" },
@@ -263,31 +253,6 @@ export default function NextJSSEOPage() {
     },
   };
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://rejishkhanal.com.np/#person",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    jobTitle: "Next.js SEO Expert and Full-Stack Developer in Nepal",
-    description:
-      "Rejish Khanal is a Next.js SEO expert in Nepal helping businesses fix rendering, indexing, Core Web Vitals, and crawlability issues in Next.js applications.",
-    knowsAbout: [
-      "Next.js SEO",
-      "JavaScript SEO",
-      "App Router SEO",
-      "Server-Side Rendering",
-      "Static Site Generation",
-      "Core Web Vitals",
-      "Schema Markup",
-      "Technical SEO",
-    ],
-    sameAs: [
-      "https://github.com/rejish7",
-      "https://x.com/KhanalRejish",
-    ],
-  };
-
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -296,11 +261,6 @@ export default function NextJSSEOPage() {
     description:
       "Next.js SEO services in Nepal for crawlable, fast, and rankable web applications with App Router, SSR, SSG, and Core Web Vitals optimization.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "Next.js SEO Services Nepal",
       "JavaScript SEO",
@@ -348,12 +308,6 @@ export default function NextJSSEOPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema),
         }}
       />
       <script

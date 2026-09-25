@@ -7,7 +7,6 @@ import {
   MapPin,
   ArrowRight,
 } from "lucide-react";
-import { SchemaScript } from "@/components/SchemaScript";
 
 const socialLinks = [
   {
@@ -112,49 +111,8 @@ const developmentLinks = [
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": "https://rejishkhanal.com.np/#professionalservice",
-    name: "Rejish Khanal",
-    url: "https://rejishkhanal.com.np",
-    description:
-      "Rejish Khanal is a technical SEO expert and full-stack developer based in Kathmandu, Nepal. He helps businesses improve crawlability, indexing, Core Web Vitals, structured data, and organic search visibility.",
-    email: "contact@rejishkhanal.com.np",
-    areaServed: [
-      {
-        "@type": "Country",
-        name: "Nepal",
-      },
-      {
-        "@type": "City",
-        name: "Kathmandu",
-      },
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "NP",
-      addressLocality: "Kathmandu",
-    },
-    founder: {
-      "@type": "Person",
-      "@id": "https://rejishkhanal.com.np/#person",
-      name: "Rejish Khanal",
-    },
-    serviceType: [
-      "Technical SEO",
-      "SEO Audit",
-      "Answer Engine Optimization",
-      "Generative Engine Optimization",
-      "Core Web Vitals Optimization",
-      "Web Development",
-    ],
-  };
-
   return (
     <footer className="border-t border-border bg-background">
-      <SchemaScript schema={organizationSchema} />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}

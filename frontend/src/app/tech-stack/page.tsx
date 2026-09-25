@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { Database, Globe, Zap, Layers } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "Tech Stack - Django, Laravel, Next.js, Vue.js",
+    title: "SEO and Web Development Technology Stack",
     description:
-        "Full stack developer specializing in Django, Laravel, Next.js, Vue.js, PostgreSQL, and SEO-ready architecture.",
+        "Explore the SEO, analytics, development, testing, and performance tools Rejish Khanal uses to build and optimize search-friendly websites.",
     keywords: [
         "Django developer",
         "PHP Laravel developer",
@@ -20,6 +20,14 @@ export const metadata: Metadata = {
     ],
     alternates: {
         canonical: "https://rejishkhanal.com.np/tech-stack",
+    },
+    openGraph: {
+        title: "SEO and Web Development Technology Stack | Rejish Khanal",
+        description:
+            "Explore the SEO, analytics, development, testing, and performance tools Rejish Khanal uses to build and optimize search-friendly websites.",
+        url: "https://rejishkhanal.com.np/tech-stack",
+        siteName: "Rejish Khanal",
+        type: "website",
     },
 };
 

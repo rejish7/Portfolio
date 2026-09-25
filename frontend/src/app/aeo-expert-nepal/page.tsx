@@ -20,9 +20,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AEO Expert in Nepal | Answer Engine Optimization",
+  title: { absolute: "AEO Expert in Nepal | Answer Engine Optimization" },
   description:
-    "Rejish Khanal is an AEO expert in Nepal for featured snippets, People Also Ask, AI Overviews, voice search, and answer-focused content optimization.",
+    "Improve visibility across answer engines with structured content, entity signals, schema, direct answers, and technical AEO support in Nepal.",
   keywords: [
     "AEO expert in Nepal",
     "answer engine optimization expert in Nepal",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/aeo-expert-nepal",
   },
   openGraph: {
-    title: "AEO Expert in Nepal | Answer Engine Optimization Expert",
+    title: "AEO Expert in Nepal | Answer Engine Optimization",
     description:
-      "Work with Rejish Khanal to optimize your website content for featured snippets, People Also Ask, voice search, AI Overviews, and answer engines.",
+      "Improve visibility across answer engines with structured content, entity signals, schema, direct answers, and technical AEO support in Nepal.",
     url: "https://rejishkhanal.com.np/aeo-expert-nepal",
     siteName: "Rejish Khanal",
     type: "website",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { cache } from "react";
 import { ArrowLeft, ExternalLink, Github, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { notFound } from "next/navigation";
@@ -12,34 +13,46 @@ export const revalidate = 0;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
-const getProject = async (slug: string): Promise<Project | null> => {
-    try {
-        const res = await fetch(`${API_BASE_URL}/api/projects/slug/${slug}`);
+// Dedupe the API call shared by generateMetadata() and the page component
+// within one render pass (halves API traffic and rate-limit exposure).
+const getProject = cache(async (slug: string): Promise<Project | null> => {
+    for (let attempt = 1; attempt <= 3; attempt++) {
+        try {
+            const res = await fetch(`${API_BASE_URL}/api/projects/slug/${slug}`);
 
-        if (!res.ok) {
-            return null;
+            // Genuine "not found" — the only case that should become a 404 page.
+            if (res.status === 404) return null;
+
+            if (!res.ok) {
+                throw new Error(`Projects API responded with ${res.status}`);
+            }
+
+            const project = await res.json();
+
+            return {
+                id: project._id || project.id,
+                slug: project.slug || project._id,
+                title: project.title,
+                description: project.description,
+                fullDescription: project.fullDescription,
+                image: project.image,
+                technologies: project.technologies || [],
+                liveUrl: project.liveUrl,
+                githubUrl: project.githubUrl,
+                featured: project.featured,
+                category: project.category,
+            };
+        } catch (error) {
+            console.error(`Failed to fetch project (attempt ${attempt}):`, error);
+            if (attempt === 3) {
+                // Transient API failure: server error, never a soft 404.
+                throw new Error(`Failed to load /projects/${slug}: ${error}`);
+            }
+            await new Promise((resolve) => setTimeout(resolve, 400 * attempt));
         }
-
-        const project = await res.json();
-
-        return {
-            id: project._id || project.id,
-            slug: project.slug || project._id,
-            title: project.title,
-            description: project.description,
-            fullDescription: project.fullDescription,
-            image: project.image,
-            technologies: project.technologies || [],
-            liveUrl: project.liveUrl,
-            githubUrl: project.githubUrl,
-            featured: project.featured,
-            category: project.category,
-        };
-    } catch (error) {
-        console.error("Failed to fetch project:", error);
-        return null;
     }
-};
+    return null;
+});
 
 export async function generateMetadata({
     params,
@@ -57,7 +70,9 @@ export async function generateMetadata({
     }
 
     return {
-            title: `${project.title} - SEO & Dev Case Study | Rejish Khanal`,
+            title: {
+                absolute: `${project.title} - SEO & Dev Case Study | Rejish Khanal`,
+            },
         description: project.description,
         keywords: project.technologies.join(", "),
         alternates: {
@@ -66,6 +81,9 @@ export async function generateMetadata({
         openGraph: {
         title: `${project.title} - SEO & Dev Case Study | Rejish Khanal`,
             description: project.description,
+            url: `https://rejishkhanal.com.np/projects/${slug}`,
+            siteName: "Rejish Khanal",
+            type: "website",
             images: project.image ? [{ url: project.image, alt: project.title }] : [],
         },
     };
@@ -99,8 +117,7 @@ export default async function ProjectPage({
                         "operatingSystem": "Web Browser",
                         "author": {
                             "@type": "Person",
-                            "name": "Rejish Khanal",
-                            "url": "https://rejishkhanal.com.np"
+                            "@id": "https://rejishkhanal.com.np/#person"
                         },
                         "offers": project.liveUrl ? {
                             "@type": "Offer",

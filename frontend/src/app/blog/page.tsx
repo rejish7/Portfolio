@@ -7,9 +7,9 @@ import { ArrowRight, BookOpen, Search, Gauge, Code2, Bot } from "lucide-react";
 import { SchemaScript } from "@/components/SchemaScript";
 
 export const metadata: Metadata = {
-  title: "SEO Blog Nepal | Technical SEO, AEO, GEO & Web Development",
+  title: "SEO, AEO, GEO and Web Development Blog",
   description:
-    "Read SEO articles by Rejish Khanal on technical SEO, Core Web Vitals, JavaScript SEO, AEO, GEO, local SEO, SEO audits, and web development in Nepal.",
+    "Read practical guides about technical SEO, AEO, GEO, local SEO, Core Web Vitals, WordPress, Next.js, and search-friendly development.",
   keywords: [
     "SEO blog Nepal",
     "technical SEO blog Nepal",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/blog",
   },
   openGraph: {
-    title: "SEO Blog Nepal | Technical SEO, AEO, GEO & Web Development",
+    title: "SEO, AEO, GEO and Web Development Blog | Rejish Khanal",
     description:
-      "Practical SEO articles from Rejish Khanal covering technical SEO, Core Web Vitals, JavaScript SEO, AEO, GEO, local SEO, SEO audits, and web development.",
+      "Read practical guides about technical SEO, AEO, GEO, local SEO, Core Web Vitals, WordPress, Next.js, and search-friendly development.",
     url: "https://rejishkhanal.com.np/blog",
     siteName: "Rejish Khanal",
     type: "website",
@@ -112,8 +112,7 @@ export default async function BlogPage() {
     },
     publisher: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: baseUrl,
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -133,18 +132,11 @@ export default async function BlogPage() {
     inLanguage: "en",
     author: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: baseUrl,
-      jobTitle: "SEO Expert in Nepal and Technical SEO Expert",
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     publisher: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: baseUrl,
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     blogPost: blogPostsSchema,
   };
@@ -157,11 +149,6 @@ export default async function BlogPage() {
     description:
       "A collection of SEO tips, technical SEO, Core Web Vitals, JavaScript SEO, AEO, GEO, local SEO, and web development articles by Rejish Khanal.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: baseUrl,
-    },
     about: [
       "SEO Blog Nepal",
       "Technical SEO",

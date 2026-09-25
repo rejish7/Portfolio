@@ -25,9 +25,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Local SEO Services Nepal | Google Maps Ranking",
+  title: "Local SEO Services in Nepal",
   description:
-    "Local SEO services in Nepal. Improve Google Maps ranking, Business Profile visibility, local citations, and reviews.",
+    "Improve local search visibility in Nepal with Google Business Profile support, local pages, citations, reviews, technical SEO, and content strategy.",
   keywords: [
     "local SEO services Nepal",
     "local SEO services in Nepal",
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     canonical: "https://rejishkhanal.com.np/local-seo-services-nepal",
   },
   openGraph: {
-    title: "Local SEO Services in Nepal | Google Maps Ranking Kathmandu",
+    title: "Local SEO Services in Nepal | Rejish Khanal",
     description:
-      "Improve local search visibility, Google Maps rankings, Google Business Profile performance, citations, reviews, and local leads with local SEO services in Nepal.",
+      "Improve local search visibility in Nepal with Google Business Profile support, local pages, citations, reviews, technical SEO, and content strategy.",
     url: "https://rejishkhanal.com.np/local-seo-services-nepal",
     siteName: "Rejish Khanal",
     type: "website",
@@ -263,18 +263,7 @@ export default function LocalSEOPage() {
     url: "https://rejishkhanal.com.np/local-seo-services-nepal",
     provider: {
       "@type": "Person",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-      jobTitle: "SEO Expert in Nepal and Local SEO Expert",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "NP",
-        addressLocality: "Kathmandu",
-      },
-      sameAs: [
-        "https://github.com/rejish7",
-        "https://x.com/KhanalRejish",
-      ],
+      "@id": "https://rejishkhanal.com.np/#person",
     },
     areaServed: [
       {
@@ -338,8 +327,8 @@ export default function LocalSEOPage() {
     },
     founder: {
       "@type": "Person",
+      "@id": "https://rejishkhanal.com.np/#person",
       name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
     },
     sameAs: [
       "https://github.com/rejish7",
@@ -355,11 +344,6 @@ export default function LocalSEOPage() {
     description:
       "Local SEO services in Nepal for Google Maps ranking, Google Business Profile optimization, local citations, reviews, and Kathmandu local search visibility.",
     inLanguage: "en",
-    isPartOf: {
-      "@type": "WebSite",
-      name: "Rejish Khanal",
-      url: "https://rejishkhanal.com.np",
-    },
     about: [
       "Local SEO Services Nepal",
       "Google Maps Ranking Nepal",

@@ -5,9 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Case Studies - Technical SEO & Web Development",
+  title: "SEO and Web Development Case Studies",
   description:
-    "Real case studies showing how I've helped businesses improve technical SEO, rankings, and organic traffic.",
+    "Explore SEO and web development case studies covering technical improvements, performance optimization, search visibility, and supported outcomes.",
   keywords: [
     "case studies",
     "SEO results",
@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://rejishkhanal.com.np/case-studies",
+  },
+  openGraph: {
+    title: "SEO and Web Development Case Studies | Rejish Khanal",
+    description:
+      "Explore SEO and web development case studies covering technical improvements, performance optimization, search visibility, and supported outcomes.",
+    url: "https://rejishkhanal.com.np/case-studies",
+    siteName: "Rejish Khanal",
+    type: "website",
   },
 };
 
