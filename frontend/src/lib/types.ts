@@ -1,3 +1,27 @@
+export interface ProjectResult {
+  label: string;
+  value: string;
+  change?: string;
+  direction?: "up" | "down" | "neutral";
+  context?: string;
+}
+
+export interface ProjectSection {
+  heading: string;
+  body: string;
+}
+
+export interface ProjectFAQ {
+  question: string;
+  answer: string;
+}
+
+export interface ProjectSEO {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+}
+
 export interface Project {
   id: string;
   slug: string;
@@ -5,11 +29,25 @@ export interface Project {
   description: string;
   fullDescription?: string;
   image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
   category?: string;
+  industry?: string;
+  services?: string[];
+  duration?: string;
+  clientScope?: string;
+  summary?: string;
+  results?: ProjectResult[];
+  highlights?: string[];
+  sections?: ProjectSection[];
+  faqs?: ProjectFAQ[];
+  seo?: ProjectSEO;
+  publishedAt?: string;
+  updatedAt?: string;
 }
 
 export interface SEOMetadata {

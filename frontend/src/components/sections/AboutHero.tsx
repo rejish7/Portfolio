@@ -23,7 +23,7 @@ export function AboutHero() {
               <div className="relative rounded-2xl overflow-hidden bg-muted aspect-[4/5] shadow-xl">
                 <Image
                   src="/assets/images/rejish-khanal.webp"
-                  alt="Rejish Khanal — Technical SEO Expert and Full-Stack Developer in Kathmandu, Nepal"
+                  alt="Rejish Khanal, Technical SEO Expert and Full-Stack Developer in Kathmandu, Nepal"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 40vw"

@@ -124,9 +124,9 @@ const caseStudies: Record<string, CaseStudy> = {
     ],
   },
   "ecommerce-seo-growth": {
-    title: "E-Commerce SEO Case Study: 46.6K Impressions and 12.2% CTR in 90 Days",
+    title: "E-Commerce SEO: 46.6K Impressions, 12.2% CTR",
     description:
-      "E-commerce SEO case study: a technical and on-page overhaul took this online store to 5.71K clicks, 46.6K impressions, a 12.2% CTR, an average position of 5.8 and 2.03K AI Overview impressions — verified in Google Search Console.",
+      "E-commerce SEO case study: a technical and on-page overhaul took this online store to 5.71K clicks, 46.6K impressions, a 12.2% CTR, an average position of 5.8 and 2.03K AI Overview impressions, verified in Google Search Console.",
     eyebrow: "E-Commerce · Technical SEO & Content",
     industry: "E-Commerce / D2C Online Store",
     timeline: "25 Jun – 21 Sep 2026",
@@ -134,24 +134,24 @@ const caseStudies: Record<string, CaseStudy> = {
       src: "/case-studies/ecommerce-gsc-performance.png",
       alt: "Google Search Console performance report for the e-commerce store showing 5.71K total clicks, 46.6K total impressions, a 12.2% average CTR and an average position of 5.8 between 25 June and 21 September 2026",
       caption:
-        "Google Search Console performance — 25 Jun 2026 to 21 Sep 2026 · clicks, impressions, CTR and average position",
+        "Google Search Console performance: 25 Jun 2026 to 21 Sep 2026 · clicks, impressions, CTR and average position",
       width: 2062,
       height: 1106,
     },
     overview:
       "A consumer e-commerce store with a large, fast-growing catalogue was publishing more products every week but search visibility was flat. Crawl budget was being burned on parameter and facet URLs, category pages cannibalised each other, and the product template was too heavy for mobile. Over a 90-day engagement we rebuilt the technical foundation, restructured the category and product pages around real search demand, and instrumented everything in Google Search Console so every change could be measured.",
     challenge:
-      "The store was losing impressions to itself. Faceted navigation and URL parameters created thousands of near-duplicate pages, the same head term was targeted by several categories at once, and new products were discovered but not indexed. On top of that, the product template shipped render-blocking JavaScript and uncompressed imagery, so Core Web Vitals failed on mobile — the exact device where most of the store's demand lives.",
+      "The store was losing impressions to itself. Faceted navigation and URL parameters created thousands of near-duplicate pages, the same head term was targeted by several categories at once, and new products were discovered but not indexed. On top of that, the product template shipped render-blocking JavaScript and uncompressed imagery, so Core Web Vitals failed on mobile, the exact device where most of the store's demand lives.",
     challengePoints: [
       "Thousands of parameterised and faceted URLs duplicating category content and splitting crawl budget.",
       "Category and product pages competing for the same head terms (keyword cannibalisation).",
       "New SKUs stuck in “Discovered – currently not indexed” for weeks after launch.",
       "Mobile LCP well above 4s on category and product templates.",
-      "No Product, Offer or Review structured data — listings without rich results.",
+      "No Product, Offer or Review structured data, so no rich results.",
       "Guides and blog posts published with no internal links to revenue pages.",
     ],
     solution:
-      "We treated the store as a system rather than a checklist. First we mapped crawl behaviour and consolidated duplicate clusters behind canonical rules and robots directives, then rebuilt the XML sitemap around indexable templates only. Second we fixed the front end: code-splitting, preloaded hero images, AVIF/WebP conversion and deferred third-party scripts brought the templates back inside Core Web Vitals thresholds. Third we rewrote the on-page layer — one primary query per URL, unique intros for the top 40 categories, and Product, Offer, AggregateRating and BreadcrumbList JSON-LD across the catalogue. Finally we built a hub-and-spoke internal linking model so guides fed categories and categories fed bestsellers.",
+      "We treated the store as a system rather than a checklist. First we mapped crawl behaviour and consolidated duplicate clusters behind canonical rules and robots directives, then rebuilt the XML sitemap around indexable templates only. Second we fixed the front end: code-splitting, preloaded hero images, AVIF/WebP conversion and deferred third-party scripts brought the templates back inside Core Web Vitals thresholds. Third we rewrote the on-page layer: one primary query per URL, unique intros for the top 40 categories, and Product, Offer, AggregateRating and BreadcrumbList JSON-LD across the catalogue. Finally we built a hub-and-spoke internal linking model so guides fed categories and categories fed bestsellers.",
     approach: [
       {
         title: "Crawl & Duplicate Analysis",
@@ -185,18 +185,18 @@ const caseStudies: Record<string, CaseStudy> = {
       "Weekly GSC reporting cadence by page type, query group and device",
     ],
     results:
-      "Between 25 June and 21 September 2026 the store recorded 5.71K clicks from 46.6K impressions, a 12.2% average click-through rate and a site-wide average position of 5.8. Index coverage stabilised — new products are now indexed within days instead of weeks — and the category pages that had been cannibalising each other each own a clear query. CTR at 12.2% is the signal that titles and descriptions now match intent, while position 5.8 keeps the store inside the first screen for its priority terms.",
+      "Between 25 June and 21 September 2026 the store recorded 5.71K clicks from 46.6K impressions, a 12.2% average click-through rate and a site-wide average position of 5.8. Index coverage stabilised, new products are now indexed within days instead of weeks, and the category pages that had been cannibalising each other each own a clear query. CTR at 12.2% is the signal that titles and descriptions now match intent, while position 5.8 keeps the store inside the first screen for its priority terms.",
     resultsQuote:
-      "5.71K clicks · 46.6K impressions · 12.2% CTR · average position 5.8 — verified in Google Search Console.",
+      "5.71K clicks · 46.6K impressions · 12.2% CTR · average position 5.8, verified in Google Search Console.",
     aiVisibility: {
       title: "Visibility in Google's AI Overviews",
-      text: "Beyond classic blue links, the store earned 2.03K impressions in Google's generative AI features during the same window. Clear entity signals, structured product data and answer-ready category content mean the catalogue is being surfaced in AI answers as well as organic results — an increasingly important share of discovery for e-commerce queries.",
+      text: "Beyond classic blue links, the store earned 2.03K impressions in Google's generative AI features during the same window. Clear entity signals, structured product data and answer-ready category content mean the catalogue is being surfaced in AI answers as well as organic results, an increasingly important share of discovery for e-commerce queries.",
     },
     secondaryImage: {
       src: "/case-studies/ecommerce-gsc-ai-overview.png",
       alt: "Google Search Console report showing 2.03K total impressions in Google generative AI features for the e-commerce store between 25 June and 23 September 2026",
       caption:
-        "Google Search Console — generative AI features · 2.03K impressions, 25 Jun to 23 Sep 2026",
+        "Google Search Console, generative AI features · 2.03K impressions, 25 Jun to 23 Sep 2026",
       width: 2096,
       height: 832,
     },
@@ -220,9 +220,9 @@ const caseStudies: Record<string, CaseStudy> = {
     ],
   },
   "service-business-seo": {
-    title: "Service Business SEO Case Study: 26.7K Impressions and 1.2K Clicks in 90 Days",
+    title: "Service Business SEO: 26.7K Impressions",
     description:
-      "Service business SEO case study: restructuring service pages, entity schema and topic clusters produced 1.2K clicks, 26.7K impressions, a 4.5% CTR and an average position of 20.6 — verified in Google Search Console.",
+      "Service business SEO case study: restructuring service pages, entity schema and topic clusters produced 1.2K clicks, 26.7K impressions, a 4.5% CTR and an average position of 20.6, verified in Google Search Console.",
     eyebrow: "Service Business · SEO & Content",
     industry: "Service-Oriented Business (Professional Services)",
     timeline: "25 Jun – 21 Sep 2026",
@@ -230,24 +230,24 @@ const caseStudies: Record<string, CaseStudy> = {
       src: "/case-studies/service-gsc-performance.png",
       alt: "Google Search Console performance report for the service business showing 1.2K total clicks, 26.7K total impressions, a 4.5% average CTR and an average position of 20.6 between 25 June and 21 September 2026",
       caption:
-        "Google Search Console performance — 25 Jun 2026 to 21 Sep 2026 · clicks, impressions, CTR and average position",
+        "Google Search Console performance: 25 Jun 2026 to 21 Sep 2026 · clicks, impressions, CTR and average position",
       width: 2052,
       height: 1110,
     },
     overview:
       "A service business relying on referrals wanted a predictable inbound channel. Its website ranked for a handful of brand terms and nothing else: service pages were thin and interchangeable, blog posts were published without a structure, and Google had no clear entity to associate with the business. Over 90 days we rebuilt the site's information architecture around the way clients actually search, gave every service a dedicated optimised page, and used topic clusters and schema to make the offering explicit to search engines.",
     challenge:
-      "One page was trying to serve five different services, so it could not rank well for any of them. Location and entity signals were missing, structured data was absent, and the blog operated as a silo with no links to the pages that generate enquiries. Most queries sat between positions 11 and 20 — visible, but rarely clicked — and the site's average CTR suffered as a result.",
+      "One page was trying to serve five different services, so it could not rank well for any of them. Location and entity signals were missing, structured data was absent, and the blog operated as a silo with no links to the pages that generate enquiries. Most queries sat between positions 11 and 20 (visible, but rarely clicked) and the site's average CTR suffered as a result.",
     challengePoints: [
       "Multiple services targeted by a single generic page, splitting relevance.",
-      "No Service or LocalBusiness schema — no rich results or clear entity signals.",
+      "No Service or LocalBusiness schema, so no rich results or clear entity signals.",
       "Blog content published in silos with zero internal links to enquiry pages.",
       "Most non-brand queries sitting on page two (positions 11–20).",
       "Template-heavy pages with poor mobile Core Web Vitals.",
       "Inconsistent business details across the site and third-party directories.",
     ],
     solution:
-      "We split the offering into one dedicated, fully optimised page per service, each with its own search-intent-led copy, FAQ section and Service schema. A hub page and topic cluster structure then connected informational articles to those money pages, so every post passed internal-link equity where it converts. Entity signals were tightened — consistent business details, Organization and LocalBusiness markup, and a clear heading hierarchy — while the template was slimmed down to fix mobile performance.",
+      "We split the offering into one dedicated, fully optimised page per service, each with its own search-intent-led copy, FAQ section and Service schema. A hub page and topic cluster structure then connected informational articles to those money pages, so every post passed internal-link equity where it converts. Entity signals were tightened (consistent business details, Organization and LocalBusiness markup, and a clear heading hierarchy) while the template was slimmed down to fix mobile performance.",
     approach: [
       {
         title: "Intent & Gap Audit",
@@ -283,7 +283,7 @@ const caseStudies: Record<string, CaseStudy> = {
     results:
       "Between 25 June and 21 September 2026 the site earned 1.2K clicks from 26.7K impressions at a 4.5% average CTR, holding an average position of 20.6 across a broad query set that includes a large share of early-stage informational searches. The commercial pages now carry unique titles, schema and internal-link equity, and the mid-tail queries previously parked on page two have a clear route to page one. Impressions are the leading indicator here: the site is being surfaced for far more relevant queries than before, and clicks follow as those positions firm up.",
     resultsQuote:
-      "1.2K clicks · 26.7K impressions · 4.5% CTR · average position 20.6 — verified in Google Search Console.",
+      "1.2K clicks · 26.7K impressions · 4.5% CTR · average position 20.6, verified in Google Search Console.",
     dataNote:
       "Source: Google Search Console, Performance report, 25 Jun 2026 – 21 Sep 2026 (all devices).",
     metrics: [
@@ -451,14 +451,10 @@ export default async function CaseStudyPage({
     author: {
       "@type": "Person",
       "@id": `${baseUrl}/#person`,
-      name: "Rejish Khanal",
-      jobTitle: "Technical SEO Expert",
-      url: baseUrl,
     },
     publisher: {
       "@type": "Person",
       "@id": `${baseUrl}/#person`,
-      name: "Rejish Khanal",
     },
     about: study.industry ?? "Search Engine Optimization",
   };
@@ -550,7 +546,7 @@ export default async function CaseStudyPage({
 
         {/* Overview */}
         <section className="mb-12" aria-labelledby="overview">
-          <SectionHeading index="01 — Overview" title="Project Overview" id="overview" />
+          <SectionHeading index="01 · Overview" title="Project Overview" id="overview" />
           <p className="text-muted-foreground leading-relaxed text-[17px]">
             {study.overview}
           </p>
@@ -558,7 +554,7 @@ export default async function CaseStudyPage({
 
         {/* Challenge */}
         <section className="mb-12" aria-labelledby="challenge">
-          <SectionHeading index="02 — Challenge" title="The Challenge" id="challenge" />
+          <SectionHeading index="02 · Challenge" title="The Challenge" id="challenge" />
           <p className="text-muted-foreground leading-relaxed text-[17px] mb-6">
             {study.challenge}
           </p>
@@ -582,7 +578,7 @@ export default async function CaseStudyPage({
 
         {/* Solution */}
         <section className="mb-12" aria-labelledby="solution">
-          <SectionHeading index="03 — Solution" title="The Solution" id="solution" />
+          <SectionHeading index="03 · Solution" title="The Solution" id="solution" />
           <p className="text-muted-foreground leading-relaxed text-[17px]">
             {study.solution}
           </p>
@@ -592,7 +588,7 @@ export default async function CaseStudyPage({
         {study.approach && (
           <section className="mb-12" aria-labelledby="approach">
             <SectionHeading
-              index="04 — Approach"
+              index="04 · Approach"
               title="How the Work Was Executed"
               id="approach"
             />
@@ -623,7 +619,7 @@ export default async function CaseStudyPage({
         {study.implementation && (
           <section className="mb-12" aria-labelledby="implementation">
             <SectionHeading
-              index="05 — Implementation"
+              index="05 · Implementation"
               title="What Was Implemented"
               id="implementation"
             />
@@ -644,7 +640,7 @@ export default async function CaseStudyPage({
         {/* Results */}
         <section className="mb-12" aria-labelledby="results">
           <SectionHeading
-            index={`${pad(resultsNumber)} — Results`}
+            index={`${pad(resultsNumber)} · Results`}
             title="The Results"
             id="results"
           />
@@ -668,7 +664,7 @@ export default async function CaseStudyPage({
         {study.aiVisibility && study.secondaryImage && (
           <section className="mb-12" aria-labelledby="ai-visibility">
             <SectionHeading
-              index={`${pad(aiNumber)} — AI Visibility`}
+              index={`${pad(aiNumber)} · AI Visibility`}
               title={study.aiVisibility.title}
               id="ai-visibility"
             />
@@ -689,7 +685,7 @@ export default async function CaseStudyPage({
         {/* Technologies */}
         <section className="mb-12" aria-labelledby="technologies">
           <SectionHeading
-            index={`${pad(scopeNumber)} — Scope`}
+            index={`${pad(scopeNumber)} · Scope`}
             title="Skills & Tools Applied"
             id="technologies"
           />
@@ -712,7 +708,7 @@ export default async function CaseStudyPage({
           </h2>
           <p className="text-muted-foreground mb-7 max-w-2xl mx-auto">
             Send me your URL and I&apos;ll review your technical SEO, Core Web
-            Vitals and search visibility — with a prioritised action list.
+            Vitals and search visibility, with a prioritised action list.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/free-seo-review">

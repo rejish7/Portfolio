@@ -13,8 +13,8 @@ const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Services", path: "/services" },
+  { name: "Projects", path: "/projects" },
   // { name: "Tech Stack", path: "/tech-stack" },
-  // { name: "Projects", path: "/projects" },
   { name: "Tools", path: "/tools" },
   { name: "Blog", path: "/blog" },
   { name: "Contact", path: "/contact" },
@@ -75,7 +75,7 @@ export function Navbar() {
                 key={item.path}
                 href={item.path}
                 className={cn(
-                  "px-4 py-2 rounded-md text-sm font-medium transition-colors relative group",
+                  "px-3 lg:px-4 py-2 rounded-md text-sm font-medium transition-colors relative group whitespace-nowrap",
                   activePathname === item.path
                     ? "text-primary"
                     : "text-foreground/60 hover:text-foreground"

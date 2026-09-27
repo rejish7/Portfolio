@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-    title: "E-Commerce SEO Case Study: 46.6K Impressions and 12.2% CTR in 90 Days",
+    title: "E-Commerce SEO: 46.6K Impressions, 12.2% CTR",
     description:
-      "A technical and on-page overhaul took this online store to 5.71K clicks, a 12.2% CTR and an average position of 5.8 — plus 2.03K impressions in Google’s AI Overviews.",
+      "A technical and on-page overhaul took this online store to 5.71K clicks, a 12.2% CTR and an average position of 5.8, plus 2.03K impressions in Google’s AI Overviews.",
     industry: "E-Commerce",
     period: "25 Jun – 21 Sep 2026",
     image: {
@@ -52,7 +52,7 @@ const caseStudies = [
     slug: "ecommerce-seo-growth",
   },
   {
-    title: "Service Business SEO Case Study: 26.7K Impressions and 1.2K Clicks",
+    title: "Service Business SEO: 26.7K Impressions",
     description:
       "Service page restructuring, entity schema and topic clusters delivered 1.2K clicks, 26.7K impressions and a 4.5% CTR across a 90-day engagement.",
     industry: "Service Business",

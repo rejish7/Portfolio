@@ -111,6 +111,24 @@ export function CaseStudiesPreview() {
               </motion.div>
             ))}
           </div>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors"
+            >
+              View all SEO, AEO &amp; GEO projects{" "}
+              <span className="font-mono" aria-hidden="true">
+                →
+              </span>
+            </Link>
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-card border border-border text-sm font-semibold text-foreground hover:border-primary/50 transition-colors"
+            >
+              All technical SEO case studies
+            </Link>
+          </div>
         </div>
       </div>
     </section>

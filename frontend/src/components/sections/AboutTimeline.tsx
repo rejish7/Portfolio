@@ -103,7 +103,7 @@ export function AboutTimeline() {
             </span>
             <p className="text-sm text-muted-foreground">
               100% transparent track record. When you engage Rejish Khanal, you collaborate directly
-              with an experienced engineer and SEO expert — not junior account managers or
+              with an experienced engineer and SEO expert, not junior account managers or
               delegated offshore pools.
             </p>
           </div>

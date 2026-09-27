@@ -11,6 +11,7 @@ import {
   MapPin,
   ShieldCheck,
   Lightbulb,
+  BarChart3,
 } from "lucide-react";
 import { ServicesHero } from "@/components/sections/ServicesHero";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
@@ -386,6 +387,20 @@ export default function ServicesPage() {
               </p>
               <p className="text-sm text-muted-foreground">
                 Improve crawlability, indexing, Core Web Vitals, schema, and website performance.
+              </p>
+            </Link>
+
+            <Link
+              href="/projects"
+              className="block p-6 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md hover:border-primary/50 transition-all"
+            >
+              <BarChart3 className="h-5 w-5 text-primary mb-3" />
+              <p className="font-semibold mb-2 text-foreground">
+                SEO Projects &amp; Case Studies
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Documented SEO, AEO and GEO results across agencies, e-commerce, local
+                services and finance.
               </p>
             </Link>
 

@@ -50,11 +50,11 @@ export function DualDiscipline() {
               The Triple-Discipline Advantage
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Technical SEO, AEO/GEO, and Full-Stack Development — Under One Roof.
+              Technical SEO, AEO/GEO, and Full-Stack Development under one roof.
             </h2>
             <p className="text-muted-foreground text-lg">
               Traditional SEO consultants hand off 80-page PDFs that engineers cannot execute. I combine
-              search architecture expertise with AEO/GEO specialization and hands-on code delivery — so
+              search architecture expertise with AEO/GEO specialization and hands-on code delivery, so
               your technical fixes actually ship.
             </p>
           </div>
@@ -90,7 +90,7 @@ export function DualDiscipline() {
               </p>
               <p className="text-sm text-muted-foreground">
                 Meanwhile, AI search engines (Google AI Overviews, ChatGPT Search, Perplexity) are
-                reshaping how users find information — and most SEO consultants have no strategy for
+                reshaping how users find information, and most SEO consultants have no strategy for
                 AEO or GEO optimization.
               </p>
             </div>

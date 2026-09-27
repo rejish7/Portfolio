@@ -24,7 +24,7 @@ const principles = [
     color: "text-green-600 dark:text-green-400",
     bg: "bg-green-100 dark:bg-green-900/20",
     description:
-      "No empty ranking guarantees, no PBN spam, and no dubious promises of &quot;guaranteed #1 citations in ChatGPT.&quot; I optimize the verifiable signals that AI agents and search engines require — structured data, entity accuracy, and authoritative sourcing.",
+      "No empty ranking guarantees, no PBN spam, and no dubious promises of &quot;guaranteed #1 citations in ChatGPT.&quot; I optimize the verifiable signals that AI agents and search engines require: structured data, entity accuracy, and authoritative sourcing.",
     bullets: [
       "Grounding in official documentation and verified crawler behavior",
       "Honest upfront assessments of AEO/GEO architectural limitations",
@@ -77,7 +77,7 @@ export function Principles() {
           </h2>
           <p className="text-muted-foreground text-lg">
             In an industry cluttered with vague buzzwords, black-box guarantees, and automated report
-            mills, I hold my work to clear, verifiable engineering standards — including honest
+            mills, I hold my work to clear, verifiable engineering standards, including honest
             AEO/GEO assessments.
           </p>
         </motion.div>

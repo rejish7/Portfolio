@@ -80,8 +80,8 @@ export function PersonalInterests() {
           <div className="flex flex-col gap-4 text-muted-foreground leading-relaxed">
             <p>
               When I am not inspecting server response headers or resolving React hydration waterfall
-              issues, I am tracking how AI-powered search engines — Google AI Overviews, ChatGPT
-              Search, and Perplexity — extract, cite, and reference entity facts from structured
+              issues, I am tracking how AI-powered search engines (Google AI Overviews, ChatGPT
+              Search, and Perplexity) extract, cite, and reference entity facts from structured
               data. This is the frontier of{" "}
               <strong className="text-foreground font-semibold">Answer Engine Optimization (AEO)</strong>{" "}
               and{" "}

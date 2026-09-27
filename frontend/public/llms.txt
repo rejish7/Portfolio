@@ -70,6 +70,17 @@ Rejish Khanal is an independent Technical SEO Expert and Full-Stack Developer ba
 - Django Developer: https://rejishkhanal.com.np/django-developer-nepal
 - Laravel Developer: https://rejishkhanal.com.np/laravel-developer-nepal
 
+## Selected Case Studies (anonymized by industry)
+
+Client names are withheld; each case study publishes the industry, the scope of work and
+verified Google Search Console data over a six-month window.
+
+- Marketing agency organic growth (404K impressions, +218%, average position 8.9): https://rejishkhanal.com.np/projects/marketing-agency-seo-growth
+- Beauty e-commerce organic growth (32× clicks, 97× impressions in six months): https://rejishkhanal.com.np/projects/beauty-ecommerce-seo-growth
+- Cleaning services local SEO (127K impressions from zero on a new site): https://rejishkhanal.com.np/projects/cleaning-services-local-seo
+- Mortgage broker YMYL SEO (6.53K impressions from zero, average position 20.5): https://rejishkhanal.com.np/projects/mortgage-broker-seo-growth
+- Product brand organic growth (11.6K clicks, +224%, top-6 average position): https://rejishkhanal.com.np/projects/product-brand-organic-growth
+
 ## Work Process
 
 1. SEO and Business Discovery - Understanding business goals, target audience, and search objectives

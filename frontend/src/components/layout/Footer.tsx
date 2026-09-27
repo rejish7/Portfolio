@@ -53,6 +53,10 @@ const mainLinks = [
     href: "/case-studies",
   },
   {
+    label: "SEO and Web Development Projects",
+    href: "/projects",
+  },
+  {
     label: "Tech Stack",
     href: "/tech-stack",
   },

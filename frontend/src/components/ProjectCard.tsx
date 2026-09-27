@@ -31,20 +31,48 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 </span>
               </div>
             </div>
-            {project.category && (
+            {(project.industry || project.category) && (
               <span className="text-xs font-semibold text-primary uppercase tracking-wider">
-                {project.category}
+                {project.industry || project.category}
               </span>
             )}
             <CardTitle className="group-hover:text-primary transition-colors">
               {project.title}
             </CardTitle>
-            <CardDescription>{project.description}</CardDescription>
+            <CardDescription>{project.summary || project.description}</CardDescription>
           </CardHeader>
 
-          <CardContent className="flex-1">
+          <CardContent className="flex-1 space-y-4">
+            {project.results && project.results.length > 0 && (
+              <dl className="grid grid-cols-2 gap-x-4 gap-y-3">
+                {project.results.slice(0, 4).map((result) => (
+                  <div key={result.label}>
+                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">
+                      {result.label}
+                    </dt>
+                    <dd className="flex items-baseline gap-2">
+                      <span className="text-lg font-bold text-foreground">{result.value}</span>
+                      {result.change && (
+                        <span
+                          className={`text-[11px] font-medium ${
+                            result.direction === "up"
+                              ? "text-emerald-600 dark:text-emerald-400"
+                              : result.direction === "down"
+                                ? "text-amber-600 dark:text-amber-400"
+                                : "text-muted-foreground"
+                          }`}
+                        >
+                          {result.change}
+                        </span>
+                      )}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+
             <div className="flex flex-wrap gap-2">
-              {project.technologies.map((tech) => (
+              {project.technologies.slice(0, 4).map((tech) => (
                 <span
                   key={tech}
                   className="px-2 py-1 text-xs font-medium bg-accent text-foreground rounded-md"
