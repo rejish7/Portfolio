@@ -8,7 +8,7 @@ const timeline = [
     period: "Current",
     role: "Independent Technical SEO Specialist and Full-Stack Developer",
     company: "Self-Employed",
-    location: "Kathmandu, Nepal",
+    location: "Remote",
     description:
       "I work with businesses and website owners that need technical SEO analysis, AEO and GEO readiness, Core Web Vitals improvement, structured data, JavaScript SEO, and code-level implementation. My work focuses on observable technical conditions, including crawler access, indexation signals, rendered content, website performance, entity consistency, accessibility, and implementation quality.",
   },
@@ -16,7 +16,7 @@ const timeline = [
     period: "March 2026 – September 2026",
     role: "SEO Specialist",
     company: "Gripas Marketing",
-    location: "Remote",
+    location: "Kathmandu, Nepal",
     description:
       "Managed SEO work for client websites serving markets in Nepal and Australia. Responsibilities included technical SEO analysis, content planning, entity optimization, structured data, Google Search Console, Google Analytics 4, Core Web Vitals, and preparation for AI-powered search experiences.",
   },
