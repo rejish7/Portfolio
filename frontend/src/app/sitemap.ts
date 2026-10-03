@@ -3,6 +3,12 @@ import { MetadataRoute } from "next";
 const baseUrl = "https://rejishkhanal.com.np";
 
 /**
+ * Rebuild the sitemap hourly so newly published projects/blog posts are
+ * discovered by Googlebot without waiting for the next deploy.
+ */
+export const revalidate = 3600;
+
+/**
  * Static indexable pages.
  * `lastModified` is the date of the last meaningful content change to the
  * page source (from git history) — NOT the build/deploy time.

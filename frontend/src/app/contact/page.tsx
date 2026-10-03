@@ -171,25 +171,6 @@ export default function ContactPage() {
     ],
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://rejishkhanal.com.np",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Contact",
-        item: "https://rejishkhanal.com.np/contact",
-      },
-    ],
-  };
-
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -206,7 +187,6 @@ export default function ContactPage() {
   return (
     <main className="pt-24 pb-24">
       <SchemaScript schema={contactPageSchema} />
-      <SchemaScript schema={breadcrumbSchema} />
       <SchemaScript schema={faqSchema} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

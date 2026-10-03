@@ -26,6 +26,14 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Django Developer in Nepal | Rejish Khanal",
+    description:
+      "Hire a Django developer in Nepal for secure, scalable, SEO-friendly web applications, backend systems, APIs, and performance-focused development.",
+    creator: "@KhanalRejish",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
+  },
 };
 
 export default function DjangoDeveloperPage() {
@@ -49,9 +57,20 @@ export default function DjangoDeveloperPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Django Developer Services",
-            "url": "https://rejishkhanal.com.np/django-developer-nepal",
+            "@graph": [
+              {
+                "@type": "Service",
+                "name": "Django Developer Services",
+                "url": "https://rejishkhanal.com.np/django-developer-nepal",
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://rejishkhanal.com.np/" },
+                  { "@type": "ListItem", position: 2, name: "Django Developer in Nepal", item: "https://rejishkhanal.com.np/django-developer-nepal" },
+                ],
+              },
+            ],
           }),
         }}
       />

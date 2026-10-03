@@ -26,6 +26,14 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free SEO and Website Performance Tools | Rejish Khanal",
+    description:
+      "Use free SEO and website performance tools from Rejish Khanal to review technical issues, Core Web Vitals, and search optimization opportunities.",
+    creator: "@KhanalRejish",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
+  },
 };
 
 const tools = [
@@ -82,9 +90,29 @@ export default function ToolsPage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://rejishkhanal.com.np/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Tools",
+        item: "https://rejishkhanal.com.np/tools",
+      },
+    ],
+  };
+
   return (
     <>
       <SchemaScript schema={itemListSchema} />
+      <SchemaScript schema={breadcrumbSchema} />
 
       <div className="pt-24 pb-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

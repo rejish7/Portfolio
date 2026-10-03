@@ -10,7 +10,9 @@ import { formatDate } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import type { BlogPost } from "@/lib/types";
 
-export const dynamic = "force-dynamic";
+// On-demand ISR: a missing slug 404s once and is cached, a valid post renders
+// immediately and refreshes hourly. A throwing fetch keeps the stale copy.
+export const revalidate = 3600;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
@@ -126,6 +128,17 @@ export async function generateMetadata({
         : post.image
           ? [{ url: post.image }]
           : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: metaTitle,
+      description: metaDescription,
+      creator: "@KhanalRejish",
+      images: post.seo?.ogImage
+        ? [post.seo.ogImage]
+        : post.image
+          ? [post.image]
+          : ["https://rejishkhanal.com.np/og-image.jpg"],
     },
   };
 }

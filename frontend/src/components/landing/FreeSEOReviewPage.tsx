@@ -1132,7 +1132,7 @@ export function FreeSEOReviewPage({ faqs }: FreeSEOReviewPageProps) {
               conversions.
             </p>
             <Link
-              href="/about/"
+              href="/about"
               className="text-primary hover:underline font-medium inline-flex items-center gap-1"
             >
               Learn More About Rejish Khanal

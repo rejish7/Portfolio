@@ -22,9 +22,17 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: `${LIST_TITLE} | Rejish Khanal`,
+    description: LIST_DESCRIPTION,
+    creator: "@KhanalRejish",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
+  },
 };
 
-export const dynamic = "force-dynamic";
+// Cached listing with hourly revalidation (fast TTFB for Googlebot).
+export const revalidate = 3600;
 
 // The listing never renders project imagery or long-form copy, so the page
 // ships a lean projection of each project instead of the full document.

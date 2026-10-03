@@ -37,8 +37,18 @@ export const metadata: Metadata = {
   authors: [{ name: "Rejish Khanal", url: "https://rejishkhanal.com.np" }],
   creator: "Rejish Khanal",
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+    other: [
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
   },
+  manifest: "/site.webmanifest",
   alternates: {
     canonical: "/",
   },
@@ -96,7 +106,7 @@ export default function RootLayout({
         alternateName: ["Rejish", "Rejish Khanal SEO"],
         inLanguage: "en",
         publisher: {
-          "@id": "https://rejishkhanal.com.np/#person",
+          "@id": "https://rejishkhanal.com.np/#organization",
         },
         potentialAction: {
           "@type": "SearchAction",
@@ -106,6 +116,37 @@ export default function RootLayout({
           },
           "query-input": "required name=search_term_string",
         },
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://rejishkhanal.com.np/#organization",
+        url: "https://rejishkhanal.com.np/",
+        name: "Rejish Khanal",
+        alternateName: ["Rejish Khanal SEO", "Rejish Khanal Web Development"],
+        description:
+          "Technical SEO, AEO, GEO, Core Web Vitals and web development services from Kathmandu, Nepal.",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://rejishkhanal.com.np/favicon.png",
+          width: 1024,
+          height: 1024,
+        },
+        image: "https://rejishkhanal.com.np/og-image.jpg",
+        email: "contact@rejishkhanal.com.np",
+        telephone: "+977-9862766994",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Kathmandu",
+          addressRegion: "Bagmati",
+          addressCountry: "NP",
+        },
+        geo: { "@type": "GeoCoordinates", latitude: 27.7172, longitude: 85.324 },
+        founder: { "@id": "https://rejishkhanal.com.np/#person" },
+        sameAs: [
+          "https://www.linkedin.com/in/rejishkhanalseo/",
+          "https://github.com/rejish7",
+          "https://x.com/KhanalRejish",
+        ],
       },
       {
         "@type": "Person",

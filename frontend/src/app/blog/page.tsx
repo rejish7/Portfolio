@@ -45,8 +45,9 @@ export const metadata: Metadata = {
   },
 };
 
-// Force dynamic - always fetch fresh data from API (Render instances sleep after inactivity)
-export const dynamic = "force-dynamic";
+// Serve a cached copy and revalidate hourly: keeps TTFB low for crawlers while
+// the API-backed content still refreshes automatically (Render sleeps when idle).
+export const revalidate = 3600;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
@@ -55,6 +56,7 @@ async function getBlogs(): Promise<BlogPost[]> {
     try {
       const res = await fetch(`${API_BASE_URL}/api/blogs`, {
         signal: AbortSignal.timeout(30000),
+        next: { revalidate: 3600 },
       });
 
       if (!res.ok) {

@@ -15,9 +15,9 @@ import { notFound } from "next/navigation";
 import { fetchProjects, mapProject, projectsBaseUrl, relatedProjects } from "@/lib/projects";
 import type { Project } from "@/lib/types";
 
-// Force dynamic rendering - prevents caching stale data
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+// On-demand ISR: renders on first request, serves a cached copy and refreshes
+// hourly. A throwing fetch (API down) keeps the last good copy instead of a 500.
+export const revalidate = 3600;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
@@ -26,7 +26,9 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhana
 const getProject = cache(async (slug: string): Promise<Project | null> => {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/projects/slug/${slug}`);
+      const res = await fetch(`${API_BASE_URL}/api/projects/slug/${slug}`, {
+        next: { revalidate: 3600 },
+      });
 
       // Genuine "not found" — the only case that should become a 404 page.
       if (res.status === 404) return null;

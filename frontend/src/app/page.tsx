@@ -11,6 +11,7 @@ import { CaseStudiesPreview } from "@/components/sections/CaseStudiesPreview";
 import { HomepageKeyFacts } from "@/components/sections/HomepageKeyFacts";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 import { HomepageFAQ } from "@/components/sections/HomepageFAQ";
+import { homepageFaqs } from "@/lib/homepage-faqs";
 import { HomepageCTA } from "@/components/sections/HomepageCTA";
 import type { BlogPost } from "@/lib/types";
 import type { Metadata } from "next";
@@ -74,9 +75,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://rejishkhanal.com.np/assets/images/rejish-khanal-technical-seo-expert-nepal.webp",
-        width: 800,
-        height: 800,
+        url: "https://rejishkhanal.com.np/og-image.jpg",
+        width: 1200,
+        height: 630,
         alt: "Rejish Khanal - SEO Expert and Web Developer",
       },
     ],
@@ -86,7 +87,7 @@ export const metadata: Metadata = {
     title: "Rejish Khanal | SEO Expert and Web Developer",
     description:
       "Rejish Khanal is an SEO expert and web developer in Nepal providing technical SEO, AEO, GEO, Core Web Vitals, audits, and development.",
-    images: ["https://rejishkhanal.com.np/assets/images/rejish-khanal-technical-seo-expert-nepal.webp"],
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
     creator: "@KhanalRejish",
   },
 };
@@ -173,6 +174,16 @@ export default async function Home() {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: homepageFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  };
+
   const stringifySchema = (schema: Record<string, unknown>) =>
     JSON.stringify(schema).replace(/</g, "\\u003c");
 
@@ -181,6 +192,7 @@ export default async function Home() {
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifySchema(professionalServiceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifySchema(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifySchema(faqSchema) }} />
 
       {/* Sections */}
       <main id="main-content" aria-label="Rejish Khanal - Technical SEO Expert in Nepal Homepage">

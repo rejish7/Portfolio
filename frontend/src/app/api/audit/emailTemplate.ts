@@ -211,12 +211,12 @@ export function auditReportTemplate(result: {
             <td style="padding:32px 48px;">
               <h2 style="margin:0 0 20px;color:#1a1a2e;font-size:18px;font-weight:700;">Helpful Resources</h2>
 
-              <a href="https://rejishkhanal.com.np/blog/core-web-vitals-optimization-guide" style="display:block;background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 20px;margin-bottom:10px;text-decoration:none;">
-                <span style="color:#0f3460;font-size:14px;font-weight:600;">How to Improve Core Web Vitals</span>
-                <span style="display:block;color:#64748b;font-size:12px;margin-top:4px;">Step-by-step guide to fixing LCP, CLS, and INP</span>
+              <a href="https://rejishkhanal.com.np/blog/why-website-not-ranking-nepal" style="display:block;background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 20px;margin-bottom:10px;text-decoration:none;">
+                <span style="color:#0f3460;font-size:14px;font-weight:600;">Why Your Website Is Not Ranking</span>
+                <span style="display:block;color:#64748b;font-size:12px;margin-top:4px;">15 technical SEO issues to check first</span>
               </a>
 
-              <a href="https://rejishkhanal.com.np/blog/technical-seo-audit-checklist" style="display:block;background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 20px;margin-bottom:10px;text-decoration:none;">
+              <a href="https://rejishkhanal.com.np/blog/technical-seo-checklist-nepal" style="display:block;background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 20px;margin-bottom:10px;text-decoration:none;">
                 <span style="color:#0f3460;font-size:14px;font-weight:600;">Technical SEO Audit Checklist</span>
                 <span style="display:block;color:#64748b;font-size:12px;margin-top:4px;">Complete checklist for auditing your website</span>
               </a>

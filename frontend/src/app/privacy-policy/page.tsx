@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Rejish Khanal",
+    description:
+      "Read the privacy policy for rejishkhanal.com.np, including information about website data, communications, analytics, and visitor privacy.",
+    creator: "@KhanalRejish",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
+  },
 };
 
 export default function PrivacyPolicyPage() {

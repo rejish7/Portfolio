@@ -328,7 +328,7 @@ export async function generateMetadata({
   const ogImage = study.heroImage;
 
   return {
-    title: { absolute: `${study.title} | Rejish Khanal Case Study` },
+    title: { absolute: `${study.title} | Rejish Khanal` },
     description: study.description,
     keywords: [
       study.eyebrow,
@@ -339,7 +339,7 @@ export async function generateMetadata({
     ],
     alternates: { canonical: url },
     openGraph: {
-      title: `${study.title} | Rejish Khanal Case Study`,
+      title: `${study.title} | Rejish Khanal`,
       description: study.description,
       url,
       siteName: "Rejish Khanal",
@@ -359,7 +359,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${study.title} | Rejish Khanal Case Study`,
+      title: `${study.title} | Rejish Khanal`,
       description: study.description,
       ...(ogImage ? { images: [`${baseUrl}${ogImage.src}`] } : {}),
     },

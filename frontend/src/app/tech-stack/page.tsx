@@ -29,6 +29,14 @@ export const metadata: Metadata = {
         siteName: "Rejish Khanal",
         type: "website",
     },
+  twitter: {
+    card: "summary_large_image",
+    title: "SEO and Web Development Technology Stack | Rejish Khanal",
+    description:
+      "Explore the SEO, analytics, development, testing, and performance tools Rejish Khanal uses to build and optimize search-friendly websites.",
+    creator: "@KhanalRejish",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
+  },
 };
 
 const techStacks = [

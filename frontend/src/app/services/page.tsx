@@ -67,9 +67,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Technical SEO Services in Nepal | Rejish Khanal",
+    title: "SEO and Web Development Services | Rejish Khanal",
     description:
-      "Technical SEO, AEO, GEO, Core Web Vitals, JavaScript SEO, and SEO-friendly web development services by Rejish Khanal.",
+      "Explore technical SEO, SEO audits, local SEO, AEO, GEO, Core Web Vitals, Next.js SEO, and web development services from Rejish Khanal.",
+    creator: "@KhanalRejish",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
   },
 };
 

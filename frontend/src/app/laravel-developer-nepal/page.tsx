@@ -26,6 +26,14 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Laravel Developer in Nepal | Rejish Khanal",
+    description:
+      "Hire a Laravel developer in Nepal for scalable web applications, backend development, APIs, performance optimization, and SEO-friendly implementation.",
+    creator: "@KhanalRejish",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
+  },
 };
 
 export default function LaravelDeveloperPage() {
@@ -49,9 +57,20 @@ export default function LaravelDeveloperPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Laravel Developer Services",
-            "url": "https://rejishkhanal.com.np/laravel-developer-nepal",
+            "@graph": [
+              {
+                "@type": "Service",
+                "name": "Laravel Developer Services",
+                "url": "https://rejishkhanal.com.np/laravel-developer-nepal",
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://rejishkhanal.com.np/" },
+                  { "@type": "ListItem", position: 2, name: "Laravel Developer in Nepal", item: "https://rejishkhanal.com.np/laravel-developer-nepal" },
+                ],
+              },
+            ],
           }),
         }}
       />

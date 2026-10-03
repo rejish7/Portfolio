@@ -56,7 +56,7 @@ export default function FreeSEOReview() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Free SEO Review for Service Businesses",
-    url: "https://rejishkhanal.com.np/free-seo-review/",
+    url: "https://rejishkhanal.com.np/free-seo-review",
     description:
       "Request a free SEO review covering your website, local visibility and one competitor. Discover practical opportunities to improve your Google presence.",
     inLanguage: "en",
@@ -147,7 +147,7 @@ export default function FreeSEOReview() {
         "@type": "ListItem",
         position: 2,
         name: "Free SEO Review",
-        item: "https://rejishkhanal.com.np/free-seo-review/",
+        item: "https://rejishkhanal.com.np/free-seo-review",
       },
     ],
   };

@@ -29,6 +29,14 @@ export const metadata: Metadata = {
     siteName: "Rejish Khanal",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "SEO and Web Development Case Studies | Rejish Khanal",
+    description:
+      "Real SEO case studies with Google Search Console proof covering e-commerce, service business, technical SEO, performance optimization and local search.",
+    creator: "@KhanalRejish",
+    images: ["https://rejishkhanal.com.np/og-image.jpg"],
+  },
 };
 
 const caseStudies = [
@@ -130,12 +138,35 @@ const caseStudySchema = {
   })),
 };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://rejishkhanal.com.np/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Case Studies",
+        item: "https://rejishkhanal.com.np/case-studies",
+      },
+    ],
+  };
+
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero */}

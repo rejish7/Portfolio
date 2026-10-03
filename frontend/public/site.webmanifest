@@ -1,0 +1,13 @@
+{
+  "name": "Rejish Khanal - SEO Expert and Web Developer",
+  "short_name": "Rejish Khanal",
+  "description": "Technical SEO, AEO, GEO, Core Web Vitals and web development services in Nepal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -174,30 +174,10 @@ export default function AboutPage() {
     ],
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://rejishkhanal.com.np",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "About",
-        item: "https://rejishkhanal.com.np/about",
-      },
-    ],
-  };
-
   return (
     <div className="pt-16">
       <SchemaScript schema={profilePageSchema} />
       <SchemaScript schema={faqSchema} />
-      <SchemaScript schema={breadcrumbSchema} />
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

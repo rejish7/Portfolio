@@ -14,6 +14,7 @@ export async function fetchProjects(): Promise<Project[]> {
     try {
       const res = await fetch(`${API_BASE_URL}/api/projects`, {
         signal: AbortSignal.timeout(30000),
+        next: { revalidate: 3600 },
       });
 
       if (!res.ok) {
