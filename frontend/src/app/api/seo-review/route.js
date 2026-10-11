@@ -240,7 +240,7 @@ export async function POST(req) {
 
     // 1. Notify website owner
     await transporter.sendMail({
-      from: '"Free SEO Review Request" <noreply@rejishkhanal.com.np>',
+      from: `"Rejish Khanal" <${process.env.GMAIL_USER}>`,
       to: process.env.CONTACT_TO_EMAIL,
       replyTo: data.businessEmail,
       subject: `New SEO Review Request from ${data.businessName} - ${data.fullName}`,
@@ -249,7 +249,7 @@ export async function POST(req) {
 
     // 2. Confirmation to the requester
     await transporter.sendMail({
-      from: process.env.GMAIL_USER,
+      from: `"Rejish Khanal" <${process.env.GMAIL_USER}>`,
       to: data.businessEmail,
       replyTo: process.env.CONTACT_TO_EMAIL,
       subject: "Your Free SEO Review Request Has Been Received",

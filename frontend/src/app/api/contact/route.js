@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import { clientConfirmationTemplate, notificationTemplate } from "./emailTemplates";
+import { clientConfirmationTemplate, notificationTemplate, clientConfirmationText, notificationText } from "./emailTemplates";
 
 export async function POST(req) {
   console.log("[CONTACT] Hit /api/contact", { method: req.method, url: req.url });
@@ -37,20 +37,21 @@ export async function POST(req) {
 
     // 1. Notify yourself — from your Gmail, reply goes to the visitor
     await transporter.sendMail({
-      from: process.env.GMAIL_USER,
+      from: `"Rejish Khanal" <${process.env.GMAIL_USER}>`,
       to: process.env.CONTACT_TO_EMAIL,
       replyTo: email,
       subject: `New contact form message from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      text: notificationText(name, email, message),
       html: notificationTemplate(name, email, message),
     });
 
     // 2. Confirmation to client — reply goes to your business email
     await transporter.sendMail({
-      from: process.env.GMAIL_USER,
+      from: `"Rejish Khanal" <${process.env.GMAIL_USER}>`,
       to: email,
       replyTo: process.env.CONTACT_TO_EMAIL,
       subject: "Thank you for contacting Rejish Khanal",
+      text: clientConfirmationText(name, message),
       html: clientConfirmationTemplate(name, message),
     });
 

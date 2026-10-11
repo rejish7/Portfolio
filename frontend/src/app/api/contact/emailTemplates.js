@@ -156,10 +156,10 @@ const clientConfirmationTemplate = (name, message) => `
           <tr>
             <td style="padding:32px 48px;text-align:center;">
               <p style="margin:0 0 20px;color:#475569;font-size:14px;line-height:1.6;">
-                Need a quick answer? Feel free to reply to this email directly.
+                Have a quick question? Chat on WhatsApp or reply to this email directly.
               </p>
-              <a href="https://rejishkhanal.com.np/contact" style="display:inline-block;background-color:#0f3460;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none;padding:12px 32px;border-radius:6px;">
-                Visit Contact Page →
+              <a href="https://wa.me/9779862766994?text=Hi%20Rejish%2C%20I%20just%20submitted%20your%20contact%20form." style="display:inline-block;background-color:#25d366;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none;padding:14px 36px;border-radius:6px;">
+                Chat on WhatsApp
               </a>
             </td>
           </tr>
@@ -276,4 +276,30 @@ const notificationTemplate = (name, email, message) => `
 </html>
 `;
 
-export { clientConfirmationTemplate, notificationTemplate };
+const clientConfirmationText = (name, message) => `Hi ${name},
+
+Thank you for reaching out! I've received your message and typically respond within 24 hours.
+
+Your message:
+${message}
+
+Have a quick question? Chat with me on WhatsApp: https://wa.me/9779862766994
+Or simply reply to this email directly.
+
+--
+Rejish Khanal
+Technical SEO Expert & Full Stack Developer
+https://rejishkhanal.com.np`;
+
+const notificationText = (name, email, message) => `New contact form submission
+
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+
+Reply directly to this email to respond to ${name}.
+`;
+
+export { clientConfirmationTemplate, notificationTemplate, clientConfirmationText, notificationText };
