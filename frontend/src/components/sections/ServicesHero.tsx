@@ -89,7 +89,7 @@ export function ServicesHero() {
   const activeProblem = diagnosticProblems.find((p) => p.id === selectedProblem);
 
   return (
-    <section className="py-8" aria-labelledby="services-hero-heading">
+    <section className="pt-24 pb-8" aria-labelledby="services-hero-heading">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Breadcrumb */}
         <motion.nav

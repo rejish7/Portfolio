@@ -35,21 +35,21 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
                                 <>
                                     <Link
                                         href={item.href}
-                                        className="text-blue-600 hover:underline dark:text-blue-400"
+                                        className="text-muted-foreground hover:text-foreground hover:underline"
                                     >
                                         {item.label}
                                     </Link>
                                     {index < items.length - 1 && (
-                                        <span className="text-gray-400">/</span>
+                                        <span className="text-muted-foreground/50">/</span>
                                     )}
                                 </>
                             ) : (
                                 <>
-                                    <span className="text-gray-700 dark:text-gray-300">
+                                    <span className="text-foreground font-medium">
                                         {item.label}
                                     </span>
                                     {index < items.length - 1 && (
-                                        <span className="text-gray-400">/</span>
+                                        <span className="text-muted-foreground/50">/</span>
                                     )}
                                 </>
                             )}
