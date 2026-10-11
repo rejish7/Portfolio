@@ -35,10 +35,11 @@ export async function POST(req) {
 
     await transporter.verify();
 
-    // 1. Notify yourself — from your Gmail, reply goes to the visitor
+    // 1. Notify yourself — to your business alias AND directly to Gmail so
+    // delivery never depends on the Cloudflare Email Routing forward alone
     await transporter.sendMail({
       from: `"Rejish Khanal" <${process.env.GMAIL_USER}>`,
-      to: process.env.CONTACT_TO_EMAIL,
+      to: [process.env.CONTACT_TO_EMAIL, process.env.GMAIL_USER],
       replyTo: email,
       subject: `New contact form message from ${name}`,
       text: notificationText(name, email, message),

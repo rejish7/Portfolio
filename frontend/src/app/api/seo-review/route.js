@@ -241,7 +241,7 @@ export async function POST(req) {
     // 1. Notify website owner
     await transporter.sendMail({
       from: `"Rejish Khanal" <${process.env.GMAIL_USER}>`,
-      to: process.env.CONTACT_TO_EMAIL,
+      to: [process.env.CONTACT_TO_EMAIL, process.env.GMAIL_USER],
       replyTo: data.businessEmail,
       subject: `New SEO Review Request from ${data.businessName} - ${data.fullName}`,
       html: seoReviewNotificationTemplate(data),
