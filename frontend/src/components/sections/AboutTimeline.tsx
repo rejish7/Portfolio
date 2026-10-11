@@ -5,12 +5,12 @@ import { ShieldCheck } from "lucide-react";
 
 const timeline = [
   {
-    period: "Current",
-    role: "Independent Technical SEO Specialist and Full-Stack Developer",
-    company: "Self-Employed",
-    location: "Remote",
+    period: "October 2026 – Present",
+    role: "SEO Strategist",
+    company: "ARKSH Group",
+    location: "Kathmandu, Nepal",
     description:
-      "I work with businesses and website owners that need technical SEO analysis, AEO and GEO readiness, Core Web Vitals improvement, structured data, JavaScript SEO, and code-level implementation. My work focuses on observable technical conditions, including crawler access, indexation signals, rendered content, website performance, entity consistency, accessibility, and implementation quality.",
+      "Lead SEO strategy focused on increasing organic visibility, attracting qualified audiences, and supporting business growth. Work spans technical SEO, content planning, keyword research, competitor analysis, website architecture, product page optimization, local SEO, and performance reporting — combining search data with user intent and commercial objectives to turn websites into stronger organic acquisition and conversion channels.",
   },
   {
     period: "March 2026 – September 2026",
@@ -66,8 +66,9 @@ export function AboutTimeline() {
             </h2>
             <p className="text-muted-foreground text-lg">
               My experience spans quality assurance, backend development, web
-              development, and technical SEO. Each role has contributed to the
-              analytical and implementation-focused approach I use today.
+              development, technical SEO, and SEO strategy. Each role has
+              contributed to the analytical and implementation-focused approach
+              I use today.
             </p>
           </motion.div>
 
