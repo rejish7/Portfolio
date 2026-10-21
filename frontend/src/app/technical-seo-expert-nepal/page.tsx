@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "Hire a technical SEO expert in Nepal for crawling, indexing, schema, JavaScript SEO, Core Web Vitals, canonical, and website architecture issues.",
   keywords: [
     "technical SEO expert in Nepal",
-    "technical SEO specialist in Nepal",
+    "technical SEO expert Kathmandu",
     "Core Web Vitals expert in Nepal",
     "JavaScript SEO expert in Nepal",
     "Next.js SEO expert in Nepal",
@@ -577,7 +577,7 @@ I am Rejish Khanal, a technical SEO expert in Kathmandu, Nepal.
             </p>
 
             <p>
-              As both a developer and SEO specialist, I can understand the code
+              As both a developer and SEO expert, I can understand the code
               behind technical issues and recommend practical fixes that support
               search performance.
             </p>
