@@ -92,8 +92,8 @@ export function About() {
                 {/* Photo container */}
                 <div className="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-2xl overflow-hidden border border-border/50 shadow-2xl">
                   <Image
-                    src="/assets/images/rejish-khanal.webp"
-                    alt="Rejish Khanal - Technical SEO Expert in Kathmandu, Nepal"
+                    src="/assets/images/rejish-khanal-seo-expert-in-nepal.webp"
+                    alt="Rejish Khanal — SEO expert in Nepal"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 40vw"

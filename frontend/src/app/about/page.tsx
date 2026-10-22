@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://rejishkhanal.com.np/assets/images/rejish-khanal.webp",
-        width: 800,
-        height: 800,
-        alt: "Rejish Khanal - Technical SEO Expert in Nepal",
+        url: "https://rejishkhanal.com.np/assets/images/rejish-khanal-seo-expert-in-nepal.webp",
+        width: 1536,
+        height: 1536,
+        alt: "Rejish Khanal — SEO expert in Nepal",
       },
     ],
   },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "About Rejish Khanal | Technical SEO Expert in Nepal",
       description:
         "Learn about Rejish Khanal, a technical SEO expert and full-stack developer in Kathmandu specializing in technical SEO, AEO, GEO, Core Web Vitals and JavaScript SEO.",
-    images: ["https://rejishkhanal.com.np/assets/images/rejish-khanal.webp"],
+    images: ["https://rejishkhanal.com.np/assets/images/rejish-khanal-seo-expert-in-nepal.webp"],
   },
 };
 
@@ -73,6 +73,30 @@ export default function AboutPage() {
     mainEntity: {
       "@type": "Person",
       "@id": "https://rejishkhanal.com.np/#person",
+    },
+  };
+
+  const heroImageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    url: "https://rejishkhanal.com.np/assets/images/rejish-khanal-seo-expert-in-nepal.webp",
+    width: 1536,
+    height: 1536,
+    caption: "Rejish Khanal — SEO expert in Nepal",
+    contentUrl:
+      "https://rejishkhanal.com.np/assets/images/rejish-khanal-seo-expert-in-nepal.webp",
+    thumbnail:
+      "https://rejishkhanal.com.np/assets/images/rejish-khanal-seo-expert-in-nepal.webp",
+    author: {
+      "@type": "Person",
+      name: "Rejish Khanal",
+      url: "https://rejishkhanal.com.np/about",
+    },
+    licence: "https://rejishkhanal.com.np/privacy-policy",
+    about: {
+      "@type": "Person",
+      name: "Rejish Khanal",
+      jobTitle: "SEO Expert in Nepal",
     },
   };
 
@@ -166,6 +190,7 @@ export default function AboutPage() {
   return (
     <div className="pt-16">
       <SchemaScript schema={profilePageSchema} />
+      <SchemaScript schema={heroImageSchema} />
       <SchemaScript schema={faqSchema} />
 
       {/* Breadcrumb */}

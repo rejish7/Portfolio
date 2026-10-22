@@ -16,7 +16,7 @@ export const revalidate = 3600;
  */
 const staticPages: { path: string; lastModified: string }[] = [
   { path: "/", lastModified: "2026-09-19" },
-  { path: "/about", lastModified: "2026-09-21" },
+  { path: "/about", lastModified: "2026-10-22" },
   { path: "/services", lastModified: "2026-09-23" },
   { path: "/tools", lastModified: "2026-09-21" },
   { path: "/tools/core-web-vitals-checker", lastModified: "2026-09-23" },
@@ -89,6 +89,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries: MetadataRoute.Sitemap = staticPages.map((page) => ({
     url: page.path === "/" ? `${baseUrl}/` : `${baseUrl}${page.path}`,
     lastModified: new Date(page.lastModified),
+    ...(page.path === "/about"
+      ? {
+          images: [`${baseUrl}/assets/images/rejish-khanal-seo-expert-in-nepal.webp`],
+        }
+      : {}),
   }));
 
   return [...staticEntries, ...projectEntries, ...blogEntries];

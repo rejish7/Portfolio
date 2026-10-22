@@ -152,7 +152,7 @@ export default function RootLayout({
         name: "Rejish Khanal",
         alternateName: ["Rejish", "Rejish Khanal SEO"],
         url: "https://rejishkhanal.com.np/",
-        image: "https://rejishkhanal.com.np/assets/images/rejish-khanal.webp",
+        image: "https://rejishkhanal.com.np/assets/images/rejish-khanal-seo-expert-in-nepal.webp",
         jobTitle: ["Technical SEO Expert", "Full-Stack Developer"],
         description:
           "Rejish Khanal is an SEO expert and web developer in Nepal providing technical SEO, AEO, GEO, Core Web Vitals, audits, and development.",
