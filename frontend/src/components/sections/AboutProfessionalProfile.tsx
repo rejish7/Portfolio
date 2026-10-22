@@ -1,36 +1,34 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { fadeInUp, spring, stagger } from "@/lib/apple-motion";
 
 export function AboutProfessionalProfile() {
   return (
-    <section className="w-full py-16 lg:py-24" aria-labelledby="who-is-rejish-khanal">
+    <section className="w-full py-20 lg:py-28" aria-labelledby="who-is-rejish-khanal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto flex flex-col gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col gap-3"
-          >
-            <span className="font-mono text-xs text-primary uppercase tracking-wider font-semibold">
+        <div className="max-w-4xl mx-auto flex flex-col gap-10">
+          <motion.div {...fadeInUp} className="flex flex-col gap-3">
+            <span className="font-mono text-xs text-primary uppercase tracking-[0.12em] font-semibold">
               Professional Profile
             </span>
-            <h2 id="who-is-rejish-khanal" className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2
+              id="who-is-rejish-khanal"
+              className="text-3xl sm:text-4xl font-bold tracking-[-0.03em] leading-[1.1]"
+            >
               Who Is Rejish Khanal?
             </h2>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={spring}
             className="flex flex-col gap-4 text-muted-foreground leading-relaxed"
           >
             <p>
-              <strong className="text-foreground">
+              <strong className="text-foreground font-semibold">
                 Rejish Khanal is a technical SEO expert and full-stack
                 developer based in Kathmandu, Nepal.
               </strong>{" "}
@@ -47,13 +45,7 @@ export function AboutProfessionalProfile() {
             <p>His main areas of specialization include:</p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               "Technical SEO audits",
               "Crawlability and indexation analysis",
@@ -67,13 +59,20 @@ export function AboutProfessionalProfile() {
               "SEO-friendly web development",
               "Django and Laravel development",
               "Code-level SEO implementation",
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-3 p-3 rounded-xl bg-muted/50">
+            ].map((item, i) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={stagger(i, 0.03)}
+                className="flex items-center gap-3 p-3.5 rounded-xl bg-muted/50 border border-border/30"
+              >
                 <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
                 <span className="text-sm text-foreground font-medium">{item}</span>
-              </div>
+              </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

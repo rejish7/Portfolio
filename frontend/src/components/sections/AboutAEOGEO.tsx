@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { fadeInUp, spring, stagger } from "@/lib/apple-motion";
 
 const aeoGeoItems = [
   "Clearly identifying the person, business, service, and location",
@@ -17,29 +18,26 @@ const aeoGeoItems = [
 
 export function AboutAEOGEO() {
   return (
-    <section className="w-full py-16 lg:py-24" aria-labelledby="aeo-geo-specialist-nepal">
+    <section className="w-full py-20 lg:py-28" aria-labelledby="aeo-geo-expert-nepal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto flex flex-col gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col gap-3"
-          >
-            <span className="font-mono text-xs text-primary uppercase tracking-wider font-semibold">
+        <div className="max-w-4xl mx-auto flex flex-col gap-10">
+          <motion.div {...fadeInUp} className="flex flex-col gap-3">
+            <span className="font-mono text-xs text-primary uppercase tracking-[0.12em] font-semibold">
               AI Search Readiness
             </span>
-            <h2 id="aeo-geo-specialist-nepal" className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2
+              id="aeo-geo-expert-nepal"
+              className="text-3xl sm:text-4xl font-bold tracking-[-0.03em] leading-[1.1]"
+            >
               Answer Engine Optimization and Generative Engine Optimization
             </h2>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={spring}
             className="flex flex-col gap-4 text-muted-foreground leading-relaxed"
           >
             <p>
@@ -57,30 +55,32 @@ export function AboutAEOGEO() {
             <p>My work in this area focuses on:</p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
-          >
-            {aeoGeoItems.map((item) => (
-              <div key={item} className="flex items-center gap-3 p-3 rounded-xl bg-muted/50">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {aeoGeoItems.map((item, i) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={stagger(i, 0.03)}
+                className="flex items-center gap-3 p-3.5 rounded-xl bg-muted/50 border border-border/30"
+              >
                 <span className="w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0" />
                 <span className="text-sm text-foreground">{item}</span>
-              </div>
+              </motion.div>
             ))}
-          </motion.div>
+          </div>
 
+          {/* Disclaimer — subtle callout */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="p-5 rounded-xl bg-muted border border-border"
+            viewport={{ once: true, margin: "-60px" }}
+            transition={spring}
+            className="p-5 rounded-2xl bg-muted border border-border/50"
           >
             <p className="text-muted-foreground leading-relaxed text-sm">
-              No SEO, AEO, or GEO specialist can guarantee that a website will receive
+              No SEO, AEO, or GEO expert can guarantee that a website will receive
               a specific ranking, AI citation, or search feature. My role is to improve
               the technical accessibility, factual clarity, content quality, and entity
               consistency that can support eligibility and discoverability.

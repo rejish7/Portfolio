@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { fadeInUp, stagger } from "@/lib/apple-motion";
 
 const toolCategories = [
   {
@@ -71,44 +72,45 @@ const toolCategories = [
 
 export function TechToolkit() {
   return (
-    <section className="w-full bg-muted/30 py-16 lg:py-24 scroll-mt-20" id="tech-stack" aria-labelledby="tools-technologies">
+    <section
+      className="w-full bg-muted/30 py-20 lg:py-28 scroll-mt-20"
+      id="tech-stack"
+      aria-labelledby="tools-technologies"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto flex flex-col gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col gap-3"
-          >
-            <span className="font-mono text-xs text-primary uppercase tracking-wider font-semibold">
+        <div className="max-w-4xl mx-auto flex flex-col gap-10">
+          <motion.div {...fadeInUp} className="flex flex-col gap-3">
+            <span className="font-mono text-xs text-primary uppercase tracking-[0.12em] font-semibold">
               Technical Stack
             </span>
-            <h2 id="tools-technologies" className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2
+              id="tools-technologies"
+              className="text-3xl sm:text-4xl font-bold tracking-[-0.03em] leading-[1.1]"
+            >
               Tools and Technologies I Work With
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-lg leading-relaxed">
               The tools used for each project depend on the website, available access,
               technology, and investigation objective.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {toolCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="p-6 rounded-2xl bg-card border border-border shadow-sm flex flex-col gap-4"
+                viewport={{ once: true, margin: "-40px" }}
+                transition={stagger(index, 0.05)}
+                className="p-6 rounded-2xl bg-card border border-border/50 shadow-sm shadow-black/[0.03] flex flex-col gap-4"
               >
-                <h3 className="font-bold text-lg">{category.title}</h3>
+                <h3 className="font-bold text-lg tracking-tight">{category.title}</h3>
                 <div className="flex flex-wrap gap-2">
                   {category.items.map((item) => (
                     <span
                       key={item}
-                      className="px-2.5 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground"
+                      className="px-2.5 py-1 rounded-lg text-xs font-medium bg-muted text-muted-foreground border border-border/30"
                     >
                       {item}
                     </span>
@@ -118,20 +120,17 @@ export function TechToolkit() {
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col gap-3"
-          >
-            <p className="text-muted-foreground text-sm">
+          <motion.div {...fadeInUp} className="flex flex-col gap-3">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Tools support the investigation, but they do not replace professional
               interpretation. An automated report may identify a symptom, while the
               website&apos;s templates, routes, content model, or server configuration reveal
               the actual cause.
             </p>
-            <Link href="/tech-stack" className="inline-flex items-center gap-1.5 text-sm text-primary font-medium hover:underline">
+            <Link
+              href="/tech-stack"
+              className="inline-flex items-center gap-1.5 text-sm text-primary font-medium hover:underline self-start"
+            >
               View My Complete Technical Stack
               <ArrowRight className="h-3.5 w-3.5" />
             </Link>

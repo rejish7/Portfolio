@@ -31,7 +31,7 @@ export function WhoIsRejish() {
           className="mt-10 space-y-6"
         >
           <p className="text-lg text-muted-foreground">
-            Rejish Khanal is a technical SEO specialist based in Kathmandu,
+            Rejish Khanal is a technical SEO expert based in Kathmandu,
             Nepal. He helps businesses improve their Google rankings through site
             audits, speed optimization, and structured data implementation.
           </p>

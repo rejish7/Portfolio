@@ -41,7 +41,7 @@ export function HomepageHero() {
               custom={1}
               className="text-xs font-semibold uppercase tracking-wider text-primary font-mono"
             >
-              Technical SEO Expert &amp; Full-Stack Developer, Kathmandu, Nepal
+              Rejish Khanal — Technical SEO &amp; Full-Stack Development, Kathmandu
             </motion.p>
 
             {/* H1 */}
@@ -51,7 +51,7 @@ export function HomepageHero() {
               id="hero-heading"
               className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]"
             >
-              Technical SEO Expert in Nepal, I Fix What&apos;s Preventing Your Website from Ranking on Google
+              I Fix What&apos;s Preventing Your Website from Ranking on Google
             </motion.h1>
 
             {/* Paragraph */}

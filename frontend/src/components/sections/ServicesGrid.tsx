@@ -36,6 +36,7 @@ const services = [
       "Actionable fix priorities",
     ],
     icon: Search,
+    href: "/seo-audit-nepal",
   },
   {
     title: "Core Web Vitals Optimization",
@@ -48,6 +49,7 @@ const services = [
       "Mobile performance tuning",
     ],
     icon: Gauge,
+    href: "/core-web-vitals-optimization",
   },
   {
     title: "JavaScript SEO",
@@ -60,6 +62,7 @@ const services = [
       "Hydration issue resolution",
     ],
     icon: Code2,
+    href: "/technical-seo-expert-nepal",
   },
   {
     title: "Structured Data Implementation",
@@ -72,6 +75,7 @@ const services = [
       "LocalBusiness schema",
     ],
     icon: Database,
+    href: "/technical-seo-expert-nepal",
   },
   {
     title: "AEO Optimization",
@@ -84,6 +88,7 @@ const services = [
       "AI search monitoring",
     ],
     icon: Brain,
+    href: "/aeo-expert-nepal",
   },
   {
     title: "GEO Optimization",
@@ -96,6 +101,7 @@ const services = [
       "AI overview tracking",
     ],
     icon: Globe2,
+    href: "/geo-expert-nepal",
   },
   {
     title: "SEO-Friendly Web Development",
@@ -108,6 +114,7 @@ const services = [
       "SEO-first architecture",
     ],
     icon: Laptop,
+    href: "/web-development-nepal",
   },
   {
     title: "Local SEO Nepal",
@@ -120,6 +127,7 @@ const services = [
       "Local keyword targeting",
     ],
     icon: MapPin,
+    href: "/local-seo-services-nepal",
   },
   {
     title: "SEO Training Nepal",
@@ -132,6 +140,7 @@ const services = [
       "Ongoing mentorship",
     ],
     icon: GraduationCap,
+    href: "/contact",
   },
   {
     title: "SEO Consultant in Nepal",
@@ -144,6 +153,7 @@ const services = [
       "Team consultation & training",
     ],
     icon: Lightbulb,
+    href: "/seo-consultant-nepal",
   },
 ];
 
@@ -190,7 +200,7 @@ export function ServicesGrid() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
               >
-                <Link href="/contact">
+                <Link href={service.href}>
                   <Card className="h-full group hover:shadow-lg hover:border-primary/50 transition-all duration-300 cursor-pointer">
                     <CardHeader>
                       <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
@@ -221,7 +231,9 @@ export function ServicesGrid() {
 
                       <div className="flex items-center text-primary group-hover:translate-x-2 transition-transform">
                         <span className="text-sm font-semibold">
-                          Contact for this service
+                          {service.href === "/contact"
+                            ? "Contact for this service"
+                            : "Learn more"}
                         </span>
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </div>

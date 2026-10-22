@@ -157,24 +157,6 @@ export default function SEOSpecialistKathmanduPage() {
     "Nepal",
   ];
 
-  const targetKeywords = [
-    "SEO expert in Kathmandu",
-    "SEO expert in Kathmandu",
-    "SEO consultant in Kathmandu",
-    "freelance SEO expert in Kathmandu",
-    "technical SEO expert in Kathmandu",
-    "local SEO expert Kathmandu",
-    "SEO services in Kathmandu",
-    "SEO audit Kathmandu",
-    "Google ranking expert Kathmandu",
-    "SEO expert Nepal",
-    "technical SEO in Nepal",
-    "AEO expert in Nepal",
-    "GEO expert in Nepal",
-    "organic growth expert Kathmandu",
-    "SEO for small business Kathmandu",
-  ];
-
   const businessTypes = [
     {
       title: "Local Businesses",
@@ -738,26 +720,6 @@ export default function SEOSpecialistKathmanduPage() {
                   <p className="text-muted-foreground">{step.description}</p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-6">
-            SEO Keywords This Page Is Built to Target
-          </h2>
-
-          <p className="text-lg text-muted-foreground mb-6">
-            This page is structured to target high-intent keywords related to SEO
-            services, technical SEO, local SEO, AEO, GEO, and organic growth in
-            Kathmandu and Nepal.
-          </p>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {targetKeywords.map((keyword) => (
-              <div key={keyword} className="p-4 rounded-lg border bg-background">
-                <p className="font-medium">{keyword}</p>
-              </div>
             ))}
           </div>
         </section>

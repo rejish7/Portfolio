@@ -124,18 +124,6 @@ export default function WordPressSEOExpertNepalPage() {
     },
   ];
 
-  const targetKeywords = [
-    "WordPress SEO expert in Nepal",
-    "WordPress SEO Nepal",
-    "WordPress technical SEO Nepal",
-    "WordPress SEO audit Nepal",
-    "WordPress speed optimization Nepal",
-    "WordPress indexing issue fix Nepal",
-    "WordPress Core Web Vitals Nepal",
-    "SEO for WordPress websites Nepal",
-    "technical SEO specialist Nepal",
-  ];
-
   const pageUrl = "https://rejishkhanal.com.np/wordpress-seo-expert-nepal";
 
   const serviceSchema = {
@@ -327,20 +315,6 @@ export default function WordPressSEOExpertNepalPage() {
               <div key={index} className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <p className="text-foreground">{item}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-6">
-            Keywords This Page Targets
-          </h2>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {targetKeywords.map((keyword) => (
-              <div key={keyword} className="p-4 rounded-lg border bg-background">
-                <p className="font-medium">{keyword}</p>
               </div>
             ))}
           </div>

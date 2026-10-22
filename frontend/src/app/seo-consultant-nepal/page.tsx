@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Consultant in Nepal | Strategy & Advice",
+  title: "SEO Consultant in Nepal | Strategy & Audits",
   description:
     "Work with an SEO consultant in Nepal for audits, strategy, technical advice, website migrations, second opinions, and practical SEO roadmaps.",
   keywords: [

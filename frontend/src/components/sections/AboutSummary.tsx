@@ -31,7 +31,7 @@ export function AboutSummary() {
           className="mt-8 space-y-6 max-w-3xl"
         >
           <p className="text-lg text-muted-foreground">
-            Rejish Khanal is a technical SEO specialist and full-stack developer
+            Rejish Khanal is a technical SEO expert and full-stack developer
             based in Kathmandu, Nepal. He combines deep SEO knowledge with
             hands-on development skills to deliver measurable results.
           </p>

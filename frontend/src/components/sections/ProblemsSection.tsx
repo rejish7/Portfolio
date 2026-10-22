@@ -69,7 +69,7 @@ export function ProblemsSection() {
               What Technical SEO Problems Do I Fix?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Most visibility problems are not content problems. They are technical barriers. Rejish Khanal, a technical SEO specialist in Kathmandu, Nepal, identifies the root cause and implements the fix directly in your codebase.
+              Most visibility problems are not content problems. They are technical barriers. Rejish Khanal, a technical SEO expert in Kathmandu, Nepal, identifies the root cause and implements the fix directly in your codebase.
             </p>
           </motion.div>
 

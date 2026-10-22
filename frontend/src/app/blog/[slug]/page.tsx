@@ -261,6 +261,28 @@ export default async function BlogPostPage({
           )}
         </div>
 
+        {/* Related SEO Services - internal links to commercial pages */}
+        <section className="mt-16 pt-8 border-t border-border" aria-label="Related SEO services">
+          <h2 className="text-2xl font-bold mb-6">Related SEO Services</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { title: "SEO Expert in Nepal", description: "Complete SEO strategy, technical SEO, and organic growth implementation.", href: "/seo-expert-nepal" },
+              { title: "Technical SEO Expert in Nepal", description: "Fix crawlability, indexing, Core Web Vitals, schema, and JavaScript SEO issues.", href: "/technical-seo-expert-nepal" },
+              { title: "SEO Audit Services in Nepal", description: "Get a detailed technical, content, and performance SEO audit with an action plan.", href: "/seo-audit-nepal" },
+              { title: "SEO Consultant in Nepal", description: "Independent SEO advice, strategic roadmaps, and second opinions for your team.", href: "/seo-consultant-nepal" },
+              { title: "Local SEO Services in Nepal", description: "Improve Google Maps visibility and local search rankings for your business.", href: "/local-seo-services-nepal" },
+              { title: "AEO Expert in Nepal", description: "Optimize your content for AI Overviews, answer engines, and featured snippets.", href: "/aeo-expert-nepal" },
+            ].map((service) => (
+              <Link key={service.href} href={service.href}>
+                <div className="p-5 rounded-lg border bg-background hover:border-primary/50 hover:shadow-sm transition-all h-full">
+                  <h3 className="font-semibold text-primary mb-1">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground">{service.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="mt-16 pt-8 border-t border-border">
           <Link href="/blog">

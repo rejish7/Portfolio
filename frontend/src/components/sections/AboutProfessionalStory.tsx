@@ -1,33 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { fadeInUp, spring } from "@/lib/apple-motion";
 
 export function AboutProfessionalStory() {
   return (
-    <section className="w-full bg-muted/30 py-16 lg:py-24" aria-labelledby="professional-story">
+    <section className="w-full bg-muted/30 py-20 lg:py-28" aria-labelledby="professional-story">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto flex flex-col gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col gap-3"
-          >
-            <span className="font-mono text-xs text-primary uppercase tracking-wider font-semibold">
+        <div className="max-w-4xl mx-auto flex flex-col gap-10">
+          <motion.div {...fadeInUp} className="flex flex-col gap-3">
+            <span className="font-mono text-xs text-primary uppercase tracking-[0.12em] font-semibold">
               My Professional Story
             </span>
-            <h2 id="professional-story" className="text-3xl sm:text-4xl font-bold tracking-tight">
+            <h2
+              id="professional-story"
+              className="text-3xl sm:text-4xl font-bold tracking-[-0.03em] leading-[1.1]"
+            >
               From Quality Assurance and Development to Technical SEO
             </h2>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="flex flex-col gap-4 text-muted-foreground leading-relaxed"
+            viewport={{ once: true, margin: "-60px" }}
+            transition={spring}
+            className="flex flex-col gap-5 text-muted-foreground leading-relaxed"
           >
             <p>
               My path into technical SEO began with quality assurance and backend
