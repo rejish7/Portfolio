@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { ProjectCard } from "@/components/ProjectCard";
+import { SectionNav } from "@/components/SectionNav";
 import { fetchProjects, projectsBaseUrl } from "@/lib/projects";
 import type { Project } from "@/lib/types";
 
@@ -164,6 +165,13 @@ export default async function ProjectsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
+      <SectionNav
+        sections={[
+          { id: "projects-hero", label: "Introduction" },
+          { id: "portfolio-glance", label: "Overview" },
+          { id: "projects-grid", label: "Case Studies" },
+        ]}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" className="mb-6 text-sm text-muted-foreground">
           <ol className="flex flex-wrap items-center gap-1">
@@ -181,7 +189,7 @@ export default async function ProjectsPage() {
           </ol>
         </nav>
 
-        <div className="text-center mb-12">
+        <div id="projects-hero" className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
             SEO, AEO &amp; GEO Projects
           </h1>
@@ -200,6 +208,7 @@ export default async function ProjectsPage() {
         ) : (
           <>
             <section
+              id="portfolio-glance"
               aria-label="Portfolio at a glance"
               className="mb-12 rounded-xl border border-border bg-card p-6 sm:p-8"
             >
@@ -245,7 +254,7 @@ export default async function ProjectsPage() {
               </p>
             </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="projects-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {allProjects.map((project, index) => (
                 <ProjectCard key={project.id} project={project} index={index} />
               ))}

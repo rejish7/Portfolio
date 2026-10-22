@@ -5,6 +5,7 @@ import type { BlogPost } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen, Search, Gauge, Code2, Bot } from "lucide-react";
 import { SchemaScript } from "@/components/SchemaScript";
+import { SectionNav } from "@/components/SectionNav";
 
 export const metadata: Metadata = {
   title: "SEO, AEO, GEO and Web Development Blog",
@@ -234,9 +235,18 @@ export default async function BlogPage() {
       <SchemaScript schema={itemListSchema} />
       <SchemaScript schema={breadcrumbSchema} />
 
+      <SectionNav
+        sections={[
+          { id: "blog-hero", label: "Introduction" },
+          { id: "blog-topics", label: "Topics" },
+          { id: "blog-articles", label: "Articles" },
+          { id: "blog-services", label: "Services" },
+        ]}
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <section className="text-center mb-16">
+        <section id="blog-hero" className="text-center mb-16">
           <p className="text-sm font-semibold text-primary mb-4">
             SEO Blog Nepal | Technical SEO | AEO | GEO | Web Development
           </p>
@@ -261,7 +271,7 @@ export default async function BlogPage() {
         </section>
 
         {/* Topic Clusters */}
-        <section className="mb-16">
+        <section id="blog-topics" className="mb-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {topics.map((topic) => {
               const Icon = topic.icon;
@@ -288,7 +298,7 @@ export default async function BlogPage() {
         </section>
 
         {/* Blog Posts */}
-        <section>
+        <section id="blog-articles">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
             <div>
               <h2 className="text-3xl font-bold mb-3">
@@ -339,7 +349,7 @@ export default async function BlogPage() {
         </section>
 
         {/* Internal Links */}
-        <section className="mt-20 pt-16 border-t">
+        <section id="blog-services" className="mt-20 pt-16 border-t">
           <h2 className="text-2xl font-bold mb-6">
             Explore SEO Services
           </h2>

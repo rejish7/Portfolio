@@ -6,6 +6,7 @@ import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { SchemaScript } from "@/components/SchemaScript";
+import { SectionNav } from "@/components/SectionNav";
 import { formatDate } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import type { BlogPost } from "@/lib/types";
@@ -187,6 +188,13 @@ export default async function BlogPostPage({
   return (
     <article className="pt-24 pb-24">
       <SchemaScript schema={articleSchema} />
+      <SectionNav
+        sections={[
+          { id: "blog-header", label: "Article" },
+          { id: "blog-content", label: "Content" },
+          { id: "related-services", label: "Services" },
+        ]}
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumb
           items={[
@@ -205,7 +213,7 @@ export default async function BlogPostPage({
         </Link>
 
         {/* Header */}
-        <header className="mb-12">
+        <header id="blog-header" className="mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">{post.title}</h1>
 
           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-6">
@@ -251,7 +259,7 @@ export default async function BlogPostPage({
         )}
 
         {/* Content */}
-        <div className="prose prose-lg dark:prose-invert max-w-none">
+        <div id="blog-content" className="prose prose-lg dark:prose-invert max-w-none">
           {post.content ? (
             <div className="whitespace-pre-wrap space-y-6">
               {post.content}
@@ -262,7 +270,7 @@ export default async function BlogPostPage({
         </div>
 
         {/* Related SEO Services - internal links to commercial pages */}
-        <section className="mt-16 pt-8 border-t border-border" aria-label="Related SEO services">
+        <section id="related-services" className="mt-16 pt-8 border-t border-border" aria-label="Related SEO services">
           <h2 className="text-2xl font-bold mb-6">Related SEO Services</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[

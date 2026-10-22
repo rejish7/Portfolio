@@ -18,6 +18,7 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SchemaScript } from "@/components/SchemaScript";
+import { SectionNav } from "@/components/SectionNav";
 
 export const metadata: Metadata = {
   title: {
@@ -189,6 +190,17 @@ export default function ContactPage() {
       <SchemaScript schema={contactPageSchema} />
       <SchemaScript schema={faqSchema} />
 
+      <SectionNav
+        sections={[
+          { id: "contact-hero", label: "Introduction" },
+          { id: "contact-info", label: "Contact Info" },
+          { id: "contact-topics", label: "Topics" },
+          { id: "contact-why", label: "Why Me" },
+          { id: "contact-faq", label: "FAQ" },
+          { id: "contact-cta", label: "Get Started" },
+        ]}
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumb
           items={[
@@ -197,7 +209,7 @@ export default function ContactPage() {
           ]}
         />
 
-        <section className="text-center mb-16">
+        <section id="contact-hero" className="text-center mb-16">
           <p className="text-sm font-semibold text-primary mb-4">
             Contact SEO Expert in Nepal | Technical SEO | Local SEO | Web Development
           </p>
@@ -219,7 +231,7 @@ export default function ContactPage() {
           </p>
         </section>
 
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+        <section id="contact-info" className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
           {/* Contact Info */}
           <div className="space-y-6">
             <div>
@@ -301,7 +313,7 @@ export default function ContactPage() {
         </section>
 
         {/* Services */}
-        <section className="mb-20">
+        <section id="contact-topics" className="mb-20">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-4">
               What You Can Contact Me For
@@ -349,7 +361,7 @@ export default function ContactPage() {
         </section>
 
         {/* Why Contact Me */}
-        <section className="mb-20 p-8 bg-accent/50 rounded-lg border">
+        <section id="contact-why" className="mb-20 p-8 bg-accent/50 rounded-lg border">
           <h2 className="text-3xl font-bold mb-6">
             Why Contact Me for SEO and Web Development?
           </h2>
@@ -365,7 +377,7 @@ export default function ContactPage() {
         </section>
 
         {/* FAQ */}
-        <section className="mb-20">
+        <section id="contact-faq" className="mb-20">
           <h2 className="text-3xl font-bold mb-8">
             Frequently Asked Questions
           </h2>
@@ -390,7 +402,7 @@ export default function ContactPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-10 sm:p-12 text-center border border-primary/20">
+        <section id="contact-cta" className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-10 sm:p-12 text-center border border-primary/20">
           <Globe2 className="h-12 w-12 text-primary mx-auto mb-5" />
 
           <h2 className="text-3xl font-bold mb-4">

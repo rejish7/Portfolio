@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SchemaScript } from "@/components/SchemaScript";
+import { SectionNav } from "@/components/SectionNav";
 import { Gauge, Search, Code2, BarChart3 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -114,10 +115,17 @@ export default function ToolsPage() {
       <SchemaScript schema={itemListSchema} />
       <SchemaScript schema={breadcrumbSchema} />
 
+      <SectionNav
+        sections={[
+          { id: "tools-hero", label: "Overview" },
+          { id: "tools-grid", label: "Tools" },
+        ]}
+      />
+
       <div className="pt-24 pb-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <header className="text-center mb-16">
+          <header id="tools-hero" className="text-center mb-16">
             <p className="text-sm font-semibold text-primary mb-4 uppercase tracking-wide">
               Free SEO Tools
             </p>
@@ -131,7 +139,7 @@ export default function ToolsPage() {
           </header>
 
           {/* Tools Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div id="tools-grid" className="grid sm:grid-cols-2 gap-6">
             {tools.map((tool) => {
               const Icon = tool.icon;
               const isLive = tool.status === "live";
