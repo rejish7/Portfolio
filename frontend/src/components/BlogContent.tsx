@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import { SectionNav } from "@/components/SectionNav";
+import { BlogTOC } from "@/components/BlogTOC";
 
 interface ParsedBlock {
   type: "heading" | "paragraph";
@@ -81,13 +81,17 @@ export function BlogContent({ content }: { content: string }) {
     () =>
       blocks
         .filter((b): b is ParsedBlock & { id: string } => b.type === "heading" && !!b.id)
-        .map((b) => ({ id: b.id, label: b.text.length > 20 ? b.text.slice(0, 20) + "…" : b.text })),
+        .map((b) => ({
+          id: b.id,
+          label: b.text.length > 40 ? b.text.slice(0, 40) + "…" : b.text,
+          level: b.level ?? 2,
+        })),
     [blocks]
   );
 
   return (
     <>
-      {headings.length > 2 && <SectionNav sections={headings} />}
+      <BlogTOC items={headings} />
 
       <div id="blog-content" className="prose prose-lg dark:prose-invert max-w-none">
         <div className="space-y-6">
