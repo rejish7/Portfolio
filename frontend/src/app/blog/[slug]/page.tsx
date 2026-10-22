@@ -6,7 +6,7 @@ import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { SchemaScript } from "@/components/SchemaScript";
-import { SectionNav } from "@/components/SectionNav";
+import { BlogContent } from "@/components/BlogContent";
 import { formatDate } from "@/lib/utils";
 import { notFound } from "next/navigation";
 import type { BlogPost } from "@/lib/types";
@@ -188,13 +188,6 @@ export default async function BlogPostPage({
   return (
     <article className="pt-24 pb-24">
       <SchemaScript schema={articleSchema} />
-      <SectionNav
-        sections={[
-          { id: "blog-header", label: "Article" },
-          { id: "blog-content", label: "Content" },
-          { id: "related-services", label: "Services" },
-        ]}
-      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumb
           items={[
@@ -259,15 +252,11 @@ export default async function BlogPostPage({
         )}
 
         {/* Content */}
-        <div id="blog-content" className="prose prose-lg dark:prose-invert max-w-none">
-          {post.content ? (
-            <div className="whitespace-pre-wrap space-y-6">
-              {post.content}
-            </div>
-          ) : (
-            <p className="text-muted-foreground">No content available.</p>
-          )}
-        </div>
+        {post.content ? (
+          <BlogContent content={post.content} />
+        ) : (
+          <p className="text-muted-foreground">No content available.</p>
+        )}
 
         {/* Related SEO Services - internal links to commercial pages */}
         <section id="related-services" className="mt-16 pt-8 border-t border-border" aria-label="Related SEO services">
