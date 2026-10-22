@@ -33,7 +33,7 @@ const graphBenefits = [
 
 export default function ServicesAEOGEO() {
   return (
-    <section className="bg-background py-20 lg:py-32">
+    <section id="aeo-geo" className="bg-background py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

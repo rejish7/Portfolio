@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export function ServicesCTA() {
   return (
-    <section className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
+    <section id="services-contact" className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

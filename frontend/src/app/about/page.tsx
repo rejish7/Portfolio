@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { SchemaScript } from "@/components/SchemaScript";
+import { SectionNav } from "@/components/SectionNav";
 import { AboutHero } from "@/components/sections/AboutHero";
 import { AboutProfessionalProfile } from "@/components/sections/AboutProfessionalProfile";
 import { AboutProfessionalStory } from "@/components/sections/AboutProfessionalStory";
@@ -67,6 +68,25 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const aboutSections = [
+    { id: "about-rejish-khanal", label: "Introduction" },
+    { id: "who-is-rejish-khanal", label: "Profile" },
+    { id: "professional-story", label: "Story" },
+    { id: "technical-seo-approach", label: "Approach" },
+    { id: "seo-development-support", label: "SEO + Dev" },
+    { id: "aeo-geo-expert-nepal", label: "AEO & GEO" },
+    { id: "about-services", label: "Services" },
+    { id: "technical-seo-expert-who-codes", label: "Advantage" },
+    { id: "professional-experience", label: "Experience" },
+    { id: "tools-technologies", label: "Tools" },
+    { id: "how-i-work", label: "Process" },
+    { id: "professional-standards", label: "Standards" },
+    { id: "current-research", label: "Research" },
+    { id: "seo-expert-kathmandu", label: "Location" },
+    { id: "about-page-faq", label: "FAQ" },
+    { id: "work-with-rejish", label: "Contact" },
+  ];
+
   const profilePageSchema = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
@@ -192,6 +212,8 @@ export default function AboutPage() {
       <SchemaScript schema={profilePageSchema} />
       <SchemaScript schema={heroImageSchema} />
       <SchemaScript schema={faqSchema} />
+
+      <SectionNav sections={aboutSections} />
 
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-1 pb-4">

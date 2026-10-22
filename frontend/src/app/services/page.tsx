@@ -22,6 +22,7 @@ import ServicesEngineering from "@/components/sections/ServicesEngineering";
 import ServicesEngagementModels from "@/components/sections/ServicesEngagementModels";
 import ServicesCaseStudies from "@/components/sections/ServicesCaseStudies";
 import { ServicesCTA } from "@/components/sections/ServicesCTA";
+import { SectionNav } from "@/components/SectionNav";
 
 export const metadata: Metadata = {
   title: "SEO and Web Development Services",
@@ -201,8 +202,21 @@ const faqSchema = {
 };
 
 export default function ServicesPage() {
+  const servicesSections = [
+    { id: "services-hero-heading", label: "Overview" },
+    { id: "services-grid-heading", label: "All Services" },
+    { id: "crawl-technical", label: "Technical SEO" },
+    { id: "aeo-geo", label: "AEO & GEO" },
+    { id: "architecture", label: "Architecture" },
+    { id: "engineering", label: "Engineering" },
+    { id: "engagement", label: "Engagement" },
+    { id: "case-studies", label: "Case Studies" },
+    { id: "services-contact", label: "Contact" },
+  ];
+
   return (
     <main className="min-h-screen">
+      <SectionNav sections={servicesSections} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

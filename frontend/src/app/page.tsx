@@ -13,6 +13,7 @@ import { BlogPreview } from "@/components/sections/BlogPreview";
 import { HomepageFAQ } from "@/components/sections/HomepageFAQ";
 import { homepageFaqs } from "@/lib/homepage-faqs";
 import { HomepageCTA } from "@/components/sections/HomepageCTA";
+import { SectionNav } from "@/components/SectionNav";
 import type { BlogPost } from "@/lib/types";
 import type { Metadata } from "next";
 
@@ -175,12 +176,24 @@ export default async function Home() {
   const stringifySchema = (schema: Record<string, unknown>) =>
     JSON.stringify(schema).replace(/</g, "\\u003c");
 
+  const homepageSections = [
+    { id: "hero-heading", label: "Introduction" },
+    { id: "key-expertise-heading", label: "Expertise" },
+    { id: "homepage-problems-heading", label: "Problems" },
+    { id: "services-grid-heading", label: "Services" },
+    { id: "process-heading", label: "Process" },
+    { id: "cases-heading", label: "Case Studies" },
+    { id: "homepage-key-facts-heading", label: "Key Facts" },
+  ];
+
   return (
     <>
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifySchema(professionalServiceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifySchema(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: stringifySchema(faqSchema) }} />
+
+      <SectionNav sections={homepageSections} />
 
       {/* Sections */}
       <main id="main-content" aria-label="Rejish Khanal - Technical SEO Expert in Nepal Homepage">

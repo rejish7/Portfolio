@@ -33,7 +33,7 @@ const caseStudies = [
 
 export default function ServicesCaseStudies() {
   return (
-    <section className="bg-background">
+    <section id="case-studies" className="bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -88,7 +88,7 @@ const boundaries = [
 
 export default function ServicesEngagementModels() {
   return (
-    <section className="bg-accent/20 py-20 lg:py-32">
+    <section id="engagement" className="bg-accent/20 py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Section Header */}
         <motion.div

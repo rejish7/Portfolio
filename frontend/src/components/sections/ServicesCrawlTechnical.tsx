@@ -65,7 +65,7 @@ const cardVariants = {
 
 export default function ServicesCrawlTechnical() {
   return (
-    <section className="bg-accent/20 py-20 lg:py-28">
+    <section id="crawl-technical" className="bg-accent/20 py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <motion.div
