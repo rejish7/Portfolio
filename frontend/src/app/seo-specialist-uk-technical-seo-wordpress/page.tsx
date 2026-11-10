@@ -205,7 +205,7 @@ export default function SEOSpecialistUKPage() {
         "Complete SEO strategy for technical SEO, on-page SEO, local SEO, AEO, GEO, and organic growth.",
     },
     {
-      title: "AEO and GEO Expert in Nepal",
+      title: "AEO Expert in Nepal",
       href: "/aeo-expert-nepal",
       description:
         "Structure content for AI Overviews, answer engines, and generative search visibility.",

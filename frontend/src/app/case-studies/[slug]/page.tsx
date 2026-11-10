@@ -671,6 +671,16 @@ export default async function CaseStudyPage({
             <p className="text-muted-foreground leading-relaxed text-[17px] mb-6">
               {study.aiVisibility.text}
             </p>
+            <p className="text-sm text-muted-foreground mb-6">
+              To improve visibility in generative search on your own site, see{" "}
+              <Link
+                href="/geo-expert-nepal"
+                className="text-primary font-medium hover:underline"
+              >
+                GEO services in Nepal
+              </Link>
+              .
+            </p>
             <Screenshot shot={study.secondaryImage} />
           </section>
         )}

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { fadeInUp, spring, stagger } from "@/lib/apple-motion";
 
 const aeoGeoItems = [
@@ -70,6 +71,18 @@ export function AboutAEOGEO() {
               </motion.div>
             ))}
           </div>
+
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            For audits, implementation and monitoring focused on generative
+            search, see the{" "}
+            <Link
+              href="/geo-expert-nepal"
+              className="text-primary font-medium hover:underline"
+            >
+              GEO services page
+            </Link>
+            .
+          </p>
 
           {/* Disclaimer — subtle callout */}
           <motion.div

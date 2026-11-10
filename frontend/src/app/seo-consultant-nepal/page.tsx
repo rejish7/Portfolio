@@ -716,6 +716,16 @@ export default function SEOConsultantPage() {
                 Get a complete technical, content, and performance SEO audit.
               </p>
             </Link>
+
+            <Link href="/geo-expert-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
+              <p className="font-semibold hover:text-primary transition-colors">
+                GEO Consulting
+              </p>
+              <p className="text-sm text-muted-foreground mt-2">
+                Improve visibility in generative search with audits and
+                implementation.
+              </p>
+            </Link>
           </div>
         </section>
       </div>

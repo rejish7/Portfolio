@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     "Rejish Khanal developer",
     "full-stack developer Kathmandu",
     "AEO expert Nepal",
-    "GEO expert Nepal",
     "Core Web Vitals optimization",
     "Next.js SEO expert",
     "Django developer Nepal",
@@ -150,10 +149,10 @@ export default function AboutPage() {
       },
       {
         "@type": "Question",
-        name: "Is Rejish Khanal a GEO expert in Nepal?",
+        name: "Does Rejish Khanal offer GEO services?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Rejish works on Generative Engine Optimization for websites seeking clearer representation across AI-powered discovery systems. The work focuses on accurate entity information, retrievable content, source quality, technical accessibility, and consistent facts rather than guaranteed AI citations.",
+          text: "Yes. Rejish works on Generative Engine Optimization for websites seeking clearer representation across AI-powered discovery systems. The work focuses on accurate entity information, retrievable content, source quality, technical accessibility, and consistent facts rather than guaranteed AI citations, and is offered as a dedicated GEO service.",
         },
       },
       {

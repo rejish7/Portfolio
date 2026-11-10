@@ -42,7 +42,6 @@ export const metadata: Metadata = {
     "technical SEO in Nepal",
     "local SEO Kathmandu",
     "AEO expert in Nepal",
-    "GEO expert in Nepal",
     "organic growth expert Kathmandu",
     "SEO consultant Nepal",
   ],
@@ -368,7 +367,7 @@ export default function SEOSpecialistKathmanduPage() {
       "Local SEO Expert Kathmandu",
       "SEO Services in Kathmandu",
       "AEO Expert in Nepal",
-      "GEO Expert in Nepal",
+      "Generative Engine Optimization",
     ],
   };
 

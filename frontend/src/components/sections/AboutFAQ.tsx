@@ -22,9 +22,9 @@ const faqs = [
       "Rejish provides Answer Engine Optimization as part of a broader technical SEO approach. His work focuses on direct answers, semantic HTML, entity clarity, factual consistency, structured data, internal linking, and crawler accessibility.",
   },
   {
-    question: "Is Rejish Khanal a GEO expert in Nepal?",
+    question: "Does Rejish Khanal offer GEO services?",
     answer:
-      "Rejish works on Generative Engine Optimization for websites seeking clearer representation across AI-powered discovery systems. The work focuses on accurate entity information, retrievable content, source quality, technical accessibility, and consistent facts rather than guaranteed AI citations.",
+      "Yes. Rejish works on Generative Engine Optimization for websites seeking clearer representation across AI-powered discovery systems. The work focuses on accurate entity information, retrievable content, source quality, technical accessibility, and consistent facts rather than guaranteed AI citations, and is offered as a dedicated GEO service.",
   },
   {
     question: "What is the difference between SEO, AEO and GEO?",

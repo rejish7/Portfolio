@@ -104,10 +104,10 @@ export default function ServicesAEOGEO() {
               </div>
 
               <Link
-                href="/aeo-expert-nepal"
+                href="/geo-expert-nepal"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
               >
-                Prepare for Generative Search →
+                Explore GEO services →
               </Link>
             </motion.div>
 
@@ -161,7 +161,7 @@ export default function ServicesAEOGEO() {
                 href="/geo-expert-nepal"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
               >
-                Engineer Custom Schema Graph →
+                See how schema supports GEO →
               </Link>
             </motion.div>
 

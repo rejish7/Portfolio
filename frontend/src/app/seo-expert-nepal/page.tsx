@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     "SEO consultant in Nepal",
     "technical SEO expert in Nepal",
     "AEO expert in Nepal",
-    "GEO expert in Nepal",
     "SEO services in Nepal",
   ],
   alternates: {
@@ -259,7 +258,7 @@ export default function SEOExpertPage() {
       "SEO Expert in Kathmandu",
       "Technical SEO in Nepal",
       "AEO Expert in Nepal",
-      "GEO Expert in Nepal",
+      "Generative Engine Optimization",
     ],
   };
 
@@ -550,7 +549,7 @@ export default function SEOExpertPage() {
 
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-6">
-            AEO and GEO Expert in Nepal for AI Search Visibility
+            Answer and Generative Search Visibility
           </h2>
 
           <div className="space-y-5 text-muted-foreground text-lg">
@@ -567,7 +566,15 @@ export default function SEOExpertPage() {
               content appear in answer-style search results. GEO, or Generative
               Engine Optimization, focuses on improving your visibility in
               AI-powered search environments where platforms summarize
-              information from multiple sources.
+              information from multiple sources. For dedicated GEO consulting,
+              see my{" "}
+              <Link
+                href="/geo-expert-nepal"
+                className="text-primary font-medium hover:underline"
+              >
+                Generative Engine Optimization services
+              </Link>
+              .
             </p>
 
             <p>

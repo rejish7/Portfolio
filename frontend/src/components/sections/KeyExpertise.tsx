@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Search, Wrench, Bot, Globe } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
@@ -10,24 +11,28 @@ const expertiseCards = [
     title: "SEO",
     description:
       "Complete SEO strategy, keyword research, on-page optimization, and link building for businesses in Nepal and worldwide.",
+    href: "/seo-expert-nepal",
   },
   {
     icon: Wrench,
     title: "Technical SEO Expert",
     description:
       "Site audits, Core Web Vitals fixes, crawl error resolution, structured data implementation, and indexation management.",
+    href: "/technical-seo-expert-nepal",
   },
   {
     icon: Bot,
     title: "AEO Expert in Nepal",
     description:
       "Answer Engine Optimization for ChatGPT Search, Perplexity, and AI Overviews. Structured data, entity optimization, and direct answers.",
+    href: "/aeo-expert-nepal",
   },
   {
     icon: Globe,
     title: "GEO Expert in Nepal",
     description:
       "Generative Engine Optimization to make your content visible and citeable in AI-generated search results.",
+    href: "/geo-expert-nepal",
   },
 ];
 
@@ -76,12 +81,25 @@ Rejish Khanal provides end-to-end technical SEO services, from
                     <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                       <Icon className="h-6 w-6 text-primary" aria-hidden="true" />
                     </div>
-                    <CardTitle>{card.title}</CardTitle>
+                    <CardTitle>
+                      <Link
+                        href={card.href}
+                        className="hover:text-primary transition-colors"
+                      >
+                        {card.title}
+                      </Link>
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
                       {card.description}
                     </p>
+                    <Link
+                      href={card.href}
+                      className="inline-block mt-3 text-sm font-medium text-primary hover:underline"
+                    >
+                      Learn more
+                    </Link>
                   </CardContent>
                 </Card>
               </motion.div>

@@ -20,9 +20,12 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Link href={`/projects/${project.slug}`}>
-        <Card className="h-full flex flex-col group hover:shadow-lg transition-all duration-300 cursor-pointer">
-          <CardHeader>
+      <Card className="h-full flex flex-col group hover:shadow-lg hover:border-primary/50 transition-all duration-300">
+        <CardHeader>
+          <Link
+            href={`/projects/${project.slug}`}
+            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-md"
+          >
             <div className="aspect-video relative overflow-hidden rounded-md bg-accent mb-4">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300" />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -40,7 +43,8 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
               {project.title}
             </CardTitle>
             <CardDescription>{project.summary || project.description}</CardDescription>
-          </CardHeader>
+          </Link>
+        </CardHeader>
 
           <CardContent className="flex-1 space-y-4">
             {project.results && project.results.length > 0 && (
@@ -85,36 +89,31 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
 
           <CardFooter className="flex gap-2">
             {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Button variant="default" className="w-full group/btn">
+              <Button asChild variant="default" className="flex-1 group/btn">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <ExternalLink className="mr-2 h-4 w-4 group-hover/btn:translate-x-0.5 transition-transform" />
                   Live Demo
-                </Button>
-              </a>
+                </a>
+              </Button>
             )}
             {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Button variant="outline" className="w-full">
+              <Button asChild variant="outline" className="flex-1">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github className="mr-2 h-4 w-4" />
                   Code
-                </Button>
-              </a>
+                </a>
+              </Button>
             )}
           </CardFooter>
         </Card>
-      </Link>
     </motion.div>
   );
 }

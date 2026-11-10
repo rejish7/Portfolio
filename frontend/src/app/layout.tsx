@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     "Rejish Khanal",
     "SEO expert Nepal",
     "AEO expert Nepal",
-    "GEO expert Nepal",
     "full-stack developer Nepal",
     "Core Web Vitals expert Nepal",
     "Next.js SEO expert Nepal",

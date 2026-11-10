@@ -816,6 +816,16 @@ I am Rejish Khanal, a technical SEO expert in Kathmandu, Nepal.
                 Rank for location-based searches in Kathmandu and across Nepal.
               </p>
             </Link>
+
+            <Link href="/geo-expert-nepal" className="block rounded-lg border bg-background p-4 hover:border-primary/50 transition-colors">
+              <p className="font-semibold hover:text-primary transition-colors">
+                GEO Services in Nepal
+              </p>
+              <p className="text-sm text-muted-foreground mt-2">
+                Improve visibility in generative search once technical health
+                is in place.
+              </p>
+            </Link>
           </div>
         </section>
       </div>
