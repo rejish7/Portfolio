@@ -40,7 +40,7 @@ const staticPages: { path: string; lastModified: string }[] = [
   { path: "/google-search-console-expert-nepal", lastModified: "2026-09-23" },
   { path: "/core-web-vitals-optimization", lastModified: "2026-09-23" },
   { path: "/local-seo-services-nepal", lastModified: "2026-09-23" },
-  { path: "/seo-specialist-kathmandu", lastModified: "2026-11-10" },
+  { path: "/seo-expert-kathmandu", lastModified: "2026-11-11" },
   { path: "/seo-consultant-nepal", lastModified: "2026-11-10" },
   { path: "/wordpress-seo-expert-nepal", lastModified: "2026-09-23" },
   { path: "/seo-specialist-uk-technical-seo-wordpress", lastModified: "2026-09-23" },

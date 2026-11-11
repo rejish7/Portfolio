@@ -23,9 +23,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "SEO Specialist in Kathmandu",
+  title: "SEO Expert in Kathmandu",
   description:
-    "Work with an SEO specialist in Kathmandu for technical SEO, local SEO, keyword strategy, content optimization, AEO, GEO, and website improvements.",
+    "Work with an SEO expert in Kathmandu for technical SEO, local SEO, keyword strategy, content optimization, AEO, GEO, and website improvements.",
   keywords: [
     "SEO expert in Kathmandu",
     "SEO expert in Kathmandu",
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
     "SEO consultant Nepal",
   ],
   alternates: {
-    canonical: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
+    canonical: "https://rejishkhanal.com.np/seo-expert-kathmandu",
   },
   openGraph: {
-    title: "SEO Specialist in Kathmandu | Rejish Khanal",
+    title: "SEO Expert in Kathmandu | Rejish Khanal",
     description:
-      "Work with an SEO specialist in Kathmandu for technical SEO, local SEO, keyword strategy, content optimization, AEO, GEO, and website improvements.",
-    url: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
+      "Work with an SEO expert in Kathmandu for technical SEO, local SEO, keyword strategy, content optimization, AEO, GEO, and website improvements.",
+    url: "https://rejishkhanal.com.np/seo-expert-kathmandu",
     siteName: "Rejish Khanal",
     type: "website",
     locale: "en_US",
@@ -287,7 +287,7 @@ export default function SEOSpecialistKathmanduPage() {
     name: "Rejish Khanal - SEO Expert in Kathmandu",
     description:
       "SEO expert in Kathmandu providing technical SEO, local SEO, SEO audits, content optimization, AEO, GEO, Core Web Vitals optimization, and organic growth strategy.",
-    url: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
+    url: "https://rejishkhanal.com.np/seo-expert-kathmandu",
     image: "https://rejishkhanal.com.np/og-image.jpg",
     areaServed: [
       {
@@ -356,7 +356,7 @@ export default function SEOSpecialistKathmanduPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "SEO Expert in Kathmandu",
-    url: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
+    url: "https://rejishkhanal.com.np/seo-expert-kathmandu",
     description:
       "SEO expert in Kathmandu for technical SEO, local SEO, SEO audits, AEO, GEO, content SEO, and organic growth.",
     inLanguage: "en",
@@ -391,7 +391,7 @@ export default function SEOSpecialistKathmanduPage() {
         "@type": "ListItem",
         position: 3,
         name: "SEO Expert in Kathmandu",
-        item: "https://rejishkhanal.com.np/seo-specialist-kathmandu",
+        item: "https://rejishkhanal.com.np/seo-expert-kathmandu",
       },
     ],
   };

@@ -41,6 +41,18 @@ const nextConfig: NextConfig = {
         destination: "/technical-seo-expert-nepal/:path+",
         permanent: true,
       },
+      // URL rename — kept as two rules so the empty-suffix case does not
+      // produce a trailing-slash hop (which caused a double redirect chain).
+      {
+        source: "/seo-specialist-kathmandu",
+        destination: "/seo-expert-kathmandu",
+        permanent: true,
+      },
+      {
+        source: "/seo-specialist-kathmandu/:path+",
+        destination: "/seo-expert-kathmandu/:path+",
+        permanent: true,
+      },
     ];
   },
   async headers() {
