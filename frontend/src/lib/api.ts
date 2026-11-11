@@ -59,7 +59,6 @@ const transformProject = (project: any): Project => {
     image: project.image,
     technologies: project.technologies || [],
     liveUrl: project.liveUrl,
-    githubUrl: project.githubUrl,
     featured: project.featured,
     category: project.category,
   };

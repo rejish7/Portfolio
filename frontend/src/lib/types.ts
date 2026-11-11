@@ -33,7 +33,6 @@ export interface Project {
   imageCaption?: string;
   technologies: string[];
   liveUrl?: string;
-  githubUrl?: string;
   featured?: boolean;
   category?: string;
   industry?: string;

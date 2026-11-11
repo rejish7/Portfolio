@@ -76,7 +76,6 @@ interface RawProject {
   imageCaption?: string;
   technologies?: string[];
   liveUrl?: string;
-  githubUrl?: string;
   featured?: boolean;
   category?: string;
   industry?: string;
@@ -112,7 +111,6 @@ export function mapProject(raw: RawProject): Project {
     imageCaption: raw.imageCaption,
     technologies: Array.isArray(raw.technologies) ? raw.technologies : [],
     liveUrl: raw.liveUrl,
-    githubUrl: raw.githubUrl,
     featured: Boolean(raw.featured),
     category: raw.category,
     industry: raw.industry,

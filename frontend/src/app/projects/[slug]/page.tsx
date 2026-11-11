@@ -5,7 +5,6 @@ import { cache } from "react";
 import {
   ArrowLeft,
   ExternalLink,
-  Github,
   ChevronRight,
   LineChart,
   ShieldCheck,
@@ -466,25 +465,13 @@ export default async function ProjectPage({
         )}
 
         {/* Actions */}
-        {(project.liveUrl || project.githubUrl) && (
-          <div className="flex flex-wrap gap-4">
-            {project.liveUrl && (
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                <Button size="lg">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  View Live Site
-                </Button>
-              </a>
-            )}
-            {project.githubUrl && (
-              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="lg">
-                  <Github className="mr-2 h-4 w-4" />
-                  View Source Code
-                </Button>
-              </a>
-            )}
-          </div>
+        {project.liveUrl && (
+          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+            <Button size="lg">
+              <ExternalLink className="mr-2 h-4 w-4" />
+              View Live Site
+            </Button>
+          </a>
         )}
 
         <footer className="mt-16 pt-8 border-t border-border">

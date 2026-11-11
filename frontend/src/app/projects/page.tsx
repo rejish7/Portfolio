@@ -49,7 +49,6 @@ function toCard(project: Project): Project {
     technologies: project.technologies,
     results: project.results,
     liveUrl: project.liveUrl,
-    githubUrl: project.githubUrl,
     seo: project.seo,
   };
 }
@@ -83,6 +82,23 @@ function joinList(items: string[]): string {
   if (items.length <= 1) return items.join("");
   return `${items.slice(0, -1).join(", ")} and ${items[items.length - 1]}`;
 }
+
+const pageStyles = `
+@keyframes pl-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pl-rise {
+  opacity: 0;
+  animation: pl-rise 0.6s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+  animation-delay: var(--pl-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-rise { animation: none; opacity: 1; transform: none; }
+}
+`;
 
 export default async function ProjectsPage() {
   const allProjects = (await fetchProjects()).map(toCard);
@@ -161,6 +177,7 @@ export default async function ProjectsPage() {
 
   return (
     <div className="pt-24 pb-24">
+      <style>{pageStyles}</style>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
@@ -189,11 +206,23 @@ export default async function ProjectsPage() {
           </ol>
         </nav>
 
-        <div id="projects-hero" className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">
+        <div id="projects-hero" className="text-center mb-14">
+          <p
+            className="pl-rise text-sm font-semibold text-primary mb-3"
+            style={{ "--pl-delay": "0ms" } as React.CSSProperties}
+          >
+            Documented results, verified with Google Search Console
+          </p>
+          <h1
+            className="pl-rise text-[clamp(2.25rem,5vw,3.5rem)] font-bold tracking-[-0.03em] leading-[1.05] mb-5"
+            style={{ "--pl-delay": "80ms" } as React.CSSProperties}
+          >
             SEO, AEO &amp; GEO Projects
           </h1>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
+          <p
+            className="pl-rise text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            style={{ "--pl-delay": "160ms" } as React.CSSProperties}
+          >
             Documented search engagements across agencies, e-commerce, local services and
             finance. Every case study lists the industry, the work performed and verified
             Google Search Console results. Clients stay anonymous. Only industry, scope and
@@ -210,41 +239,33 @@ export default async function ProjectsPage() {
             <section
               id="portfolio-glance"
               aria-label="Portfolio at a glance"
-              className="mb-12 rounded-xl border border-border bg-card p-6 sm:p-8"
+              className="pl-rise mb-14 rounded-2xl border border-border bg-card p-6 sm:p-8"
+              style={{ "--pl-delay": "240ms" } as React.CSSProperties}
             >
-              <h2 className="text-lg font-semibold mb-1">Portfolio at a glance</h2>
+              <h2 className="text-lg font-semibold tracking-[-0.01em] mb-1">
+                Portfolio at a glance
+              </h2>
               <p className="text-sm text-muted-foreground mb-6">
                 Aggregated across the tracked six-month windows shown in each case study.
               </p>
-              <dl className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-                <div>
-                  <dt className="text-xs uppercase tracking-wider text-muted-foreground">
-                    Case studies
-                  </dt>
-                  <dd className="text-2xl font-bold text-primary">{allProjects.length}</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wider text-muted-foreground">
-                    Google impressions
-                  </dt>
-                  <dd className="text-2xl font-bold text-primary">
-                    {formatCount(impressions)}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wider text-muted-foreground">
-                    Organic clicks
-                  </dt>
-                  <dd className="text-2xl font-bold text-primary">{formatCount(clicks)}</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wider text-muted-foreground">
-                    Industries
-                  </dt>
-                  <dd className="text-2xl font-bold text-primary">{industries.length}</dd>
-                </div>
+              <dl className="grid grid-cols-2 gap-6 sm:gap-8 sm:grid-cols-4">
+                {[
+                  { label: "Case studies", value: allProjects.length },
+                  { label: "Google impressions", value: formatCount(impressions) },
+                  { label: "Organic clicks", value: formatCount(clicks) },
+                  { label: "Industries", value: industries.length },
+                ].map((stat) => (
+                  <div key={stat.label} className="sm:border-l sm:border-border sm:pl-6 sm:first:border-l-0 sm:first:pl-0">
+                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground mb-1">
+                      {stat.label}
+                    </dt>
+                    <dd className="text-3xl font-bold text-primary tabular-nums tracking-[-0.02em]">
+                      {stat.value}
+                    </dd>
+                  </div>
+                ))}
               </dl>
-              <p className="mt-6 text-sm text-muted-foreground">
+              <p className="mt-8 pt-6 border-t border-border text-sm text-muted-foreground">
                 <strong className="font-semibold text-foreground">
                   What does this portfolio cover?
                 </strong>{" "}
