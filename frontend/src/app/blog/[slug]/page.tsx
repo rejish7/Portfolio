@@ -12,8 +12,9 @@ import { notFound } from "next/navigation";
 import type { BlogPost } from "@/lib/types";
 
 // On-demand ISR: a missing slug 404s once and is cached, a valid post renders
-// immediately and refreshes hourly. A throwing fetch keeps the stale copy.
-export const revalidate = 3600;
+// immediately and refreshes every 60s so edits made through the API show up
+// quickly. A throwing fetch keeps the stale copy.
+export const revalidate = 60;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
@@ -24,6 +25,7 @@ const getBlogPost = cache(async (slug: string): Promise<BlogPost | null> => {
     try {
       const res = await fetch(`${API_BASE_URL}/api/blogs/${slug}`, {
         signal: AbortSignal.timeout(30000),
+        next: { revalidate: 60 },
       });
 
       // Genuine "not found" — the only case that should become a 404 page.

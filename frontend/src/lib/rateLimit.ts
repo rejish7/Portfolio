@@ -5,21 +5,26 @@ const rateLimitCache = new LRUCache<string, number[]>({
   ttl: 60 * 60 * 1000, // 1 hour
 });
 
-const MAX_REQUESTS = 5;
-const WINDOW_MS = 60 * 60 * 1000; // 1 hour
+export interface RateLimitOptions {
+  maxRequests?: number;
+  windowMs?: number;
+}
 
 export interface RateLimitResult {
   allowed: boolean;
   remaining: number;
 }
 
-export function checkRateLimit(ip: string): RateLimitResult {
+export function checkRateLimit(
+  ip: string,
+  { maxRequests = 5, windowMs = 60 * 60 * 1000 }: RateLimitOptions = {}
+): RateLimitResult {
   const now = Date.now();
   const timestamps = rateLimitCache.get(ip) ?? [];
 
-  const recent = timestamps.filter((t) => now - t < WINDOW_MS);
+  const recent = timestamps.filter((t) => now - t < windowMs);
 
-  if (recent.length >= MAX_REQUESTS) {
+  if (recent.length >= maxRequests) {
     rateLimitCache.set(ip, recent);
     return { allowed: false, remaining: 0 };
   }
@@ -27,5 +32,5 @@ export function checkRateLimit(ip: string): RateLimitResult {
   recent.push(now);
   rateLimitCache.set(ip, recent);
 
-  return { allowed: true, remaining: MAX_REQUESTS - recent.length };
+  return { allowed: true, remaining: maxRequests - recent.length };
 }

@@ -54,7 +54,7 @@ async function fetchSlugs<T extends { slug: string }>(endpoint: string): Promise
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const res = await fetch(`${apiUrl}${endpoint}`, { next: { revalidate: 3600 } });
+      const res = await fetch(`${apiUrl}${endpoint}`, { next: { revalidate: 60 } });
       if (res.ok) return res.json();
     } catch {
       // retry below

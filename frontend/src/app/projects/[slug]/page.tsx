@@ -15,8 +15,9 @@ import { fetchProjects, mapProject, projectsBaseUrl, relatedProjects } from "@/l
 import type { Project } from "@/lib/types";
 
 // On-demand ISR: renders on first request, serves a cached copy and refreshes
-// hourly. A throwing fetch (API down) keeps the last good copy instead of a 500.
-export const revalidate = 3600;
+// every 60s so edits made through the API show up quickly. A throwing fetch
+// (API down) keeps the last good copy instead of a 500.
+export const revalidate = 60;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
@@ -26,7 +27,7 @@ const getProject = cache(async (slug: string): Promise<Project | null> => {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const res = await fetch(`${API_BASE_URL}/api/projects/slug/${slug}`, {
-        next: { revalidate: 3600 },
+        next: { revalidate: 60 },
       });
 
       // Genuine "not found" — the only case that should become a 404 page.

@@ -46,9 +46,10 @@ export const metadata: Metadata = {
   },
 };
 
-// Serve a cached copy and revalidate hourly: keeps TTFB low for crawlers while
-// the API-backed content still refreshes automatically (Render sleeps when idle).
-export const revalidate = 3600;
+// Serve a cached copy and refresh every 60s: keeps TTFB low for crawlers while
+// new posts published through the API appear automatically within a minute
+// (the API sleeps when idle on Render, so revalidation only runs on traffic).
+export const revalidate = 60;
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
 
@@ -57,7 +58,7 @@ async function getBlogs(): Promise<BlogPost[]> {
     try {
       const res = await fetch(`${API_BASE_URL}/api/blogs`, {
         signal: AbortSignal.timeout(30000),
-        next: { revalidate: 3600 },
+        next: { revalidate: 60 },
       });
 
       if (!res.ok) {

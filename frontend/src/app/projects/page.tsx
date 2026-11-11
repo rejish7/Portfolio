@@ -32,8 +32,9 @@ export const metadata: Metadata = {
   },
 };
 
-// Cached listing with hourly revalidation (fast TTFB for Googlebot).
-export const revalidate = 3600;
+// Cached listing with a 60s refresh window (fast TTFB for Googlebot, new
+// projects published through the API appear automatically within a minute).
+export const revalidate = 60;
 
 // The listing never renders project imagery or long-form copy, so the page
 // ships a lean projection of each project instead of the full document.
