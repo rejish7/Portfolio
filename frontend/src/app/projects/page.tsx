@@ -231,8 +231,13 @@ export default async function ProjectsPage() {
         </div>
 
         {allProjects.length === 0 ? (
-          <div className="text-center text-muted-foreground">
-            <p>No projects available at the moment. Check back soon!</p>
+          <div className="rounded-2xl border border-border bg-card p-12 text-center">
+            <p className="text-lg font-semibold text-foreground mb-2">
+              No case studies yet
+            </p>
+            <p className="text-sm text-muted-foreground">
+              New documented projects are being prepared. Check back soon.
+            </p>
           </div>
         ) : (
           <>
@@ -275,11 +280,27 @@ export default async function ProjectsPage() {
               </p>
             </section>
 
-            <div id="projects-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {allProjects.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index} />
-              ))}
-            </div>
+            <section
+              id="projects-grid"
+              aria-labelledby="projects-grid-heading"
+              className="pl-rise"
+              style={{ "--pl-delay": "320ms" } as React.CSSProperties}
+            >
+              <h2
+                id="projects-grid-heading"
+                className="text-2xl font-bold tracking-[-0.02em] mb-6"
+              >
+                All case studies{" "}
+                <span className="text-muted-foreground font-medium">
+                  ({allProjects.length})
+                </span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {allProjects.map((project, index) => (
+                  <ProjectCard key={project.id} project={project} index={index} />
+                ))}
+              </div>
+            </section>
           </>
         )}
       </div>
