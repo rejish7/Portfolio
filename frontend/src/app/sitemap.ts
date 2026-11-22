@@ -50,6 +50,19 @@ const staticPages: { path: string; lastModified: string }[] = [
   { path: "/laravel-developer-nepal", lastModified: "2026-05-31" },
 ];
 
+/**
+ * Blog posts permanently redirected to service landing pages — keep them out
+ * of the sitemap so Google does not see conflicting 200 vs 301 signals.
+ * (Must stay in sync with redirects() in next.config.ts.)
+ */
+const redirectedBlogSlugs = new Set([
+  "top-seo-expert-nepal-best-seo-freelancer",
+  "freelance-seo-web-developer-nepal-2026",
+  "seo-specialist-in-kathmandu-nepal",
+  "seo-expert-kathmandu-nepal-aeo-geo-technical-seo",
+  "how-to-hire-remote-seo-expert",
+]);
+
 async function fetchSlugs<T extends { slug: string }>(endpoint: string): Promise<T[]> {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.rejishkhanal.com.np";
   for (let attempt = 1; attempt <= 3; attempt++) {
@@ -78,13 +91,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     };
   });
 
-  const blogEntries: MetadataRoute.Sitemap = blogs.map((post) => {
-    const lastModified = post.updatedAt || post.publishedAt;
-    return {
-      url: `${baseUrl}/blog/${post.slug}`,
-      ...(lastModified ? { lastModified: new Date(lastModified) } : {}),
-    };
-  });
+  const blogEntries: MetadataRoute.Sitemap = blogs
+    .filter((post) => !redirectedBlogSlugs.has(post.slug))
+    .map((post) => {
+      const lastModified = post.updatedAt || post.publishedAt;
+      return {
+        url: `${baseUrl}/blog/${post.slug}`,
+        ...(lastModified ? { lastModified: new Date(lastModified) } : {}),
+      };
+    });
 
   const staticEntries: MetadataRoute.Sitemap = staticPages.map((page) => ({
     url: page.path === "/" ? `${baseUrl}/` : `${baseUrl}${page.path}`,

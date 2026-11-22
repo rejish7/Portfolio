@@ -53,6 +53,33 @@ const nextConfig: NextConfig = {
         destination: "/seo-expert-kathmandu/:path+",
         permanent: true,
       },
+      // Blog → service-page consolidation (perf-checked: destinations ~1s vs
+      // sources up to 15s/timeouts). One primary landing page per intent.
+      {
+        source: "/blog/top-seo-expert-nepal-best-seo-freelancer",
+        destination: "/seo-expert-nepal",
+        permanent: true,
+      },
+      {
+        source: "/blog/freelance-seo-web-developer-nepal-2026",
+        destination: "/seo-consultant-nepal",
+        permanent: true,
+      },
+      {
+        source: "/blog/seo-specialist-in-kathmandu-nepal",
+        destination: "/seo-expert-kathmandu",
+        permanent: true,
+      },
+      {
+        source: "/blog/seo-expert-kathmandu-nepal-aeo-geo-technical-seo",
+        destination: "/seo-expert-kathmandu",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-hire-remote-seo-expert",
+        destination: "/blog/hire-remote-technical-seo-consultant-australia",
+        permanent: true,
+      },
     ];
   },
   async headers() {
