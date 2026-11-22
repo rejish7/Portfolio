@@ -329,7 +329,7 @@ export function CoreWebVitalsChecker() {
                         <div key={m.label} className="p-2 rounded-lg bg-muted/30">
                           <div className="text-xs text-muted-foreground">{m.label}</div>
                           <div className="text-sm font-bold">{m.value}</div>
-                          <div className="text-[10px] text-muted-foreground">Good: {m.good}</div>
+                          <div className="text-xs text-muted-foreground">Good: {m.good}</div>
                         </div>
                       ))}
                     </div>
@@ -594,8 +594,8 @@ export function CoreWebVitalsChecker() {
                       <div className="flex items-start justify-between gap-3">
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{rec.category}</span>
-                            <span className={`text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded ${
+                            <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">{rec.category}</span>
+                            <span className={`text-xs font-bold uppercase tracking-widest px-1.5 py-0.5 rounded ${
                               rec.priority === "high" ? "bg-red-100 text-red-600 dark:bg-red-900/50" :
                               rec.priority === "medium" ? "bg-yellow-100 text-yellow-600 dark:bg-yellow-900/50" :
                               "bg-blue-100 text-blue-600 dark:bg-blue-900/50"

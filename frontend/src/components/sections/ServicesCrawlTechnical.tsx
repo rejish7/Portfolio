@@ -103,7 +103,7 @@ export default function ServicesCrawlTechnical() {
               className="p-6 lg:p-8 rounded-2xl bg-card border border-border shadow-sm hover:shadow-md transition-all flex flex-col"
             >
               <span
-                className={`inline-block self-start text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded-full border border-border mb-4 ${
+                className={`inline-block self-start text-xs font-mono uppercase tracking-widest px-3 py-1 rounded-full border border-border mb-4 ${
                   card.tagColor ?? "bg-muted/50 text-muted-foreground"
                 }`}
               >

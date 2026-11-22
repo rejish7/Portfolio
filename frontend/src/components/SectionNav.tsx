@@ -74,7 +74,7 @@ export function SectionNav({ sections }: SectionNavProps) {
               >
                 {/* Label tooltip — appears on hover */}
                 <span
-                  className="absolute right-6 whitespace-nowrap px-2.5 py-1 rounded-lg text-[11px] font-medium
+                  className="absolute right-6 whitespace-nowrap px-2.5 py-1 rounded-lg text-xs font-medium
                     bg-card/90 backdrop-blur-md border border-border/50 shadow-sm
                     text-foreground opacity-0 group-hover:opacity-100
                     transition-opacity duration-200 pointer-events-none"

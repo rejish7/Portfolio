@@ -111,7 +111,7 @@ export default function ToolsPage() {
   };
 
   return (
-    <>
+    <main id="main-content">
       <SchemaScript schema={itemListSchema} />
       <SchemaScript schema={breadcrumbSchema} />
 
@@ -201,6 +201,6 @@ export default function ToolsPage() {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }

@@ -217,7 +217,7 @@ export function ServicesHero() {
                   </span>
                 </div>
               </div>
-              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-primary/10 text-[11px] font-mono font-bold text-primary uppercase tracking-wider">
+              <span className="flex items-center gap-1.5 px-2.5 py-1 rounded bg-primary/10 text-xs font-mono font-bold text-primary uppercase tracking-wider">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" aria-hidden="true" />
                 CRAWL_STATUS: READY
               </span>

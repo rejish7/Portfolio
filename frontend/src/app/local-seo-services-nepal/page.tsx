@@ -386,7 +386,7 @@ export default function LocalSEOPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-background to-background/95">
+    <main id="main-content" className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <SchemaScript schema={serviceSchema} />
       <SchemaScript schema={localBusinessSchema} />
       <SchemaScript schema={webPageSchema} />

@@ -67,10 +67,10 @@ export default function ServicesArchitecture() {
             className="col-span-12 lg:col-span-6 p-8 rounded-2xl bg-card border border-border shadow-sm flex flex-col"
           >
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="text-[11px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+              <span className="text-xs font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                 Internal PageRank
               </span>
-              <span className="text-[11px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+              <span className="text-xs font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                 Topical Clusters
               </span>
             </div>
@@ -132,10 +132,10 @@ export default function ServicesArchitecture() {
             className="col-span-12 lg:col-span-6 p-8 rounded-2xl bg-card border border-border shadow-sm flex flex-col"
           >
             <div className="flex flex-wrap items-center gap-3 mb-4">
-              <span className="text-[11px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+              <span className="text-xs font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                 Geo-Targeting
               </span>
-              <span className="text-[11px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+              <span className="text-xs font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                 Multi-Region Hreflang
               </span>
             </div>
@@ -155,11 +155,11 @@ export default function ServicesArchitecture() {
             <div className="rounded-xl bg-background border border-border p-4 mb-6 overflow-x-auto">
               <div className="flex items-center gap-2 mb-3 pb-2 border-b border-border">
                 <Code2 className="w-4 h-4 text-primary" />
-                <span className="text-[10px] font-mono tracking-widest uppercase text-foreground/70">
+                <span className="text-xs font-mono tracking-widest uppercase text-foreground/70">
                   HREFLANG Architecture
                 </span>
               </div>
-              <pre className="text-[11px] leading-relaxed font-mono text-foreground/70 whitespace-pre">
+              <pre className="text-xs leading-relaxed font-mono text-foreground/70 whitespace-pre">
                 {hreflangCode}
               </pre>
             </div>

@@ -157,7 +157,7 @@ export function Footer() {
                 href="/contact"
                 className="inline-flex items-center rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground hover:border-primary/50 hover:text-primary transition-colors"
               >
-                Contact Me
+                Contact
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>

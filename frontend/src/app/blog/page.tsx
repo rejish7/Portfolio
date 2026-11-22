@@ -230,7 +230,7 @@ export default async function BlogPage() {
   ];
 
   return (
-    <main className="pt-24 pb-24">
+    <main id="main-content" className="pt-24 pb-24">
       <SchemaScript schema={blogSchema} />
       <SchemaScript schema={collectionPageSchema} />
       <SchemaScript schema={itemListSchema} />

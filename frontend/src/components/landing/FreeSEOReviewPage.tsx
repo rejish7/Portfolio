@@ -360,7 +360,7 @@ export function FreeSEOReviewPage({ faqs }: FreeSEOReviewPageProps) {
                           </span>
                         </div>
                       </div>
-                      <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${item.bg} ${item.color} shrink-0`}>
+                      <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${item.bg} ${item.color} shrink-0`}>
                         {item.tag}
                       </span>
                     </div>
@@ -382,7 +382,7 @@ export function FreeSEOReviewPage({ faqs }: FreeSEOReviewPageProps) {
                         Not appearing in local results
                       </p>
                     </div>
-                    <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-yellow-500/10 text-yellow-600 dark:text-yellow-500 shrink-0">
+                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-yellow-500/10 text-yellow-600 dark:text-yellow-500 shrink-0">
                       Missing
                     </span>
                   </div>

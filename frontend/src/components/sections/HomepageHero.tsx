@@ -16,7 +16,7 @@ const fadeUp = {
 
 export function HomepageHero() {
   return (
-    <section className="relative overflow-hidden bg-accent/30" aria-labelledby="hero-heading" role="banner">
+    <section className="relative overflow-hidden bg-accent/30" aria-labelledby="hero-heading">
       <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -119,7 +119,7 @@ export function HomepageHero() {
                   <span className="w-3 h-3 rounded-full bg-green-400/70" aria-hidden="true" />
                   <span className="ml-2 text-xs font-mono text-muted-foreground">telemetry_inspector.ts</span>
                 </div>
-                <span className="px-2 py-0.5 rounded bg-accent text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+                <span className="px-2 py-0.5 rounded bg-accent text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                   Diagnostic Mode
                 </span>
               </div>
@@ -128,9 +128,9 @@ export function HomepageHero() {
               <div className="p-4 rounded-xl bg-accent/50 mb-4">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-semibold text-foreground font-mono">Crawlability &amp; Bot Access</span>
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">200 OK</span>
+                  <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">200 OK</span>
                 </div>
-                <div className="grid grid-cols-2 gap-2 text-[11px] font-mono text-muted-foreground">
+                <div className="grid grid-cols-2 gap-2 text-xs font-mono text-muted-foreground">
                   <div>Robots.txt: <span className="text-foreground font-medium">Strict Dynamic</span></div>
                   <div>Canonical Logic: <span className="text-foreground font-medium">Self-Ref 100%</span></div>
                   <div>Index Coverage: <span className="text-foreground font-medium">Zero-Waste URL</span></div>
@@ -142,23 +142,23 @@ export function HomepageHero() {
               <div className="mb-4">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-semibold text-foreground font-mono">Google Core Web Vitals (Field Real-User P75)</span>
-                  <span className="text-[10px] font-bold text-green-600">Passing All Signals</span>
+                  <span className="text-xs font-bold text-green-600">Passing All Signals</span>
                 </div>
                 <div className="grid grid-cols-3 gap-2">
                   <div className="p-3 rounded-xl bg-accent/50 flex flex-col items-center text-center">
-                    <span className="text-[10px] text-muted-foreground uppercase">LCP Mobile</span>
+                    <span className="text-xs text-muted-foreground uppercase">LCP Mobile</span>
                     <span className="text-xl font-bold text-foreground mt-1">1.4s</span>
-                    <span className="text-[10px] text-green-600 font-semibold mt-0.5">Good (&lt; 2.5s)</span>
+                    <span className="text-xs text-green-600 font-semibold mt-0.5">Good (&lt; 2.5s)</span>
                   </div>
                   <div className="p-3 rounded-xl bg-accent/50 flex flex-col items-center text-center">
-                    <span className="text-[10px] text-muted-foreground uppercase">INP Speed</span>
+                    <span className="text-xs text-muted-foreground uppercase">INP Speed</span>
                     <span className="text-xl font-bold text-foreground mt-1">82ms</span>
-                    <span className="text-[10px] text-green-600 font-semibold mt-0.5">Good (&lt; 200ms)</span>
+                    <span className="text-xs text-green-600 font-semibold mt-0.5">Good (&lt; 200ms)</span>
                   </div>
                   <div className="p-3 rounded-xl bg-accent/50 flex flex-col items-center text-center">
-                    <span className="text-[10px] text-muted-foreground uppercase">CLS Shift</span>
+                    <span className="text-xs text-muted-foreground uppercase">CLS Shift</span>
                     <span className="text-xl font-bold text-foreground mt-1">0.02</span>
-                    <span className="text-[10px] text-green-600 font-semibold mt-0.5">Good (&lt; 0.10)</span>
+                    <span className="text-xs text-green-600 font-semibold mt-0.5">Good (&lt; 0.10)</span>
                   </div>
                 </div>
               </div>
@@ -167,18 +167,18 @@ export function HomepageHero() {
               <div className="p-4 rounded-xl bg-accent/50 mb-4">
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-semibold text-foreground font-mono">Schema &amp; AEO Readiness</span>
-                  <span className="text-[10px] font-bold text-primary">Entity Verified</span>
+                  <span className="text-xs font-bold text-primary">Entity Verified</span>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
-                  <span className="px-2 py-0.5 rounded bg-background text-[11px] font-mono text-foreground">Organization • Valid</span>
-                  <span className="px-2 py-0.5 rounded bg-background text-[11px] font-mono text-foreground">Person • Valid</span>
-                  <span className="px-2 py-0.5 rounded bg-background text-[11px] font-mono text-foreground">Service • Graph Linked</span>
+                  <span className="px-2 py-0.5 rounded bg-background text-xs font-mono text-foreground">Organization • Valid</span>
+                  <span className="px-2 py-0.5 rounded bg-background text-xs font-mono text-foreground">Person • Valid</span>
+                  <span className="px-2 py-0.5 rounded bg-background text-xs font-mono text-foreground">Service • Graph Linked</span>
                 </div>
               </div>
 
               {/* Footer */}
-              <div className="flex items-center justify-between text-[11px] text-muted-foreground font-mono">
-                <span>Live diagnostic sample • No automated generic report bloat.</span>
+              <div className="flex items-center justify-between text-xs text-muted-foreground font-mono">
+                <span>Sample report from a real engagement • No automated generic report bloat.</span>
                 <span className="text-green-600" aria-label="Verified">✓</span>
               </div>
             </div>

@@ -343,7 +343,7 @@ export default function TechnicalSEOPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-background to-background/95">
+    <main id="main-content" className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

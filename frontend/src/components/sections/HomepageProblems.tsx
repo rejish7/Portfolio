@@ -98,7 +98,7 @@ export function HomepageProblems() {
                     href={problem.link}
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
                   >
-                    Get in touch <span className="font-mono" aria-hidden="true">→</span>
+                    Contact <span className="font-mono" aria-hidden="true">→</span>
                   </Link>
                 </motion.div>
               );

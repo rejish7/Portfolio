@@ -38,7 +38,7 @@ export function AboutHero() {
                     {["Technical SEO", "AEO", "GEO", "Full-Stack"].map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-white/15 backdrop-blur-md border border-white/10 text-white"
+                        className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-white/15 backdrop-blur-md border border-white/10 text-white"
                       >
                         {tag}
                       </span>
@@ -63,7 +63,7 @@ export function AboutHero() {
                   </div>
                   <span className="font-mono text-xs font-semibold text-green-600 dark:text-green-400">Available</span>
                 </div>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">Open for SEO &amp; development projects</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">Open for SEO &amp; development projects</p>
               </motion.div>
             </div>
           </motion.div>
@@ -154,7 +154,7 @@ export function AboutHero() {
                   className="p-4 rounded-2xl bg-muted/60 border border-border/40 text-center"
                 >
                   <span className="block text-xl font-bold text-primary tracking-tight">{stat.value}</span>
-                  <span className="text-[11px] text-muted-foreground mt-0.5 block">{stat.label}</span>
+                  <span className="text-xs text-muted-foreground mt-0.5 block">{stat.label}</span>
                 </div>
               ))}
             </motion.div>

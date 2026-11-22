@@ -186,7 +186,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="pt-24 pb-24">
+    <main id="main-content" className="pt-24 pb-24">
       <SchemaScript schema={contactPageSchema} />
       <SchemaScript schema={faqSchema} />
 
@@ -349,7 +349,7 @@ export default function ContactPage() {
                       </p>
 
                       <div className="flex items-center text-primary text-sm font-semibold">
-                        Learn more
+                        Learn about {service.title}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </div>
                     </CardContent>

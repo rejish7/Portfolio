@@ -72,10 +72,10 @@ export default function ServicesAEOGEO() {
               className="p-6 lg:p-8 rounded-2xl bg-card border border-border shadow-sm"
             >
               <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="text-[11px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                <span className="text-xs font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                   Generative Engine Optimization
                 </span>
-                <span className="text-[11px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                <span className="text-xs font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                   LLM Citation Ready
                 </span>
               </div>
@@ -92,12 +92,12 @@ export default function ServicesAEOGEO() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div className="rounded-xl border border-border bg-background p-4">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-primary">
+                  <span className="text-xs font-mono tracking-widest uppercase text-primary">
                     Fact Isolation
                   </span>
                 </div>
                 <div className="rounded-xl border border-border bg-background p-4">
-                  <span className="text-[10px] font-mono tracking-widest uppercase text-primary">
+                  <span className="text-xs font-mono tracking-widest uppercase text-primary">
                     Corpus Auditing
                   </span>
                 </div>
@@ -120,10 +120,10 @@ export default function ServicesAEOGEO() {
               className="p-6 lg:p-8 rounded-2xl bg-card border border-border shadow-sm"
             >
               <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="text-[11px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                <span className="text-xs font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                   Structured Data
                 </span>
-                <span className="text-[11px] font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                <span className="text-xs font-mono tracking-widest uppercase px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
                   JSON-LD Graph
                 </span>
               </div>
@@ -174,7 +174,7 @@ export default function ServicesAEOGEO() {
               className="rounded-2xl border border-dashed border-border bg-card/50 p-6"
             >
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-[10px] font-mono tracking-widest uppercase text-foreground/70">
+                <span className="text-xs font-mono tracking-widest uppercase text-foreground/70">
                   Ethical Engineering Note
                 </span>
               </div>
@@ -199,14 +199,14 @@ export default function ServicesAEOGEO() {
               {/* Terminal Header */}
               <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border">
                 <FileJson2 className="w-4 h-4 text-primary" />
-                <span className="text-[11px] font-mono tracking-widest uppercase text-foreground/70">
+                <span className="text-xs font-mono tracking-widest uppercase text-foreground/70">
                   Interactive Schema Graph Viewport
                 </span>
               </div>
 
               {/* Code Block */}
               <div className="rounded-xl bg-background border border-border p-4 mb-6 overflow-x-auto">
-                <pre className="text-[11px] leading-relaxed font-mono text-foreground/70 whitespace-pre">
+                <pre className="text-xs leading-relaxed font-mono text-foreground/70 whitespace-pre">
                   {schemaCode}
                 </pre>
               </div>

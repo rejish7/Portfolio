@@ -177,7 +177,7 @@ export default async function ProjectsPage() {
   };
 
   return (
-    <div className="pt-24 pb-24">
+    <main id="main-content" className="pt-24 pb-24">
       <style>{pageStyles}</style>
       <script
         type="application/ld+json"
@@ -262,7 +262,7 @@ export default async function ProjectsPage() {
                   { label: "Industries", value: industries.length },
                 ].map((stat) => (
                   <div key={stat.label} className="sm:border-l sm:border-border sm:pl-6 sm:first:border-l-0 sm:first:pl-0">
-                    <dt className="text-[11px] uppercase tracking-wider text-muted-foreground mb-1">
+                    <dt className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
                       {stat.label}
                     </dt>
                     <dd className="text-3xl font-bold text-primary tabular-nums tracking-[-0.02em]">
@@ -305,6 +305,6 @@ export default async function ProjectsPage() {
           </>
         )}
       </div>
-    </div>
+    </main>
   );
 }

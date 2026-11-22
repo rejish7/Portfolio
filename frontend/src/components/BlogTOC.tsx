@@ -82,7 +82,7 @@ export function BlogTOC({ items }: BlogTOCProps) {
                   rounded-2xl bg-card/90 backdrop-blur-xl border border-border/50
                   shadow-xl shadow-black/10 p-2"
               >
-                <p className="px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                <p className="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                   On This Page
                 </p>
                 <nav className="flex flex-col gap-0.5">

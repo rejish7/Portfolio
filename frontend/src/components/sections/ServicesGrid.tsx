@@ -37,6 +37,7 @@ const services = [
     ],
     icon: Search,
     href: "/seo-audit-nepal",
+    cta: "Learn about technical SEO audits",
   },
   {
     title: "Core Web Vitals Optimization",
@@ -50,6 +51,7 @@ const services = [
     ],
     icon: Gauge,
     href: "/core-web-vitals-optimization",
+    cta: "Learn about Core Web Vitals optimization",
   },
   {
     title: "JavaScript SEO",
@@ -63,6 +65,7 @@ const services = [
     ],
     icon: Code2,
     href: "/technical-seo-expert-nepal",
+    cta: "Learn about JavaScript SEO",
   },
   {
     title: "Structured Data Implementation",
@@ -76,6 +79,7 @@ const services = [
     ],
     icon: Database,
     href: "/technical-seo-expert-nepal",
+    cta: "Learn about structured data implementation",
   },
   {
     title: "AEO Optimization",
@@ -89,6 +93,7 @@ const services = [
     ],
     icon: Brain,
     href: "/aeo-expert-nepal",
+    cta: "Learn about AEO optimization",
   },
   {
     title: "GEO Optimization",
@@ -102,6 +107,7 @@ const services = [
     ],
     icon: Globe2,
     href: "/geo-expert-nepal",
+    cta: "Learn about GEO optimization",
   },
   {
     title: "SEO-Friendly Web Development",
@@ -115,6 +121,7 @@ const services = [
     ],
     icon: Laptop,
     href: "/web-development-nepal",
+    cta: "Learn about SEO-friendly web development",
   },
   {
     title: "Local SEO Nepal",
@@ -128,6 +135,7 @@ const services = [
     ],
     icon: MapPin,
     href: "/local-seo-services-nepal",
+    cta: "Learn about local SEO in Nepal",
   },
   {
     title: "SEO Training Nepal",
@@ -141,6 +149,7 @@ const services = [
     ],
     icon: GraduationCap,
     href: "/contact",
+    cta: "Contact for SEO training",
   },
   {
     title: "SEO Consultant in Nepal",
@@ -154,6 +163,7 @@ const services = [
     ],
     icon: Lightbulb,
     href: "/seo-consultant-nepal",
+    cta: "Learn about SEO consulting",
   },
 ];
 
@@ -230,11 +240,7 @@ export function ServicesGrid() {
                       </ul>
 
                       <div className="flex items-center text-primary group-hover:translate-x-2 transition-transform">
-                        <span className="text-sm font-semibold">
-                          {service.href === "/contact"
-                            ? "Contact for this service"
-                            : "Learn more"}
-                        </span>
+                        <span className="text-sm font-semibold">{service.cta}</span>
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </div>
                     </CardContent>

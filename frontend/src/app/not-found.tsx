@@ -109,7 +109,7 @@ export default function NotFound() {
           __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c"),
         }}
       />
-      <main className="relative overflow-hidden pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+      <main id="main-content" className="relative overflow-hidden pt-32 pb-24 px-4 sm:px-6 lg:px-8">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute left-1/2 top-0 -z-10 h-[480px] w-[720px] max-w-full -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]"

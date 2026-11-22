@@ -170,7 +170,7 @@ const techStacks = [
 
 export default function TechStackPage() {
     return (
-        <main className="min-h-screen">
+        <main id="main-content" className="min-h-screen">
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 via-background to-background">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb

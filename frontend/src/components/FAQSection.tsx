@@ -53,6 +53,8 @@ export function FAQSection({ items, title }: FAQSectionProps) {
                                     }
                                     className="w-full flex items-center justify-between p-6 text-left"
                                     aria-expanded={openIndex === index}
+                                    aria-controls={`faq-panel-${index}`}
+                                    id={`faq-button-${index}`}
                                 >
                                     <h3 className="font-semibold text-lg text-foreground pr-4">
                                         {item.question}
@@ -63,11 +65,15 @@ export function FAQSection({ items, title }: FAQSectionProps) {
                                     />
                                 </button>
 
-                                {openIndex === index && (
-                                    <div className="px-6 pb-6 pt-0 text-muted-foreground leading-relaxed">
-                                        {item.answer}
-                                    </div>
-                                )}
+                                <div
+                                    id={`faq-panel-${index}`}
+                                    role="region"
+                                    aria-labelledby={`faq-button-${index}`}
+                                    hidden={openIndex !== index}
+                                    className="px-6 pb-6 pt-0 text-muted-foreground leading-relaxed"
+                                >
+                                    {item.answer}
+                                </div>
                             </div>
                         ))}
                     </div>

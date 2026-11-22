@@ -33,12 +33,12 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           {initials}
         </span>
         {(project.industry || project.category) && (
-          <span className="absolute left-3 top-3 rounded-full bg-background/70 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-foreground backdrop-blur">
+          <span className="absolute left-3 top-3 rounded-full bg-background/70 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-foreground backdrop-blur">
             {project.industry || project.category}
           </span>
         )}
         {project.results && project.results.length > 0 && (
-          <span className="absolute bottom-3 left-3 inline-flex max-w-[calc(100%-1.5rem)] items-center gap-1.5 truncate rounded-full bg-background/70 px-2.5 py-1 text-[11px] font-semibold text-foreground backdrop-blur">
+          <span className="absolute bottom-3 left-3 inline-flex max-w-[calc(100%-1.5rem)] items-center gap-1.5 truncate rounded-full bg-background/70 px-2.5 py-1 text-xs font-semibold text-foreground backdrop-blur">
             <TrendingUp className="h-3 w-3 shrink-0 text-primary" />
             {project.results[0].label}: {project.results[0].value}
           </span>
@@ -65,7 +65,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           <dl className="grid grid-cols-2 gap-x-6">
             {project.results.slice(0, 2).map((result) => (
               <div key={result.label}>
-                <dt className="text-[11px] uppercase tracking-wider text-muted-foreground">
+                <dt className="text-xs uppercase tracking-wider text-muted-foreground">
                   {result.label}
                 </dt>
                 <dd className="flex items-baseline gap-2">
@@ -74,7 +74,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                   </span>
                   {result.change && (
                     <span
-                      className={`text-[11px] font-medium ${
+                      className={`text-xs font-medium ${
                         result.direction === "up"
                           ? "text-emerald-600 dark:text-emerald-400"
                           : result.direction === "down"

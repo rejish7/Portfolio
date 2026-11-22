@@ -123,7 +123,7 @@ export default function CoreWebVitalsCheckerPage() {
   };
 
   return (
-    <>
+    <main id="main-content">
       <SchemaScript schema={softwareSchema} />
       <SchemaScript schema={faqSchema} />
       <SchemaScript schema={breadcrumbSchema} />
@@ -225,6 +225,6 @@ export default function CoreWebVitalsCheckerPage() {
           </section>
         </div>
       </div>
-    </>
+    </main>
   );
 }

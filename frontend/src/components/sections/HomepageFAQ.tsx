@@ -33,6 +33,8 @@ export function HomepageFAQ() {
                   }
                   className="w-full flex items-center justify-between p-6 text-left"
                   aria-expanded={openIndex === index}
+                  aria-controls={`home-faq-panel-${index}`}
+                  id={`home-faq-button-${index}`}
                 >
                   <h3 className="font-semibold text-lg text-foreground pr-4">
                     {faq.question}
@@ -42,11 +44,15 @@ export function HomepageFAQ() {
                   />
                 </button>
 
-                {openIndex === index && (
-                  <div className="px-6 pb-6 pt-0 text-muted-foreground leading-relaxed">
-                    {faq.answer}
-                  </div>
-                )}
+                <div
+                  id={`home-faq-panel-${index}`}
+                  role="region"
+                  aria-labelledby={`home-faq-button-${index}`}
+                  hidden={openIndex !== index}
+                  className="px-6 pb-6 pt-0 text-muted-foreground leading-relaxed"
+                >
+                  {faq.answer}
+                </div>
               </div>
             ))}
           </div>

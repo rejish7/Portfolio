@@ -114,6 +114,8 @@ export function ContactForm() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
+            role="alert"
+            aria-live={status === "success" ? "polite" : "assertive"}
             className={`flex items-center gap-2 p-4 rounded-lg ${
               status === "success"
                 ? "bg-green-500/10 text-green-500 border border-green-500/20"

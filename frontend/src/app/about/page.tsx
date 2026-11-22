@@ -207,7 +207,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="pt-16">
+    <main id="main-content" className="pt-16">
       <SchemaScript schema={profilePageSchema} />
       <SchemaScript schema={heroImageSchema} />
       <SchemaScript schema={faqSchema} />
@@ -271,6 +271,6 @@ export default function AboutPage() {
 
       {/* Section 16: Final CTA */}
       <FinalCTA />
-    </div>
+    </main>
   );
 }

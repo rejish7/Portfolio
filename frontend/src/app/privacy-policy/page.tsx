@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+    <main id="main-content" className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Breadcrumb
           items={[
@@ -126,6 +126,6 @@ export default function PrivacyPolicyPage() {
           </section>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

@@ -210,7 +210,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <SectionNav sections={servicesSections} />
       <script
         type="application/ld+json"

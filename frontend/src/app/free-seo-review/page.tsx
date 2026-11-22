@@ -153,7 +153,7 @@ export default function FreeSEOReview() {
   };
 
   return (
-    <>
+    <main id="main-content">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -179,6 +179,6 @@ export default function FreeSEOReview() {
         }}
       />
       <FreeSEOReviewPage faqs={faqs} />
-    </>
+    </main>
   );
 }

@@ -131,7 +131,7 @@ export default function ServicesEngagementModels() {
             >
               {model.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="inline-block rounded-full bg-secondary px-4 py-1 text-[10px] font-mono font-bold tracking-widest uppercase text-secondary-foreground">
+                  <span className="inline-block rounded-full bg-secondary px-4 py-1 text-xs font-mono font-bold tracking-widest uppercase text-secondary-foreground">
                     Most Requested
                   </span>
                 </div>

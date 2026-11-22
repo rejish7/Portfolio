@@ -159,7 +159,7 @@ const caseStudySchema = {
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+    <main id="main-content" className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }}
@@ -256,6 +256,6 @@ export default function CaseStudiesPage() {
           </Link>
         </section>
       </div>
-    </div>
+    </main>
   );
 }

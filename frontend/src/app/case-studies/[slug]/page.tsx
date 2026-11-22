@@ -460,7 +460,7 @@ export default async function CaseStudyPage({
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-background/95">
+    <main id="main-content" className="min-h-screen bg-gradient-to-b from-background to-background/95">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -497,7 +497,7 @@ export default async function CaseStudyPage({
             <dl className="flex flex-wrap gap-x-10 gap-y-3 mt-7 text-sm">
               {study.industry && (
                 <div>
-                  <dt className="text-muted-foreground uppercase tracking-wider text-[11px] font-semibold font-mono">
+                  <dt className="text-muted-foreground uppercase tracking-wider text-xs font-semibold font-mono">
                     Industry
                   </dt>
                   <dd className="font-semibold mt-0.5">{study.industry}</dd>
@@ -505,7 +505,7 @@ export default async function CaseStudyPage({
               )}
               {study.timeline && (
                 <div>
-                  <dt className="text-muted-foreground uppercase tracking-wider text-[11px] font-semibold font-mono">
+                  <dt className="text-muted-foreground uppercase tracking-wider text-xs font-semibold font-mono">
                     Engagement
                   </dt>
                   <dd className="font-semibold mt-0.5">{study.timeline}</dd>
@@ -751,6 +751,6 @@ export default async function CaseStudyPage({
           </Link>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

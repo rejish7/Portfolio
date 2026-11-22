@@ -181,7 +181,7 @@ export default async function ProjectPage({
   };
 
   return (
-    <div className="pt-24 pb-24">
+    <main id="main-content" className="pt-24 pb-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -450,7 +450,7 @@ export default async function ProjectPage({
                     className="flex h-full flex-col gap-2 rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/50"
                   >
                     {(item.industry || item.category) && (
-                      <span className="text-[11px] font-semibold uppercase tracking-wider text-primary">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                         {item.industry || item.category}
                       </span>
                     )}
@@ -484,6 +484,6 @@ export default async function ProjectPage({
           </Link>
         </footer>
       </div>
-    </div>
+    </main>
   );
 }

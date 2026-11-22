@@ -99,7 +99,7 @@ export function CaseStudiesPreview() {
 
                 {/* Right: Result */}
                 <div className="lg:w-5/12 p-6 rounded-xl bg-accent/50 flex flex-col justify-center gap-3">
-                  <span className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">Verified Result</span>
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Verified Result</span>
                   <div className={`text-5xl font-bold leading-tight ${cs.resultColor || "text-primary"}`}>{cs.result}</div>
                   <p className="text-sm font-semibold text-foreground">{cs.resultLabel}</p>
                   <p className="text-sm text-muted-foreground">{cs.resultDetail}</p>

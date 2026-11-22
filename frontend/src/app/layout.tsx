@@ -205,6 +205,12 @@ export default function RootLayout({
 
       </head>
       <body className={`${inter.variable} antialiased`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-foreground focus:shadow-lg focus:ring-2 focus:ring-ring"
+        >
+          Skip to content
+        </a>
         {/* Google Tag Manager (noscript fallback) */}
         <noscript>
           <iframe
@@ -221,8 +227,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative min-h-screen flex flex-col">
-            <Navbar />
-            <main className="flex-1">{children}</main>
+            <header>
+              <Navbar />
+            </header>
+            <div className="flex-1">{children}</div>
             <Footer />
           </div>
           <WhatsAppFloat />

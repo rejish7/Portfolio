@@ -59,7 +59,7 @@ export function WhoIsRejish() {
             <Link href="/about">Learn More About Rejish</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <Link href="/contact">Contact Rejish Khanal</Link>
+            <Link href="/contact">Contact</Link>
           </Button>
         </motion.div>
       </div>

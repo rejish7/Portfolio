@@ -188,7 +188,8 @@ export default async function BlogPostPage({
   };
 
   return (
-    <article className="pt-24 pb-24">
+    <main id="main-content">
+      <article className="pt-24 pb-24">
       <SchemaScript schema={articleSchema} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumb
@@ -292,6 +293,7 @@ export default async function BlogPostPage({
           </Link>
         </footer>
       </div>
-    </article>
+      </article>
+    </main>
   );
 }

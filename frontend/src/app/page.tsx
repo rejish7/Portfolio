@@ -1,11 +1,9 @@
 import { HomepageHero } from "@/components/sections/HomepageHero";
 import { WhoIsRejish } from "@/components/sections/WhoIsRejish";
-import { KeyExpertise } from "@/components/sections/KeyExpertise";
 import { HomepageProblems } from "@/components/sections/HomepageProblems";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { HomepageProcess } from "@/components/sections/HomepageProcess";
 import { WhyChoose } from "@/components/sections/WhyChoose";
-import { AboutSummary } from "@/components/sections/AboutSummary";
 import { TechnicalStack } from "@/components/sections/TechnicalStack";
 import { CaseStudiesPreview } from "@/components/sections/CaseStudiesPreview";
 import { HomepageKeyFacts } from "@/components/sections/HomepageKeyFacts";
@@ -176,7 +174,6 @@ export default async function Home() {
 
   const homepageSections = [
     { id: "hero-heading", label: "Introduction" },
-    { id: "key-expertise-heading", label: "Expertise" },
     { id: "homepage-problems-heading", label: "Problems" },
     { id: "services-grid-heading", label: "Services" },
     { id: "process-heading", label: "Process" },
@@ -197,12 +194,10 @@ export default async function Home() {
       <main id="main-content" aria-label="Rejish Khanal - Technical SEO Expert in Nepal Homepage">
         <HomepageHero />
         <WhoIsRejish />
-        <KeyExpertise />
         <HomepageProblems />
         <ServicesGrid />
         <HomepageProcess />
         <WhyChoose />
-        <AboutSummary />
         <TechnicalStack />
         <CaseStudiesPreview />
         <HomepageKeyFacts />

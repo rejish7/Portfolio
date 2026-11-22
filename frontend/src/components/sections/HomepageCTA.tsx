@@ -60,7 +60,7 @@ export function HomepageCTA() {
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact">
                   <Button size="lg" className="gap-2 font-bold">
-                    Start a Conversation
+                    Request a Website Review
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
@@ -142,7 +142,7 @@ export function HomepageCTA() {
 
               <Link href="/contact">
                 <Button variant="outline" className="w-full gap-2">
-                  Request a Free SEO Audit
+                  Contact
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
